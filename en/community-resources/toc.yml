@@ -4,7 +4,7 @@ items:
   expanded: true
 - name: ⚙️ Example Projects
   href: example-projects.md
-- name: 🎓 Tutorials
+- name: 🎓 Tutorials and Articles
   href: tutorials-and-articles.md
 - name: ⨺ Models and Animations
   href: models-and-animations.md
@@ -12,6 +12,8 @@ items:
   href: terrain-and-water.md
 - name: 🍎  Physics
   href: physics.md
+- name: 🔊 Audio
+  href: audio.md
 - name: 🌈 Shaders
   href: shaders.md
 - name: 🎥 Rendering and Camera
@@ -26,3 +28,5 @@ items:
   href: coding.md
 - name: 🔌 Embedding and Integration
   href: embedded-stride.md
+- name: 🔧 Engine
+  href: engine.md
