@@ -1,4 +1,4 @@
-## Tools and Importers
+# Tools and Importers
 
 ## Assets
 - [Blender plugin to export bulk anims for importing into Stride](https://github.com/JackPilley/BlenderToStrideAnimationSeparator)

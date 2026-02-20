@@ -26,7 +26,7 @@ perhaps for something that you can reuse for your project.
     <div class="card h-100">
         <div class="card-body">
             <h2 class="card-title h5">🎓 Tutorials and Articles</h2>
-            <p class="card-text">Tutorials and articles.</p>
+            <p class="card-text">Video tutorials, written guides and blog posts.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="tutorials-and-articles.md">Explore tutorials and articles</a></p>
     </div>
@@ -56,6 +56,15 @@ perhaps for something that you can reuse for your project.
             <p class="card-text">Physics, colliders, triggers.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="physics.md">Bump in to some useful code</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">🔊 Audio</h2>
+            <p class="card-text">Sound effects, music, beat detection and audio integrations.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="audio.md">Turn it up</a></p>
     </div>
 </div>
 <div class="col-md-6">
@@ -119,6 +128,15 @@ perhaps for something that you can reuse for your project.
             <p class="card-text">Plug Stride into other apps and make magic happen.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="embedded-stride.md">Plug in and play</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">🔧 Engine</h2>
+            <p class="card-text">Engine internals, custom renderers, editor extensions and source references.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="engine.md">Under the hood</a></p>
     </div>
 </div>
 
