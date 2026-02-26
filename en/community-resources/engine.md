@@ -1,20 +1,20 @@
-# Engine
+# 🔧 Engine
 
 ## Editor Extensions and Tooling
 
-- [Experimental mini Stride.Editor in Avalonia](https://github.com/manio143/StrideComponentsEditorAvalonia) - Prototype Stride editor built with Avalonia UI
-- [Stride Editor current design document](https://gist.github.com/manio143/b6666eedb1403deb5525961697d0c25d) - Design notes for a future Stride editor
-- [Stride UI discussion](https://gist.github.com/manio143/8706b4bad5f7db5402d3b81acbb6276e) - Community discussion on StrideUI design
-- [Stride Game Engine Extension for code-only approach](https://github.com/VaclavElias/stride-code-only) - Extensions for building Stride games without the editor
+- [StrideComponentsEditorAvalonia](https://github.com/manio143/StrideComponentsEditorAvalonia) - Experimental prototype of a Stride editor built with Avalonia UI
+- [Stride Editor Design Document](https://gist.github.com/manio143/b6666eedb1403deb5525961697d0c25d) - Community design notes outlining the architecture for a future Stride editor
+- [Stride UI Discussion](https://gist.github.com/manio143/8706b4bad5f7db5402d3b81acbb6276e) - Community discussion thread exploring StrideUI design and layout approaches
+- [stride-code-only](https://github.com/VaclavElias/stride-code-only) - Extension library for building Stride games entirely in code, without the editor
 
 ## Rendering Internals
 
-- [Custom Root Renderer](https://github.com/tebjan/Stride.CustomRootRenderFeature) - Example of a custom root render feature for advanced rendering
+- [Stride.CustomRootRenderFeature](https://github.com/tebjan/Stride.CustomRootRenderFeature) - Example showing how to implement a custom root render feature for advanced rendering pipelines
 
 ## Source References
 
-- [Stride shader stages documentation](https://github.com/stride3d/stride-docs/blob/master/en/manual/graphics/effects-and-shaders/shading-language/shader-stages.md/) - Official shader stage reference in the Stride docs repo
+- [Stride Shader Stages Documentation](https://github.com/stride3d/stride-docs/blob/master/en/manual/graphics/effects-and-shaders/shading-language/shader-stages.md/) - Official reference for vertex, pixel, geometry, and compute shader stages in Stride
 
 ## Building and Compiling
 
-- [Compiling Stride for Linux](https://www.youtube.com/watch?v=BoHEASoQvu8) - Video walkthrough of compiling Stride with Vulkan on Linux
+- [Compiling Stride for Linux](https://www.youtube.com/watch?v=BoHEASoQvu8) - Video walkthrough of building Stride from source with Vulkan support on Linux

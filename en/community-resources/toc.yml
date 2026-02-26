@@ -26,6 +26,12 @@ items:
   href: tools-and-importers.md
 - name: 👨‍💻 Programming and Scripting
   href: coding.md
+- name: 🌐 Networking
+  href: networking.md
+- name: 🤖 AI and Pathfinding
+  href: ai-and-pathfinding.md
+- name: 🎮 Input
+  href: input.md
 - name: 🔌 Embedding and Integration
   href: embedded-stride.md
 - name: 🔧 Engine

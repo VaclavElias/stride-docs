@@ -124,6 +124,33 @@ perhaps for something that you can reuse for your project.
 <div class="col-md-6">
     <div class="card h-100">
         <div class="card-body">
+            <h2 class="card-title h5">🌐 Networking</h2>
+            <p class="card-text">Client-server, headless servers, and networking libraries.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="networking.md">Get connected</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">🤖 AI and Pathfinding</h2>
+            <p class="card-text">FSM, GOAP, navigation meshes, and pathfinding libraries.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="ai-and-pathfinding.md">Outsmart the player</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">🎮 Input</h2>
+            <p class="card-text">Input managers, action maps, rebinding, and binding extensions.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="input.md">Take control</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
             <h2 class="card-title h5">🔌 Embedding and Integration</h2>
             <p class="card-text">Plug Stride into other apps and make magic happen.</p>
         </div>
