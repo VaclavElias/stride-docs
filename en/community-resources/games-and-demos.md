@@ -1,4 +1,4 @@
-# Games and demos
+# 👾 Games and demos
 
 ## Released Games
 
