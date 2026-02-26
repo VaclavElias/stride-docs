@@ -1,0 +1,2929 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CommandList | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommandList | Stride API ">
+      
+      <meta name="description" content="Represents a list of graphics commands for playback, which can include resource binding, primitive-based rendering, etc.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_CommandList.md&amp;value=---%0Auid%3A%20Stride.Graphics.CommandList%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.CommandList">
+
+
+
+  <h1 id="Stride_Graphics_CommandList" data-uid="Stride.Graphics.CommandList" class="text-break">
+Class CommandList  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a list of graphics commands for playback, which can include resource binding, primitive-based rendering, etc.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CommandList : GraphicsResourceBase, IDisposable, IComponent, IReferencable, ICollectorHolder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="Stride.Core.DisposeBase.html">DisposeBase</a></div>
+      <div><a class="xref" href="Stride.Core.ComponentBase.html">ComponentBase</a></div>
+      <div><a class="xref" href="Stride.Graphics.GraphicsResourceBase.html">GraphicsResourceBase</a></div>
+      <div><span class="xref">CommandList</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Stride.Core.IComponent.html">IComponent</a></div>
+      <div><a class="xref" href="Stride.Core.IReferencable.html">IReferencable</a></div>
+      <div><a class="xref" href="Stride.Core.ICollectorHolder.html">ICollectorHolder</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_NativeResource">GraphicsResourceBase.NativeResource</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_NativeDeviceChild">GraphicsResourceBase.NativeDeviceChild</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_UnsetNativeDeviceChild">GraphicsResourceBase.UnsetNativeDeviceChild()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_SetNativeDeviceChild_Silk_NET_Core_Native_ComPtr_Silk_NET_Direct3D11_ID3D11DeviceChild__">GraphicsResourceBase.SetNativeDeviceChild(ComPtr&lt;ID3D11DeviceChild&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_NativeDevice">GraphicsResourceBase.NativeDevice</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_IsDebugMode">GraphicsResourceBase.IsDebugMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_OnRecreate">GraphicsResourceBase.OnRecreate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Reload">GraphicsResourceBase.Reload</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsResourceBase.GraphicsDevice</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Destroyed">GraphicsResourceBase.Destroyed</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_OnPause">GraphicsResourceBase.OnPause()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_OnResume">GraphicsResourceBase.OnResume()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Destroy">GraphicsResourceBase.Destroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Tags">ComponentBase.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Name">ComponentBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_OnNameChanged">ComponentBase.OnNameChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_ToString">ComponentBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_IsDisposed">DisposeBase.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_Dispose">DisposeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_OnAddReference">DisposeBase.OnAddReference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_OnReleaseReference">DisposeBase.OnReleaseReference()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Stride.Core.ComponentBaseExtensions.html#Stride_Core_ComponentBaseExtensions_DisposeBy__1___0_Stride_Core_ICollectorHolder_">ComponentBaseExtensions.DisposeBy&lt;T&gt;(T, ICollectorHolder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.ComponentBaseExtensions.html#Stride_Core_ComponentBaseExtensions_RemoveDisposeBy__1___0_Stride_Core_ICollectorHolder_">ComponentBaseExtensions.RemoveDisposeBy&lt;T&gt;(T, ICollectorHolder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Graphics.GraphicsDeviceExtensions.html#Stride_Graphics_GraphicsDeviceExtensions_DrawQuad_Stride_Graphics_CommandList_">GraphicsDeviceExtensions.DrawQuad(CommandList)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_">UnsafeUtilities.As&lt;T&gt;(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Stride_Graphics_CommandList_MaxRenderTargetCount" data-uid="Stride.Graphics.CommandList.MaxRenderTargetCount">
+  MaxRenderTargetCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of Render Targets that can be bound simultaneously by Stride.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxRenderTargetCount = 8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_CommandList_MaxViewportAndScissorRectangleCount" data-uid="Stride.Graphics.CommandList.MaxViewportAndScissorRectangleCount">
+  MaxViewportAndScissorRectangleCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of Viewports or Scissor Rectangles that can be set simultaneously by Stride.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxViewportAndScissorRectangleCount = 16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Stride_Graphics_CommandList_DepthStencilBuffer_" data-uid="Stride.Graphics.CommandList.DepthStencilBuffer*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DepthStencilBuffer" data-uid="Stride.Graphics.CommandList.DepthStencilBuffer">
+  DepthStencilBuffer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Depth-Stencil Buffer (Z-Buffer) currently bound to the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture DepthStencilBuffer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_DepthStencilBuffer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set the Depth-Stencil Buffer, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTargetAndViewport(Texture, Texture)</a>,
+or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt;)</a>, or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargets_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargets(ReadOnlySpan&lt;Texture&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_RenderTarget_" data-uid="Stride.Graphics.CommandList.RenderTarget*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_RenderTarget" data-uid="Stride.Graphics.CommandList.RenderTarget">
+  RenderTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first Render Target currently bound to the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture RenderTarget { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_RenderTarget_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set Render Targets, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTargetAndViewport(Texture, Texture)</a>,
+or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt;)</a>, or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargets_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargets(ReadOnlySpan&lt;Texture&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_RenderTargetCount_" data-uid="Stride.Graphics.CommandList.RenderTargetCount*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_RenderTargetCount" data-uid="Stride.Graphics.CommandList.RenderTargetCount">
+  RenderTargetCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of Render Targets currently bound to the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RenderTargetCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_RenderTargets_" data-uid="Stride.Graphics.CommandList.RenderTargets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_RenderTargets" data-uid="Stride.Graphics.CommandList.RenderTargets">
+  RenderTargets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the set of Render Targets currently bound to the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;Texture&gt; RenderTargets { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Texture.html">Texture</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_RenderTargets_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set Render Targets, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTargetAndViewport(Texture, Texture)</a>,
+or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt;)</a>, or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargets_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargets(ReadOnlySpan&lt;Texture&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Scissor_" data-uid="Stride.Graphics.CommandList.Scissor*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Scissor" data-uid="Stride.Graphics.CommandList.Scissor">
+  Scissor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first scissor rectangle bound to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rectangle Scissor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Core.Mathematics.Rectangle.html">Rectangle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_Scissor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set the scissor rectangles, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetScissorRectangle_Stride_Core_Mathematics_Rectangle__">SetScissorRectangle(in Rectangle)</a> or
+<a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetScissorRectangles_System_ReadOnlySpan_Stride_Core_Mathematics_Rectangle__">SetScissorRectangles(params ReadOnlySpan&lt;Rectangle&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_ScissorCount_" data-uid="Stride.Graphics.CommandList.ScissorCount*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ScissorCount" data-uid="Stride.Graphics.CommandList.ScissorCount">
+  ScissorCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of scissor rectangles currently bound to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ScissorCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Scissors_" data-uid="Stride.Graphics.CommandList.Scissors*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Scissors" data-uid="Stride.Graphics.CommandList.Scissors">
+  Scissors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets scissor rectangles currently bound to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;Rectangle&gt; Scissors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Core.Mathematics.Rectangle.html">Rectangle</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_Scissors_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set the scissor rectangles, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetScissorRectangle_Stride_Core_Mathematics_Rectangle__">SetScissorRectangle(in Rectangle)</a> or
+<a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetScissorRectangles_System_ReadOnlySpan_Stride_Core_Mathematics_Rectangle__">SetScissorRectangles(params ReadOnlySpan&lt;Rectangle&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Viewport_" data-uid="Stride.Graphics.CommandList.Viewport*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Viewport" data-uid="Stride.Graphics.CommandList.Viewport">
+  Viewport
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first viewport bound to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Viewport Viewport { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.Viewport.html">Viewport</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_Viewport_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set the viewport, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetViewport_Stride_Graphics_Viewport__">SetViewport(in Viewport)</a> or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetViewports_System_ReadOnlySpan_Stride_Graphics_Viewport__">SetViewports(params ReadOnlySpan&lt;Viewport&gt;)</a> methods,
+or the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTargetAndViewport(Texture, Texture)</a>, or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_ViewportCount_" data-uid="Stride.Graphics.CommandList.ViewportCount*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ViewportCount" data-uid="Stride.Graphics.CommandList.ViewportCount">
+  ViewportCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of viewports currently bound to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ViewportCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Viewports_" data-uid="Stride.Graphics.CommandList.Viewports*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Viewports" data-uid="Stride.Graphics.CommandList.Viewports">
+  Viewports
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the viewports currently bound to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;Viewport&gt; Viewports { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Viewport.html">Viewport</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_Viewports_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To set the viewport, use one of the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetViewport_Stride_Graphics_Viewport__">SetViewport(in Viewport)</a> or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetViewports_System_ReadOnlySpan_Stride_Graphics_Viewport__">SetViewports(params ReadOnlySpan&lt;Viewport&gt;)</a> methods,
+or the <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTargetAndViewport(Texture, Texture)</a>, or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture__">SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt;)</a> methods.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Graphics_CommandList_BeginProfile_" data-uid="Stride.Graphics.CommandList.BeginProfile*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_" data-uid="Stride.Graphics.CommandList.BeginProfile(Stride.Core.Mathematics.Color4,System.String)">
+  BeginProfile(Color4, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L858"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks the beginning of a profile section.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginProfile(Color4 profileColor, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profileColor</code> <a class="xref" href="Stride.Core.Mathematics.Color4.html">Color4</a></dt>
+    <dd><p>A color that a profiling tool can use to display the event.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A descriptive name for the profile section.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Each call to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a> must be matched with a corresponding call to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_EndProfile">EndProfile()</a>,
+  which defines a region of code that can be identified with a name and possibly a color in a compatible
+  profiling tool.
+</p>
+<p>
+  A pair of calls to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a> and <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_EndProfile">EndProfile()</a> can be nested inside a call
+  to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a> and <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_EndProfile">EndProfile()</a> in an upper level in the call stack.
+  This allows to form a hierarchy of profile sections.
+</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Clear_" data-uid="Stride.Graphics.CommandList.Clear*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Clear_Stride_Graphics_Texture_Stride_Core_Mathematics_Color4_" data-uid="Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Core.Mathematics.Color4)">
+  Clear(Texture, Color4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L911"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the specified Render Target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear(Texture renderTarget, Color4 color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderTarget</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The Render Target to clear.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="Stride.Core.Mathematics.Color4.html">Color4</a></dt>
+    <dd><p>The color to use to clear the Render Target.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">renderTarget</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_Clear_" data-uid="Stride.Graphics.CommandList.Clear*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Clear_Stride_Graphics_Texture_Stride_Graphics_DepthStencilClearOptions_System_Single_System_Byte_" data-uid="Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Graphics.DepthStencilClearOptions,System.Single,System.Byte)">
+  Clear(Texture, DepthStencilClearOptions, float, byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L887"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the specified Depth-Stencil Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear(Texture depthStencilBuffer, DepthStencilClearOptions options, float depth = 1, byte stencil = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthStencilBuffer</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The Depth-Stencil Buffer to clear.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Stride.Graphics.DepthStencilClearOptions.html">DepthStencilClearOptions</a></dt>
+    <dd><p>A combination of <a class="xref" href="Stride.Graphics.DepthStencilClearOptions.html">DepthStencilClearOptions</a> flags identifying what parts of the Depth-Stencil Buffer to clear.</p>
+</dd>
+    <dt><code>depth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The depth value to use for clearing the Depth Buffer.</p>
+</dd>
+    <dt><code>stencil</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The stencil value to use for clearing the Stencil Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">depthStencilBuffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Cannot clear a Stencil Buffer without a Stencil Buffer format.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearReadWrite_" data-uid="Stride.Graphics.CommandList.ClearReadWrite*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearReadWrite_Stride_Graphics_Buffer_Stride_Core_Mathematics_Int4_" data-uid="Stride.Graphics.CommandList.ClearReadWrite(Stride.Graphics.Buffer,Stride.Core.Mathematics.Int4)">
+  ClearReadWrite(Buffer, Int4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L943"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears a Read-Write Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReadWrite(Buffer buffer, Int4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>The Buffer to clear. It must have been created with read-write / unordered access flags.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Stride.Core.Mathematics.Int4.html">Int4</a></dt>
+    <dd><p>The value to use to clear the Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">buffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">buffer</code> must support Unordered Access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearReadWrite_" data-uid="Stride.Graphics.CommandList.ClearReadWrite*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearReadWrite_Stride_Graphics_Buffer_Stride_Core_Mathematics_UInt4_" data-uid="Stride.Graphics.CommandList.ClearReadWrite(Stride.Graphics.Buffer,Stride.Core.Mathematics.UInt4)">
+  ClearReadWrite(Buffer, UInt4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L960"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears a Read-Write Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReadWrite(Buffer buffer, UInt4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>The Buffer to clear. It must have been created with read-write / unordered access flags.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Stride.Core.Mathematics.UInt4.html">UInt4</a></dt>
+    <dd><p>The value to use to clear the Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">buffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">buffer</code> must support Unordered Access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearReadWrite_" data-uid="Stride.Graphics.CommandList.ClearReadWrite*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearReadWrite_Stride_Graphics_Buffer_Stride_Core_Mathematics_Vector4_" data-uid="Stride.Graphics.CommandList.ClearReadWrite(Stride.Graphics.Buffer,Stride.Core.Mathematics.Vector4)">
+  ClearReadWrite(Buffer, Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L926"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears a Read-Write Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReadWrite(Buffer buffer, Vector4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>The Buffer to clear. It must have been created with read-write / unordered access flags.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Stride.Core.Mathematics.Vector4.html">Vector4</a></dt>
+    <dd><p>The value to use to clear the Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">buffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">buffer</code> must support Unordered Access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearReadWrite_" data-uid="Stride.Graphics.CommandList.ClearReadWrite*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearReadWrite_Stride_Graphics_Texture_Stride_Core_Mathematics_Int4_" data-uid="Stride.Graphics.CommandList.ClearReadWrite(Stride.Graphics.Texture,Stride.Core.Mathematics.Int4)">
+  ClearReadWrite(Texture, Int4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L994"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears a Read-Write Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReadWrite(Texture texture, Int4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The Texture to clear. It must have been created with read-write / unordered access flags.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Stride.Core.Mathematics.Int4.html">Int4</a></dt>
+    <dd><p>The value to use to clear the Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">texture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">texture</code> must support Unordered Access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearReadWrite_" data-uid="Stride.Graphics.CommandList.ClearReadWrite*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearReadWrite_Stride_Graphics_Texture_Stride_Core_Mathematics_UInt4_" data-uid="Stride.Graphics.CommandList.ClearReadWrite(Stride.Graphics.Texture,Stride.Core.Mathematics.UInt4)">
+  ClearReadWrite(Texture, UInt4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L1011"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears a Read-Write Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReadWrite(Texture texture, UInt4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The Texture to clear. It must have been created with read-write / unordered access flags.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Stride.Core.Mathematics.UInt4.html">UInt4</a></dt>
+    <dd><p>The value to use to clear the Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">texture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">texture</code> must support Unordered Access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearReadWrite_" data-uid="Stride.Graphics.CommandList.ClearReadWrite*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearReadWrite_Stride_Graphics_Texture_Stride_Core_Mathematics_Vector4_" data-uid="Stride.Graphics.CommandList.ClearReadWrite(Stride.Graphics.Texture,Stride.Core.Mathematics.Vector4)">
+  ClearReadWrite(Texture, Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L977"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears a Read-Write Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReadWrite(Texture texture, Vector4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The Texture to clear. It must have been created with read-write / unordered access flags.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Stride.Core.Mathematics.Vector4.html">Vector4</a></dt>
+    <dd><p>The value to use to clear the Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">texture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">texture</code> must support Unordered Access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_ClearState_" data-uid="Stride.Graphics.CommandList.ClearState*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ClearState" data-uid="Stride.Graphics.CommandList.ClearState">
+  ClearState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears and restores the state of the Graphics Device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Close_" data-uid="Stride.Graphics.CommandList.Close*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Close" data-uid="Stride.Graphics.CommandList.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates that recording to the Command List has finished.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledCommandList Close()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.CompiledCommandList.html">CompiledCommandList</a></dt>
+    <dd><p>A <a class="xref" href="Stride.Graphics.CompiledCommandList.html">CompiledCommandList</a> representing the frozen list of recorded commands
+that can be executed at a later time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_Close_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Compiled Command Lists are not supported for Direct3D 11. This method returns a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/default">default</a> empty one.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Copy_" data-uid="Stride.Graphics.CommandList.Copy*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Copy_Stride_Graphics_GraphicsResource_Stride_Graphics_GraphicsResource_" data-uid="Stride.Graphics.CommandList.Copy(Stride.Graphics.GraphicsResource,Stride.Graphics.GraphicsResource)">
+  Copy(GraphicsResource, GraphicsResource)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L1029"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the data from a Graphics Resource to another.
+Views are ignored and the full underlying data is copied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Copy(GraphicsResource source, GraphicsResource destination)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The source Graphics Resource.</p>
+</dd>
+    <dt><code>destination</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The destination Graphics Resource.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">source</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">destination</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_CopyCount_" data-uid="Stride.Graphics.CommandList.CopyCount*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_CopyCount_Stride_Graphics_Buffer_Stride_Graphics_Buffer_System_Int32_" data-uid="Stride.Graphics.CommandList.CopyCount(Stride.Graphics.Buffer,Stride.Graphics.Buffer,System.Int32)">
+  CopyCount(Buffer, Buffer, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L1197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies data from a Buffer holding variable length data to another Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyCount(Buffer sourceBuffer, Buffer destinationBuffer, int destinationOffsetInBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceBuffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>A Structured Buffer created with either <a class="xref" href="Stride.Graphics.BufferFlags.html#Stride_Graphics_BufferFlags_StructuredAppendBuffer">StructuredAppendBuffer</a> or <a class="xref" href="Stride.Graphics.BufferFlags.html#Stride_Graphics_BufferFlags_StructuredCounterBuffer">StructuredCounterBuffer</a>.
+These types of resources have hidden counters tracking &quot;how many&quot; records have been written.</p>
+</dd>
+    <dt><code>destinationBuffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>A Buffer resource to copy the data to. Any Buffer that other copy commands, such as <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_Copy_Stride_Graphics_GraphicsResource_Stride_Graphics_GraphicsResource_">Copy(GraphicsResource, GraphicsResource)</a> or <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_CopyRegion_Stride_Graphics_GraphicsResource_System_Int32_System_Nullable_Stride_Graphics_ResourceRegion__Stride_Graphics_GraphicsResource_System_Int32_System_Int32_System_Int32_System_Int32_">CopyRegion(GraphicsResource, int, ResourceRegion?, GraphicsResource, int, int, int, int)</a>, are able to write to.</p>
+</dd>
+    <dt><code>destinationOffsetInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The offset in bytes from the start of <code class="paramref">destinationBuffer</code> to write 32-bit <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">uint</a>
+structure (vertex) count from <code class="paramref">sourceBuffer</code>.
+The offset must be aligned to 4 bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">sourceBuffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">destinationBuffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_CopyMultisample_" data-uid="Stride.Graphics.CommandList.CopyMultisample*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_CopyMultisample_Stride_Graphics_Texture_System_Int32_Stride_Graphics_Texture_System_Int32_Stride_Graphics_PixelFormat_" data-uid="Stride.Graphics.CommandList.CopyMultisample(Stride.Graphics.Texture,System.Int32,Stride.Graphics.Texture,System.Int32,Stride.Graphics.PixelFormat)">
+  CopyMultisample(Texture, int, Texture, int, PixelFormat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L1092"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the data from a multi-sampled Texture (which is resolved) to another Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyMultisample(Texture sourceMultiSampledTexture, int sourceSubResourceIndex, Texture destinationTexture, int destinationSubResourceIndex, PixelFormat format = PixelFormat.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceMultiSampledTexture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The source multi-sampled Texture.</p>
+</dd>
+    <dt><code>sourceSubResourceIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sub-resource index of the source Texture.</p>
+</dd>
+    <dt><code>destinationTexture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The destination Texture.</p>
+</dd>
+    <dt><code>destinationSubResourceIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sub-resource index of the destination Texture.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>A <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a> that indicates how the multi-sampled Texture will be resolved to a single-sampled resource.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_CopyMultisample_Stride_Graphics_Texture_System_Int32_Stride_Graphics_Texture_System_Int32_Stride_Graphics_PixelFormat__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The <code class="paramref">sourceMultiSampledTexture</code> and <code class="paramref">destinationTexture</code> must have the same dimensions.
+In addition, they must have compatible formats. There are three scenarios for this:</p>
+<table><thead><tr><th class="term">Scenario</th><th class="description">Requirements</th></tr></thead><tbody><tr><td class="term">Source and destination are prestructured and typed</td><td class="description">
+     Both the source and destination must have identical formats and that format must be specified in the <code class="paramref">format</code> parameter.
+   </td></tr><tr><td class="term">One resource is prestructured and typed and the other is prestructured and typeless</td><td class="description">
+     The typed resource must have a format that is compatible with the typeless resource (i.e. the typed resource is <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32_Float">R32_Float</a>
+     and the typeless resource is <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32_Typeless">R32_Typeless</a>).
+     The format of the typed resource must be specified in the <code class="paramref">format</code> parameter.
+   </td></tr><tr><td class="term">Source and destination are prestructured and typeless</td><td class="description">
+     <p>
+       Both the source and destination must have the same typeless format (i.e. both must have <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32_Typeless">R32_Typeless</a>), and the
+       <code class="paramref">format</code> parameter must specify a format that is compatible with the source and destination
+       (i.e. if both are <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32_Typeless">R32_Typeless</a> then <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32_Float">R32_Float</a> could be specified in the
+       <code class="paramref">format</code> parameter).
+     </p>
+     <p>
+       For example, given the <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R16G16B16A16_Typeless">R16G16B16A16_Typeless</a> format:
+<pre><code>   &lt;ul&gt;&lt;li&gt;The source (or destination) format could be &lt;xref href=&quot;Stride.Graphics.PixelFormat.R16G16B16A16_UNorm&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;.&lt;/li&gt;&lt;li&gt;The destination (or source) format could be &lt;xref href=&quot;Stride.Graphics.PixelFormat.R16G16B16A16_Float&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;.&lt;/li&gt;&lt;/ul&gt;
+ &lt;/p&gt;
+</code></pre>
+   </td></tr></tbody></table>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">sourceMultiSampledTexture</code> is not a multi-sampled Texture.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">sourceMultiSampledTexture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">destinationTexture</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_CopyRegion_" data-uid="Stride.Graphics.CommandList.CopyRegion*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_CopyRegion_Stride_Graphics_GraphicsResource_System_Int32_System_Nullable_Stride_Graphics_ResourceRegion__Stride_Graphics_GraphicsResource_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.CopyRegion(Stride.Graphics.GraphicsResource,System.Int32,System.Nullable{Stride.Graphics.ResourceRegion},Stride.Graphics.GraphicsResource,System.Int32,System.Int32,System.Int32,System.Int32)">
+  CopyRegion(GraphicsResource, int, ResourceRegion?, GraphicsResource, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L1158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies a region from a source Graphics Resource to a destination Graphics Resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyRegion(GraphicsResource source, int sourceSubResourceIndex, ResourceRegion? sourceRegion, GraphicsResource destination, int destinationSubResourceIndex, int dstX = 0, int dstY = 0, int dstZ = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The source Graphics Resource to copy from.</p>
+</dd>
+    <dt><code>sourceSubResourceIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the sub-resource of <code class="paramref">source</code> to copy from.</p>
+</dd>
+    <dt><code>sourceRegion</code> <a class="xref" href="Stride.Graphics.ResourceRegion.html">ResourceRegion</a>?</dt>
+    <dd><p>
+  An optional <a class="xref" href="Stride.Graphics.ResourceRegion.html">ResourceRegion</a> that defines the source sub-resource to copy from.
+  Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> the entire source sub-resource is copied.
+</p>
+<p>
+  An empty region makes this method to not perform a copy operation.
+  It is considered empty if the top value is greater than or equal to the bottom value,
+  or the left value is greater than or equal to the right value, or the front value is greater than or equal to the back value.
+</p>
+</dd>
+    <dt><code>destination</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The destination Graphics Resource to copy to.</p>
+</dd>
+    <dt><code>destinationSubResourceIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the sub-resource of <code class="paramref">destination</code> to copy to.</p>
+</dd>
+    <dt><code>dstX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The X-coordinate of the upper left corner of the destination region.</p>
+</dd>
+    <dt><code>dstY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The Y-coordinate of the upper left corner of the destination region. For a 1D sub-resource, this must be zero.</p>
+</dd>
+    <dt><code>dstZ</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The Z-coordinate of the upper left corner of the destination region. For a 1D or 2D sub-resource, this must be zero.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_CopyRegion_Stride_Graphics_GraphicsResource_System_Int32_System_Nullable_Stride_Graphics_ResourceRegion__Stride_Graphics_GraphicsResource_System_Int32_System_Int32_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The <code class="paramref">sourceRegion</code> must be within the size of the source resource.
+  The destination offsets, (<code class="paramref">dstX</code>, <code class="paramref">dstY</code>, and <code class="paramref">dstZ</code>),
+  allow the source region to be offset when writing into the destination resource;
+  however, the dimensions of the source region and the offsets must be within the size of the resource.
+</p>
+<p>
+  If the resources are Buffers, all coordinates are in bytes; if the resources are Textures, all coordinates are in texels.
+</p>
+<p>
+  <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_CopyRegion_Stride_Graphics_GraphicsResource_System_Int32_System_Nullable_Stride_Graphics_ResourceRegion__Stride_Graphics_GraphicsResource_System_Int32_System_Int32_System_Int32_System_Int32_">CopyRegion(GraphicsResource, int, ResourceRegion?, GraphicsResource, int, int, int, int)</a> performs the copy on the GPU (similar to a <code>memcpy</code> by the CPU). As a consequence,
+  the source and destination resources:
+  <ul><li>Must be different sub-resources (although they can be from the same Graphics Resource).</li><li>Must be the same type.</li><li>
+      Must have compatible formats (identical or from the same type group). For example, a <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32G32B32_Float">R32G32B32_Float</a> Texture
+      can be copied to a <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32G32B32_UInt">R32G32B32_UInt</a> Texture since both of these formats are in the
+      <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R32G32B32_Typeless">R32G32B32_Typeless</a> group.
+    </li><li>May not be currently mapped with <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a>.</li></ul>
+
+<p>
+  <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_CopyRegion_Stride_Graphics_GraphicsResource_System_Int32_System_Nullable_Stride_Graphics_ResourceRegion__Stride_Graphics_GraphicsResource_System_Int32_System_Int32_System_Int32_System_Int32_">CopyRegion(GraphicsResource, int, ResourceRegion?, GraphicsResource, int, int, int, int)</a> only supports copy; it doesn't support any stretch, color key, or blend.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">source</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">destination</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_Dispatch_" data-uid="Stride.Graphics.CommandList.Dispatch*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Dispatch_Stride_Graphics_Buffer_System_Int32_" data-uid="Stride.Graphics.CommandList.Dispatch(Stride.Graphics.Buffer,System.Int32)">
+  Dispatch(Buffer, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L700"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispatches a Compute Shader workload using an Indirect Buffer, allowing the thread group count to be determined at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispatch(Buffer indirectBuffer, int offsetInBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>indirectBuffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>A Buffer containing the dispatch parameters, structured as <code>(threadCountX, threadCountY, threadCountZ)</code>.</p>
+</dd>
+    <dt><code>offsetInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The byte offset within the <code class="paramref">indirectBuffer</code> where the dispatch parameters are located.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">indirectBuffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_Dispatch_" data-uid="Stride.Graphics.CommandList.Dispatch*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Dispatch_System_Int32_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.Dispatch(System.Int32,System.Int32,System.Int32)">
+  Dispatch(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispatches a Compute Shader workload with the specified number of thread groups in each dimension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispatch(int threadCountX, int threadCountY, int threadCountZ)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadCountX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of thread groups in the X dimension.</p>
+</dd>
+    <dt><code>threadCountY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of thread groups in the Y dimension.</p>
+</dd>
+    <dt><code>threadCountZ</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of thread groups in the Z dimension.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Draw_" data-uid="Stride.Graphics.CommandList.Draw*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Draw_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.Draw(System.Int32,System.Int32)">
+  Draw(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L717"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues a non-indexed draw call, rendering a sequence of vertices directly from the bound Vertex Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Draw(int vertexCount, int startVertexLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of vertices to draw.</p>
+</dd>
+    <dt><code>startVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of the first vertex in the Vertex Buffer to begin rendering from;
+it could also be used as the first vertex id generated for a shader parameter marked with the <code>SV_TargetId</code> system-value semantic.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_DrawAuto_" data-uid="Stride.Graphics.CommandList.DrawAuto*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DrawAuto" data-uid="Stride.Graphics.CommandList.DrawAuto">
+  DrawAuto()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L731"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues a draw call for geometry of unknown size, typically used with Vertex or Index Buffers populated via Stream Output.
+The vertex count is inferred from the data written by the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawAuto()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_DrawIndexed_" data-uid="Stride.Graphics.CommandList.DrawIndexed*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DrawIndexed_System_Int32_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)">
+  DrawIndexed(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L746"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues an indexed non-instanced draw call using the currently bound Index Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexed(int indexCount, int startIndexLocation = 0, int baseVertexLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>indexCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices to draw.</p>
+</dd>
+    <dt><code>startIndexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The location of the first index read by the GPU from the Index Buffer.</p>
+</dd>
+    <dt><code>baseVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value added to each index before reading a vertex from the Vertex Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_DrawIndexedInstanced_" data-uid="Stride.Graphics.CommandList.DrawIndexedInstanced*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DrawIndexedInstanced_Stride_Graphics_Buffer_System_Int32_" data-uid="Stride.Graphics.CommandList.DrawIndexedInstanced(Stride.Graphics.Buffer,System.Int32)">
+  DrawIndexedInstanced(Buffer, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L782"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues an indexed instanced draw call using an Indirect Arguments Buffer, allowing parameters to be determined at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexedInstanced(Buffer argumentsBuffer, int alignedByteOffsetForArgs = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>argumentsBuffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>A Buffer containing the draw parameters (index count, instance count, etc.).</p>
+</dd>
+    <dt><code>alignedByteOffsetForArgs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset within the <code class="paramref">argumentsBuffer</code> where the draw arguments are located.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">argumentsBuffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_DrawIndexedInstanced_" data-uid="Stride.Graphics.CommandList.DrawIndexedInstanced*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DrawIndexedInstanced_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.DrawIndexedInstanced(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  DrawIndexedInstanced(int, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues an indexed instanced draw call, rendering multiple instances of indexed geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexedInstanced(int indexCountPerInstance, int instanceCount, int startIndexLocation = 0, int baseVertexLocation = 0, int startInstanceLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>indexCountPerInstance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices read from the Index Buffer for each instance.</p>
+</dd>
+    <dt><code>instanceCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of instances to draw.</p>
+</dd>
+    <dt><code>startIndexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The location of the first index read by the GPU from the Index Buffer.</p>
+</dd>
+    <dt><code>baseVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value added to each index before reading a vertex from the Vertex Buffer.</p>
+</dd>
+    <dt><code>startInstanceLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value added to each index before reading per-instance data from a Vertex Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_DrawInstanced_" data-uid="Stride.Graphics.CommandList.DrawInstanced*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DrawInstanced_Stride_Graphics_Buffer_System_Int32_" data-uid="Stride.Graphics.CommandList.DrawInstanced(Stride.Graphics.Buffer,System.Int32)">
+  DrawInstanced(Buffer, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L818"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues a non-indexed instanced draw call using an Indirect Arguments Buffer, allowing parameters to be determined at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawInstanced(Buffer argumentsBuffer, int alignedByteOffsetForArgs = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>argumentsBuffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>A Buffer containing the draw parameters (vertex count, instance count, etc.).</p>
+</dd>
+    <dt><code>alignedByteOffsetForArgs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset within the <code class="paramref">argumentsBuffer</code> where the draw arguments are located.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">argumentsBuffer</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_DrawInstanced_" data-uid="Stride.Graphics.CommandList.DrawInstanced*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_DrawInstanced_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.DrawInstanced(System.Int32,System.Int32,System.Int32,System.Int32)">
+  DrawInstanced(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L800"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues a non-indexed instanced draw call, rendering multiple instances of geometry using a Vertex Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawInstanced(int vertexCountPerInstance, int instanceCount, int startVertexLocation = 0, int startInstanceLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexCountPerInstance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of vertices to draw per instance.</p>
+</dd>
+    <dt><code>instanceCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of instances to draw.</p>
+</dd>
+    <dt><code>startVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the first vertex in the Vertex Buffer.</p>
+</dd>
+    <dt><code>startInstanceLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value added to each index before reading per-instance data from a Vertex Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_EndProfile_" data-uid="Stride.Graphics.CommandList.EndProfile*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_EndProfile" data-uid="Stride.Graphics.CommandList.EndProfile">
+  EndProfile()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L869"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks the end of a profile section previously started by a call to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EndProfile()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_EndProfile_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Each call to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a> must be matched with a corresponding call to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_EndProfile">EndProfile()</a>,
+  which defines a region of code that can be identified with a name and possibly a color in a compatible
+  profiling tool.
+</p>
+<p>
+  A pair of calls to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a> and <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_EndProfile">EndProfile()</a> can be nested inside a call
+  to <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_BeginProfile_Stride_Core_Mathematics_Color4_System_String_">BeginProfile(Color4, string)</a> and <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_EndProfile">EndProfile()</a> in an upper level in the call stack.
+  This allows to form a hierarchy of profile sections.
+</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Flush_" data-uid="Stride.Graphics.CommandList.Flush*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Flush" data-uid="Stride.Graphics.CommandList.Flush">
+  Flush()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes and executes the Command List.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_MapSubResource_" data-uid="Stride.Graphics.CommandList.MapSubResource*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.MapSubResource(Stride.Graphics.GraphicsResource,System.Int32,Stride.Graphics.MapMode,System.Boolean,System.Int32,System.Int32)">
+  MapSubResource(GraphicsResource, int, MapMode, bool, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L623"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maps a sub-resource of a Graphics Resource to be accessible from CPU memory, and in the process denies the GPU access to that sub-resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MappedResource MapSubResource(GraphicsResource resource, int subResourceIndex, MapMode mapMode, bool doNotWait = false, int offsetInBytes = 0, int lengthInBytes = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resource</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The Graphics Resource to map to CPU memory.</p>
+</dd>
+    <dt><code>subResourceIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the sub-resource to get access to.</p>
+</dd>
+    <dt><code>mapMode</code> <a class="xref" href="Stride.Graphics.MapMode.html">MapMode</a></dt>
+    <dd><p>A value of <a class="xref" href="Stride.Graphics.MapMode.html">MapMode</a> indicating the way the Graphics Resource should be mapped to CPU memory.</p>
+</dd>
+    <dt><code>doNotWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating if this method will return immediately if the Graphics Resource is still being used by the GPU for writing
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. The default value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, which means the method will wait until the GPU is done.</p>
+</dd>
+    <dt><code>offsetInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The offset in bytes from the beginning of the mapped memory of the sub-resource.
+Defaults to 0, which means it is mapped from the beginning.</p>
+</dd>
+    <dt><code>lengthInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length in bytes of the memory to map from the sub-resource.
+Defaults to 0, which means the entire sub-resource is mapped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.MappedResource.html">MappedResource</a></dt>
+    <dd><p>A <a class="xref" href="Stride.Graphics.MappedResource.html">MappedResource</a> structure pointing to the GPU resource mapped for CPU access.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a>s:</p>
+<p>
+  Usage Instructions:
+  <ul><li>
+      Ensure the <code class="paramref">resource</code> was created with the correct usage.
+      For example, you should specify <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Dynamic">Dynamic</a> if you plan to update its contents frequently.
+    </li><li>This method can be called multiple times, and nested calls are supported.</li><li>
+      Use appropriate <a class="xref" href="Stride.Graphics.MapMode.html">MapMode</a> values when calling <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a>.
+      For example, <a class="xref" href="Stride.Graphics.MapMode.html#Stride_Graphics_MapMode_WriteDiscard">WriteDiscard</a> indicates that the old data in the Buffer can be discarded.
+    </li></ul>
+
+<p>
+  Restrictions:
+  <ul><li>
+      The <a class="xref" href="Stride.Graphics.MappedResource.html">MappedResource</a> returned by <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a> is not guaranteed to be consistent across different calls.
+      Applications should not rely on the address being the same unless <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a> is persistently nested.
+    </li><li><a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a> may invalidate the CPU cache to ensure that CPU reads reflect any modifications made by the GPU.</li><li>If your graphics API supports them, use fences for synchronization to ensure proper coordination between the CPU and GPU.</li><li>Ensure that the Buffer data is properly aligned to meet the requirements of your graphics API.</li><li>
+      Stick to simple usage models (e.g., <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Dynamic">Dynamic</a> for <strong>upload</strong>, <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>,
+      <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Staging">Staging</a> for <strong>readback</strong>) unless advanced models are necessary for your application.
+    </li></ul>
+
+<p>For <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>s:</p>
+<p>
+  Usage Instructions:
+  <ul><li>
+      Ensure to use the correct data format when writing data to the Texture.
+    </li><li>Textures can have multiple mipmap levels. You must specify which level you want to map with <code class="paramref">subResourceIndex</code>.</li><li>
+      Use appropriate <a class="xref" href="Stride.Graphics.MapMode.html">MapMode</a> values when calling <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a>.
+      For example, <a class="xref" href="Stride.Graphics.MapMode.html#Stride_Graphics_MapMode_WriteDiscard">WriteDiscard</a> is usually used to update dynamic Textures.
+    </li></ul>
+
+<p>
+  Restrictions:
+  <ul><li>
+      Not all <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a>s are compatible with mapping operations.
+    </li><li>Concurrent access to a Texture both from the CPU and the GPU may not be allowed and might require careful synchronization.</li><li>Ensure that the Texture data is properly aligned to meet the requirements of your graphics API and the <a class="xref" href="Stride.Graphics.Texture.html#Stride_Graphics_Texture_Format">Format</a>.</li></ul>
+
+<p>For <strong>State Objects</strong> (like <a class="xref" href="Stride.Graphics.PipelineState.html">PipelineState</a>, <a class="xref" href="Stride.Graphics.SamplerState.html">SamplerState</a>, etc):</p>
+<p>
+  Restrictions:
+  <ul><li>
+      State Objects are not usually mapped nor directly updated. They are created with specific configurations and are treated
+      as immutable from now on. Instead, if you need changes, you can create a new State Object with the updated settings.
+    </li></ul>
+
+<p>After updating the <code class="paramref">resource</code>, call <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_UnmapSubResource_Stride_Graphics_MappedResource_">UnmapSubResource(MappedResource)</a> to release the CPU pointer and allow the GPU to access the updated data.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">resource</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_New_" data-uid="Stride.Graphics.CommandList.New*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_New_Stride_Graphics_GraphicsDevice_" data-uid="Stride.Graphics.CommandList.New(Stride.Graphics.GraphicsDevice)">
+  New(GraphicsDevice)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommandList New(GraphicsDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The Graphics Device.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a></dt>
+    <dd><p>The new instance of <a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Creation of additional Command Lists is not supported for Direct3D 11.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_OnDestroyed_" data-uid="Stride.Graphics.CommandList.OnDestroyed*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_OnDestroyed_System_Boolean_" data-uid="Stride.Graphics.CommandList.OnDestroyed(System.Boolean)">
+  OnDestroyed(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a> has been detected to be internally destroyed,
+or when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Destroy">Destroy()</a> methad has been called. Raises the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Destroyed">Destroyed</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroyed(bool immediately = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>immediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating whether the resource should be destroyed immediately (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>),
+or if it can be deferred until it's safe to do so (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_OnDestroyed_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method releases the underlying native resources (<span class="xref">Silk.NET.Direct3D11.ID3D11Resource</span> and <span class="xref">Silk.NET.Direct3D11.ID3D11DeviceChild</span>).</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_Reset_" data-uid="Stride.Graphics.CommandList.Reset*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_Reset" data-uid="Stride.Graphics.CommandList.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L462"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets a Command List back to its initial state as if a new Command List was just created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_Reset_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Deferred execution of Command Lists is not supported for Direct3D 11. This method does nothing.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_ResetTargets_" data-uid="Stride.Graphics.CommandList.ResetTargets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ResetTargets" data-uid="Stride.Graphics.CommandList.ResetTargets">
+  ResetTargets()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unbinds all the Render Targets and the Depth-Stencil Buffer from the output-merger stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetTargets()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_ResourceBarrierTransition_" data-uid="Stride.Graphics.CommandList.ResourceBarrierTransition*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_ResourceBarrierTransition_Stride_Graphics_GraphicsResource_Stride_Graphics_GraphicsResourceState_" data-uid="Stride.Graphics.CommandList.ResourceBarrierTransition(Stride.Graphics.GraphicsResource,Stride.Graphics.GraphicsResourceState)">
+  ResourceBarrierTransition(GraphicsResource, GraphicsResourceState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L656"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a barrier that transitions a Graphics Resource to a new state, ensuring proper synchronization
+between different GPU operations accessing the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResourceBarrierTransition(GraphicsResource resource, GraphicsResourceState newState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resource</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The Graphics Resource to transition to a different state.</p>
+</dd>
+    <dt><code>newState</code> <a class="xref" href="Stride.Graphics.GraphicsResourceState.html">GraphicsResourceState</a></dt>
+    <dd><p>The new state of <code class="paramref">resource</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_ResourceBarrierTransition_Stride_Graphics_GraphicsResource_Stride_Graphics_GraphicsResourceState__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The Direct3D 11 implementation does not have synchronization barriers for Graphics Resource transitions.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetBlendFactor_" data-uid="Stride.Graphics.CommandList.SetBlendFactor*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetBlendFactor_Stride_Core_Mathematics_Color4_" data-uid="Stride.Graphics.CommandList.SetBlendFactor(Stride.Core.Mathematics.Color4)">
+  SetBlendFactor(Color4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the blend factors for blending each of the RGBA components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBlendFactor(Color4 blendFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blendFactor</code> <a class="xref" href="Stride.Core.Mathematics.Color4.html">Color4</a></dt>
+    <dd><p>
+  A <a class="xref" href="Stride.Core.Mathematics.Color4.html">Color4</a> representing the blend factors for each RGBA component.
+  The blend factors modulate values for the pixel Shader, Render Target, or both.
+</p>
+<p>
+  If you have configured the Blend-State object with <a class="xref" href="Stride.Graphics.Blend.html#Stride_Graphics_Blend_BlendFactor">BlendFactor</a> or <a class="xref" href="Stride.Graphics.Blend.html#Stride_Graphics_Blend_InverseBlendFactor">InverseBlendFactor</a>,
+  the blending stage uses the blend factors specified by <code class="paramref">blendFactor</code>.
+  Otherwise, the blend factors will not be taken into account for the blend stage.
+</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetPipelineState_Stride_Graphics_PipelineState_">SetPipelineState(PipelineState)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Stride_Graphics_CommandList_SetDescriptorSets_" data-uid="Stride.Graphics.CommandList.SetDescriptorSets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetDescriptorSets_System_Int32_Stride_Graphics_DescriptorSet___" data-uid="Stride.Graphics.CommandList.SetDescriptorSets(System.Int32,Stride.Graphics.DescriptorSet[])">
+  SetDescriptorSets(int, DescriptorSet[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L672"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds an array of Descriptor Sets at the specified index in the current pipeline's Root Signature,
+making shader resources available for rendering operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDescriptorSets(int index, DescriptorSet[] descriptorSets)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The starting slot where the Descriptor Sets will be bound. This is not used in the Direct3D 11 implementation.</p>
+</dd>
+    <dt><code>descriptorSets</code> <a class="xref" href="Stride.Graphics.DescriptorSet.html">DescriptorSet</a>[]</dt>
+    <dd><p>An array of Descriptor Sets containing resource bindings (such as Textures, Samplers, and Constant Buffers)
+to be used by the currently active Pipeline State.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetIndexBuffer_" data-uid="Stride.Graphics.CommandList.SetIndexBuffer*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetIndexBuffer_Stride_Graphics_Buffer_System_Int32_System_Boolean_" data-uid="Stride.Graphics.CommandList.SetIndexBuffer(Stride.Graphics.Buffer,System.Int32,System.Boolean)">
+  SetIndexBuffer(Buffer, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L638"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the Index Buffer for the input assembler stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIndexBuffer(Buffer buffer, int offset, bool is32bits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>The Index Buffer to set. It must have been created with <a class="xref" href="Stride.Graphics.BufferFlags.html#Stride_Graphics_BufferFlags_IndexBuffer">IndexBuffer</a>.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Offset (in bytes) from the start of the Index Buffer to the first index to use.</p>
+</dd>
+    <dt><code>is32bits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating if the Index Buffer elements are 32-bit indices (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>), or 16-bit (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetPipelineState_" data-uid="Stride.Graphics.CommandList.SetPipelineState*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetPipelineState_Stride_Graphics_PipelineState_" data-uid="Stride.Graphics.CommandList.SetPipelineState(Stride.Graphics.PipelineState)">
+  SetPipelineState(PipelineState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L594"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the configuration of the graphics pipeline which, among other things, control the shaders, input layout,
+render states, and output settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPipelineState(PipelineState pipelineState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pipelineState</code> <a class="xref" href="Stride.Graphics.PipelineState.html">PipelineState</a></dt>
+    <dd><p>The Pipeline State object to set. Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to use the default one.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.PipelineState.html">PipelineState</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Stride_Graphics_CommandList_SetRenderTarget_" data-uid="Stride.Graphics.CommandList.SetRenderTarget*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetRenderTarget_Stride_Graphics_Texture_Stride_Graphics_Texture_" data-uid="Stride.Graphics.CommandList.SetRenderTarget(Stride.Graphics.Texture,Stride.Graphics.Texture)">
+  SetRenderTarget(Texture, Texture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a Depth-Stencil Buffer and a single Render Target to the output-merger stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRenderTarget(Texture depthStencilView, Texture renderTargetView)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthStencilView</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A view of the Depth-Stencil Buffer to bind.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the currently bound Depth-Stencil Buffer.</p>
+</dd>
+    <dt><code>renderTargetView</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A view of the Render Target to bind.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the currently bound Render Targets.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetRenderTarget_Stride_Graphics_Texture_Stride_Graphics_Texture__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-use-a-render-target">Use a Render Target</a>
+in the manual for more information.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetRenderTargetAndViewport_" data-uid="Stride.Graphics.CommandList.SetRenderTargetAndViewport*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_" data-uid="Stride.Graphics.CommandList.SetRenderTargetAndViewport(Stride.Graphics.Texture,Stride.Graphics.Texture)">
+  SetRenderTargetAndViewport(Texture, Texture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a Depth-Stencil Buffer and a single Render Target to the output-merger stage,
+setting also the viewport according to their dimensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRenderTargetAndViewport(Texture depthStencilView, Texture renderTargetView)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthStencilView</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A view of the Depth-Stencil Buffer to bind.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the currently bound Depth-Stencil Buffer.</p>
+</dd>
+    <dt><code>renderTargetView</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A view of the Render Target to bind.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the currently bound Render Targets.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-use-a-render-target">Use a Render Target</a>
+in the manual for more information.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetRenderTargets_" data-uid="Stride.Graphics.CommandList.SetRenderTargets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetRenderTargets_Stride_Graphics_Texture_System_ReadOnlySpan_Stride_Graphics_Texture__" data-uid="Stride.Graphics.CommandList.SetRenderTargets(Stride.Graphics.Texture,System.ReadOnlySpan{Stride.Graphics.Texture})">
+  SetRenderTargets(Texture, params ReadOnlySpan&lt;Texture&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a Depth-Stencil Buffer and one or more Render Targets atomically to the output-merger stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRenderTargets(Texture depthStencilView, params ReadOnlySpan&lt;Texture&gt; renderTargetViews)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthStencilView</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A view of the Depth-Stencil Buffer to bind.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the currently bound Depth-Stencil Buffer.</p>
+</dd>
+    <dt><code>renderTargetViews</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Texture.html">Texture</a>&gt;</dt>
+    <dd><p>A set of Render Targets to bind.
+Specify an empty collection to unbind the currently bound Render Targets.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetRenderTargets_Stride_Graphics_Texture_System_ReadOnlySpan_Stride_Graphics_Texture___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-use-a-render-target">Use a Render Target</a>
+in the manual for more information.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">renderTargetViews</code> contains too many Render Targets to set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_SetRenderTargets_" data-uid="Stride.Graphics.CommandList.SetRenderTargets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetRenderTargets_System_ReadOnlySpan_Stride_Graphics_Texture__" data-uid="Stride.Graphics.CommandList.SetRenderTargets(System.ReadOnlySpan{Stride.Graphics.Texture})">
+  SetRenderTargets(ReadOnlySpan&lt;Texture&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds one or more Render Targets atomically to the output-merger stage,
+and unbinds any Depth-Stencil Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRenderTargets(ReadOnlySpan&lt;Texture&gt; renderTargetViews)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderTargetViews</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Texture.html">Texture</a>&gt;</dt>
+    <dd><p>A set of Render Targets to bind.
+Specify an empty collection to unbind the currently bound Render Targets.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetRenderTargets_System_ReadOnlySpan_Stride_Graphics_Texture___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-use-a-render-target">Use a Render Target</a>
+in the manual for more information.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">renderTargetViews</code> contains too many Render Targets to set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_SetRenderTargetsAndViewport_" data-uid="Stride.Graphics.CommandList.SetRenderTargetsAndViewport*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetRenderTargetsAndViewport_Stride_Graphics_Texture_System_ReadOnlySpan_Stride_Graphics_Texture__" data-uid="Stride.Graphics.CommandList.SetRenderTargetsAndViewport(Stride.Graphics.Texture,System.ReadOnlySpan{Stride.Graphics.Texture})">
+  SetRenderTargetsAndViewport(Texture, params ReadOnlySpan&lt;Texture&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a Depth-Stencil Buffer and one or more Render Targets atomically to the output-merger stage,
+setting also the viewport according to their dimensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRenderTargetsAndViewport(Texture depthStencilView, params ReadOnlySpan&lt;Texture&gt; renderTargetViews)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthStencilView</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A view of the Depth-Stencil Buffer to bind.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the currently bound Depth-Stencil Buffer.</p>
+</dd>
+    <dt><code>renderTargetViews</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Texture.html">Texture</a>&gt;</dt>
+    <dd><p>A set of Render Targets to bind.
+Specify an empty collection to unbind the currently bound Render Targets.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetRenderTargetsAndViewport_Stride_Graphics_Texture_System_ReadOnlySpan_Stride_Graphics_Texture___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-use-a-render-target">Use a Render Target</a>
+in the manual for more information.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">renderTargetViews</code> contains too many Render Targets to set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_SetRenderTargetsAndViewport_" data-uid="Stride.Graphics.CommandList.SetRenderTargetsAndViewport*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture__" data-uid="Stride.Graphics.CommandList.SetRenderTargetsAndViewport(System.ReadOnlySpan{Stride.Graphics.Texture})">
+  SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds one or more Render Targets atomically to the output-merger stage,
+setting also the viewport according to their dimensions.
+Also unbinds the current Depth-Stencil Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRenderTargetsAndViewport(ReadOnlySpan&lt;Texture&gt; renderTargetViews)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderTargetViews</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Texture.html">Texture</a>&gt;</dt>
+    <dd><p>A set of Render Targets to bind.
+Specify an empty collection to unbind the currently bound Render Targets.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetRenderTargetsAndViewport_System_ReadOnlySpan_Stride_Graphics_Texture___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-use-a-render-target">Use a Render Target</a>
+in the manual for more information.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">renderTargetViews</code> contains too many Render Targets to set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_SetScissorRectangle_" data-uid="Stride.Graphics.CommandList.SetScissorRectangle*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetScissorRectangle_Stride_Core_Mathematics_Rectangle__" data-uid="Stride.Graphics.CommandList.SetScissorRectangle(Stride.Core.Mathematics.Rectangle@)">
+  SetScissorRectangle(in Rectangle)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a single scissor rectangle to the rasterizer stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetScissorRectangle(in Rectangle rectangle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rectangle</code> <a class="xref" href="Stride.Core.Mathematics.Rectangle.html">Rectangle</a></dt>
+    <dd><p>The scissor rectangle to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetScissorRectangle_Stride_Core_Mathematics_Rectangle___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-set-the-scissor">Set the scissor</a>
+in the manual for more information.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetScissorRectangles_" data-uid="Stride.Graphics.CommandList.SetScissorRectangles*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetScissorRectangles_System_ReadOnlySpan_Stride_Core_Mathematics_Rectangle__" data-uid="Stride.Graphics.CommandList.SetScissorRectangles(System.ReadOnlySpan{Stride.Core.Mathematics.Rectangle})">
+  SetScissorRectangles(params ReadOnlySpan&lt;Rectangle&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a set of scissor rectangles to the rasterizer stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetScissorRectangles(params ReadOnlySpan&lt;Rectangle&gt; scissorRectangles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scissorRectangles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Core.Mathematics.Rectangle.html">Rectangle</a>&gt;</dt>
+    <dd><p>The set of scissor rectangles to bind.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_CommandList_SetScissorRectangles_System_ReadOnlySpan_Stride_Core_Mathematics_Rectangle___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://doc.stride3d.net/latest/en/manual/graphics/low-level-api/textures-and-render-textures.html#code-set-the-scissor">Set the scissor</a>
+in the manual for more information.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">scissorRectangles</code> contains too many scissor rectangles to set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_SetStencilReference_" data-uid="Stride.Graphics.CommandList.SetStencilReference*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetStencilReference_System_Int32_" data-uid="Stride.Graphics.CommandList.SetStencilReference(System.Int32)">
+  SetStencilReference(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the reference value for Depth-Stencil tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStencilReference(int stencilReference)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stencilReference</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Reference value to perform against when doing a Depth-Stencil test.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetPipelineState_Stride_Graphics_PipelineState_">SetPipelineState(PipelineState)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Stride_Graphics_CommandList_SetStreamTargets_" data-uid="Stride.Graphics.CommandList.SetStreamTargets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetStreamTargets_System_ReadOnlySpan_Stride_Graphics_Buffer__" data-uid="Stride.Graphics.CommandList.SetStreamTargets(System.ReadOnlySpan{Stride.Graphics.Buffer})">
+  SetStreamTargets(params ReadOnlySpan&lt;Buffer&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the stream output Buffers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStreamTargets(params ReadOnlySpan&lt;Buffer&gt; buffers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a>&gt;</dt>
+    <dd><p>The Buffers to set for stream output.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty array to unset any bound output Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetVertexBuffer_" data-uid="Stride.Graphics.CommandList.SetVertexBuffer*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetVertexBuffer_System_Int32_Stride_Graphics_Buffer_System_Int32_System_Int32_" data-uid="Stride.Graphics.CommandList.SetVertexBuffer(System.Int32,Stride.Graphics.Buffer,System.Int32,System.Int32)">
+  SetVertexBuffer(int, Buffer, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a Vertex Buffer for the input assembler stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertexBuffer(int index, Buffer buffer, int offset, int stride)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The input slot for binding the Vertex Buffer;
+The maximum number of input slots available depends on platform and graphics profile, usually 16 or 32.</p>
+</dd>
+    <dt><code>buffer</code> <a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a></dt>
+    <dd><p>The Vertex Buffer to set. It must have been created with <a class="xref" href="Stride.Graphics.BufferFlags.html#Stride_Graphics_BufferFlags_VertexBuffer">VertexBuffer</a>.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of bytes between the first element of the Vertex Buffer and the first element that will be used.</p>
+</dd>
+    <dt><code>stride</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size (in bytes) of the elements that are to be used from the Vertex Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetViewport_" data-uid="Stride.Graphics.CommandList.SetViewport*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetViewport_Stride_Graphics_Viewport__" data-uid="Stride.Graphics.CommandList.SetViewport(Stride.Graphics.Viewport@)">
+  SetViewport(in Viewport)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a single viewport to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetViewport(in Viewport viewport)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewport</code> <a class="xref" href="Stride.Graphics.Viewport.html">Viewport</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_SetViewports_" data-uid="Stride.Graphics.CommandList.SetViewports*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_SetViewports_System_ReadOnlySpan_Stride_Graphics_Viewport__" data-uid="Stride.Graphics.CommandList.SetViewports(System.ReadOnlySpan{Stride.Graphics.Viewport})">
+  SetViewports(params ReadOnlySpan&lt;Viewport&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds an array of viewports to the rasterizer stage of the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetViewports(params ReadOnlySpan&lt;Viewport&gt; viewports)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewports</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="Stride.Graphics.Viewport.html">Viewport</a>&gt;</dt>
+    <dd><p>The viewports to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">viewports</code> contains too many viewports to set.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_CommandList_UnmapSubResource_" data-uid="Stride.Graphics.CommandList.UnmapSubResource*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_UnmapSubResource_Stride_Graphics_MappedResource_" data-uid="Stride.Graphics.CommandList.UnmapSubResource(Stride.Graphics.MappedResource)">
+  UnmapSubResource(MappedResource)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/CommandList.cs/#L633"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unmaps a sub-resource of a Graphics Resource, which was previously mapped to CPU memory with <a class="xref" href="Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_MapSubResource_Stride_Graphics_GraphicsResource_System_Int32_Stride_Graphics_MapMode_System_Boolean_System_Int32_System_Int32_">MapSubResource(GraphicsResource, int, MapMode, bool, int, int)</a>,
+and in the process re-enables the GPU access to that sub-resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnmapSubResource(MappedResource mappedResource)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mappedResource</code> <a class="xref" href="Stride.Graphics.MappedResource.html">MappedResource</a></dt>
+    <dd><p>A <a class="xref" href="Stride.Graphics.MappedResource.html">MappedResource</a> structure identifying the sub-resource to unmap.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_UnsetRenderTargets_" data-uid="Stride.Graphics.CommandList.UnsetRenderTargets*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_UnsetRenderTargets" data-uid="Stride.Graphics.CommandList.UnsetRenderTargets">
+  UnsetRenderTargets()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unsets the Render Targets currently bound to the pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnsetRenderTargets()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_CommandList_WriteTimestamp_" data-uid="Stride.Graphics.CommandList.WriteTimestamp*"></a>
+
+  <h3 id="Stride_Graphics_CommandList_WriteTimestamp_Stride_Graphics_QueryPool_System_Int32_" data-uid="Stride.Graphics.CommandList.WriteTimestamp(Stride.Graphics.QueryPool,System.Int32)">
+  WriteTimestamp(QueryPool, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L834"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Submits a GPU timestamp Query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTimestamp(QueryPool queryPool, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>queryPool</code> <a class="xref" href="Stride.Graphics.QueryPool.html">QueryPool</a></dt>
+    <dd><p>The <a class="xref" href="Stride.Graphics.QueryPool.html">QueryPool</a> owning the Query.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the Query to write.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/CommandList.Direct3D11.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,950 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum PixelFormat | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum PixelFormat | Stride API ">
+      
+      <meta name="description" content="Defines various types of pixel formats.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_PixelFormat.md&amp;value=---%0Auid%3A%20Stride.Graphics.PixelFormat%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.PixelFormat">
+
+
+
+
+  <h1 id="Stride_Graphics_PixelFormat" data-uid="Stride.Graphics.PixelFormat" class="text-break">
+Enum PixelFormat  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride/Graphics/PixelFormat.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines various types of pixel formats.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public enum PixelFormat</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsPointer__1___0__">UnsafeUtilities.AsPointer&lt;T&gt;(ref T)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__">UnsafeUtilities.AsReadOnlySpan&lt;TFrom, TTo&gt;(scoped ref TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__System_Int32_">UnsafeUtilities.AsReadOnlySpan&lt;TFrom, TTo&gt;(scoped ref TFrom, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__">UnsafeUtilities.AsSpan&lt;TFrom, TTo&gt;(scoped ref TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__System_Int32_">UnsafeUtilities.AsSpan&lt;TFrom, TTo&gt;(scoped ref TFrom, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__2___0__">UnsafeUtilities.As&lt;TFrom, TTo&gt;(ref TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_BitCast__2___0_">UnsafeUtilities.BitCast&lt;TFrom, TTo&gt;(TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_">UnsafeUtilities.As&lt;T&gt;(object?)</a>
+  </div>
+  </dd></dl>
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Stride_Graphics_PixelFormat_A8_UNorm"><code>A8_UNorm = 65</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 8-bit <strong>unsigned normalized integer</strong> format <strong>for alpha only</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B5G5R5A1_UNorm"><code>B5G5R5A1_UNorm = 86</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 16-bit <strong>unsigned normalized integer</strong> format that supports <strong>5 bits for each color channel and 1-bit alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B5G6R5_UNorm"><code>B5G6R5_UNorm = 85</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 16-bit <strong>unsigned normalized integer</strong> format that supports <strong>5 bits for blue, 6 bits for green, and 5 bits for red</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B8G8R8A8_Typeless"><code>B8G8R8A8_Typeless = 90</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit format that supports <strong>8 bits for each color channel and 8-bit alpha</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B8G8R8A8_UNorm"><code>B8G8R8A8_UNorm = 87</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits for each color channel and 8-bit alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B8G8R8A8_UNorm_SRgb"><code>B8G8R8A8_UNorm_SRgb = 91</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits for each color channel and 8-bit alpha</strong>,
+where the data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B8G8R8X8_Typeless"><code>B8G8R8X8_Typeless = 92</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit format that supports 8 bits for each color channel, and 8 bits are unused.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B8G8R8X8_UNorm"><code>B8G8R8X8_UNorm = 88</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits for each color channel</strong> and a remaining unused 8-bit part.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_B8G8R8X8_UNorm_SRgb"><code>B8G8R8X8_UNorm_SRgb = 93</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit unsigned-normalized standard RGB format that supports 8 bits for each color channel, and 8 bits are unused.
+,
+where the data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC1_Typeless"><code>BC1_Typeless = 70</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit block-compression format using the <strong>BC1 encoding</strong>, where
+the alpha channel is optionally encoded in 1 bit (either fully opaque or fully transparent), and the RGB color is encoded
+in 2 bits per pixel to select from a 4-color (or 3-color + transparent) color palette.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC1 format is tipically used for diffuse maps that do not require alpha transparency or where the alpha channel is not important.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC1_UNorm"><code>BC1_UNorm = 71</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>unsigned normalized integer</strong> block-compression format
+using the <strong>BC1 encoding</strong>, where the alpha channel is optionally encoded in 1 bit (either fully opaque or fully transparent),
+and the RGB color is encoded in 2 bits per pixel to select from a 4-color (or 3-color + transparent) color palette.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC1 format is tipically used for diffuse maps that do not require alpha transparency or where the alpha channel is not important.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC1_UNorm_SRgb"><code>BC1_UNorm_SRgb = 72</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>unsigned normalized integer</strong> block-compression format <strong>for sRGB data</strong>
+using the <strong>BC1 encoding</strong>, where the alpha channel is optionally encoded in 1 bit (either fully opaque or fully transparent),
+and the RGB color is encoded in 2 bits per pixel to select from a 4-color (or 3-color + transparent) color palette.
+<br>
+The data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC1 format is tipically used for diffuse maps that do not require alpha transparency or where the alpha channel is not important.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC2_Typeless"><code>BC2_Typeless = 73</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit block-compression format using the <strong>BC2 encoding</strong>,
+where the alpha channel is encoded in 4 bits (for 16 levels of transparency, quantized, not interpolated),
+and the RGB color is encoded in 2 bits per pixel to select from a 4-color color palette.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC2 format is tipically used for UI, decals, or sharp masks, although it is now considered somewhat outdated.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC2_UNorm"><code>BC2_UNorm = 74</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format
+using the <strong>BC2 encoding</strong>, where the alpha channel is encoded in 4 bits (for 16 levels of transparency, quantized, not interpolated),
+and the RGB color is encoded in 2 bits per pixel to select from a 4-color color palette.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC2 format is tipically used for UI, decals, or sharp masks, although it is now considered somewhat outdated.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC2_UNorm_SRgb"><code>BC2_UNorm_SRgb = 75</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format <strong>for sRGB data</strong>
+using the <strong>BC2 encoding</strong>, where the alpha channel is encoded in 4 bits (for 16 levels of transparency, quantized, not interpolated),
+and the RGB color is encoded in 2 bits per pixel to select from a 4-color color palette.
+<br>
+The data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC2 format is tipically used for UI, decals, or sharp masks, although it is now considered somewhat outdated.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC3_Typeless"><code>BC3_Typeless = 76</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit block-compression format using the <strong>BC3 encoding</strong>,
+where the alpha channel is encoded as two 8-bit alpha endpoints and 3 bits per pixel to select
+from 6 interpolated alpha values, and the RGB color is encoded in 2 bits per pixel to select from a 4-color color palette.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC3 format is tipically used for smooth and soft transparency, like foliage, shadows, hair, or smoke.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC3_UNorm"><code>BC3_UNorm = 77</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format
+using the <strong>BC3 encoding</strong>, where the alpha channel is encoded as two 8-bit alpha endpoints and 3 bits per pixel to select
+from 6 interpolated alpha values, and the RGB color is encoded in 2 bits per pixel to select from a 4-color color palette.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC3 format is tipically used for smooth and soft transparency, like foliage, shadows, hair, or smoke.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC3_UNorm_SRgb"><code>BC3_UNorm_SRgb = 78</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format <strong>for sRGB data</strong>
+using the <strong>BC3 encoding</strong>, where the alpha channel is encoded as two 8-bit alpha endpoints and 3 bits per pixel to select
+from 6 interpolated alpha values, and the RGB color is encoded in 2 bits per pixel to select from a 4-color color palette.
+<br>
+The data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC3 format is tipically used for smooth and soft transparency, like foliage, shadows, hair, or smoke.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC4_SNorm"><code>BC4_SNorm = 81</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 64-bit <strong>signed normalized integer</strong> block-compression format
+using the <strong>BC4 encoding</strong>, where the data is encoded as two 8-bit endpoints and 3 bits per pixel to select
+from 6 interpolated values.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC4 format is tipically used for grayscale Textures, smooth masks, or heightmaps.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC4_Typeless"><code>BC4_Typeless = 79</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 64-bit  block-compression format using the <strong>BC4 encoding</strong>,
+where the data is encoded as two 8-bit endpoints and 3 bits per pixel to select from 6 interpolated values.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC4 format is tipically used for grayscale Textures, smooth masks, or heightmaps.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC4_UNorm"><code>BC4_UNorm = 80</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 64-bit <strong>unsigned normalized integer</strong> block-compression format
+using the <strong>BC4 encoding</strong>, where the data is encoded as two 8-bit endpoints and 3 bits per pixel to select
+from 6 interpolated values.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC4 format is tipically used for grayscale Textures, smooth masks, or heightmaps.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC5_SNorm"><code>BC5_SNorm = 84</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 128-bit <strong>signed normalized integer</strong> block-compression format
+using the <strong>BC5 encoding</strong>, where for each channel the data is encoded as two 8-bit endpoints and 3 bits per pixel
+to select from 6 interpolated values. This is essentially a BC4 format for each channel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC5 format is tipically used for dual-channel data like normal maps (X and Y) or vector fields.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC5_Typeless"><code>BC5_Typeless = 82</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 128-bit block-compression format using the <strong>BC5 encoding</strong>,
+where for each channel the data is encoded as two 8-bit endpoints and 3 bits per pixel to select from 6 interpolated values.
+This is essentially a BC4 format for each channel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC5 format is tipically used for dual-channel data like normal maps (X and Y) or vector fields.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC5_UNorm"><code>BC5_UNorm = 83</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format
+using the <strong>BC5 encoding</strong>, where for each channel the data is encoded as two 8-bit endpoints and 3 bits per pixel
+to select from 6 interpolated values. This is essentially a BC4 format for each channel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC5 format is tipically used for dual-channel data like normal maps (X and Y) or vector fields.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC6H_Sf16"><code>BC6H_Sf16 = 96</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 128-bit <strong>signed floating-point</strong> block-compression format <strong>for full-range HDR data</strong>
+using the <strong>BC6H encoding</strong>, where the color channels are encoded as 16-bit <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a> values and
+selected and interpolated according to the BC6H algorithm.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC6H format is best used for HDR environment maps, lightprobes, or any Texture with values beyond the [0,1] range.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC6H_Typeless"><code>BC6H_Typeless = 94</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 128-bit block-compression format <strong>for HDR data</strong>
+using the <strong>BC6H encoding</strong>, where the color channels are encoded as 16-bit <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a> values and
+selected and interpolated according to the BC6H algorithm.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC6H format is best used for HDR environment maps, lightprobes, or any Texture with values beyond the [0,1] range.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC6H_Uf16"><code>BC6H_Uf16 = 95</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 128-bit <strong>unsigned floating-point</strong> block-compression format <strong>for positive-only HDR data</strong>
+using the <strong>BC6H encoding</strong>, where the color channels are encoded as 16-bit <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a> values and
+selected and interpolated according to the BC6H algorithm.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC6H format is best used for HDR environment maps, lightprobes, or any Texture with values beyond the [0,1] range.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC7_Typeless"><code>BC7_Typeless = 97</code></dt>
+  
+  <dd><p>A <strong>three- or four-component</strong>, 128-bit block-compression format using the <strong>BC7 encoding</strong>,
+where it can encode the RGB channels and an optional 1-8-bit alpha channel according to the BC7 algorithm.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC7 format is best for high-quality color Textures, like albedo maps, UI, or detailed color surfaces.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC7_UNorm"><code>BC7_UNorm = 98</code></dt>
+  
+  <dd><p>A <strong>three- or four-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format
+using the <strong>BC7 encoding</strong>, where it can encode the RGB channels and an optional 1-8-bit alpha channel according to the BC7 algorithm.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC7 format is best for high-quality color Textures, like albedo maps, UI, or detailed color surfaces.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_BC7_UNorm_SRgb"><code>BC7_UNorm_SRgb = 99</code></dt>
+  
+  <dd><p>A <strong>three- or four-component</strong>, 128-bit <strong>unsigned normalized integer</strong> block-compression format <strong>for sRGB data</strong>
+using the <strong>BC7 encoding</strong>, where it can encode the RGB channels and an optional 1-8-bit alpha channel according to the BC7 algorithm.
+<br>
+The data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+The BC7 format is best for high-quality color Textures, like albedo maps, UI, or detailed color surfaces.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_D16_UNorm"><code>D16_UNorm = 55</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit <strong>unsigned normalized integer</strong> format that supports <strong>16 bits for depth</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_D24_UNorm_S8_UInt"><code>D24_UNorm_S8_UInt = 45</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit format consisting of a <strong>24-bit unsigned normalized integer component for depth</strong>
+and a <strong>8-bit unsigned integer component for stencil</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_D32_Float"><code>D32_Float = 40</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 32-bit <strong>floating-point format</strong> that supports <strong>32 bits for depth</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_D32_Float_S8X24_UInt"><code>D32_Float_S8X24_UInt = 20</code></dt>
+  
+  <dd><p>A composite format consisting of a <strong>32-bit floating-point component</strong> intended for <strong>depth</strong>, plus a <strong>8-bit unsigned-integer component</strong>
+intended for <strong>stencil values</strong> in an additional 32-bit part where the last 24 bits are unused (for padding).</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_EAC_R11_Signed"><code>EAC_R11_Signed = 1093</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 64-bit block-compression format using the <strong>EAC R11 signed encoding</strong>,
+where the red channel is encoded as a signed 11-bit value per pixel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Typically used for single-channel signed data such as normal maps or vector fields (reconstructing the second component).</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_EAC_R11_Unsigned"><code>EAC_R11_Unsigned = 1092</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 64-bit block-compression format using the <strong>EAC R11 unsigned encoding</strong>,
+where the red channel is encoded as an unsigned 11-bit value per pixel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Typically used for single-channel data such as heightmaps or masks.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_EAC_RG11_Signed"><code>EAC_RG11_Signed = 1095</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 128-bit block-compression format using the <strong>EAC RG11 signed encoding</strong>,
+where the red and green channels are encoded as signed 11-bit values per pixel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Used for dual-channel signed data such as normal maps or vector fields.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_EAC_RG11_Unsigned"><code>EAC_RG11_Unsigned = 1094</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 128-bit block-compression format using the <strong>EAC RG11 unsigned encoding</strong>,
+where the red and green channels are encoded as unsigned 11-bit values per pixel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Used for dual-channel data such as normal maps or vector fields.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_ETC1"><code>ETC1 = 1088</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 64-bit block-compression format using the <strong>ETC1 encoding</strong>,
+where the RGB color is encoded in 4 bits per pixel. Does not support alpha.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Commonly used for opaque textures on mobile devices.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_ETC2_RGB"><code>ETC2_RGB = 1089</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 64-bit block-compression format using the <strong>ETC2 RGB encoding</strong>,
+where the RGB color is encoded in 4 bits per pixel. Does not support alpha.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Widely supported on modern mobile and embedded GPUs for general color data.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_ETC2_RGBA"><code>ETC2_RGBA = 1090</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit block-compression format using the <strong>ETC2 RGBA encoding</strong>,
+where the RGB color is encoded in 4 bits per pixel and the alpha channel is encoded in 4 bits per pixel.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Used for Textures requiring full alpha support on mobile and embedded devices.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_ETC2_RGBA_SRgb"><code>ETC2_RGBA_SRgb = 1096</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit block-compression format using the <strong>ETC2 RGBA encoding</strong> for <strong>sRGB data</strong>,
+where the RGB color is encoded in 4 bits per pixel and the alpha channel is encoded in 4 bits per pixel.
+<br>
+The data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Tipically used for color textures with transparency on mobile and embedded devices.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_ETC2_RGB_A1"><code>ETC2_RGB_A1 = 1091</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit block-compression format using the <strong>ETC2 RGB+A1 encoding</strong>,
+where the RGB color is encoded in 4 bits per pixel and the alpha channel is encoded as a single bit (1-bit alpha mask).
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Suitable for Textures with simple transparency (fully opaque or fully transparent pixels).</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_ETC2_RGB_SRgb"><code>ETC2_RGB_SRgb = 1097</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 64-bit block-compression format using the <strong>ETC2 RGB encoding</strong> for <strong>sRGB data</strong>,
+where the RGB color is encoded in 4 bits per pixel.
+<br>
+The data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.
+<br>
+The block-compression formats operate only on 4x4 blocks, so Textures using this format <strong>must have dimensions that are multiples of 4</strong>.
+<br>
+Tipically used for color textures without alpha on mobile and embedded devices.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_G8R8_G8B8_UNorm"><code>G8R8_G8B8_UNorm = 69</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format packed in a form <strong>analogous to the YUY2 format</strong>.
+Each 32-bit block describes a pair of pixels (<code>RGB</code>, <code>RGB</code>) with 8-bit RGB components where the R/B values are repeated,
+and the G values are unique to each pixel.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_None"><code>None = 0</code></dt>
+  
+  <dd><p>The format is not known.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R10G10B10A2_Typeless"><code>R10G10B10A2_Typeless = 23</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit format that supports <strong>10 bits for each color and 2 bits for alpha</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R10G10B10A2_UInt"><code>R10G10B10A2_UInt = 25</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned integer format</strong> that supports <strong>10 bits for each color and 2 bits for alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R10G10B10A2_UNorm"><code>R10G10B10A2_UNorm = 24</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>10 bits for each color and 2 bits for alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R10G10B10_Xr_Bias_A2_UNorm"><code>R10G10B10_Xr_Bias_A2_UNorm = 89</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit format consisting of <strong>10 bits for each of the red, green, and blue channels</strong> encoded as
+2.8-biased fixed-point numbers and <strong>2-bit alpha channel</strong>.
+The <strong>XR bias</strong> applies a fixed scale and offset to the red channel to better represent HDR luminance. This is useful when
+tone mapping has already been applied and the image is ready for display.
+<br>
+This format is intended for use as a <strong>presentation format</strong>, particularly for High Dynamic Range (HDR) content. It
+is read-only for shaders and not renderable directly. Instead, it is typically converted from a compatible format (like <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R10G10B10A2_UNorm">R10G10B10A2_UNorm</a>).</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R11G11B10_Float"><code>R11G11B10_Float = 26</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 32-bit <strong>partial-precision floating-point format</strong> that supports
+<strong>11 bits for the red and green channels and 10 bits for the blue channel</strong>.
+<br>
+It uses a variant of <code>s10e5</code> (sign bit, 10-bit mantissa, and 5-bit biased (15) exponent), but there are no sign bits, and there is a 5-bit biased (15) exponent
+for each channel, 6-bit mantissa for R and G, and a 5-bit mantissa for B.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16B16A16_Float"><code>R16G16B16A16_Float = 10</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>floating-point format</strong> that supports <strong>16 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16B16A16_SInt"><code>R16G16B16A16_SInt = 14</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>signed integer format</strong> that supports <strong>16 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16B16A16_SNorm"><code>R16G16B16A16_SNorm = 13</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>signed normalized integer</strong> format that supports <strong>16 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16B16A16_Typeless"><code>R16G16B16A16_Typeless = 9</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit format that supports <strong>16 bits per channel</strong> including alpha.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16B16A16_UInt"><code>R16G16B16A16_UInt = 12</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>unsigned integer format</strong> that supports <strong>16 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16B16A16_UNorm"><code>R16G16B16A16_UNorm = 11</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 64-bit <strong>unsigned normalized integer</strong> format that supports <strong>16 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16_Float"><code>R16G16_Float = 34</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit <strong>floating-point format</strong> that supports <strong>16 bits for the red channel and 16 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16_SInt"><code>R16G16_SInt = 38</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit <strong>signed integer format</strong> that supports <strong>16 bits for the red channel and 16 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16_SNorm"><code>R16G16_SNorm = 37</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit <strong>signed normalized integer</strong> format that supports <strong>16 bits for the red channel and 16 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16_Typeless"><code>R16G16_Typeless = 33</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit format that supports <strong>16 bits for the red channel and 16 bits for the green channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16_UInt"><code>R16G16_UInt = 36</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit <strong>unsigned integer format</strong> that supports <strong>16 bits for the red channel and 16 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16G16_UNorm"><code>R16G16_UNorm = 35</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>16 bits for the red channel and 16 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16_Float"><code>R16_Float = 54</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit <strong>floating-point format</strong> that supports <strong>16 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16_SInt"><code>R16_SInt = 59</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit <strong>signed integer format</strong> that supports <strong>16 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16_SNorm"><code>R16_SNorm = 58</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit <strong>signed normalized integer</strong> format that supports <strong>16 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16_Typeless"><code>R16_Typeless = 53</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit format that supports <strong>16 bits for the red channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16_UInt"><code>R16_UInt = 57</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit <strong>unsigned integer format</strong> that supports <strong>16 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R16_UNorm"><code>R16_UNorm = 56</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 16-bit <strong>unsigned normalized integer</strong> format that supports <strong>16 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R1_UNorm"><code>R1_UNorm = 66</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 1-bit <strong>unsigned normalized integer</strong> format that supports <strong>1 bit for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R24G8_Typeless"><code>R24G8_Typeless = 44</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit format that supports <strong>24 bits for the red channel and 8 bits for the green channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R24_UNorm_X8_Typeless"><code>R24_UNorm_X8_Typeless = 46</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit format consisting of a <strong>24-bit unsigned normalized integer red component</strong>
+and a <strong>8-bit typeless component</strong>.
+<br>
+This format has a <strong>typeless</strong> component, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32A32_Float"><code>R32G32B32A32_Float = 2</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>floating-point format</strong> that supports <strong>32 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32A32_SInt"><code>R32G32B32A32_SInt = 4</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>signed integer format</strong> that supports <strong>32 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32A32_Typeless"><code>R32G32B32A32_Typeless = 1</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit format that supports <strong>32 bits per channel</strong> including alpha.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32A32_UInt"><code>R32G32B32A32_UInt = 3</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 128-bit <strong>unsigned integer format</strong> that supports <strong>32 bits per channel</strong> including alpha.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32_Float"><code>R32G32B32_Float = 6</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 96-bit <strong>floating-point format</strong> that supports <strong>32 bits per channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32_SInt"><code>R32G32B32_SInt = 8</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 96-bit <strong>signed integer format</strong> that supports <strong>32 bits per channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32_Typeless"><code>R32G32B32_Typeless = 5</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 96-bit format that supports <strong>32 bits per channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32B32_UInt"><code>R32G32B32_UInt = 7</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 96-bit <strong>unsigned integer format</strong> that supports <strong>32 bits per channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32_Float"><code>R32G32_Float = 16</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 64-bit <strong>floating-point format</strong> that supports <strong>32 bits for the red channel and 32 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32_SInt"><code>R32G32_SInt = 18</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 64-bit <strong>signed integer format</strong> that supports <strong>32 bits for the red channel and 32 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32_Typeless"><code>R32G32_Typeless = 15</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 64-bit format that supports <strong>32 bits for the red channel and 32 bits for the green channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G32_UInt"><code>R32G32_UInt = 17</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 64-bit <strong>unsigned integer format</strong> that supports <strong>32 bits for the red channel and 32 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32G8X24_Typeless"><code>R32G8X24_Typeless = 19</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 64-bit format that supports <strong>32 bits for the red channel, 8 bits for the green channel, and 24 bits are unused</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32_Float"><code>R32_Float = 41</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 32-bit <strong>floating-point format</strong> that supports <strong>32 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32_Float_X8X24_Typeless"><code>R32_Float_X8X24_Typeless = 21</code></dt>
+  
+  <dd><p>A composite format consisting of a <strong>32-bit floating-point component for the red channel</strong>, and <strong>two typeless components (8-bit and 24-bit respectively)</strong>
+in an additional 32-bit part.
+<br>
+This is commonly used to create Views for Depth-Stencil Buffers where a shader needs to access the depth.
+<br>
+This format has <strong>typeless</strong> components, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32_SInt"><code>R32_SInt = 43</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 32-bit <strong>signed integer format</strong> that supports <strong>32 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32_Typeless"><code>R32_Typeless = 39</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 32-bit format that supports <strong>32 bits for the red channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R32_UInt"><code>R32_UInt = 42</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 32-bit <strong>unsigned integer format</strong> that supports <strong>32 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8B8A8_SInt"><code>R8G8B8A8_SInt = 32</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>signed integer format</strong> that supports <strong>8 bits per channel including alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8B8A8_SNorm"><code>R8G8B8A8_SNorm = 31</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>signed normalized integer</strong> format that supports <strong>8 bits per channel including alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8B8A8_Typeless"><code>R8G8B8A8_Typeless = 27</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit format that supports <strong>8 bits per channel including alpha</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8B8A8_UInt"><code>R8G8B8A8_UInt = 30</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned integer format</strong> that supports <strong>8 bits per channel including alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8B8A8_UNorm"><code>R8G8B8A8_UNorm = 28</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits per channel including alpha</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8B8A8_UNorm_SRgb"><code>R8G8B8A8_UNorm_SRgb = 29</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits per channel including alpha</strong>,
+where the data is stored in <strong>sRGB color space</strong>, and the GPU will automatically convert it to linear space when sampling in a shader.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8_B8G8_UNorm"><code>R8G8_B8G8_UNorm = 68</code></dt>
+  
+  <dd><p>A <strong>four-component</strong>, 32-bit <strong>unsigned normalized integer</strong> format packed in a form <strong>analogous to the UYVY format</strong>.
+Each 32-bit block describes a pair of pixels (<code>RGB</code>, <code>RGB</code>) with 8-bit RGB components where the R/B values are repeated,
+and the G values are unique to each pixel.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8_SInt"><code>R8G8_SInt = 52</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 16-bit <strong>signed integer format</strong> that supports <strong>8 bits for the red channel and 8 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8_SNorm"><code>R8G8_SNorm = 51</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 16-bit <strong>signed normalized integer</strong> format that supports <strong>8 bits for the red channel and 8 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8_Typeless"><code>R8G8_Typeless = 48</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 16-bit format that supports <strong>8 bits for the red channel and 8 bits for the green channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8_UInt"><code>R8G8_UInt = 50</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 16-bit <strong>unsigned integer format</strong> that supports <strong>8 bits for the red channel and 8 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8G8_UNorm"><code>R8G8_UNorm = 49</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 16-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits for the red channel and 8 bits for the green channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8_SInt"><code>R8_SInt = 64</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 8-bit <strong>signed integer format</strong> that supports <strong>8 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8_SNorm"><code>R8_SNorm = 63</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 8-bit <strong>signed normalized integer</strong> format that supports <strong>8 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8_Typeless"><code>R8_Typeless = 60</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 8-bit format that supports <strong>8 bits for the red channel</strong>.
+<br>
+This format is <strong>typeless</strong>, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8_UInt"><code>R8_UInt = 62</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 8-bit <strong>unsigned integer format</strong> that supports <strong>8 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R8_UNorm"><code>R8_UNorm = 61</code></dt>
+  
+  <dd><p>A <strong>single-component</strong>, 8-bit <strong>unsigned normalized integer</strong> format that supports <strong>8 bits for the red channel</strong>.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_R9G9B9E5_Sharedexp"><code>R9G9B9E5_Sharedexp = 67</code></dt>
+  
+  <dd><p>A <strong>three-component</strong>, 32-bit <strong>partial-precision floating-point format</strong> that supports
+<strong>9 bits per channel</strong> with the same <strong>5-bit shared exponent</strong>.
+<br>
+It uses a variant of <code>s10e5</code> (sign bit, 10-bit mantissa, and 5-bit biased (15) exponent), but there are no sign bits, and the exponent is shared.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_X24_Typeless_G8_UInt"><code>X24_Typeless_G8_UInt = 47</code></dt>
+  
+  <dd><p>A <strong>two-component</strong>, 32-bit format consisting of a <strong>24-bit typeless component</strong>
+and a <strong>8-bit unsigned integer green component</strong>.
+<br>
+This format has a <strong>typeless</strong> component, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+    <dt id="Stride_Graphics_PixelFormat_X32_Typeless_G8X24_UInt"><code>X32_Typeless_G8X24_UInt = 22</code></dt>
+  
+  <dd><p>A composite format consisting of an <strong>unused 32-bit typeless component</strong>, plus an <strong>8-bit unsigned-integer component</strong>
+in an additional 32-bit part where the last 24 bits are unused (for padding).
+<br>
+This is commonly used to create Views for Depth-Stencil Buffers where a shader needs to access the stencil values.
+<br>
+This format has <strong>typeless</strong> components, i.e. it just specifies the memory layout, but can be used for different types of data,
+such as floating-point, unsigned-integer, or signed-integer.</p>
+</dd>
+  </dl>
+
+
+  <h2 id="Stride_Graphics_PixelFormat_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+  Pixel formats describe the layout and type of data stored in a pixel, including the number of channels, bits per channel,
+  and whether the data is normalized or typeless.
+</p>
+<p>The suffixes in the names indicate the type of data:</p>
+<table><tbody><tr><td class="term">UNorm (Unsigned Normalized)</td><td class="description">
+      Values are stored as <strong>unsigned integers</strong>, but <strong>interpreted as floating-point values between <code>0.0</code> and <code>1.0</code></strong>.
+      For example, <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R8G8B8A8_UNorm">R8G8B8A8_UNorm</a> stores 8-bit values per channel, where 0 maps to 0.0 and 255 maps to 1.0.
+      <br>
+      Common for color Textures and Render Targets.
+    </td></tr><tr><td class="term">SNorm (Signed Normalized)</td><td class="description">
+      Values are stored as <strong>signed integers</strong>, but <strong>interpreted as floating-point values between <code>-1.0</code> and <code>1.0</code></strong>.
+      For example, <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R8G8_SNorm">R8G8_SNorm</a> stores 8-bit values per channel, where -128 to -1.0 and 127 to ~1.0.
+      <br>
+      Useful for storing normals or vectors.
+    </td></tr><tr><td class="term">Typeless</td><td class="description">
+      The format is not fully defined —it’s <strong>just a memory layout</strong>.
+      <br>
+      Multiple Views (e.g., Shader Resource Views, Render Target Views) can be created over a Graphics Resource with a typeless format
+      with different interpretations. For example, <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R8G8B8A8_Typeless">R8G8B8A8_Typeless</a> can be viewed as <code>UNorm</code>, <code>UNorm_SRgb</code>,
+      or <code>UInt</code>, depending on how the resource is bound.
+      <br>
+      Great for flexibility, like rendering in linear space and sampling in sRGB.
+    </td></tr><tr><td class="term">UInt / SInt</td><td class="description">
+      <strong>Unsigned (<code>UInt</code>) or signed (<code>SInt</code>) integer values. No normalization</strong> —values are used as-is.
+      <br>
+      Often used for IDs, masks, or counters.
+    </td></tr><tr><td class="term">Float</td><td class="description">
+      Stores values as <strong>IEEE floating-point numbers</strong>.
+      <br>
+      Used when precision and range are important, like Depth Buffers or HDR color.
+    </td></tr><tr><td class="term">SRgb</td><td class="description">
+      Stores <strong>color data</strong> in the <strong>sRGB color space</strong>.
+      When sampling, the GPU automatically converts it to linear space, and when writing the data, it converts it back to sRGB
+      (applies <em>gamma correction</em>).
+      <br>
+      It is typically used for textures that represent colors.
+    </td></tr></tbody></table>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride/Graphics/PixelFormat.cs/#L96" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

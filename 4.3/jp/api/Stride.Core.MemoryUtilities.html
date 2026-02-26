@@ -1,0 +1,950 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MemoryUtilities | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MemoryUtilities | Stride API ">
+      
+      <meta name="description" content="Provides a set of static utility methods for memory management.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Core_MemoryUtilities.md&amp;value=---%0Auid%3A%20Stride.Core.MemoryUtilities%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Core.MemoryUtilities">
+
+
+
+  <h1 id="Stride_Core_MemoryUtilities" data-uid="Stride.Core.MemoryUtilities" class="text-break">
+Class MemoryUtilities  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a set of static utility methods for memory management.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class MemoryUtilities</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">MemoryUtilities</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Core_MemoryUtilities_Allocate_" data-uid="Stride.Core.MemoryUtilities.Allocate*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_Allocate_System_Int32_System_Int32_" data-uid="Stride.Core.MemoryUtilities.Allocate(System.Int32,System.Int32)">
+  Allocate(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates an aligned memory buffer of the requested size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint Allocate(int sizeInBytes, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size of the buffer to allocate.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>A pointer to the allocated aligned buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_MemoryUtilities_Allocate_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To free the buffer allocated by this method, use the <a class="xref" href="Stride.Core.MemoryUtilities.html#Stride_Core_MemoryUtilities_Free_System_IntPtr_">Free(nint)</a> method</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_AllocateCleared_" data-uid="Stride.Core.MemoryUtilities.AllocateCleared*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_AllocateCleared_System_Int32_System_Byte_System_Int32_" data-uid="Stride.Core.MemoryUtilities.AllocateCleared(System.Int32,System.Byte,System.Int32)">
+  AllocateCleared(int, byte, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates an aligned memory buffer of the requested size, and clears its contents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint AllocateCleared(int sizeInBytes, byte clearValue = 0, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size of the buffer to allocate.</p>
+</dd>
+    <dt><code>clearValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The value to use to clear the buffer. Default is 0.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>A pointer to the allocated aligned buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_MemoryUtilities_AllocateCleared_System_Int32_System_Byte_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To free the buffer allocated by this method, use the <a class="xref" href="Stride.Core.MemoryUtilities.html#Stride_Core_MemoryUtilities_Free_System_IntPtr_">Free(nint)</a> method</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_Clear_" data-uid="Stride.Core.MemoryUtilities.Clear*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_Clear_System_Byte__System_UInt32_" data-uid="Stride.Core.MemoryUtilities.Clear(System.Byte@,System.UInt32)">
+  Clear(ref byte, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the contents of memory at a provided address, zeroing it out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Clear(ref byte startAddress, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startAddress</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>A reference to the starting byte of the memory to clear.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to clear.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_Clear_" data-uid="Stride.Core.MemoryUtilities.Clear*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_Clear_System_IntPtr_System_UInt32_" data-uid="Stride.Core.MemoryUtilities.Clear(System.IntPtr,System.UInt32)">
+  Clear(nint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the contents of memory at a provided address, zeroing it out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Clear(nint startAddress, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startAddress</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The starting address of the memory to clear.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to clear.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_Clear_" data-uid="Stride.Core.MemoryUtilities.Clear*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_Clear_System_Void__System_UInt32_" data-uid="Stride.Core.MemoryUtilities.Clear(System.Void*,System.UInt32)">
+  Clear(void*, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the contents of memory at a provided address, zeroing it out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Clear(void* startAddress, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startAddress</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>The starting address of the memory to clear.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to clear.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_" data-uid="Stride.Core.MemoryUtilities.CopyWithAlignmentFallback*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_System_Byte__System_Byte__System_UInt32_" data-uid="Stride.Core.MemoryUtilities.CopyWithAlignmentFallback(System.Byte@,System.Byte@,System.UInt32)">
+  CopyWithAlignmentFallback(ref byte, ref readonly byte, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bytes from the source address to the destination address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyWithAlignmentFallback(ref byte destination, ref readonly byte source, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The managed pointer corresponding to the destination address to copy to.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The managed pointer corresponding to the source address to copy from.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to copy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_System_Byte__System_Byte__System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Some platform architectures do not support arbitrary unaligned memory reads or writes.
+  This method checks whether unaligned memory access is safe on the current architecture
+  and uses the most efficient method available.
+</p>
+<p>
+  Use this method instead of other memory copying methods if you are not sure whether
+  the pointers or references you pass in are aligned.
+</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_" data-uid="Stride.Core.MemoryUtilities.CopyWithAlignmentFallback*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_System_IntPtr_System_IntPtr_System_UInt32_" data-uid="Stride.Core.MemoryUtilities.CopyWithAlignmentFallback(System.IntPtr,System.IntPtr,System.UInt32)">
+  CopyWithAlignmentFallback(nint, nint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bytes from the source address to the destination address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyWithAlignmentFallback(nint destination, nint source, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The managed pointer corresponding to the destination address to copy to.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The managed pointer corresponding to the source address to copy from.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to copy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_System_IntPtr_System_IntPtr_System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Some platform architectures do not support arbitrary unaligned memory reads or writes.
+  This method checks whether unaligned memory access is safe on the current architecture
+  and uses the most efficient method available.
+</p>
+<p>
+  Use this method instead of other memory copying methods if you are not sure whether
+  the pointers or references you pass in are aligned.
+</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_" data-uid="Stride.Core.MemoryUtilities.CopyWithAlignmentFallback*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_System_Void__System_Void__System_UInt32_" data-uid="Stride.Core.MemoryUtilities.CopyWithAlignmentFallback(System.Void*,System.Void*,System.UInt32)">
+  CopyWithAlignmentFallback(void*, void*, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bytes from the source address to the destination address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyWithAlignmentFallback(void* destination, void* source, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>The managed pointer corresponding to the destination address to copy to.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>The managed pointer corresponding to the source address to copy from.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to copy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_MemoryUtilities_CopyWithAlignmentFallback_System_Void__System_Void__System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Some platform architectures do not support arbitrary unaligned memory reads or writes.
+  This method checks whether unaligned memory access is safe on the current architecture
+  and uses the most efficient method available.
+</p>
+<p>
+  Use this method instead of other memory copying methods if you are not sure whether
+  the pointers or references you pass in are aligned.
+</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_Free_" data-uid="Stride.Core.MemoryUtilities.Free*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_Free_System_IntPtr_" data-uid="Stride.Core.MemoryUtilities.Free(System.IntPtr)">
+  Free(nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees an aligned memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Free(nint alignedBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alignedBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The aligned buffer to free.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_MemoryUtilities_Free_System_IntPtr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The buffer must have been allocated with AllocateMemory.</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_Byte__System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.Byte@,System.Int32)">
+  IsAligned(ref byte, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified memory reference is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(ref byte memoryRef, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memoryRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The memory reference.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">memoryRef</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_IntPtr_System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.IntPtr,System.Int32)">
+  IsAligned(nint, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified memory address is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(nint memoryAddress, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memoryAddress</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The memory address.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">memoryAddress</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_Memory_System_Byte__System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.Memory{System.Byte},System.Int32)">
+  IsAligned(Memory&lt;byte&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified memory is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(Memory&lt;byte&gt; memory, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The memory memory.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">memory</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_ReadOnlyMemory_System_Byte__System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.ReadOnlyMemory{System.Byte},System.Int32)">
+  IsAligned(ReadOnlyMemory&lt;byte&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified memory is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(ReadOnlyMemory&lt;byte&gt; memory, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The memory.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">memory</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_ReadOnlySpan_System_Byte__System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.ReadOnlySpan{System.Byte},System.Int32)">
+  IsAligned(ReadOnlySpan&lt;byte&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified span is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(ReadOnlySpan&lt;byte&gt; span, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The memory span.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">span</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_Span_System_Byte__System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.Span{System.Byte},System.Int32)">
+  IsAligned(Span&lt;byte&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified span is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(Span&lt;byte&gt; span, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The memory span.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">span</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_IsAligned_" data-uid="Stride.Core.MemoryUtilities.IsAligned*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_IsAligned_System_Void__System_Int32_" data-uid="Stride.Core.MemoryUtilities.IsAligned(System.Void*,System.Int32)">
+  IsAligned(void*, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified memory pointer is aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAligned(void* memoryPtr, int alignment = 16)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>memoryPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>The memory pointer.</p>
+</dd>
+    <dt><code>alignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The memory alignment. It must be a positive power of two value.
+Defaults to 16 bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <code class="paramref">memoryPtr</code> is aligned
+to the given <code class="paramref">alignment</code>;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">alignment</code> parameter is not a positive power of two value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_MemoryUtilities_Swap_" data-uid="Stride.Core.MemoryUtilities.Swap*"></a>
+
+  <h3 id="Stride_Core_MemoryUtilities_Swap__1___0____0__" data-uid="Stride.Core.MemoryUtilities.Swap``1(``0@,``0@)">
+  Swap&lt;T&gt;(ref T, ref T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Swaps two values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Swap&lt;T&gt;(ref T left, ref T right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <span class="xref">T</span></dt>
+    <dd><p>The left value.</p>
+</dd>
+    <dt><code>right</code> <span class="xref">T</span></dt>
+    <dd><p>The right value.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the values to swap.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/MemoryUtilities.cs/#L34" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

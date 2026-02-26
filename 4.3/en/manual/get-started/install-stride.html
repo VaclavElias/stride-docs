@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Install Stride | Stride manual </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Install Stride | Stride manual ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/blob/master/en/manual/get-started/install-stride.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="install-stride">Install Stride</h1>
+
+<p><span class="badge text-bg-primary">Beginner</span></p>
+<h2 id="introduction">Introduction</h2>
+<p>If you want to <strong>create games using Stride</strong>, this guide provides the installation steps you'll need to follow. You'll need to install the Stride installer and launcher. The Stride installer is approximately <strong>55 MB</strong> and is downloaded directly from our main GitHub repository.</p>
+<p>The installer will automatically download and install the prerequisites if they are not detected, including the <a href="launch-stride.html">Stride Launcher</a>, which is essential for downloading and installing the latest version of Stride for game development.</p>
+<p>If you're interested in <strong>building the Stride engine from source</strong> or <strong>contributing to its development</strong>, please visit the <a href="https://github.com/stride3d/stride">Stride GitHub repository</a> for instructions on how to build from source and contribute to the project.</p>
+<p><strong>Prerequisites (automatically installed if not present):</strong></p>
+<ul>
+<li>Latest <strong>.NET SDK</strong> supported by Stride</li>
+<li>Microsoft Visual C++ Redistributable</li>
+</ul>
+<p>The <strong>Stride Launcher</strong> will download and install the latest version of Stride.</p>
+<h2 id="installation-steps">Installation Steps</h2>
+<ol>
+<li><p>Download the Stride installer (<strong>StrideSetup.exe</strong>) from the <a href="http://stride3d.net/download/">Stride website</a>.</p>
+</li>
+<li><p>Run the installer by double-clicking the <strong>StrideSetup.exe</strong> file.</p>
+</li>
+<li><p>The <strong>Stride Setup Wizard</strong> opens.</p>
+<p><img src="media/install-stride-setup-wizard.webp" alt="Stride Setup Wizard"></p>
+<p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>The <strong>Stride installation type</strong> window opens.</p>
+<p><img src="media/install-stride-installation-type.webp" alt="Stride installation type window"></p>
+<p>Select an installation type and click <strong>Next</strong>.</p>
+</li>
+<li><p>The <strong>Select installation folder</strong> window opens.</p>
+<p><img src="media/install-stride-select-installation-folder.webp" alt="Select installation folder window"></p>
+<p>Choose a folder where you want to install Stride, then click <strong>Next</strong>.</p>
+</li>
+<li><p>The <strong>Create application shortcuts</strong> window opens.</p>
+<p><img src="media/install-stride-create-application-shortcuts.webp" alt="Create application shortcuts window"></p>
+<p>Choose which shortcuts you want Stride to create, then click <strong>Next</strong>.</p>
+</li>
+<li><p>The <strong>Ready to Install</strong> window opens.</p>
+<p><img src="media/install-stride-ready-to-install.webp" alt="Ready to install window"></p>
+<p>Click <strong>Install</strong> to begin the installation.</p>
+</li>
+<li><p>Installation begins.</p>
+<p><img src="media/install-stride-installation-status.webp" alt="Installation status"></p>
+<p>The installer will proceed with the installation. After it completes, Stride creates shortcuts in the locations you selected, and the <strong>Stride Launcher</strong> starts automatically.</p>
+</li>
+<li><p>The first time you run the Stride Launcher, you will be asked to accept the privacy policy.</p>
+<p><img src="media/stride-privacy-policy-prompt.webp" alt="Stride privacy policy"></p>
+<p>Check <em>I agree to the Privacy Policy</em>, then click <strong>I Accept</strong>.</p>
+</li>
+<li><p>The <strong>Stride Launcher</strong> window opens.</p>
+<p><img src="media/stride-launcher.webp" alt="Stride Launcher"></p>
+<p>The Stride Launcher prompts you to install the latest version of Stride.</p>
+<p><img src="media/stride-launcher-install-latest-version-prompt.webp" alt="No version installed"></p>
+<p>Click <strong>Yes</strong> to install the latest version.</p>
+</li>
+<li><p>Installation of the latest version of Stride begins.</p>
+<p><img src="media/stride-launcher-install-latest-version.webp" alt="Installation of Stride"></p>
+<p>While the installation is in progress, the release notes are displayed.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If the .NET SDK has never been installed on your machine, the .NET SDK installation window might appear below the Stride installation window. Please check step 12 for details and be prepared to manually continue the .NET SDK installation.</p>
+</div>
+</li>
+<li><p>During the installation, you might be asked to install the .NET SDK if it's not already on your machine.</p>
+<p><img src="media/install-dotnet-SDK.webp" alt="Installation of .NET SDK"></p>
+<p>Click <strong>Install</strong>.</p>
+</li>
+<li><p>The Stride Launcher asks if you want to install the Visual Studio integration. This allows you to edit shaders directly from Visual Studio, providing syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.</p>
+<p><img src="media/install-VS-plug-in-prompt.webp" alt="Install Visual Studio integration"></p>
+<p>Click <strong>Yes</strong> to install the integration, or <strong>No</strong> to skip.</p>
+</li>
+<li><p>Stride is now installed and ready to use.</p>
+<p><img src="media/stride-launcher-ready.webp" alt="Stride ready to use"></p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>Stride Launcher:</strong> If you click <strong>Start</strong> and see an error message such as <code>Could not find a compatible version of MSBuild.</code> or <code>Path to dotnet executable is not set.</code>, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.</p>
+<p>Example error: <img src="media/stride-launcher-first-time-after-installation-error.webp" alt="First launch error"></p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you don't install the prerequisites, Stride won't run. In this case, you can download and install the prerequisites separately. For instructions, see <a href="../troubleshooting/stride-doesnt-run.html">Troubleshooting — Stride doesn't run</a>.</p>
+<p>Alternatively, uninstall Stride, restart the Stride installer, and install the prerequisites when prompted.</p>
+</div>
+<h2 id="whats-next">What's next?</h2>
+<ul>
+<li><a href="launch-stride.html">Launch Stride</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride-docs/blob/master/en/manual/get-started/install-stride.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1728 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct TextureDescription | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct TextureDescription | Stride API ">
+      
+      <meta name="description" content="A structure providing a common description for all kinds of s.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_TextureDescription.md&amp;value=---%0Auid%3A%20Stride.Graphics.TextureDescription%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.TextureDescription">
+
+
+
+  <h1 id="Stride_Graphics_TextureDescription" data-uid="Stride.Graphics.TextureDescription" class="text-break">
+Struct TextureDescription  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.ExtensionsCube.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A structure providing a common description for all kinds of <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>s.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct TextureDescription : IEquatable&lt;TextureDescription&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsPointer__1___0__">UnsafeUtilities.AsPointer&lt;T&gt;(ref T)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__">UnsafeUtilities.AsReadOnlySpan&lt;TFrom, TTo&gt;(scoped ref TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__System_Int32_">UnsafeUtilities.AsReadOnlySpan&lt;TFrom, TTo&gt;(scoped ref TFrom, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__">UnsafeUtilities.AsSpan&lt;TFrom, TTo&gt;(scoped ref TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__System_Int32_">UnsafeUtilities.AsSpan&lt;TFrom, TTo&gt;(scoped ref TFrom, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__2___0__">UnsafeUtilities.As&lt;TFrom, TTo&gt;(ref TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_BitCast__2___0_">UnsafeUtilities.BitCast&lt;TFrom, TTo&gt;(TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_">UnsafeUtilities.As&lt;T&gt;(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_ArraySize" data-uid="Stride.Graphics.TextureDescription.ArraySize">
+  ArraySize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The number of Textures in the Texture Array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ArraySize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_ArraySize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The range of this value is from 1 to the maximum supported array size, which is constrained by the graphics profile of the device.
+</p>
+<p>
+  This field is valid for <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture1D">Texture1D</a>, <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture2D">Texture2D</a>, and <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_TextureCube">TextureCube</a>.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture1DArraySize">MaximumTexture1DArraySize</a></div>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture2DArraySize">MaximumTexture2DArraySize</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Depth" data-uid="Stride.Graphics.TextureDescription.Depth">
+  Depth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Texture depth in texels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Depth</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_Depth_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The range of this value is from 1 to the maximum supported size, which is constrained by the graphics profile of the device.
+</p>
+<p>
+  This field is valid for <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture3D">Texture3D</a>.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture3DSize">MaximumTexture3DSize</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Dimension" data-uid="Stride.Graphics.TextureDescription.Dimension">
+  Dimension
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The dimension (type) of the Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureDimension Dimension</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDimension.html">TextureDimension</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Flags" data-uid="Stride.Graphics.TextureDescription.Flags">
+  Flags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A combination of flags describing how the Texture is to be bound to the stages of the graphics pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureFlags Flags</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Format" data-uid="Stride.Graphics.TextureDescription.Format">
+  Format
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The format of the Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PixelFormat Format</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Height" data-uid="Stride.Graphics.TextureDescription.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Texture height in texels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Height</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_Height_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The range of this value is from 1 to the maximum supported size, which is constrained by the graphics profile of the device.
+</p>
+<p>
+  This field is valid for <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture2D">Texture2D</a>, <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture3D">Texture3D</a>, and <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_TextureCube">TextureCube</a>.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture2DSize">MaximumTexture2DSize</a></div>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture3DSize">MaximumTexture3DSize</a></div>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTextureCubeSize">MaximumTextureCubeSize</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_MipLevelCount" data-uid="Stride.Graphics.TextureDescription.MipLevelCount">
+  MipLevelCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The number of mipmap levels in the Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MipLevelCount</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_MipLevelCount_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The range of this value is from 1 to <a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumMipLevels">MaximumMipLevels</a>, which is constrained by the graphics profile of the device.
+</p>
+<p>
+  Use 1 for a multisampled Texture; or 0 to generate a full set of subtextures.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumMipLevels">MaximumMipLevels</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_MultisampleCount" data-uid="Stride.Graphics.TextureDescription.MultisampleCount">
+  MultisampleCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The level of multisampling for the Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultisampleCount MultisampleCount</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.MultisampleCount.html">MultisampleCount</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_MultisampleCount_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This field is only valid for <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture2D">Texture2D</a>.</p>
+</div>
+
+
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Options" data-uid="Stride.Graphics.TextureDescription.Options">
+  Options
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A combination of flags specifying options for Textures, like creating them as shared resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureOptions Options</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureOptions.html">TextureOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_Options_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This field must be <a class="xref" href="Stride.Graphics.TextureOptions.html#Stride_Graphics_TextureOptions_None">None</a> when creating Textures with CPU access flags.</p>
+</div>
+
+
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Usage" data-uid="Stride.Graphics.TextureDescription.Usage">
+  Usage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value that indicates how the Texture is to be read from and written to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsResourceUsage Usage</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_Usage_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The most common value is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>.</p>
+</div>
+
+
+
+
+
+  <h3 id="Stride_Graphics_TextureDescription_Width" data-uid="Stride.Graphics.TextureDescription.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Texture width in texels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Width</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_TextureDescription_Width_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The range of this value is from 1 to the maximum supported size, which is constrained by the graphics profile of the device.
+</p>
+<p>
+  This field is valid for all textures: <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture1D">Texture1D</a>, <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture2D">Texture2D</a>, <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_Texture3D">Texture3D</a>,
+  and <a class="xref" href="Stride.Graphics.TextureDimension.html#Stride_Graphics_TextureDimension_TextureCube">TextureCube</a>.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture1DSize">MaximumTexture1DSize</a></div>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture2DSize">MaximumTexture2DSize</a></div>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture3DSize">MaximumTexture3DSize</a></div>
+    <div><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_MaximumTextureCubeSize">MaximumTextureCubeSize</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Stride_Graphics_TextureDescription_IsDepthStencil_" data-uid="Stride.Graphics.TextureDescription.IsDepthStencil*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_IsDepthStencil" data-uid="Stride.Graphics.TextureDescription.IsDepthStencil">
+  IsDepthStencil
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Texture is a <strong>Depth-Stencil buffer</strong>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsDepthStencil { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Texture is a Depth-Stencil buffer; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_IsMultiSampled_" data-uid="Stride.Graphics.TextureDescription.IsMultiSampled*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_IsMultiSampled" data-uid="Stride.Graphics.TextureDescription.IsMultiSampled">
+  IsMultiSampled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Texture is a <strong>multi-sampled</strong> Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsMultiSampled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Texture is multi-sampled; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_IsRenderTarget_" data-uid="Stride.Graphics.TextureDescription.IsRenderTarget*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_IsRenderTarget" data-uid="Stride.Graphics.TextureDescription.IsRenderTarget">
+  IsRenderTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Texture is a <strong>Render Target</strong>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsRenderTarget { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Texture is a Render Target; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_IsShaderResource_" data-uid="Stride.Graphics.TextureDescription.IsShaderResource*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_IsShaderResource" data-uid="Stride.Graphics.TextureDescription.IsShaderResource">
+  IsShaderResource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Texture is a <strong>Shader Resource</strong>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsShaderResource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Texture is a Shader Resource; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_IsUnorderedAccess_" data-uid="Stride.Graphics.TextureDescription.IsUnorderedAccess*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_IsUnorderedAccess" data-uid="Stride.Graphics.TextureDescription.IsUnorderedAccess">
+  IsUnorderedAccess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Texture is a created to allow <strong>Unordered Access</strong>
+when used as Shader Resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsUnorderedAccess { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Texture allows Unordered Access; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Graphics_TextureDescription_Equals_" data-uid="Stride.Graphics.TextureDescription.Equals*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_Equals_Stride_Graphics_TextureDescription_" data-uid="Stride.Graphics.TextureDescription.Equals(Stride.Graphics.TextureDescription)">
+  Equals(TextureDescription)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool Equals(TextureDescription other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>An object to compare with this object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_Equals_" data-uid="Stride.Graphics.TextureDescription.Equals*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_Equals_System_Object_" data-uid="Stride.Graphics.TextureDescription.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <span class="xref">object</span></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_FromDescription_" data-uid="Stride.Graphics.TextureDescription.FromDescription*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_FromDescription_Stride_Graphics_TextureDescription_Stride_Graphics_TextureFlags_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.FromDescription(Stride.Graphics.TextureDescription,Stride.Graphics.TextureFlags,Stride.Graphics.GraphicsResourceUsage)">
+  FromDescription(TextureDescription, TextureFlags, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new description from another description but overrides <a class="xref" href="Stride.Graphics.TextureDescription.html#Stride_Graphics_TextureDescription_Flags">Flags</a> and <a class="xref" href="Stride.Graphics.TextureDescription.html#Stride_Graphics_TextureDescription_Usage">Usage</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription FromDescription(TextureDescription description, TextureFlags textureFlags, GraphicsResourceUsage usage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>description</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>The Texture Description to copy.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>The new Texture flags.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>The new usage.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A modified copy of the specified <code class="paramref">description</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_GetHashCode_" data-uid="Stride.Graphics.TextureDescription.GetHashCode*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_GetHashCode" data-uid="Stride.Graphics.TextureDescription.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New1D_" data-uid="Stride.Graphics.TextureDescription.New1D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New1D_System_Int32_Stride_Graphics_MipMapCount_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_System_Int32_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.New1D(System.Int32,Stride.Graphics.MipMapCount,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,System.Int32,Stride.Graphics.GraphicsResourceUsage)">
+  New1D(int, MipMapCount, PixelFormat, TextureFlags, int, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions1D.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a one-dimensional (1D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New1D(int width, MipMapCount mipCount, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, int arraySize = 1, GraphicsResourceUsage usage = GraphicsResourceUsage.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>mipCount</code> <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a></dt>
+    <dd><p>
+  A <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> structure describing the number of mipmaps for the Texture.
+  Specify <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_Auto">Auto</a> to have <strong>all mipmaps</strong>, or
+  <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_One">One</a> to indicate a <strong>single mipmap</strong>, or
+  any number greater than 1 for a particular mipmap count.
+</p>
+<p>
+  You can also specify a number (which will be converted implicitly) or a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+  See <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> for more information about accepted values.
+</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>arraySize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of array slices for the Texture.
+The default value is 1, indicating the Texture is not a Texture Array.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a one-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New1D_" data-uid="Stride.Graphics.TextureDescription.New1D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New1D_System_Int32_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.New1D(System.Int32,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,Stride.Graphics.GraphicsResourceUsage)">
+  New1D(int, PixelFormat, TextureFlags, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions1D.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a one-dimensional (1D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> with a single mipmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New1D(int width, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, GraphicsResourceUsage usage = GraphicsResourceUsage.Immutable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a one-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New1D_" data-uid="Stride.Graphics.TextureDescription.New1D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New1D_System_Int32_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_System_Int32_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.New1D(System.Int32,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,System.Int32,Stride.Graphics.GraphicsResourceUsage)">
+  New1D(int, PixelFormat, TextureFlags, int, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions1D.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a one-dimensional (1D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> with a single mipmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New1D(int width, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, int arraySize = 1, GraphicsResourceUsage usage = GraphicsResourceUsage.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>arraySize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of array slices for the Texture.
+The default value is 1, indicating the Texture is not a Texture Array.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a one-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New2D_" data-uid="Stride.Graphics.TextureDescription.New2D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New2D_System_Int32_System_Int32_Stride_Graphics_MipMapCount_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_System_Int32_Stride_Graphics_GraphicsResourceUsage_Stride_Graphics_MultisampleCount_Stride_Graphics_TextureOptions_" data-uid="Stride.Graphics.TextureDescription.New2D(System.Int32,System.Int32,Stride.Graphics.MipMapCount,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,System.Int32,Stride.Graphics.GraphicsResourceUsage,Stride.Graphics.MultisampleCount,Stride.Graphics.TextureOptions)">
+  New2D(int, int, MipMapCount, PixelFormat, TextureFlags, int, GraphicsResourceUsage, MultisampleCount, TextureOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions2D.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a two-dimensional (2D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New2D(int width, int height, MipMapCount mipCount, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, int arraySize = 1, GraphicsResourceUsage usage = GraphicsResourceUsage.Default, MultisampleCount multisampleCount = MultisampleCount.None, TextureOptions textureOptions = TextureOptions.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the Texture in texels.</p>
+</dd>
+    <dt><code>mipCount</code> <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a></dt>
+    <dd><p>
+  A <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> structure describing the number of mipmaps for the Texture.
+  Specify <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_Auto">Auto</a> to have <strong>all mipmaps</strong>, or
+  <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_One">One</a> to indicate a <strong>single mipmap</strong>, or
+  any number greater than 1 for a particular mipmap count.
+</p>
+<p>
+  You can also specify a number (which will be converted implicitly) or a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+  See <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> for more information about accepted values.
+</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>arraySize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of array slices for the Texture.
+The default value is 1, indicating the Texture is not a Texture Array.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+    <dt><code>multisampleCount</code> <a class="xref" href="Stride.Graphics.MultisampleCount.html">MultisampleCount</a></dt>
+    <dd><p>The number of samples per texel the Texture will have.
+The default value is <a class="xref" href="Stride.Graphics.MultisampleCount.html#Stride_Graphics_MultisampleCount_None">None</a>, indicating a non-multisampled Texture.</p>
+</dd>
+    <dt><code>textureOptions</code> <a class="xref" href="Stride.Graphics.TextureOptions.html">TextureOptions</a></dt>
+    <dd><p>A combination of flags indicating options about the creation of the Texture, like creating it as a shared resource.
+The default value is <a class="xref" href="Stride.Graphics.TextureOptions.html#Stride_Graphics_TextureOptions_None">None</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a two-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New2D_" data-uid="Stride.Graphics.TextureDescription.New2D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New2D_System_Int32_System_Int32_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_System_Int32_Stride_Graphics_GraphicsResourceUsage_Stride_Graphics_TextureOptions_" data-uid="Stride.Graphics.TextureDescription.New2D(System.Int32,System.Int32,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,System.Int32,Stride.Graphics.GraphicsResourceUsage,Stride.Graphics.TextureOptions)">
+  New2D(int, int, PixelFormat, TextureFlags, int, GraphicsResourceUsage, TextureOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions2D.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a two-dimensional (2D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> with a single mipmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New2D(int width, int height, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, int arraySize = 1, GraphicsResourceUsage usage = GraphicsResourceUsage.Default, TextureOptions textureOptions = TextureOptions.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the Texture in texels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>arraySize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of array slices for the Texture.
+The default value is 1, indicating the Texture is not a Texture Array.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+    <dt><code>textureOptions</code> <a class="xref" href="Stride.Graphics.TextureOptions.html">TextureOptions</a></dt>
+    <dd><p>A combination of flags indicating options about the creation of the Texture, like creating it as a shared resource.
+The default value is <a class="xref" href="Stride.Graphics.TextureOptions.html#Stride_Graphics_TextureOptions_None">None</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a two-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New3D_" data-uid="Stride.Graphics.TextureDescription.New3D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New3D_System_Int32_System_Int32_System_Int32_Stride_Graphics_MipMapCount_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.New3D(System.Int32,System.Int32,System.Int32,Stride.Graphics.MipMapCount,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,Stride.Graphics.GraphicsResourceUsage)">
+  New3D(int, int, int, MipMapCount, PixelFormat, TextureFlags, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions3D.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a three-dimensional (3D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New3D(int width, int height, int depth, MipMapCount mipCount, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, GraphicsResourceUsage usage = GraphicsResourceUsage.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the Texture in texels.</p>
+</dd>
+    <dt><code>depth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The depth of the Texture in texels.</p>
+</dd>
+    <dt><code>mipCount</code> <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a></dt>
+    <dd><p>
+  A <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> structure describing the number of mipmaps for the Texture.
+  Specify <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_Auto">Auto</a> to have <strong>all mipmaps</strong>, or
+  <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_One">One</a> to indicate a <strong>single mipmap</strong>, or
+  any number greater than 1 for a particular mipmap count.
+</p>
+<p>
+  You can also specify a number (which will be converted implicitly) or a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+  See <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> for more information about accepted values.
+</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a three-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_New3D_" data-uid="Stride.Graphics.TextureDescription.New3D*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_New3D_System_Int32_System_Int32_System_Int32_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.New3D(System.Int32,System.Int32,System.Int32,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,Stride.Graphics.GraphicsResourceUsage)">
+  New3D(int, int, int, PixelFormat, TextureFlags, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.Extensions3D.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a three-dimensional (3D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> with a single mipmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription New3D(int width, int height, int depth, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, GraphicsResourceUsage usage = GraphicsResourceUsage.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the Texture in texels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the Texture in texels.</p>
+</dd>
+    <dt><code>depth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The depth of the Texture in texels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a three-dimensional Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_NewCube_" data-uid="Stride.Graphics.TextureDescription.NewCube*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_NewCube_System_Int32_Stride_Graphics_MipMapCount_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.NewCube(System.Int32,Stride.Graphics.MipMapCount,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,Stride.Graphics.GraphicsResourceUsage)">
+  NewCube(int, MipMapCount, PixelFormat, TextureFlags, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.ExtensionsCube.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a cube-map composed of six two-dimensional (2D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription NewCube(int size, MipMapCount mipCount, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, GraphicsResourceUsage usage = GraphicsResourceUsage.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size in texels of the faces of the cube Texture.
+As the Texture is a cube, this single value specifies both the width and the height.</p>
+</dd>
+    <dt><code>mipCount</code> <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a></dt>
+    <dd><p>
+  A <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> structure describing the number of mipmaps for the Texture.
+  Specify <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_Auto">Auto</a> to have <strong>all mipmaps</strong>, or
+  <a class="xref" href="Stride.Graphics.MipMapCount.html#Stride_Graphics_MipMapCount_One">One</a> to indicate a <strong>single mipmap</strong>, or
+  any number greater than 1 for a particular mipmap count.
+</p>
+<p>
+  You can also specify a number (which will be converted implicitly) or a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>.
+  See <a class="xref" href="Stride.Graphics.MipMapCount.html">MipMapCount</a> for more information about accepted values.
+</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a cube-map Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_NewCube_" data-uid="Stride.Graphics.TextureDescription.NewCube*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_NewCube_System_Int32_Stride_Graphics_PixelFormat_Stride_Graphics_TextureFlags_Stride_Graphics_GraphicsResourceUsage_" data-uid="Stride.Graphics.TextureDescription.NewCube(System.Int32,Stride.Graphics.PixelFormat,Stride.Graphics.TextureFlags,Stride.Graphics.GraphicsResourceUsage)">
+  NewCube(int, PixelFormat, TextureFlags, GraphicsResourceUsage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.ExtensionsCube.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> for a cube-map composed of six two-dimensional (2D) <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>s
+with a single mipmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextureDescription NewCube(int size, PixelFormat format, TextureFlags textureFlags = TextureFlags.ShaderResource, GraphicsResourceUsage usage = GraphicsResourceUsage.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size in texels of the faces of the cube Texture.
+As the Texture is a cube, this single value specifies both the width and the height.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The format to use.</p>
+</dd>
+    <dt><code>textureFlags</code> <a class="xref" href="Stride.Graphics.TextureFlags.html">TextureFlags</a></dt>
+    <dd><p>A combination of flags determining what kind of Texture and how the is should behave
+(i.e. how it is bound, how can it be read / written, etc.).
+By default, it is <a class="xref" href="Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_ShaderResource">ShaderResource</a>.</p>
+</dd>
+    <dt><code>usage</code> <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html">GraphicsResourceUsage</a></dt>
+    <dd><p>A combination of flags determining how the Texture will be used during rendering.
+The default is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>, meaning it will need read/write access by the GPU.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A new description for a cube-map Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_ToCloneableDescription_" data-uid="Stride.Graphics.TextureDescription.ToCloneableDescription*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_ToCloneableDescription" data-uid="Stride.Graphics.TextureDescription.ToCloneableDescription">
+  ToCloneableDescription()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a copy of this Texture Description modified so if the Texture is <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Immutable">Immutable</a>,
+it is switched to <a class="xref" href="Stride.Graphics.GraphicsResourceUsage.html#Stride_Graphics_GraphicsResourceUsage_Default">Default</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TextureDescription ToCloneableDescription()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A modified copy of this Texture Description.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_ToStagingDescription_" data-uid="Stride.Graphics.TextureDescription.ToStagingDescription*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_ToStagingDescription" data-uid="Stride.Graphics.TextureDescription.ToStagingDescription">
+  ToStagingDescription()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a copy of this Texture Description modified to describe a <strong>staging Texture</strong>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TextureDescription ToStagingDescription()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>A staging Texture Description.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Stride_Graphics_TextureDescription_op_Equality_" data-uid="Stride.Graphics.TextureDescription.op_Equality*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_op_Equality_Stride_Graphics_TextureDescription_Stride_Graphics_TextureDescription_" data-uid="Stride.Graphics.TextureDescription.op_Equality(Stride.Graphics.TextureDescription,Stride.Graphics.TextureDescription)">
+  operator ==(TextureDescription, TextureDescription)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(TextureDescription left, TextureDescription right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_op_Implicit_" data-uid="Stride.Graphics.TextureDescription.op_Implicit*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_op_Implicit_Stride_Graphics_ImageDescription__Stride_Graphics_TextureDescription" data-uid="Stride.Graphics.TextureDescription.op_Implicit(Stride.Graphics.ImageDescription)~Stride.Graphics.TextureDescription">
+  implicit operator TextureDescription(ImageDescription)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs an explicit conversion from <a class="xref" href="Stride.Graphics.ImageDescription.html">ImageDescription</a> to <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TextureDescription(ImageDescription description)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>description</code> <a class="xref" href="Stride.Graphics.ImageDescription.html">ImageDescription</a></dt>
+    <dd><p>The Image Description to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>The result of the conversion.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_op_Implicit_" data-uid="Stride.Graphics.TextureDescription.op_Implicit*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_op_Implicit_Stride_Graphics_TextureDescription__Stride_Graphics_ImageDescription" data-uid="Stride.Graphics.TextureDescription.op_Implicit(Stride.Graphics.TextureDescription)~Stride.Graphics.ImageDescription">
+  implicit operator ImageDescription(TextureDescription)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a> to <a class="xref" href="Stride.Graphics.ImageDescription.html">ImageDescription</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ImageDescription(TextureDescription description)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>description</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd><p>The Texture Description to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.ImageDescription.html">ImageDescription</a></dt>
+    <dd><p>The result of the conversion.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_TextureDescription_op_Inequality_" data-uid="Stride.Graphics.TextureDescription.op_Inequality*"></a>
+
+  <h3 id="Stride_Graphics_TextureDescription_op_Inequality_Stride_Graphics_TextureDescription_Stride_Graphics_TextureDescription_" data-uid="Stride.Graphics.TextureDescription.op_Inequality(Stride.Graphics.TextureDescription,Stride.Graphics.TextureDescription)">
+  operator !=(TextureDescription, TextureDescription)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(TextureDescription left, TextureDescription right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Stride.Graphics.TextureDescription.html">TextureDescription</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/TextureDescription.ExtensionsCube.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

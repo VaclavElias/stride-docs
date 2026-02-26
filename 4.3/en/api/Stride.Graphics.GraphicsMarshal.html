@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GraphicsMarshal | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GraphicsMarshal | Stride API ">
+      
+      <meta name="description" content="An unsafe class that provides a set of methods to access the underlying native DXGI and Direct3D devices and resources from its Stride counterparts.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_GraphicsMarshal.md&amp;value=---%0Auid%3A%20Stride.Graphics.GraphicsMarshal%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.GraphicsMarshal">
+
+
+
+  <h1 id="Stride_Graphics_GraphicsMarshal" data-uid="Stride.Graphics.GraphicsMarshal" class="text-break">
+Class GraphicsMarshal  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An unsafe class that provides a set of methods to access the underlying native DXGI and Direct3D
+devices and resources from its Stride counterparts.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class GraphicsMarshal</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">GraphicsMarshal</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_CreateTextureFromNative_" data-uid="Stride.Graphics.GraphicsMarshal.CreateTextureFromNative*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_CreateTextureFromNative_Stride_Graphics_GraphicsDevice_Silk_NET_Direct3D11_ID3D11Texture2D__System_Boolean_System_Boolean_" data-uid="Stride.Graphics.GraphicsMarshal.CreateTextureFromNative(Stride.Graphics.GraphicsDevice,Silk.NET.Direct3D11.ID3D11Texture2D*,System.Boolean,System.Boolean)">
+  CreateTextureFromNative(GraphicsDevice, ID3D11Texture2D*, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> from a Direct3D 11 texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Texture CreateTextureFromNative(GraphicsDevice device, ID3D11Texture2D* dxTexture2D, bool takeOwnership, bool isSRgb = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> in use.</p>
+</dd>
+    <dt><code>dxTexture2D</code> <span class="xref">ID3D11Texture2D</span>*</dt>
+    <dd><p>The Direct3D 11 texture.</p>
+</dd>
+    <dt><code>takeOwnership</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to call <span class="xref">Silk.NET.Direct3D11.ID3D11Resource.AddRef()</span> on the texture;
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to not call it, effectively taking ownership of the texture.</p>
+</dd>
+    <dt><code>isSRgb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating whether to set the format of the Texture to sRGB.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>A Stride <a class="xref" href="Stride.Graphics.Texture.html">Texture</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_GetNativeDevice_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeDevice*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_GetNativeDevice_Stride_Graphics_GraphicsDevice_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeDevice(Stride.Graphics.GraphicsDevice)">
+  GetNativeDevice(GraphicsDevice)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Direct3D 11 native device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComPtr&lt;ID3D11Device&gt; GetNativeDevice(GraphicsDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The Stride Graphics Device.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11Device</span>&gt;</dt>
+    <dd><p>A COM pointer to a <span class="xref">Silk.NET.Direct3D11.ID3D11Device</span> instance representing the native Direct3D 11 device.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_GetNativeDeviceContext_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeDeviceContext*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_GetNativeDeviceContext_Stride_Graphics_GraphicsDevice_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeDeviceContext(Stride.Graphics.GraphicsDevice)">
+  GetNativeDeviceContext(GraphicsDevice)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Direct3D 11 native device context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComPtr&lt;ID3D11DeviceContext&gt; GetNativeDeviceContext(GraphicsDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The Stride Graphics Device.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11DeviceContext</span>&gt;</dt>
+    <dd><p>A COM pointer to a <span class="xref">Silk.NET.Direct3D11.ID3D11DeviceContext</span> instance representing the native Direct3D 11 command queue.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_GetNativeRenderTargetView_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeRenderTargetView*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_GetNativeRenderTargetView_Stride_Graphics_Texture_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeRenderTargetView(Stride.Graphics.Texture)">
+  GetNativeRenderTargetView(Texture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Direct3D 11 native render target view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComPtr&lt;ID3D11RenderTargetView&gt; GetNativeRenderTargetView(Texture texture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11RenderTargetView</span>&gt;</dt>
+    <dd><p>A COM pointer to a <span class="xref">Silk.NET.Direct3D11.ID3D11RenderTargetView</span> instance representing the native Direct3D 11
+render target view on the Texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_GetNativeResource_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeResource*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_GetNativeResource_Stride_Graphics_GraphicsResource_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeResource(Stride.Graphics.GraphicsResource)">
+  GetNativeResource(GraphicsResource)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Direct3D 11 native resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComPtr&lt;ID3D11Resource&gt; GetNativeResource(GraphicsResource resource)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resource</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The Stride Graphics Resource.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11Resource</span>&gt;</dt>
+    <dd><p>A COM pointer to a <span class="xref">Silk.NET.Direct3D11.ID3D11Resource</span> instance representing the native Direct3D 11 resource.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_GetNativeShaderResourceView_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeShaderResourceView*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_GetNativeShaderResourceView_Stride_Graphics_GraphicsResource_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeShaderResourceView(Stride.Graphics.GraphicsResource)">
+  GetNativeShaderResourceView(GraphicsResource)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Direct3D 11 native shader resource view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComPtr&lt;ID3D11ShaderResourceView&gt; GetNativeShaderResourceView(GraphicsResource resource)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resource</code> <a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+    <dd><p>The Stride Graphics Resource.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11ShaderResourceView</span>&gt;</dt>
+    <dd><p>A COM pointer to a <span class="xref">Silk.NET.Direct3D11.ID3D11ShaderResourceView</span> instance representing the native Direct3D 11
+shader resource view on the resource.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsMarshal_GetNativeSwapChain_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeSwapChain*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsMarshal_GetNativeSwapChain_Stride_Graphics_GraphicsPresenter_" data-uid="Stride.Graphics.GraphicsMarshal.GetNativeSwapChain(Stride.Graphics.GraphicsPresenter)">
+  GetNativeSwapChain(GraphicsPresenter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying DXGI swap-chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComPtr&lt;IDXGISwapChain1&gt;? GetNativeSwapChain(GraphicsPresenter presenter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>presenter</code> <a class="xref" href="Stride.Graphics.GraphicsPresenter.html">GraphicsPresenter</a></dt>
+    <dd><p>The Stride Graphics Presenter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">IDXGISwapChain1</span>&gt;?</dt>
+    <dd><p>A COM pointer to a <span class="xref">Silk.NET.DXGI.IDXGISwapChain</span> instance representing the native DirectX swap-chain,
+or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the <code class="paramref">presenter</code> does not encapsulate a DXGI swap-chain.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsMarshal.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GraphicsPresenter | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GraphicsPresenter | Stride API ">
+      
+      <meta name="description" content="Represents an abstraction over a Swap-Chain.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_GraphicsPresenter.md&amp;value=---%0Auid%3A%20Stride.Graphics.GraphicsPresenter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.GraphicsPresenter">
+
+
+
+  <h1 id="Stride_Graphics_GraphicsPresenter" data-uid="Stride.Graphics.GraphicsPresenter" class="text-break">
+Class GraphicsPresenter  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an abstraction over a <strong>Swap-Chain</strong>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class GraphicsPresenter : ComponentBase, IDisposable, IComponent, IReferencable, ICollectorHolder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="Stride.Core.DisposeBase.html">DisposeBase</a></div>
+      <div><a class="xref" href="Stride.Core.ComponentBase.html">ComponentBase</a></div>
+      <div><span class="xref">GraphicsPresenter</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Stride.Core.IComponent.html">IComponent</a></div>
+      <div><a class="xref" href="Stride.Core.IReferencable.html">IReferencable</a></div>
+      <div><a class="xref" href="Stride.Core.ICollectorHolder.html">ICollectorHolder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Stride.Graphics.RenderTargetGraphicsPresenter.html">RenderTargetGraphicsPresenter</a></div>
+      <div><a class="xref" href="Stride.Graphics.SwapChainGraphicsPresenter.html">SwapChainGraphicsPresenter</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Tags">ComponentBase.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Name">ComponentBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_OnNameChanged">ComponentBase.OnNameChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_ToString">ComponentBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_IsDisposed">DisposeBase.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_Dispose">DisposeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_OnAddReference">DisposeBase.OnAddReference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_OnReleaseReference">DisposeBase.OnReleaseReference()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Stride.Core.ComponentBaseExtensions.html#Stride_Core_ComponentBaseExtensions_DisposeBy__1___0_Stride_Core_ICollectorHolder_">ComponentBaseExtensions.DisposeBy&lt;T&gt;(T, ICollectorHolder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.ComponentBaseExtensions.html#Stride_Core_ComponentBaseExtensions_RemoveDisposeBy__1___0_Stride_Core_ICollectorHolder_">ComponentBaseExtensions.RemoveDisposeBy&lt;T&gt;(T, ICollectorHolder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_">UnsafeUtilities.As&lt;T&gt;(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Stride_Graphics_GraphicsPresenter_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+  A <em>Swap-Chain</em> is a collection of same-sized buffers (one <strong>front-buffer</strong>,
+  one or more -usually one- <strong>Back-Buffer</strong>, and an optional <strong>Depth-Stencil Buffer</strong>)
+  that are used to present the final rendered image to the screen.
+</p>
+<p>
+  In order to create a new <a class="xref" href="Stride.Graphics.GraphicsPresenter.html">GraphicsPresenter</a>, a <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a>
+  should have been initialized first.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsPresenter__ctor_" data-uid="Stride.Graphics.GraphicsPresenter.#ctor*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter__ctor_Stride_Graphics_GraphicsDevice_Stride_Graphics_PresentationParameters_" data-uid="Stride.Graphics.GraphicsPresenter.#ctor(Stride.Graphics.GraphicsDevice,Stride.Graphics.PresentationParameters)">
+  GraphicsPresenter(GraphicsDevice, PresentationParameters)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Stride.Graphics.GraphicsPresenter.html">GraphicsPresenter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GraphicsPresenter(GraphicsDevice device, PresentationParameters presentationParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The Graphics Device.</p>
+</dd>
+    <dt><code>presentationParameters</code> <a class="xref" href="Stride.Graphics.PresentationParameters.html">PresentationParameters</a></dt>
+    <dd><p>The parameters describing the buffers the <code class="paramref">device</code> will present to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">device</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">presentationParameters</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The Depth-Stencil format specified is not supported.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_BackBuffer_" data-uid="Stride.Graphics.GraphicsPresenter.BackBuffer*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_BackBuffer" data-uid="Stride.Graphics.GraphicsPresenter.BackBuffer">
+  BackBuffer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default Back-Buffer for the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Texture BackBuffer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> where rendering will happen, which will then be presented to the front-buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_DepthStencilBuffer_" data-uid="Stride.Graphics.GraphicsPresenter.DepthStencilBuffer*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_DepthStencilBuffer" data-uid="Stride.Graphics.GraphicsPresenter.DepthStencilBuffer">
+  DepthStencilBuffer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default Depth-Stencil Buffer for the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture DepthStencilBuffer { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The <a class="xref" href="Stride.Graphics.Texture.html">Texture</a> where depth (Z) values will be written, and optionally also
+stencil masking values.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_DepthStencilBuffer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the Depth-Stencil Buffer is the one created by this Graphics Presenter, it is attached to it its lifetime
+is managed by this instance.
+If a derived class needs to set a custom Depth-Stencil Buffer, it should first call
+<a class="xref" href="Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_DetachDepthStencilBuffer">DetachDepthStencilBuffer()</a> to release the current one.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_Description_" data-uid="Stride.Graphics.GraphicsPresenter.Description*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_Description" data-uid="Stride.Graphics.GraphicsPresenter.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the parameters describing the Resources and behavior of the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PresentationParameters Description { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.PresentationParameters.html">PresentationParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_GraphicsDevice_" data-uid="Stride.Graphics.GraphicsPresenter.GraphicsDevice*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_GraphicsDevice" data-uid="Stride.Graphics.GraphicsPresenter.GraphicsDevice">
+  GraphicsDevice
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Graphics Device the Graphics Presenter is associated to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDevice GraphicsDevice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The Graphics Device that will be used for managing the Buffers and Textures, and starting/ending a frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_IsFullScreen_" data-uid="Stride.Graphics.GraphicsPresenter.IsFullScreen*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_IsFullScreen" data-uid="Stride.Graphics.GraphicsPresenter.IsFullScreen">
+  IsFullScreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating if the Graphics Presenter is in full-screen mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsFullScreen { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating whether the presentation will be in full screen.</p>
+<ul><li><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the presentation will be in full screen.</li><li><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the presentation will be in a window.</li></ul>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_IsFullScreen_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This property is only valid on desktop Windows. It has no effect on UWP.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_NativePresenter_" data-uid="Stride.Graphics.GraphicsPresenter.NativePresenter*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_NativePresenter" data-uid="Stride.Graphics.GraphicsPresenter.NativePresenter">
+  NativePresenter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying native presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract object NativePresenter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">object</span></dt>
+    <dd><p>The native presenter. Depending on platform, for exmaple, it can be a <span class="xref">Silk.NET.DXGI.IDXGISwapChain</span>
+or <span class="xref">Silk.NET.DXGI.IDXGISwapChain1</span> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_PresentInterval_" data-uid="Stride.Graphics.GraphicsPresenter.PresentInterval*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_PresentInterval" data-uid="Stride.Graphics.GraphicsPresenter.PresentInterval">
+  PresentInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the presentation interval of the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PresentInterval PresentInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.PresentInterval.html">PresentInterval</a></dt>
+    <dd><p>A value of <a class="xref" href="Stride.Graphics.PresentInterval.html">PresentInterval</a> indicating how often the display should be updated.
+The default value is <a class="xref" href="Stride.Graphics.PresentInterval.html#Stride_Graphics_PresentInterval_Default">Default</a>, which is to wait for one vertical blanking.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_BeginDraw_" data-uid="Stride.Graphics.GraphicsPresenter.BeginDraw*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_BeginDraw_Stride_Graphics_CommandList_" data-uid="Stride.Graphics.GraphicsPresenter.BeginDraw(Stride.Graphics.CommandList)">
+  BeginDraw(CommandList)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks the beginning of a frame that will be presented later by the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void BeginDraw(CommandList commandList)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commandList</code> <a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a></dt>
+    <dd><p>The Command List where rendering commands will be registered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_BeginDraw_Stride_Graphics_CommandList__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When overriden in a derived class, this method should prepare the Graphics Presenter to receive
+graphics commands to be executed at the beginning of the current frame.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_CreateDepthStencilBuffer_" data-uid="Stride.Graphics.GraphicsPresenter.CreateDepthStencilBuffer*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_CreateDepthStencilBuffer" data-uid="Stride.Graphics.GraphicsPresenter.CreateDepthStencilBuffer">
+  CreateDepthStencilBuffer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L452"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the Depth-Stencil Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CreateDepthStencilBuffer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_CreateDepthStencilBuffer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  When overriden in a derived class, this method allows to create a custom Depth-Stencil Buffer
+  when initializing the Graphics Presenter.
+</p>
+<p>
+  By default, if a depth format has been specified, a Depth-Stencil Buffer is created with the same
+  size as the Back-Buffer.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The Depth-Stencil format specified is not supported.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_Destroy_" data-uid="Stride.Graphics.GraphicsPresenter.Destroy*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_Destroy" data-uid="Stride.Graphics.GraphicsPresenter.Destroy">
+  Destroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes the object's resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Destroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_Destroy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Override in a derived class to implement disposal logic specific to it.
+</p>
+<p>
+  This method is automatically called whenever a call to <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_Dispose">Dispose()</a> (or to <a class="xref" href="Stride.Core.IReferencable.html#Stride_Core_IReferencable_Release">Release()</a>)
+  has decreased the internal reference count to zero, meaning no other objects (hopefully) hold a reference to this one
+  and its resources can be safely released.
+</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_DestroyChildrenTextures_" data-uid="Stride.Graphics.GraphicsPresenter.DestroyChildrenTextures*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_DestroyChildrenTextures_Stride_Graphics_Texture_" data-uid="Stride.Graphics.GraphicsPresenter.DestroyChildrenTextures(Stride.Graphics.Texture)">
+  DestroyChildrenTextures(Texture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Stride.Graphics.Texture.html#Stride_Graphics_Texture_OnDestroyed_System_Boolean_">OnDestroyed(bool)</a> for all children of the specified Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Texture&gt; DestroyChildrenTextures(Texture parentTexture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parentTexture</code> <a class="xref" href="Stride.Graphics.Texture.html">Texture</a></dt>
+    <dd><p>The parent Texture whose children are to be destroyed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Stride.Graphics.Texture.html">Texture</a>&gt;</dt>
+    <dd><p>A list of the children Textures which were destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_DetachDepthStencilBuffer_" data-uid="Stride.Graphics.GraphicsPresenter.DetachDepthStencilBuffer*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_DetachDepthStencilBuffer" data-uid="Stride.Graphics.GraphicsPresenter.DetachDepthStencilBuffer">
+  DetachDepthStencilBuffer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detaches the current Depth-Stencil Buffer from the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void DetachDepthStencilBuffer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_DetachDepthStencilBuffer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_DepthStencilBuffer">DepthStencilBuffer</a> is the Depth-Stencil Buffer created by this Graphics Presenter,
+it is attached to it its lifetime is managed by this instance.
+If a derived class needs to set a custom Depth-Stencil Buffer, it should first call this method
+to detach the current one.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_EndDraw_" data-uid="Stride.Graphics.GraphicsPresenter.EndDraw*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_EndDraw_Stride_Graphics_CommandList_System_Boolean_" data-uid="Stride.Graphics.GraphicsPresenter.EndDraw(Stride.Graphics.CommandList,System.Boolean)">
+  EndDraw(CommandList, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks the end of a frame that will be presented later by the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void EndDraw(CommandList commandList, bool present)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commandList</code> <a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a></dt>
+    <dd><p>The Command List where rendering commands will be registered.</p>
+</dd>
+    <dt><code>present</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating whether the frame will be presented, i.e. if the Back-Buffer will be shown to the screen.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_EndDraw_Stride_Graphics_CommandList_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When overriden in a derived class, this method should prepare the Graphics Presenter to receive
+graphics commands to be executed at the end of the current frame.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_OnDestroyed_" data-uid="Stride.Graphics.GraphicsPresenter.OnDestroyed*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_OnDestroyed_System_Boolean_" data-uid="Stride.Graphics.GraphicsPresenter.OnDestroyed(System.Boolean)">
+  OnDestroyed(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the Graphics Presenter has been destroyed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroyed(bool immediately = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>immediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating whether the resources used by the Graphics Presenter should be
+destroyed immediately (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>), or if it can be deferred until
+it's safe to do so (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_OnDestroyed_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When overriden in a derived class, this method allows to perform additional cleanup
+and release of associated resources.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_OnRecreated_" data-uid="Stride.Graphics.GraphicsPresenter.OnRecreated*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_OnRecreated" data-uid="Stride.Graphics.GraphicsPresenter.OnRecreated">
+  OnRecreated()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the Graphics Presenter has been reinitialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnRecreated()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_OnRecreated_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When overriden in a derived class, this method allows to perform additional resource
+creation, configuration, and initialization.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p><a class="xref" href="Stride.Graphics.PresentationParameters.html#Stride_Graphics_PresentationParameters_DeviceWindowHandle">DeviceWindowHandle</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or
+the <a class="xref" href="Stride.Graphics.WindowHandle.html#Stride_Graphics_WindowHandle_Handle">Handle</a> is invalid or zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_Present_" data-uid="Stride.Graphics.GraphicsPresenter.Present*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_Present" data-uid="Stride.Graphics.GraphicsPresenter.Present">
+  Present()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Presents the Back-Buffer to the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Present()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsDeviceException.html">GraphicsDeviceException</a></dt>
+    <dd><p>An unexpected error occurred while presenting. Check the status of the Graphics Device
+for more information (<a class="xref" href="Stride.Graphics.GraphicsDeviceException.html#Stride_Graphics_GraphicsDeviceException_Status">Status</a>).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_ProcessPresentationParameters_" data-uid="Stride.Graphics.GraphicsPresenter.ProcessPresentationParameters*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_ProcessPresentationParameters" data-uid="Stride.Graphics.GraphicsPresenter.ProcessPresentationParameters">
+  ProcessPresentationParameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes and adjusts the Presentation Parameters before initializing the Graphics Presenter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessPresentationParameters()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_ProcessPresentationParameters_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When overriden in a derived class, this method allows to modify the specified Presentation Parameters
+before initializing the internal buffers and resources.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_Resize_" data-uid="Stride.Graphics.GraphicsPresenter.Resize*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_Resize_System_Int32_System_Int32_Stride_Graphics_PixelFormat_" data-uid="Stride.Graphics.GraphicsPresenter.Resize(System.Int32,System.Int32,Stride.Graphics.PixelFormat)">
+  Resize(int, int, PixelFormat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the Back-Buffer and the Depth-Stencil Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resize(int width, int height, PixelFormat format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The new width of the buffers of the Graphics Presenter, in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The new height of the buffers of the Graphics Presenter, in pixels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The new preferred pixel format for the Back-Buffer. The specified format may be overriden
+depending on Graphics Device features and configuration (for example, to use sRGB when appropriate).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The specified pixel <code class="paramref">format</code> or size is not supported by the Graphics Device.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_ResizeBackBuffer_" data-uid="Stride.Graphics.GraphicsPresenter.ResizeBackBuffer*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_ResizeBackBuffer_System_Int32_System_Int32_Stride_Graphics_PixelFormat_" data-uid="Stride.Graphics.GraphicsPresenter.ResizeBackBuffer(System.Int32,System.Int32,Stride.Graphics.PixelFormat)">
+  ResizeBackBuffer(int, int, PixelFormat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the Back-Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ResizeBackBuffer(int width, int height, PixelFormat format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The new width of the Back-Buffer, in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The new height of the Back-Buffer, in pixels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The new pixel format for the Back-Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_ResizeBackBuffer_System_Int32_System_Int32_Stride_Graphics_PixelFormat__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When implementing this method, the derived class should resize the Back-Buffer to the specified
+size and format.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The specified pixel <code class="paramref">format</code> or size is not supported by the Graphics Device.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_ResizeDepthStencilBuffer_" data-uid="Stride.Graphics.GraphicsPresenter.ResizeDepthStencilBuffer*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_ResizeDepthStencilBuffer_System_Int32_System_Int32_Stride_Graphics_PixelFormat_" data-uid="Stride.Graphics.GraphicsPresenter.ResizeDepthStencilBuffer(System.Int32,System.Int32,Stride.Graphics.PixelFormat)">
+  ResizeDepthStencilBuffer(int, int, PixelFormat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the Depth-Stencil Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ResizeDepthStencilBuffer(int width, int height, PixelFormat format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The new width of the Depth-Stencil Buffer, in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The new height of the Depth-Stencil Buffer, in pixels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The new pixel format for the Depth-Stencil Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_ResizeDepthStencilBuffer_System_Int32_System_Int32_Stride_Graphics_PixelFormat__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When implementing this method, the derived class should resize the Depth-Stencil Buffer to the specified
+size and format.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The specified depth <code class="paramref">format</code> or size is not supported by the Graphics Device.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Graphics_GraphicsPresenter_SetOutputColorSpace_" data-uid="Stride.Graphics.GraphicsPresenter.SetOutputColorSpace*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsPresenter_SetOutputColorSpace_Stride_Graphics_ColorSpaceType_Stride_Graphics_PixelFormat_" data-uid="Stride.Graphics.GraphicsPresenter.SetOutputColorSpace(Stride.Graphics.ColorSpaceType,Stride.Graphics.PixelFormat)">
+  SetOutputColorSpace(ColorSpaceType, PixelFormat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the output color space of the Graphics Presenter and the pixel format to use for the Back-Buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOutputColorSpace(ColorSpaceType colorSpace, PixelFormat format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorSpace</code> <a class="xref" href="Stride.Graphics.ColorSpaceType.html">ColorSpaceType</a></dt>
+    <dd><p>The output color space the Graphics Presenter should use.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The pixel format to use for the Back-Buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsPresenter_SetOutputColorSpace_Stride_Graphics_ColorSpaceType_Stride_Graphics_PixelFormat__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  The output color space can be used to render to HDR monitors.
+</p>
+<p>
+  Use the following combinations:
+  <table><tbody><tr><td class="term">For rendering to a SDR display with gamma 2.2</td><td class="description">
+        Set a color space of ColorSpaceType.RgbFullG22NoneP709 with a Back-Buffer format <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R8G8B8A8_UNorm">R8G8B8A8_UNorm</a>,
+        <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R8G8B8A8_UNorm_SRgb">R8G8B8A8_UNorm_SRgb</a>, <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_B8G8R8A8_UNorm">B8G8R8A8_UNorm</a>, or <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_B8G8R8A8_UNorm">B8G8R8A8_UNorm</a>.
+      </td></tr><tr><td class="term">For rendering to a HDR display in scRGB (standard linear), and letting the Windows DWM do the color conversion</td><td class="description">
+        Set a color space of ColorSpaceType.RgbFullG10NoneP709 with a Back-Buffer format <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R16G16B16A16_Float">R16G16B16A16_Float</a>.
+      </td></tr><tr><td class="term">
+        For rendering to a HDR display in HDR10 / BT.2100, with no color conversion by the Windows DWM, rendering needs to happen in the
+        same color space as the display.
+      </td><td class="description">
+        Set a color space of ColorSpaceType.RgbFullG2084NoneP2020 with a Back-Buffer format <a class="xref" href="Stride.Graphics.PixelFormat.html#Stride_Graphics_PixelFormat_R10G10B10A2_UNorm">R10G10B10A2_UNorm</a>.
+      </td></tr></tbody></table>
+
+<p>
+  Note that this is currently only supported in Stride when using the Direct3D Graphics API.
+  For more information about High Dynamic Range (HDR) rendering, see
+  <a href="https://learn.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range">https://learn.microsoft.com/en-us/windows/win32/direct3darticles/high-dynamic-range</a>.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The specified pixel <code class="paramref">format</code> or size is not supported by the Graphics Device.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Stride.Graphics.SwapChainGraphicsPresenter.html">SwapChainGraphicsPresenter</a></div>
+      <div><a class="xref" href="Stride.Graphics.RenderTargetGraphicsPresenter.html">RenderTargetGraphicsPresenter</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsPresenter.cs/#L46" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

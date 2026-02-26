@@ -1,0 +1,2444 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UnsafeUtilities | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UnsafeUtilities | Stride API ">
+      
+      <meta name="description" content="Provides a set of methods to supplement or replace  and , mainly for working with structs and unmanaged types.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Core_UnsafeExtensions_UnsafeUtilities.md&amp;value=---%0Auid%3A%20Stride.Core.UnsafeExtensions.UnsafeUtilities%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities">
+
+
+
+  <h1 id="Stride_Core_UnsafeExtensions_UnsafeUtilities" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities" class="text-break">
+Class UnsafeUtilities  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Core.html">Core</a>.<a class="xref" href="Stride.Core.UnsafeExtensions.html">UnsafeExtensions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a set of methods to supplement or replace <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.unsafe">Unsafe</a> and
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.memorymarshal">MemoryMarshal</a>, mainly for working with <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/struct">struct</a>s and <a href="https://learn.microsoft.com/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#unmanaged-constraint">unmanaged</a> types.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnsafeUtilities</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">UnsafeUtilities</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsBytes_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsBytes*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsBytes__1_System_ReadOnlySpan___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsBytes``1(System.ReadOnlySpan{``0})">
+  AsBytes&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Casts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of one primitive type, <code class="paramref">T</code>, to a <code>ReadOnlySpan&lt;Byte&gt;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;byte&gt; AsBytes&lt;T&gt;(this ReadOnlySpan&lt;T&gt; span) where T : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The source slice to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A read-only span of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the read-only span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">T</code> contains managed object references.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1.length">Length</a> property of the new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> would exceed <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a></p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsBytes_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsBytes*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsBytes__1_System_Span___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsBytes``1(System.Span{``0})">
+  AsBytes&lt;T&gt;(Span&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Casts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of one primitive type, <code class="paramref">T</code>, to a <code>Span&lt;Byte&gt;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;byte&gt; AsBytes&lt;T&gt;(this Span&lt;T&gt; span) where T : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>The source slice to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A span of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">T</code> contains managed object references.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1.length">Length</a> property of the new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> would exceed <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a></p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsPointer_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsPointer*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsPointer__1___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsPointer``1(``0@)">
+  AsPointer&lt;T&gt;(ref T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T* AsPointer&lt;T&gt;(this ref T value) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__1___0___" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan``1(``0[])">
+  AsReadOnlySpan&lt;T&gt;(T[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new read-only span over the target array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;T&gt; AsReadOnlySpan&lt;T&gt;(this T[]? array)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> T[]</dt>
+    <dd><p>The array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>A read-only span over the provided <code class="paramref">array</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan``2(``0@)">
+  AsReadOnlySpan&lt;TFrom, TTo&gt;(scoped ref TFrom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets a regular managed object as a read-only span of elements of another type. This can be useful
+if a managed object represents a &quot;fixed array&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;TTo&gt; AsReadOnlySpan&lt;TFrom, TTo&gt;(this scoped ref TFrom reference) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <span class="xref">TFrom</span></dt>
+    <dd><p>A reference to data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TTo&gt;</dt>
+    <dd><p>A read-only span representing the specified reference as elements of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method should be used with caution. Even though the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/ref">ref</a> is annotated as <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/declarations#scoped-ref">scoped</a>,
+it will be stored into the returned span, and the lifetime of the returned span will not be validated for safety, even by
+span-aware languages.</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan``2(``0@,System.Int32)">
+  AsReadOnlySpan&lt;TFrom, TTo&gt;(scoped ref TFrom, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets a regular managed object as an array of elements of another type and returns a read-only span over
+a portion of that array. This can be useful if a managed object represents a &quot;fixed array&quot;.
+This is dangerous because the <code class="paramref">elementCount</code> is not checked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;TTo&gt; AsReadOnlySpan&lt;TFrom, TTo&gt;(this scoped ref TFrom reference, int elementCount) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <span class="xref">TFrom</span></dt>
+    <dd><p>A reference to data.</p>
+</dd>
+    <dt><code>elementCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of <code class="typeparamref">TTo</code> elements the memory contains.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TTo&gt;</dt>
+    <dd><p>A read-only span representing the specified reference as <code class="paramref">elementCount</code> elements of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0__System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method should be used with caution. It is dangerous because the <code class="paramref">elementCount</code> argument is not checked.
+Even though the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/ref">ref</a> is annotated as <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/declarations#scoped-ref">scoped</a>, it will be stored into the returned span,
+and the lifetime of the returned span will not be validated for safety, even by span-aware languages.</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadOnlySpan__2___0___" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadOnlySpan``2(``0[])">
+  AsReadOnlySpan&lt;TFrom, TTo&gt;(TFrom[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets a regular array as a read-only span of elements of another type. This can be useful
+if the types are the same size and interchangeable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;TTo&gt; AsReadOnlySpan&lt;TFrom, TTo&gt;(this TFrom[]? array) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> TFrom[]</dt>
+    <dd><p>An array of data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TTo&gt;</dt>
+    <dd><p>A read-only span representing the data of <code class="paramref">array</code> reinterpreted as elements of type <code class="typeparamref">TTo</code>.
+If the array is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, returns an empty span.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadonlyPointer_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadonlyPointer*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadonlyPointer__1___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadonlyPointer``1(``0@)">
+  AsReadonlyPointer&lt;T&gt;(ref readonly T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T* AsReadonlyPointer&lt;T&gt;(ref readonly T value) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadonly_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadonly*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsReadonly__2___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsReadonly``2(``0@)">
+  AsReadonly&lt;TFrom, TTo&gt;(ref readonly TFrom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given managed pointer as a new managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref readonly TTo AsReadonly&lt;TFrom, TTo&gt;(ref readonly TFrom source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TFrom</span></dt>
+    <dd><p>The managed pointer to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TTo</span></dt>
+    <dd><p>A managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd><p>The type of managed pointer to reinterpret.</p>
+</dd>
+    <dt><code>TTo</code></dt>
+    <dd><p>The desired type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef__1_System_IntPtr_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef``1(System.IntPtr)">
+  AsRef&lt;T&gt;(nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given native integer as a reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T AsRef&lt;T&gt;(nint source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The native integer to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the reference.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef__1_System_UIntPtr_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef``1(System.UIntPtr)">
+  AsRef&lt;T&gt;(nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given native unsigned integer as a reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T AsRef&lt;T&gt;(nuint source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The native unsigned integer to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the reference.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef__1_System_Void__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef``1(System.Void*)">
+  AsRef&lt;T&gt;(void*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unmanaged pointer into a managed pointer to a value of type <code class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T AsRef&lt;T&gt;(void* source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>The unmanaged pointer to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A managed pointer to a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The elemental type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef__1___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef``1(``0@)">
+  AsRef&lt;T&gt;(scoped ref readonly T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given read-only reference as a mutable reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T AsRef&lt;T&gt;(scoped ref readonly T source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">T</span></dt>
+    <dd><p>The read-only reference to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A mutable reference to a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The underlying type of the reference.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsRef__2___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsRef``2(``0@)">
+  AsRef&lt;TFrom, TTo&gt;(scoped ref readonly TFrom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given read-only reference as a mutable reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref TTo AsRef&lt;TFrom, TTo&gt;(scoped ref readonly TFrom source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TFrom</span></dt>
+    <dd><p>The read-only reference to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TTo</span></dt>
+    <dd><p>A mutable reference to a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__1_System_ReadOnlySpan___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan``1(System.ReadOnlySpan{``0})">
+  AsSpan&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the read-only span as a writeable span.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;T&gt; AsSpan&lt;T&gt;(this ReadOnlySpan&lt;T&gt; span)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The read-only span to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>A writeable span that points to the same items as <code class="paramref">span</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in <code class="paramref">span</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan``2(``0@)">
+  AsSpan&lt;TFrom, TTo&gt;(scoped ref TFrom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets a regular managed object as a span of elements of another type. This can be useful
+if a managed object represents a &quot;fixed array&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;TTo&gt; AsSpan&lt;TFrom, TTo&gt;(this scoped ref TFrom reference) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <span class="xref">TFrom</span></dt>
+    <dd><p>A reference to data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TTo&gt;</dt>
+    <dd><p>A span representing the specified reference as elements of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method should be used with caution. Even though the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/ref">ref</a> is annotated as <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/declarations#scoped-ref">scoped</a>,
+it will be stored into the returned span, and the lifetime of the returned span will not be validated for safety, even by
+span-aware languages.</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan``2(``0@,System.Int32)">
+  AsSpan&lt;TFrom, TTo&gt;(scoped ref TFrom, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets a regular managed object as an array of elements of another type and returns a span over
+a portion of that array. This can be useful if a managed object represents a &quot;fixed array&quot;.
+This is dangerous because the <code class="paramref">elementCount</code> is not checked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;TTo&gt; AsSpan&lt;TFrom, TTo&gt;(this scoped ref TFrom reference, int elementCount) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <span class="xref">TFrom</span></dt>
+    <dd><p>A reference to data.</p>
+</dd>
+    <dt><code>elementCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of <code class="typeparamref">TTo</code> elements the memory contains.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TTo&gt;</dt>
+    <dd><p>A span representing the specified reference as <code class="paramref">elementCount</code> elements of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0__System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method should be used with caution. It is dangerous because the <code class="paramref">elementCount</code> argument is not checked.
+Even though the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/ref">ref</a> is annotated as <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/statements/declarations#scoped-ref">scoped</a>, it will be stored into the returned span,
+and the lifetime of the returned span will not be validated for safety, even by span-aware languages.</p>
+</div>
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_AsSpan__2___0___" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.AsSpan``2(``0[])">
+  AsSpan&lt;TFrom, TTo&gt;(TFrom[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets a regular array as a span of elements of another type. This can be useful
+if the types are the same size and interchangeable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;TTo&gt; AsSpan&lt;TFrom, TTo&gt;(this TFrom[]? array) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> TFrom[]</dt>
+    <dd><p>An array of data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TTo&gt;</dt>
+    <dd><p>A span representing the data of <code class="paramref">array</code> reinterpreted as elements of type <code class="typeparamref">TTo</code>.
+If the array is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, returns an empty span.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As``1(System.Object)">
+  As&lt;T&gt;(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Casts the given object to the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T? As&lt;T&gt;(this object? o) where T : class?</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <span class="xref">object</span></dt>
+    <dd><p>The object to cast.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The original object, cast to the given type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type which the object will be cast to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As__2_System_ReadOnlySpan___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As``2(System.ReadOnlySpan{``0})">
+  As&lt;TFrom, TTo&gt;(ReadOnlySpan&lt;TFrom&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given managed pointer as a new managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;TTo&gt; As&lt;TFrom, TTo&gt;(this ReadOnlySpan&lt;TFrom&gt; span) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TFrom&gt;</dt>
+    <dd><p>The span to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TTo&gt;</dt>
+    <dd><p>A managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd><p>The type of managed pointer to reinterpret.</p>
+</dd>
+    <dt><code>TTo</code></dt>
+    <dd><p>The desired type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As__2_System_Span___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As``2(System.Span{``0})">
+  As&lt;TFrom, TTo&gt;(Span&lt;TFrom&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given managed pointer as a new managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;TTo&gt; As&lt;TFrom, TTo&gt;(this Span&lt;TFrom&gt; span) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TFrom&gt;</dt>
+    <dd><p>The span to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TTo&gt;</dt>
+    <dd><p>A managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd><p>The type of managed pointer to reinterpret.</p>
+</dd>
+    <dt><code>TTo</code></dt>
+    <dd><p>The desired type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_As__2___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.As``2(``0@)">
+  As&lt;TFrom, TTo&gt;(ref TFrom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given managed pointer as a new managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref TTo As&lt;TFrom, TTo&gt;(this ref TFrom source) where TFrom : unmanaged where TTo : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TFrom</span></dt>
+    <dd><p>The managed pointer to reinterpret.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TTo</span></dt>
+    <dd><p>A managed pointer to a value of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd><p>The type of managed pointer to reinterpret.</p>
+</dd>
+    <dt><code>TTo</code></dt>
+    <dd><p>The desired type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_BitCast_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.BitCast*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_BitCast__2___0_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.BitCast``2(``0)">
+  BitCast&lt;TFrom, TTo&gt;(TFrom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reinterprets the given value of type <code class="typeparamref">TFrom</code> as a value of type <code class="typeparamref">TTo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TTo BitCast&lt;TFrom, TTo&gt;(this TFrom source) where TFrom : struct where TTo : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TFrom</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TTo</span></dt>
+    <dd><p>A value of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd></dd>
+    <dt><code>TTo</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The size of <code class="typeparamref">TFrom</code> and <code class="typeparamref">TTo</code> are not the same.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_Cast_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.Cast*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_Cast__2_System_ReadOnlySpan___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.Cast``2(System.ReadOnlySpan{``0})">
+  Cast&lt;TFrom, TTo&gt;(ReadOnlySpan&lt;TFrom&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Casts a read-only span of one primitive type to a read-only span of another primitive type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;TTo&gt; Cast&lt;TFrom, TTo&gt;(this ReadOnlySpan&lt;TFrom&gt; span) where TFrom : struct where TTo : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TFrom&gt;</dt>
+    <dd><p>The source slice to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;TTo&gt;</dt>
+    <dd><p>The converted read-only span.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd><p>The type of the source span.</p>
+</dd>
+    <dt><code>TTo</code></dt>
+    <dd><p>The type of the target span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">TFrom</code> or <code class="paramref">TTo</code> contains managed object references.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1.length">Length</a> property of the new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> would exceed <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32.maxvalue">MaxValue</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_Cast_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.Cast*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_Cast__2_System_Span___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.Cast``2(System.Span{``0})">
+  Cast&lt;TFrom, TTo&gt;(Span&lt;TFrom&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Casts a span of one primitive type to a span of another primitive type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;TTo&gt; Cast&lt;TFrom, TTo&gt;(this Span&lt;TFrom&gt; span) where TFrom : struct where TTo : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TFrom&gt;</dt>
+    <dd><p>The source slice to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;TTo&gt;</dt>
+    <dd><p>The converted span.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TFrom</code></dt>
+    <dd><p>The type of the source span.</p>
+</dd>
+    <dt><code>TTo</code></dt>
+    <dd><p>The type of the target span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">TFrom</code> or <code class="paramref">TTo</code> contains managed object references.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1.length">Length</a> property of the new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> would exceed <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32.maxvalue">MaxValue</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CopyBlockUnaligned_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CopyBlockUnaligned*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CopyBlockUnaligned__2___0____1__System_UInt32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CopyBlockUnaligned``2(``0@,``1@,System.UInt32)">
+  CopyBlockUnaligned&lt;TDestination, TSource&gt;(ref TDestination, ref readonly TSource, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bytes from the source address to the destination address without assuming architecture dependent alignment of the addresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyBlockUnaligned&lt;TDestination, TSource&gt;(ref TDestination destination, ref readonly TSource source, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <span class="xref">TDestination</span></dt>
+    <dd><p>The managed pointer corresponding to the destination address to copy to.</p>
+</dd>
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>The managed pointer corresponding to the source address to copy from.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to copy.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TDestination</code></dt>
+    <dd></dd>
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CopyBlock_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CopyBlock*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CopyBlock__2___0____1__System_UInt32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CopyBlock``2(``0@,``1@,System.UInt32)">
+  CopyBlock&lt;TDestination, TSource&gt;(ref TDestination, ref readonly TSource, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bytes from the source address to the destination address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyBlock&lt;TDestination, TSource&gt;(ref TDestination destination, ref readonly TSource source, uint byteCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <span class="xref">TDestination</span></dt>
+    <dd><p>The managed pointer corresponding to the destination address to copy to.</p>
+</dd>
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>The managed pointer corresponding to the source address to copy from.</p>
+</dd>
+    <dt><code>byteCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number of bytes to copy.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TDestination</code></dt>
+    <dd></dd>
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CreateReadOnlySpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CreateReadOnlySpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CreateReadOnlySpan__1___0__System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CreateReadOnlySpan``1(``0@,System.Int32)">
+  CreateReadOnlySpan&lt;T&gt;(scoped ref readonly T, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new read-only span over a portion of a regular managed object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;T&gt; CreateReadOnlySpan&lt;T&gt;(scoped ref readonly T reference, int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <span class="xref">T</span></dt>
+    <dd><p>A reference to data.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of <code class="paramref">T</code> elements that <code class="paramref">reference</code> contains.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>A read-only span.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the data items.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CreateSpan_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CreateSpan*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_CreateSpan__1___0__System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.CreateSpan``1(``0@,System.Int32)">
+  CreateSpan&lt;T&gt;(scoped ref T, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new span over a portion of a regular managed object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;T&gt; CreateSpan&lt;T&gt;(scoped ref T reference, int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <span class="xref">T</span></dt>
+    <dd><p>A reference to data.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of <code class="paramref">T</code> elements that <code class="paramref">reference</code> contains.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>A span.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the data items.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetPointer_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetPointer*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetPointer__1_System_ReadOnlySpan___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetPointer``1(System.ReadOnlySpan{``0})">
+  GetPointer&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a pointer to the element of the span at index zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T* GetPointer&lt;T&gt;(this ReadOnlySpan&lt;T&gt; span) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The span from which the pointer is retrieved.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T*</dt>
+    <dd><p>A pointer to the item at index zero of <code class="paramref">span</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in <code class="paramref">span</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetPointer_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetPointer*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetPointer__1_System_Span___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetPointer``1(System.Span{``0})">
+  GetPointer&lt;T&gt;(Span&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a pointer to the element of the span at index zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T* GetPointer&lt;T&gt;(this Span&lt;T&gt; span) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>The span from which the pointer is retrieved.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T*</dt>
+    <dd><p>A pointer to the item at index zero of <code class="paramref">span</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in <code class="paramref">span</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1_System_ReadOnlySpan___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(System.ReadOnlySpan{``0})">
+  GetReference&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the element of the read-only span at index 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref readonly T GetReference&lt;T&gt;(this ReadOnlySpan&lt;T&gt; span)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The read-only span from which the reference is retrieved.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to the element at index 0.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1_System_ReadOnlySpan___0__System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(System.ReadOnlySpan{``0},System.Int32)">
+  GetReference&lt;T&gt;(ReadOnlySpan&lt;T&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the element of the read-only span at index 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref readonly T GetReference&lt;T&gt;(this ReadOnlySpan&lt;T&gt; span, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The read-only span from which the reference is retrieved.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the element of <code class="paramref">span</code> for which to take a reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to the element at index 0.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1_System_ReadOnlySpan___0__System_UIntPtr_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(System.ReadOnlySpan{``0},System.UIntPtr)">
+  GetReference&lt;T&gt;(ReadOnlySpan&lt;T&gt;, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the element of the read-only span at index 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref readonly T GetReference&lt;T&gt;(this ReadOnlySpan&lt;T&gt; span, nuint index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The read-only span from which the reference is retrieved.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The index of the element of <code class="paramref">span</code> for which to take a reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to the element at index 0.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1_System_Span___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(System.Span{``0})">
+  GetReference&lt;T&gt;(Span&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the element of the span at index 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T GetReference&lt;T&gt;(this Span&lt;T&gt; span)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>The span from which the reference is retrieved.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to the element at index 0.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1_System_Span___0__System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(System.Span{``0},System.Int32)">
+  GetReference&lt;T&gt;(Span&lt;T&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the element of the span at index 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T GetReference&lt;T&gt;(this Span&lt;T&gt; span, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>The span from which the reference is retrieved.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the element of <code class="paramref">span</code> for which to take a reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to the element at index 0.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1_System_Span___0__System_UIntPtr_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(System.Span{``0},System.UIntPtr)">
+  GetReference&lt;T&gt;(Span&lt;T&gt;, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the element of the span at index 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T GetReference&lt;T&gt;(this Span&lt;T&gt; span, nuint index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+    <dd><p>The span from which the reference is retrieved.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The index of the element of <code class="paramref">span</code> for which to take a reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A reference to the element at index 0.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the span.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1___0___" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(``0[])">
+  GetReference&lt;T&gt;(T[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the 0th element of <code class="paramref">array</code>. If the array is empty, returns a reference to where the 0th element would have been stored. Such a reference may be used for pinning but must never be dereferenced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T GetReference&lt;T&gt;(this T[] array)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> T[]</dt>
+    <dd><p>The array to analyze.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Reference to the 0th element in <code class="paramref">array</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the array elements.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p><code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1___0___System_Int32_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(``0[],System.Int32)">
+  GetReference&lt;T&gt;(T[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the 0th element of <code class="paramref">array</code>. If the array is empty, returns a reference to where the 0th element would have been stored. Such a reference may be used for pinning but must never be dereferenced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T GetReference&lt;T&gt;(this T[] array, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> T[]</dt>
+    <dd><p>The array to analyze.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the element of <code class="paramref">array</code> for which to take a reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Reference to the 0th element in <code class="paramref">array</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the array elements.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p><code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_GetReference__1___0___System_UIntPtr_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.GetReference``1(``0[],System.UIntPtr)">
+  GetReference&lt;T&gt;(T[], nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a reference to the 0th element of <code class="paramref">array</code>. If the array is empty, returns a reference to where the 0th element would have been stored. Such a reference may be used for pinning but must never be dereferenced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T GetReference&lt;T&gt;(this T[] array, nuint index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> T[]</dt>
+    <dd><p>The array to analyze.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The index of the element of <code class="paramref">array</code> for which to take a reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Reference to the 0th element in <code class="paramref">array</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the array elements.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p><code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_IsNotNullRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.IsNotNullRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_IsNotNullRef__1___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.IsNotNullRef``1(``0@)">
+  IsNotNullRef&lt;T&gt;(ref readonly T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if a given reference to a value of type <code class="typeparamref">T</code> is not a null reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNotNullRef&lt;T&gt;(ref readonly T source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">T</span></dt>
+    <dd><p>The reference to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">source</code> is not a null reference;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the reference.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_IsNullRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.IsNullRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_IsNullRef__1___0__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.IsNullRef``1(``0@)">
+  IsNullRef&lt;T&gt;(ref readonly T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if a given managed pointer to a value of type <code class="typeparamref">T</code> is a null reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNullRef&lt;T&gt;(ref readonly T source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">T</span></dt>
+    <dd><p>The managed pointer to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">source</code> is a null reference; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The elemental type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_NullRef_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.NullRef*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_NullRef__1" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.NullRef``1">
+  NullRef&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a null managed pointer to a value of type <code class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref T NullRef&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A null managed pointer to a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The elemental type of the managed pointer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_ReadUnaligned_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.ReadUnaligned*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_ReadUnaligned__1_System_Void__" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.ReadUnaligned``1(System.Void*)">
+  ReadUnaligned&lt;T&gt;(void*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L460"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a value of type <code class="typeparamref">T</code> from the given location without assuming architecture dependent alignment of the source address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ReadUnaligned&lt;T&gt;(void* source) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>An unmanaged pointer containing the address to read from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A value of type <code class="typeparamref">T</code> read from the given location.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the value to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_ReadUnaligned_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.ReadUnaligned*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_ReadUnaligned__1_System_Void__System_UIntPtr_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.ReadUnaligned``1(System.Void*,System.UIntPtr)">
+  ReadUnaligned&lt;T&gt;(void*, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a value of type <code class="typeparamref">T</code> from the given location without assuming architecture dependent alignment of the source address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ReadUnaligned&lt;T&gt;(void* source, nuint offset) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>An unmanaged pointer containing the address to read from.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The offset in bytes from the location pointed to by <code class="paramref">source</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A value of type <code class="typeparamref">T</code> read from the given location.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the value to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_SizeOf_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.SizeOf*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_SizeOf__1" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.SizeOf``1">
+  SizeOf&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L485"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the size of a value of the given type parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint SizeOf&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The size, in bytes, of a value of type <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type whose size is to be retrieved.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_WriteUnaligned_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.WriteUnaligned*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_WriteUnaligned__1_System_Void__System_UIntPtr___0_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.WriteUnaligned``1(System.Void*,System.UIntPtr,``0)">
+  WriteUnaligned&lt;T&gt;(void*, nuint, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a value of type <code class="typeparamref">T</code> to the given location without assuming architecture dependent alignment of the destination address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteUnaligned&lt;T&gt;(void* destination, nuint offset, T value) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>A managed pointer containing the address to write to.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd><p>The offset in bytes from the location pointed to by <code class="paramref">destination</code>.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The value to write.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the value to write.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Core_UnsafeExtensions_UnsafeUtilities_WriteUnaligned_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.WriteUnaligned*"></a>
+
+  <h3 id="Stride_Core_UnsafeExtensions_UnsafeUtilities_WriteUnaligned__1_System_Void____0_" data-uid="Stride.Core.UnsafeExtensions.UnsafeUtilities.WriteUnaligned``1(System.Void*,``0)">
+  WriteUnaligned&lt;T&gt;(void*, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a value of type <code class="typeparamref">T</code> to the given location without assuming architecture dependent alignment of the destination address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteUnaligned&lt;T&gt;(void* destination, T value) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>A managed pointer containing the address to write to.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The value to write.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the value to write.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/core/Stride.Core/Unsafe/UnsafeUtilities.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

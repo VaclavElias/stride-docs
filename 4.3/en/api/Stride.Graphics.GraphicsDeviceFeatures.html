@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct GraphicsDeviceFeatures | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct GraphicsDeviceFeatures | Stride API ">
+      
+      <meta name="description" content="Contains information about the general features supported by a , as well as supported features specific to a particular pixel format or data format.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_GraphicsDeviceFeatures.md&amp;value=---%0Auid%3A%20Stride.Graphics.GraphicsDeviceFeatures%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.GraphicsDeviceFeatures">
+
+
+
+  <h1 id="Stride_Graphics_GraphicsDeviceFeatures" data-uid="Stride.Graphics.GraphicsDeviceFeatures" class="text-break">
+Struct GraphicsDeviceFeatures  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains information about the general features supported by a <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a>, as well as
+supported features specific to a particular pixel format or data format.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct GraphicsDeviceFeatures</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_BitCast__2___0_">UnsafeUtilities.BitCast&lt;TFrom, TTo&gt;(TFrom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_">UnsafeUtilities.As&lt;T&gt;(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Stride_Graphics_GraphicsDeviceFeatures_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>To obtain information about the supported features for a particular format, use the <a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_Item_Stride_Graphics_PixelFormat_">indexer</a>.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_CurrentProfile" data-uid="Stride.Graphics.GraphicsDeviceFeatures.CurrentProfile">
+  CurrentProfile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current profile of the current <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a>, which determines its supported features.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly GraphicsProfile CurrentProfile</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsProfile.html">GraphicsProfile</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsDeviceFeatures_CurrentProfile_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This may differ from <a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html#Stride_Graphics_GraphicsDeviceFeatures_RequestedProfile">RequestedProfile</a> if the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> could not be created
+with that requested profile. This one represents the closest supported profile.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsProfile.html">GraphicsProfile</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasComputeShaders" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasComputeShaders">
+  HasComputeShaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> supports Compute Shaders, unordered access on Structured Buffers,
+and Raw Structured Buffers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasComputeShaders</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a>.<a class="xref" href="Stride.Graphics.Buffer.Structured.html">Structured</a></div>
+    <div><a class="xref" href="Stride.Graphics.Buffer.html">Buffer</a>.<a class="xref" href="Stride.Graphics.Buffer.Raw.html">Raw</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasDepthAsReadOnlyRT" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasDepthAsReadOnlyRT">
+  HasDepthAsReadOnlyRT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the Depth Buffer can directly be used as a read-only Render Target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasDepthAsReadOnlyRT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasDepthAsSRV" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasDepthAsSRV">
+  HasDepthAsSRV
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the Depth Buffer can also be used as a Shader Resource View and bound for shader passes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasDepthAsSRV</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasDoublePrecision" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasDoublePrecision">
+  HasDoublePrecision
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> supports double precision operations in shaders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasDoublePrecision</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasDriverCommandLists" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasDriverCommandLists">
+  HasDriverCommandLists
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> supports Command Lists in multi-threading scenarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasDriverCommandLists</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasMultiSampleDepthAsSRV" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasMultiSampleDepthAsSRV">
+  HasMultiSampleDepthAsSRV
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if a multi-sampled Depth Buffer can directly be used as a Shader Resource View.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasMultiSampleDepthAsSRV</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasMultiThreadingConcurrentResources" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasMultiThreadingConcurrentResources">
+  HasMultiThreadingConcurrentResources
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> supports concurrent Resources in multi-threading scenarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasMultiThreadingConcurrentResources</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasResourceRenaming" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasResourceRenaming">
+  HasResourceRenaming
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the graphics API supports resource renaming
+(with either <a class="xref" href="Stride.Graphics.MapMode.html#Stride_Graphics_MapMode_WriteDiscard">WriteDiscard</a> or <a class="xref" href="Stride.Graphics.GraphicsResource.html">UpdateSubResource(GraphicsResource, int, DataBox, ResourceRegion)</a> with full size).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasResourceRenaming</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_HasSRgb" data-uid="Stride.Graphics.GraphicsDeviceFeatures.HasSRgb">
+  HasSRgb
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A value indicating if the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> supports sRGB Textures and Render Targets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool HasSRgb</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumMipLevels" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumMipLevels">
+  MaximumMipLevels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of miplevels a Texture can have.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumMipLevels</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture1DArraySize" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumTexture1DArraySize">
+  MaximumTexture1DArraySize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of slices/array elements for a one-dimensional (1D) Texture Array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumTexture1DArraySize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture1DSize" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumTexture1DSize">
+  MaximumTexture1DSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum size in texels for a one-dimensional (1D) Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumTexture1DSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture2DArraySize" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumTexture2DArraySize">
+  MaximumTexture2DArraySize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of slices/array elements for a two-dimensional (2D) Texture Array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumTexture2DArraySize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture2DSize" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumTexture2DSize">
+  MaximumTexture2DSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum size (width or height) in texels for a two-dimensional (2D) Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumTexture2DSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumTexture3DSize" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumTexture3DSize">
+  MaximumTexture3DSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum size (width, height, or depth) in texels for a three-dimensional (3D) Texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumTexture3DSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_MaximumTextureCubeSize" data-uid="Stride.Graphics.GraphicsDeviceFeatures.MaximumTextureCubeSize">
+  MaximumTextureCubeSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum size (width or height) in texels for a Texture Cube.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaximumTextureCubeSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.Texture.html">Texture</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_RequestedProfile" data-uid="Stride.Graphics.GraphicsDeviceFeatures.RequestedProfile">
+  RequestedProfile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The requested profile when the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly GraphicsProfile RequestedProfile</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsProfile.html">GraphicsProfile</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsProfile.html">GraphicsProfile</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_ResourceSizeInMegabytes" data-uid="Stride.Graphics.GraphicsDeviceFeatures.ResourceSizeInMegabytes">
+  ResourceSizeInMegabytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum size of a resource, in megabytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int ResourceSizeInMegabytes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsDeviceFeatures_Item_" data-uid="Stride.Graphics.GraphicsDeviceFeatures.Item*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_Item_Stride_Graphics_PixelFormat_" data-uid="Stride.Graphics.GraphicsDeviceFeatures.Item(Stride.Graphics.PixelFormat)">
+  this[PixelFormat]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queries the features the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> supports for the specified <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly GraphicsDeviceFeatures.FeaturesPerFormat this[PixelFormat pixelFormat] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pixelFormat</code> <a class="xref" href="Stride.Graphics.PixelFormat.html">PixelFormat</a></dt>
+    <dd><p>The pixel format.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a>.<a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.FeaturesPerFormat.html">FeaturesPerFormat</a></dt>
+    <dd><p>A <a class="xref" href="Stride.Graphics.GraphicsDeviceFeatures.FeaturesPerFormat.html">GraphicsDeviceFeatures.FeaturesPerFormat</a> structure indicating the features supported for <code class="paramref">pixelFormat</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsDeviceFeatures_ToString_" data-uid="Stride.Graphics.GraphicsDeviceFeatures.ToString*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsDeviceFeatures_ToString" data-uid="Stride.Graphics.GraphicsDeviceFeatures.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsDeviceFeatures.cs/#L33" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

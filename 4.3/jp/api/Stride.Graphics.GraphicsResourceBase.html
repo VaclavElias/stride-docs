@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GraphicsResourceBase | Stride API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GraphicsResourceBase | Stride API ">
+      
+      <meta name="description" content="Base class for a Graphics Resource.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/stride3d/stride-docs/new/master/apiSpec/new?filename=Stride_Graphics_GraphicsResourceBase.md&amp;value=---%0Auid%3A%20Stride.Graphics.GraphicsResourceBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="https://www.stride3d.net/">
+            <img id="logo" class="svg" src="../media/stride-logo-red.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Stride.Graphics.GraphicsResourceBase">
+
+
+
+  <h1 id="Stride_Graphics_GraphicsResourceBase" data-uid="Stride.Graphics.GraphicsResourceBase" class="text-break">
+Class GraphicsResourceBase  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Stride.html">Stride</a>.<a class="xref" href="Stride.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Stride.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base class for a Graphics Resource.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class GraphicsResourceBase : ComponentBase, IDisposable, IComponent, IReferencable, ICollectorHolder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="Stride.Core.DisposeBase.html">DisposeBase</a></div>
+      <div><a class="xref" href="Stride.Core.ComponentBase.html">ComponentBase</a></div>
+      <div><span class="xref">GraphicsResourceBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Stride.Core.IComponent.html">IComponent</a></div>
+      <div><a class="xref" href="Stride.Core.IReferencable.html">IReferencable</a></div>
+      <div><a class="xref" href="Stride.Core.ICollectorHolder.html">ICollectorHolder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Stride.Graphics.CommandList.html">CommandList</a></div>
+      <div><a class="xref" href="Stride.Graphics.DescriptorPool.html">DescriptorPool</a></div>
+      <div><a class="xref" href="Stride.Graphics.DescriptorSetLayout.html">DescriptorSetLayout</a></div>
+      <div><a class="xref" href="Stride.Graphics.GraphicsResource.html">GraphicsResource</a></div>
+      <div><a class="xref" href="Stride.Graphics.PipelineState.html">PipelineState</a></div>
+      <div><a class="xref" href="Stride.Graphics.QueryPool.html">QueryPool</a></div>
+      <div><a class="xref" href="Stride.Graphics.RootSignature.html">RootSignature</a></div>
+      <div><a class="xref" href="Stride.Graphics.SamplerState.html">SamplerState</a></div>
+      <div><a class="xref" href="Stride.Video.VideoInstance.html">VideoInstance</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Tags">ComponentBase.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Name">ComponentBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_OnNameChanged">ComponentBase.OnNameChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_ToString">ComponentBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_IsDisposed">DisposeBase.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_Dispose">DisposeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_OnAddReference">DisposeBase.OnAddReference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_OnReleaseReference">DisposeBase.OnReleaseReference()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Stride.Core.ComponentBaseExtensions.html#Stride_Core_ComponentBaseExtensions_DisposeBy__1___0_Stride_Core_ICollectorHolder_">ComponentBaseExtensions.DisposeBy&lt;T&gt;(T, ICollectorHolder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.ComponentBaseExtensions.html#Stride_Core_ComponentBaseExtensions_RemoveDisposeBy__1___0_Stride_Core_ICollectorHolder_">ComponentBaseExtensions.RemoveDisposeBy&lt;T&gt;(T, ICollectorHolder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Stride.Core.UnsafeExtensions.UnsafeUtilities.html#Stride_Core_UnsafeExtensions_UnsafeUtilities_As__1_System_Object_">UnsafeUtilities.As&lt;T&gt;(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase__ctor_" data-uid="Stride.Graphics.GraphicsResourceBase.#ctor*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase__ctor" data-uid="Stride.Graphics.GraphicsResourceBase.#ctor">
+  GraphicsResourceBase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html">GraphicsResourceBase</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GraphicsResourceBase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase__ctor_" data-uid="Stride.Graphics.GraphicsResourceBase.#ctor*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase__ctor_Stride_Graphics_GraphicsDevice_" data-uid="Stride.Graphics.GraphicsResourceBase.#ctor(Stride.Graphics.GraphicsDevice)">
+  GraphicsResourceBase(GraphicsDevice)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html">GraphicsResourceBase</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GraphicsResourceBase(GraphicsDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The graphics device.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase__ctor_" data-uid="Stride.Graphics.GraphicsResourceBase.#ctor*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase__ctor_Stride_Graphics_GraphicsDevice_System_String_" data-uid="Stride.Graphics.GraphicsResourceBase.#ctor(Stride.Graphics.GraphicsDevice,System.String)">
+  GraphicsResourceBase(GraphicsDevice, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html">GraphicsResourceBase</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GraphicsResourceBase(GraphicsDevice device, string? name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>The graphics device.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A name that can be used to identify the Graphics Resource.
+Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to use the type's name instead.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_Reload" data-uid="Stride.Graphics.GraphicsResourceBase.Reload">
+  Reload
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/reference-types">delegate</a> that will be invoked when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a> is reset and the
+Graphics Resource needs to be created / loaded again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;GraphicsResourceBase, IServiceRegistry&gt; Reload</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Stride.Graphics.GraphicsResourceBase.html">GraphicsResourceBase</a>, <a class="xref" href="Stride.Core.IServiceRegistry.html">IServiceRegistry</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_GraphicsDevice_" data-uid="Stride.Graphics.GraphicsResourceBase.GraphicsDevice*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_GraphicsDevice" data-uid="Stride.Graphics.GraphicsResourceBase.GraphicsDevice">
+  GraphicsDevice
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> the Graphics Resource depends on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDevice GraphicsDevice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_IsDebugMode_" data-uid="Stride.Graphics.GraphicsResourceBase.IsDebugMode*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_IsDebugMode" data-uid="Stride.Graphics.GraphicsResourceBase.IsDebugMode">
+  IsDebugMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Graphics Resource is in &quot;Debug mode&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsDebugMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Graphics Resource is initialized in &quot;Debug mode&quot;; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_NativeDevice_" data-uid="Stride.Graphics.GraphicsResourceBase.NativeDevice*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_NativeDevice" data-uid="Stride.Graphics.GraphicsResourceBase.NativeDevice">
+  NativeDevice
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the internal Direct3D 11 device (<span class="xref">Silk.NET.Direct3D11.ID3D11Device</span>) if the resource is attached to
+a <a class="xref" href="Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ComPtr&lt;ID3D11Device&gt; NativeDevice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11Device</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_NativeDevice_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the reference is going to be kept, use ComPtr&lt;T&gt;.AddRef() to increment the internal
+reference count, and <span class="xref">Silk.NET.Core.Native.ComPtr&lt;T&gt;.Dispose()</span> when no longer needed to release the object.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_NativeDeviceChild_" data-uid="Stride.Graphics.GraphicsResourceBase.NativeDeviceChild*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_NativeDeviceChild" data-uid="Stride.Graphics.GraphicsResourceBase.NativeDeviceChild">
+  NativeDeviceChild
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the internal <span class="xref">Silk.NET.Direct3D11.ID3D11DeviceChild</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ComPtr&lt;ID3D11DeviceChild&gt; NativeDeviceChild { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11DeviceChild</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_NativeDeviceChild_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the reference is going to be kept, use ComPtr&lt;T&gt;.AddRef() to increment the internal
+reference count, and <span class="xref">Silk.NET.Core.Native.ComPtr&lt;T&gt;.Dispose()</span> when no longer needed to release the object.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_NativeResource_" data-uid="Stride.Graphics.GraphicsResourceBase.NativeResource*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_NativeResource" data-uid="Stride.Graphics.GraphicsResourceBase.NativeResource">
+  NativeResource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the internal Direct3D 11 Resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ComPtr&lt;ID3D11Resource&gt; NativeResource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11Resource</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_NativeResource_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the reference is going to be kept, use ComPtr&lt;T&gt;.AddRef() to increment the internal
+reference count, and <span class="xref">Silk.NET.Core.Native.ComPtr&lt;T&gt;.Dispose()</span> when no longer needed to release the object.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_Destroy_" data-uid="Stride.Graphics.GraphicsResourceBase.Destroy*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_Destroy" data-uid="Stride.Graphics.GraphicsResourceBase.Destroy">
+  Destroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes the resources associated with the Graphics Resource, removes itself from
+the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a>'s resource registry, and transitions to the
+<a class="xref" href="Stride.Graphics.GraphicsResourceLifetimeState.html#Stride_Graphics_GraphicsResourceLifetimeState_Destroyed">Destroyed</a> state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Destroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_OnDestroyed_" data-uid="Stride.Graphics.GraphicsResourceBase.OnDestroyed*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_OnDestroyed_System_Boolean_" data-uid="Stride.Graphics.GraphicsResourceBase.OnDestroyed(System.Boolean)">
+  OnDestroyed(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a> has been detected to be internally destroyed,
+or when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Destroy">Destroy()</a> methad has been called. Raises the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_Destroyed">Destroyed</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroyed(bool immediately = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>immediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A value indicating whether the resource should be destroyed immediately (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>),
+or if it can be deferred until it's safe to do so (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_OnDestroyed_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method releases the underlying native resources (<span class="xref">Silk.NET.Direct3D11.ID3D11Resource</span> and <span class="xref">Silk.NET.Direct3D11.ID3D11DeviceChild</span>).</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_OnPause_" data-uid="Stride.Graphics.GraphicsResourceBase.OnPause*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_OnPause" data-uid="Stride.Graphics.GraphicsResourceBase.OnPause">
+  OnPause()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a> is inactive (put in the background and rendering is paused).
+By default, it does nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnPause()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Graphics Resource has transitioned to the <a class="xref" href="Stride.Graphics.GraphicsResourceLifetimeState.html#Stride_Graphics_GraphicsResourceLifetimeState_Paused">Paused</a> state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_OnPause_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method may be overriden in derived classes to voluntarily release objects that can be easily recreated,
+such as <strong>Dynamic Buffers</strong> and <strong>Frame Buffers / Render Targets</strong>.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_OnRecreate_" data-uid="Stride.Graphics.GraphicsResourceBase.OnRecreate*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_OnRecreate" data-uid="Stride.Graphics.GraphicsResourceBase.OnRecreate">
+  OnRecreate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a> has been recreated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnRecreate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if resource has transitioned to the <a class="xref" href="Stride.Graphics.GraphicsResourceLifetimeState.html#Stride_Graphics_GraphicsResourceLifetimeState_Active">Active</a> state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_OnResume_" data-uid="Stride.Graphics.GraphicsResourceBase.OnResume*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_OnResume" data-uid="Stride.Graphics.GraphicsResourceBase.OnResume">
+  OnResume()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Stride.Graphics.GraphicsResourceBase.html#Stride_Graphics_GraphicsResourceBase_GraphicsDevice">GraphicsDevice</a> has resumed from either a paused or destroyed state.
+By default, it does nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnResume()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_OnResume_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method may be overriden in derived classes to recreate the Graphics Resource if possible.</p>
+</div>
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_SetNativeDeviceChild_" data-uid="Stride.Graphics.GraphicsResourceBase.SetNativeDeviceChild*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_SetNativeDeviceChild_Silk_NET_Core_Native_ComPtr_Silk_NET_Direct3D11_ID3D11DeviceChild__" data-uid="Stride.Graphics.GraphicsResourceBase.SetNativeDeviceChild(Silk.NET.Core.Native.ComPtr{Silk.NET.Direct3D11.ID3D11DeviceChild})">
+  SetNativeDeviceChild(ComPtr&lt;ID3D11DeviceChild&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal method to set the internal <span class="xref">Silk.NET.Direct3D11.ID3D11DeviceChild</span> without incrementing or decrementing
+the reference count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetNativeDeviceChild(ComPtr&lt;ID3D11DeviceChild&gt; deviceChild)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deviceChild</code> <span class="xref">ComPtr</span>&lt;<span class="xref">ID3D11DeviceChild</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Stride_Graphics_GraphicsResourceBase_UnsetNativeDeviceChild_" data-uid="Stride.Graphics.GraphicsResourceBase.UnsetNativeDeviceChild*"></a>
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_UnsetNativeDeviceChild" data-uid="Stride.Graphics.GraphicsResourceBase.UnsetNativeDeviceChild">
+  UnsetNativeDeviceChild()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/Direct3D11/GraphicsResourceBase.Direct3D11.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal method to detach the internal <span class="xref">Silk.NET.Direct3D11.ID3D11DeviceChild</span> without incrementing or decrementing
+the reference count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UnsetNativeDeviceChild()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Stride_Graphics_GraphicsResourceBase_Destroyed" data-uid="Stride.Graphics.GraphicsResourceBase.Destroyed">
+  Destroyed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when the internal Graphics Resource gets destroyed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Destroyed</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Stride_Graphics_GraphicsResourceBase_Destroyed_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This event is useful when user-allocated handles associated with the internal resource need to be released.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Graphics/GraphicsResourceBase.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
