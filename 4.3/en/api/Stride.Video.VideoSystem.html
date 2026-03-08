@@ -89,7 +89,7 @@
 
 
   <h1 id="Stride_Video_VideoSystem" data-uid="Stride.Video.VideoSystem" class="text-break">
-Class VideoSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class VideoSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-464/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -207,9 +207,6 @@ Class VideoSystem  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Name">ComponentBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_Destroy">ComponentBase.Destroy()</a>
-    </div>
-    <div>
       <a class="xref" href="Stride.Core.ComponentBase.html#Stride_Core_ComponentBase_OnNameChanged">ComponentBase.OnNameChanged()</a>
     </div>
     <div>
@@ -255,7 +252,7 @@ Class VideoSystem  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Stride_Video_VideoSystem__ctor_Stride_Core_IServiceRegistry_" data-uid="Stride.Video.VideoSystem.#ctor(Stride.Core.IServiceRegistry)">
   VideoSystem(IServiceRegistry)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Video/VideoSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-464/sources/engine/Stride.Video/VideoSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -282,49 +279,52 @@ Class VideoSystem  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
+  <a id="Stride_Video_VideoSystem_Destroy_" data-uid="Stride.Video.VideoSystem.Destroy*"></a>
 
-  <h3 id="Stride_Video_VideoSystem_DxgiDeviceManager" data-uid="Stride.Video.VideoSystem.DxgiDeviceManager">
-  DxgiDeviceManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Stride_Video_VideoSystem_Destroy" data-uid="Stride.Video.VideoSystem.Destroy">
+  Destroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-464/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disposes the object's resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DXGIDeviceManager DxgiDeviceManager</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Destroy()</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">DXGIDeviceManager</span></dt>
-    <dd></dd>
-  </dl>
 
 
 
 
 
+  <h4 class="section" id="Stride_Video_VideoSystem_Destroy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+  Override in a derived class to implement disposal logic specific to it.
+</p>
+<p>
+  This method is automatically called whenever a call to <a class="xref" href="Stride.Core.DisposeBase.html#Stride_Core_DisposeBase_Dispose">Dispose()</a> (or to <a class="xref" href="Stride.Core.IReferencable.html#Stride_Core_IReferencable_Release">Release()</a>)
+  has decreased the internal reference count to zero, meaning no other objects (hopefully) hold a reference to this one
+  and its resources can be safely released.
+</p>
+</div>
 
 
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
 
 
   <a id="Stride_Video_VideoSystem_Initialize_" data-uid="Stride.Video.VideoSystem.Initialize*"></a>
 
   <h3 id="Stride_Video_VideoSystem_Initialize" data-uid="Stride.Video.VideoSystem.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-464/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes the Game System.</p>
@@ -356,7 +356,7 @@ and setting up non-graphics resources (as here the Graphics Device may have not 
 
   <h3 id="Stride_Video_VideoSystem_NewInstance_Stride_Core_IServiceRegistry_" data-uid="Stride.Video.VideoSystem.NewInstance(Stride.Core.IServiceRegistry)">
   NewInstance(IServiceRegistry)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Video/VideoSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stride3d/stride/blob/feat-464/sources/engine/Stride.Video/VideoSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -392,7 +392,7 @@ and setting up non-graphics resources (as here the Graphics Device may have not 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/stride3d/stride/blob/feat-community-resources-updates/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/stride3d/stride/blob/feat-464/sources/engine/Stride.Video/VideoSystem.Direct3D.cs/#L17" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -408,7 +408,7 @@ and setting up non-graphics resources (as here the Graphics Device may have not 
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.3</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.4</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

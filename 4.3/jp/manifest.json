@@ -22364,16 +22364,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Stride.Graphics.SpriteFont.IFontManager.yml",
+      "source_relative_path": "api/Stride.Graphics.SpriteFont.GlyphPosition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Stride.Graphics.SpriteFont.IFontManager.html"
+          "relative_path": "api/Stride.Graphics.SpriteFont.GlyphPosition.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Stride.Graphics.SpriteFont.IFontManager",
+      "Title": "Stride.Graphics.SpriteFont.GlyphPosition",
       "Summary": null
     },
     {
@@ -37946,6 +37946,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Stride.Rendering.UI.UIProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Stride.Rendering.UI.UIProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Stride.Rendering.UI.UIProcessor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Stride.Rendering.UI.UIRenderFeature.HitTestResult.yml",
       "output": {
         ".html": {
@@ -40085,6 +40099,20 @@
       "IsMRef": true,
       "Title": "Stride.UI.StripType",
       "Summary": "<p sourcefile=\"api/Stride.UI.StripType.yml\" sourcestartlinenumber=\"1\">The different types of strip possible of a grid.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Stride.UI.TextEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Stride.UI.TextEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Stride.UI.TextEventArgs",
+      "Summary": "<p sourcefile=\"api/Stride.UI.TextEventArgs.yml\" sourcestartlinenumber=\"1\">The arguments associated with a <xref href=\"Stride.Input.TextInputEvent\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -49612,10 +49640,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/get-started/assets.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/get-started/assets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/get-started/create-a-project.md",
       "output": {
         ".html": {
           "relative_path": "manual/get-started/create-a-project.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/get-started/game-studio.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/get-started/game-studio.html"
         }
       },
       "version": ""
@@ -49636,6 +49684,16 @@
       "output": {
         ".html": {
           "relative_path": "manual/get-started/install-stride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/get-started/key-concepts.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/get-started/key-concepts.html"
         }
       },
       "version": ""
@@ -49742,6 +49800,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-editor.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-editor.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "manual/get-started/media/asset-unsaved-changes.png",
       "output": {
         "resource": {
@@ -49752,10 +49820,90 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-add-asset.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-add-asset.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-copy-resource.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-copy-resource.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-create-new.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-create-new.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-from-resource-type.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-from-resource-type.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-include-root.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-include-root.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-indicators.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-indicators.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "manual/get-started/media/asset-view-options.png",
       "output": {
         "resource": {
           "relative_path": "manual/get-started/media/asset-view-options.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view-resource-default-location.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view-resource-default-location.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/asset-view.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/asset-view.webp"
         }
       },
       "version": ""
@@ -50242,6 +50390,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "manual/get-started/media/game-studio.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/game-studio.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "manual/get-started/media/get-started.jpg",
       "output": {
         "resource": {
@@ -50276,16 +50434,6 @@
       "output": {
         "resource": {
           "relative_path": "manual/get-started/media/install-VS-plug-in-prompt.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "manual/get-started/media/install-VS-plug-in-prompt.webp",
-      "output": {
-        "resource": {
-          "relative_path": "manual/get-started/media/install-VS-plug-in-prompt.webp"
         }
       },
       "version": ""
@@ -50762,6 +50910,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "manual/get-started/media/property-grid.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/property-grid.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "manual/get-started/media/reinstall-extension.png",
       "output": {
         "resource": {
@@ -50786,6 +50944,16 @@
       "output": {
         "resource": {
           "relative_path": "manual/get-started/media/scene-creation-basic-scene-in-stride.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/scene-nesting.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/scene-nesting.webp"
         }
       },
       "version": ""
@@ -50842,10 +51010,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "manual/get-started/media/stride-launcher-first-time-after-installation-error.webp",
+      "source_relative_path": "manual/get-started/media/solution-explorer.webp",
       "output": {
         "resource": {
-          "relative_path": "manual/get-started/media/stride-launcher-first-time-after-installation-error.webp"
+          "relative_path": "manual/get-started/media/solution-explorer.webp"
         }
       },
       "version": ""
@@ -50866,16 +51034,6 @@
       "output": {
         "resource": {
           "relative_path": "manual/get-started/media/stride-launcher-install-last-version.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "manual/get-started/media/stride-launcher-install-latest-version-prompt.webp",
-      "output": {
-        "resource": {
-          "relative_path": "manual/get-started/media/stride-launcher-install-latest-version-prompt.webp"
         }
       },
       "version": ""
@@ -50932,16 +51090,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "manual/get-started/media/stride-launcher-ready.webp",
-      "output": {
-        "resource": {
-          "relative_path": "manual/get-started/media/stride-launcher-ready.webp"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "manual/get-started/media/stride-launcher-start-button.png",
       "output": {
         "resource": {
@@ -50992,16 +51140,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "manual/get-started/media/stride-launcher.webp",
-      "output": {
-        "resource": {
-          "relative_path": "manual/get-started/media/stride-launcher.webp"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "manual/get-started/media/stride-poster-image-640by480.png",
       "output": {
         "resource": {
@@ -51026,26 +51164,6 @@
       "output": {
         "resource": {
           "relative_path": "manual/get-started/media/switch-to-orthographic.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "manual/get-started/media/update-stride-packages.webp",
-      "output": {
-        "resource": {
-          "relative_path": "manual/get-started/media/update-stride-packages.webp"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "manual/get-started/media/update-stride-save-project.webp",
-      "output": {
-        "resource": {
-          "relative_path": "manual/get-started/media/update-stride-save-project.webp"
         }
       },
       "version": ""
@@ -51212,10 +51330,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/get-started/update-stride.md",
+      "source_relative_path": "manual/get-started/next-steps.md",
       "output": {
         ".html": {
-          "relative_path": "manual/get-started/update-stride.html"
+          "relative_path": "manual/get-started/next-steps.html"
         }
       },
       "version": ""
@@ -56686,6 +56804,126 @@
       "output": {
         ".html": {
           "relative_path": "manual/input/virtual-buttons.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/install-and-update/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/install-and-update/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/install-and-update/install-stride.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/install-and-update/install-stride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/install-VS-plug-in-prompt.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/install-VS-plug-in-prompt.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/stride-launcher-first-time-after-installation-error.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/stride-launcher-first-time-after-installation-error.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/stride-launcher-install-latest-version-prompt.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/stride-launcher-install-latest-version-prompt.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/stride-launcher-ready.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/stride-launcher-ready.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/stride-launcher.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/stride-launcher.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/update-stride-packages.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/update-stride-packages.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/update-stride-save-project.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/update-stride-save-project.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/install-and-update/media/vs-extension.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/install-and-update/media/vs-extension.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/install-and-update/requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/install-and-update/requirements.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/install-and-update/update-stride.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/install-and-update/update-stride.html"
         }
       },
       "version": ""
