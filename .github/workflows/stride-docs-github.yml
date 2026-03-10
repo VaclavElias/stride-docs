@@ -18,7 +18,7 @@ jobs:
     - name: .NET SDK Setup
       uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 10.x
+        dotnet-version: 10.0.3
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
