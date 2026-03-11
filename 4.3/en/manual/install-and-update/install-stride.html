@@ -114,14 +114,18 @@
 <h2 id="installation-location">Installation Location</h2>
 <p>The engine and it's editor Game Studio are a <a href="https://learn.microsoft.com/en-us/nuget/what-is-nuget">NuGet package</a>, which is the packaging format used in C# projects. This means that <strong>Stride's installation location is managed by the NuGet package manager</strong> and <strong>can't be easily changed by the user</strong>.</p>
 <p>Changing the installation location is possible, but this is outside of the scope of this page.</p>
-<h2 id="visual-studio-integration">Visual Studio integration</h2>
-<p>The Visual Studio integration is an optional extension for Visual Studio.</p>
+<h2 id="stride-extension">Stride Extension</h2>
+<p>Stride has an optional extension that's avaliable for some IDEs.</p>
 <ul>
-<li><strong>🟩 What it does</strong>: provides syntax highlighting to shaders in Visual Studio.</li>
+<li><strong>🟩 What it does</strong>: let's you write shaders directly in Visual Studio.</li>
 <li><strong>🟥 What it doesn't do</strong>: provide C# syntax highlighting for Stride (that works without the extension).</li>
 </ul>
-<p>The extension can be installed via the launcher, by navigating to the <strong>Visual Studio extension</strong> section.</p>
+<p>The extension can be installed for Visual Studio via the launcher, by navigating to the <strong>Visual Studio extension</strong> section. For other IDEs, visit the <a href="../get-started/visual-studio-extension.html">Stride Extension page</a>.</p>
 <p><img src="media/vs-extension.webp" alt="Image of the &quot;Visual Studio extension&quot; section in the Stride Launcher."></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The &quot;Visual Studio 2022: Install&quot; button will also work for Visual Studio 2026.</p>
+</div>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="could-not-find-a-compatible-version-of-msbuild-or-path-to-dotnet-executable-is-not-set"><code>Could not find a compatible version of MSBuild.</code> or <code>Path to dotnet executable is not set.</code></h3>
 <p>If you click <strong>Start</strong> and see one of the above error messages, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.</p>
@@ -149,7 +153,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.4</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

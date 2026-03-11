@@ -50280,6 +50280,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "manual/get-started/media/extension-install-vs.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/extension-install-vs.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/get-started/media/extension-open-game-studio.webp",
+      "output": {
+        "resource": {
+          "relative_path": "manual/get-started/media/extension-open-game-studio.webp"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "manual/get-started/media/file-type-workflow.png",
       "output": {
         "resource": {
