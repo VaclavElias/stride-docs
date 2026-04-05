@@ -105,16 +105,16 @@
 <p>This approach also solves many update order dependencies issues (just need to order the entity processors updates properly).</p>
 <p>Here is some examples of entity processors:</p>
 <ul>
-<li><a class="xref" href="../../../api/Stride.Engine.Processors.TransformProcessor.html">TransformProcessor</a>: Compute transformation matrices from hierarchy and local transformation stored in <a class="xref" href="../../../api/Stride.Engine.TransformComponent.html">TransformComponent</a>.
+<li>@'Stride.Engine.Processors.TransformProcessor': Compute transformation matrices from hierarchy and local transformation stored in @'Stride.Engine.TransformComponent'.
 <ul>
-<li>As a result, <a class="xref" href="../../../api/Stride.Engine.EntityManager.html">EntityManager</a> can be used as a hierarchical scenegraph instead of a simple entity list.</li>
+<li>As a result, @'Stride.Engine.EntityManager' can be used as a hierarchical scenegraph instead of a simple entity list.</li>
 </ul>
 </li>
-<li><a class="xref" href="../../../api/Stride.Engine.Processors.ModelTransformProcessor.html">ModelTransformProcessor</a>: Add <a class="xref" href="../../../api/Stride.Engine.ModelComponent.html#Stride_Engine_ModelComponent_Model">Model</a> to rendering.</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.Lights.LightProcessor.html">LightProcessor</a>: Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)</li>
+<li>@'Stride.Engine.Processors.ModelTransformProcessor': Add @'Stride.Engine.ModelComponent.Model' to rendering.</li>
+<li>@'Stride.Rendering.Lights.LightProcessor': Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)</li>
 </ul>
 <h2 id="entity-system">Entity System</h2>
-<p>Entity are grouped together in an <a class="xref" href="../../../api/Stride.Engine.EntityManager.html">EntityManager</a>. It will also contains the list of entity processors. When an entity is added or an entity components changes, it will ask entity processors if they should be included.</p>
+<p>Entity are grouped together in an @'Stride.Engine.EntityManager'. It will also contains the list of entity processors. When an entity is added or an entity components changes, it will ask entity processors if they should be included.</p>
 <pre><code class="lang-cs">// Add an entity:
 var myEntity = new Entity();
 engine.EntityManager.AddEntity(myEntity);
@@ -125,8 +125,8 @@ foreach (var entity in engine.EntityManager.Entities)
 	Console.WriteLine(entity.Name);
 }
 </code></pre>
-<p><a class="xref" href="../../../api/Stride.Engine.EntityManager.html">EntityManager</a> can be used to enumerate its <code>Entities (ref:{Stride.Engine.Entity})</code>. Note that children of a given entities will also be in this list.</p>
-<p>To manipulate entities as a scenegraph, refer to <a class="xref" href="../../../api/Stride.Engine.TransformComponent.html">TransformComponent</a> class.</p>
+<p>@'Stride.Engine.EntityManager' can be used to enumerate its <code>Entities (ref:{Stride.Engine.Entity})</code>. Note that children of a given entities will also be in this list.</p>
+<p>To manipulate entities as a scenegraph, refer to @'Stride.Engine.TransformComponent' class.</p>
 
 </article>
 
@@ -148,7 +148,7 @@ foreach (var entity in engine.EntityManager.Entities)
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

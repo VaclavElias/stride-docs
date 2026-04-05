@@ -98,27 +98,27 @@
 <p>ジェスチャの認識には CPU 時間が必要であるため、既定では、入力システムはジェスチャを認識しません。</p>
 <p>ジェスチャの認識を有効にするには:</p>
 <ol>
-<li>認識するジェスチャの構成クラスのインスタンスを作成します。たとえば、ドラッグ ジェスチャの場合は、<a class="xref" href="../../api/Stride.Input.GestureConfigDrag.html">GestureConfigDrag</a> のインスタンスを作成します。</li>
+<li>認識するジェスチャの構成クラスのインスタンスを作成します。たとえば、ドラッグ ジェスチャの場合は、@'Stride.Input.GestureConfigDrag' のインスタンスを作成します。</li>
 <li>クラスのパラメーターを構成します。</li>
-<li>ジェスチャの構成を <a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_Gestures">Gestures</a> コレクションに追加します。</li>
+<li>ジェスチャの構成を @'Stride.Input.InputManager.Gestures' コレクションに追加します。</li>
 </ol>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>ジェスチャの認識をアクティブにした後では、ジェスチャのパラメーターを変更できません。パラメーターを変更する必要がある場合は、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_Gestures">Gestures</a> コレクションからジェスチャを削除し、新しいパラメーターで新しいエントリを作成する必要があります。</p>
+<p>ジェスチャの認識をアクティブにした後では、ジェスチャのパラメーターを変更できません。パラメーターを変更する必要がある場合は、@'Stride.Input.InputManager.Gestures' コレクションからジェスチャを削除し、新しいパラメーターで新しいエントリを作成する必要があります。</p>
 </div>
 <h3 id="ジェスチャの認識を無効にする">ジェスチャの認識を無効にする</h3>
-<p><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_Gestures">InputManager.Gestures</a> コレクションからジェスチャを削除します。</p>
+<p><a href="xref:Stride.Input.InputManager.Gestures">InputManager.Gestures</a> コレクションからジェスチャを削除します。</p>
 <h2 id="ジェスチャの認識">ジェスチャの認識</h2>
-<p>入力システムは、ジェスチャを検出すると、<a class="xref" href="../../api/Stride.Input.GestureEvent.html">GestureEvent</a> を <a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_GestureEvents">InputManager.GestureEvents</a> のリストに追加します。イベントには、ジェスチャとその状態に関する情報が含まれます (ジェスチャの場所や使用された指の数など)。</p>
+<p>入力システムは、ジェスチャを検出すると、@'Stride.Input.GestureEvent' を <a href="xref:Stride.Input.InputManager.GestureEvents">InputManager.GestureEvents</a> のリストに追加します。イベントには、ジェスチャとその状態に関する情報が含まれます (ジェスチャの場所や使用された指の数など)。</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>各ジェスチャには、固有のジェスチャ イベント クラスが関連付けられています (後述)。</p>
 </div>
-<p><a class="xref" href="../../api/Stride.Input.GestureEvent.html#Stride_Input_GestureEvent_Type">GestureEvent.Type</a> フィールドは、どのジェスチャが認識されたかを示します。基底ジェスチャ イベントをジェスチャ固有のイベント型にキャストして、イベントに関するジェスチャ型固有の情報を取得できます。</p>
+<p><a href="xref:Stride.Input.GestureEvent.Type">GestureEvent.Type</a> フィールドは、どのジェスチャが認識されたかを示します。基底ジェスチャ イベントをジェスチャ固有のイベント型にキャストして、イベントに関するジェスチャ型固有の情報を取得できます。</p>
 <p>Stride は同時に複数のジェスチャを検出できるので、イベント リストは 1 回の更新で複数の項目を格納することができます。</p>
 <p>リストは更新のたびにクリアされるので、手動でクリアする必要はありません。</p>
 <h2 id="ジェスチャを構成する">ジェスチャを構成する</h2>
-<p><a class="xref" href="../../api/Stride.Input.GestureConfig.html">GestureConfig</a> クラスでは、次のようなパラメーターを構成できます。</p>
+<p>@'Stride.Input.GestureConfig' クラスでは、次のようなパラメーターを構成できます。</p>
 <ul>
 <li><p>ジェスチャが使用する指の数</p>
 </li>
@@ -144,7 +144,7 @@
 </li>
 </ul>
 <p><strong>単独</strong>ジェスチャ (タップ、フリック、長押し) は常に_発生_状態になっています。<strong>連続</strong>ジェスチャ (ドラッグ、複合) は常に、_開始_状態で開始し、何らかの_変更_状態がそれに続き、_終了_状態で終了します。</p>
-<p>ジェスチャの現在の状態を問い合わせるには、トリガーされたジェスチャ イベントの <a class="xref" href="../../api/Stride.Input.GestureEvent.html#Stride_Input_GestureEvent_State">GestureEvent.State</a> フィールドを使用します。</p>
+<p>ジェスチャの現在の状態を問い合わせるには、トリガーされたジェスチャ イベントの <a href="xref:Stride.Input.GestureEvent.State">GestureEvent.State</a> フィールドを使用します。</p>
 <h2 id="ジェスチャの種類">ジェスチャの種類</h2>
 <p>Stride がサポートするジェスチャには大きく分けて次の 2 つの種類があります。</p>
 <ul>
@@ -171,43 +171,43 @@
 <h4 id="タップ"><a name="Tap">タップ</a></h4>
 <p><img src="media/gestures_tap_gesture.png" alt="Tap gesture"></p>
 <p>ユーザーは、画面に触れて、すぐに指を離します。</p>
-<p><strong>構成クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureConfigTap.html">GestureConfigTap</a></p>
-<p><strong>イベント クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureEventTap.html">GestureEventTap</a></p>
-<p>画面に触れる指の数をジェスチャの間に変えることはできません。タップに必要な指の数を設定するには、<a class="xref" href="../../api/Stride.Input.GestureConfig.html#Stride_Input_GestureConfig_RequiredNumberOfFingers">RequiredNumberOfFingers</a> を変更します。</p>
+<p><strong>構成クラス</strong>: @'Stride.Input.GestureConfigTap'</p>
+<p><strong>イベント クラス</strong>: @'Stride.Input.GestureEventTap'</p>
+<p>画面に触れる指の数をジェスチャの間に変えることはできません。タップに必要な指の数を設定するには、@'Stride.Input.GestureConfig.RequiredNumberOfFingers' を変更します。</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>シングル タップとマルチ タップを区別するため、システムはタップ イベントでのレイテンシを使用します。これを無効にするには、<a class="xref" href="../../api/Stride.Input.GestureConfigTap.html#Stride_Input_GestureConfigTap_MaximumTimeBetweenTaps">GestureConfigTap.MaximumTimeBetweenTaps</a> フィールドを <strong>0</strong> に設定します。</p>
+<p>シングル タップとマルチ タップを区別するため、システムはタップ イベントでのレイテンシを使用します。これを無効にするには、<a href="xref:Stride.Input.GestureConfigTap.MaximumTimeBetweenTaps">GestureConfigTap.MaximumTimeBetweenTaps</a> フィールドを <strong>0</strong> に設定します。</p>
 </div>
 <h4 id="フリック"><a name="Flick">フリック</a></h4>
 <p><img src="media/gestures_flick_gesture.png" alt="Flick gesture"></p>
 <p>ユーザーは、画面に触れて、すばやい直線的な移動を行った後、指を離します。</p>
-<p><strong>構成クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureConfigFlick.html">GestureConfigFlick</a></p>
-<p><strong>イベント クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureEventFlick.html">GestureEventFlick</a></p>
+<p><strong>構成クラス</strong>: @'Stride.Input.GestureConfigFlick'</p>
+<p><strong>イベント クラス</strong>: @'Stride.Input.GestureEventFlick'</p>
 <p>面に触れる指の数をジェスチャの間に変えることはできません。</p>
-<p>フリック ジェスチャの最小の長さを設定するには、<a class="xref" href="../../api/Stride.Input.GestureConfigFlick.html#Stride_Input_GestureConfigFlick_MinimumFlickLength">GestureConfigFlick.MinimumFlickLength</a> を使用します。</p>
+<p>フリック ジェスチャの最小の長さを設定するには、<a href="xref:Stride.Input.GestureConfigFlick.MinimumFlickLength">GestureConfigFlick.MinimumFlickLength</a> を使用します。</p>
 <p>フリックの方向を<strong>上下</strong>または<strong>左右</strong>に制限するには、
-<a class="xref" href="../../api/Stride.Input.GestureConfigFlick.html#Stride_Input_GestureConfigFlick_FlickShape">GestureConfigFlick.FlickShape</a> を使用します。</p>
+<a href="xref:Stride.Input.GestureConfigFlick.FlickShape">GestureConfigFlick.FlickShape</a> を使用します。</p>
 <h4 id="長押し"><a name="Long-press">長押し</a></h4>
 <p><img src="media/gestures_long_pres_gesture.png" alt="Long press gesture"></p>
 <p>ユーザーは、画面に触れて、一定の時間、指を離さずに圧力をかけ続けます (既定の時間は 1 秒です)。</p>
-<p><strong>構成クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureConfigLongPress.html">GestureConfigLongPress</a></p>
-<p><strong>イベント クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureEventLongPress.html">GestureEventLongPress</a></p>
+<p><strong>構成クラス</strong>: <a href="xref:Stride.Input.GestureConfigLongPress">GestureConfigLongPress</a></p>
+<p><strong>イベント クラス</strong>: <a href="xref:Stride.Input.GestureEventLongPress">GestureEventLongPress</a></p>
 <p>画面に触れる指の数をジェスチャの間に変えることはできません。</p>
-<p>長押しジェスチャで押している最小限の時間の長さを変更するには、<a class="xref" href="../../api/Stride.Input.GestureConfigLongPress.html#Stride_Input_GestureConfigLongPress_RequiredPressTime">GestureConfigLongPress.RequiredPressTime</a> を変更します。</p>
+<p>長押しジェスチャで押している最小限の時間の長さを変更するには、<a href="xref:Stride.Input.GestureConfigLongPress.RequiredPressTime">GestureConfigLongPress.RequiredPressTime</a> を変更します。</p>
 <h3 id="連続ジェスチャ">連続ジェスチャ</h3>
 <h4 id="ドラッグ"><a name="Drag">ドラッグ</a></h4>
 <p><img src="media/gestures_drag_gesture.png" alt="Drag gesture"></p>
 <p>ユーザーは、画面に触れて、移動を行った後、指を離します。</p>
-<p><strong>構成クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureConfigDrag.html">GestureConfigDrag</a></p>
-<p><strong>イベント クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureEventDrag.html">GestureEventDrag</a></p>
+<p><strong>構成クラス</strong>: <a href="xref:Stride.Input.GestureConfigDrag">GestureConfigDrag</a></p>
+<p><strong>イベント クラス</strong>: <a href="xref:Stride.Input.GestureEventDrag">GestureEventDrag</a></p>
 <p>画面に触れる指の数をジェスチャの間に変えることはできません。</p>
-<p>短いドラッグを検出するには、<a class="xref" href="../../api/Stride.Input.GestureConfigDrag.html#Stride_Input_GestureConfigDrag_MinimumDragDistance">GestureConfigDrag.MinimumDragDistance</a> を小さくします。</p>
-<p>ドラッグの方向を<strong>上下</strong>または<strong>左右</strong>に制限するには、<a class="xref" href="../../api/Stride.Input.GestureConfigDrag.html#Stride_Input_GestureConfigDrag_DragShape">GestureConfigDrag.DragShape</a> を使用します。</p>
+<p>短いドラッグを検出するには、<a href="xref:Stride.Input.GestureConfigDrag.MinimumDragDistance">GestureConfigDrag.MinimumDragDistance</a> を小さくします。</p>
+<p>ドラッグの方向を<strong>上下</strong>または<strong>左右</strong>に制限するには、<a href="xref:Stride.Input.GestureConfigDrag.DragShape">GestureConfigDrag.DragShape</a> を使用します。</p>
 <h4 id="複合"><a name="Composite">複合</a></h4>
 <p><img src="media/gestures_translation_gesture.png" alt="Translation gesture"> <img src="media/gestures_scale_gesture.png" alt="Scale gesture"> <img src="media/gestures_rotation_gesture.png" alt="Rotation gesture"></p>
 <p>ユーザーは、2 本の指で画面に触れて、各指を個別に動かします。</p>
-<p><strong>構成クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureConfigComposite.html">GestureConfigComposite</a></p>
-<p><strong>イベント クラス</strong>: <a class="xref" href="../../api/Stride.Input.GestureEventComposite.html">GestureEventComposite</a></p>
+<p><strong>構成クラス</strong>: @'Stride.Input.GestureConfigComposite'</p>
+<p><strong>イベント クラス</strong>: @'Stride.Input.GestureEventComposite'</p>
 <p>複合ジェスチャを行うには、正確に 2 本の指で画面に触れる必要があります。システムが 3 つの基本アクションのいずれかを検出すると、複合ジェスチャがトリガーされます。</p>
 <ul>
 <li><em>平行移動</em>: ユーザーは、2 本の指を一緒に同じ方向へ動かします。</li>
@@ -252,11 +252,11 @@ var doubleTapConfig = new GestureConfigTap(2, 2);
 var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero };
 </code></pre>
 <h3 id="ジェスチャ-イベントにアクセスする">ジェスチャ イベントにアクセスする</h3>
-<p>認識されたジェスチャによってトリガーされたイベントのリストにアクセスするには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_GestureEvents">InputManager.GestureEvents</a> コレクションを使用します。このコレクションは、更新のたびに自動的に作成されます。</p>
+<p>認識されたジェスチャによってトリガーされたイベントのリストにアクセスするには、<a href="xref:Stride.Input.InputManager.GestureEvents">InputManager.GestureEvents</a> コレクションを使用します。このコレクションは、更新のたびに自動的に作成されます。</p>
 <pre><code class="lang-cs">var currentFrameGestureEvents = Input.GestureEvents;
 </code></pre>
 <h3 id="ジェスチャの種類を識別する">ジェスチャの種類を識別する</h3>
-<p><a class="xref" href="../../api/Stride.Input.GestureEvent.html#Stride_Input_GestureEvent_Type">GestureEvent.Type</a> フィールドを使用してジェスチャの種類を識別した後、それを適切なイベント型にキャストして、イベントに関する他の情報を取得します。</p>
+<p><a href="xref:Stride.Input.GestureEvent.Type">GestureEvent.Type</a> フィールドを使用してジェスチャの種類を識別した後、それを適切なイベント型にキャストして、イベントに関する他の情報を取得します。</p>
 <pre><code class="lang-cs">foreach( var gestureEvent in Input.GestureEvents)
 {
    	// イベントがタップ ジェスチャからのものかどうかを確認する
@@ -271,7 +271,7 @@ var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zer
 }
 </code></pre>
 <h3 id="ジェスチャの状態を識別する">ジェスチャの状態を識別する</h3>
-<p>ジェスチャ イベントの状態を取得するには、<a class="xref" href="../../api/Stride.Input.GestureEvent.html#Stride_Input_GestureEvent_State">GestureEvent.State</a> フィールドを使用します。</p>
+<p>ジェスチャ イベントの状態を取得するには、<a href="xref:Stride.Input.GestureEvent.State">GestureEvent.State</a> フィールドを使用します。</p>
 <pre><code class="lang-cs">switch(compositeGestureEvent.State)
 {
 case GestureState.Began:
@@ -314,7 +314,7 @@ default:
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

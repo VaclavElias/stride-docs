@@ -96,7 +96,7 @@
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
 -->
-<p>Stride では、<a class="xref" href="../../../api/Stride.Graphics.Texture.html">Texture</a> クラスを使って、コード内でテクスチャーオブジェクトを操作することができます。</p>
+<p>Stride では、@'Stride.Graphics.Texture' クラスを使って、コード内でテクスチャーオブジェクトを操作することができます。</p>
 <!--
 Stride uses the @'Stride.Graphics.Texture' class to interact with texture objects in code.
 -->
@@ -124,7 +124,7 @@ This automatically generates a texture object with all its fields correctly fill
 <!--
 ## Create a texture
 -->
-<p>アセットを使わずにテクスチャーを作ることもできます（例：レンダーターゲットとして使用するため）。これを行うには、<a class="xref" href="../../../api/Stride.Graphics.Texture.html">Texture</a> クラスのコンストラクタを呼び出します。利用可能なオプションとパラメータの完全なリストについては、<a class="xref" href="../../../api/Stride.Graphics.Texture.html">Texture</a> クラスのリファレンスをご覧ください。一部、すべてのプラットフォームで利用できるわけではないテクスチャーフォーマットもあります。</p>
+<p>アセットを使わずにテクスチャーを作ることもできます（例：レンダーターゲットとして使用するため）。これを行うには、@'Stride.Graphics.Texture' クラスのコンストラクタを呼び出します。利用可能なオプションとパラメータの完全なリストについては、@'Stride.Graphics.Texture' クラスのリファレンスをご覧ください。一部、すべてのプラットフォームで利用できるわけではないテクスチャーフォーマットもあります。</p>
 <!--
 You can also create textures without any assets (eg to be used as render target). To do this, call the constructor of the @'Stride.Graphics.Texture' class. See the @'Stride.Graphics.Texture' class reference to get the full list of available options and parameters. Some texture formats might not be available on all platforms.
 -->
@@ -142,7 +142,7 @@ You can also create textures without any assets (eg to be used as render target)
 <!--
 ### Create a render target
 -->
-<p><a class="xref" href="../../../api/Stride.Graphics.GraphicsPresenter.html">GraphicsPresenter</a> クラスは、常に既定のレンダーターゲットと深度バッファを提供します。これらは、<a class="xref" href="../../../api/Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_BackBuffer">BackBuffer</a> プロパティおよび <a class="xref" href="../../../api/Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_DepthStencilBuffer">DepthStencilBuffer</a> プロパティでアクセスできます。プレゼンターは、<a class="xref" href="../../../api/Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> の @'Stride.GraphicsDevice.Presenter' プロパティとして公開されています。しかし、オフスクリーンレンダリングやポストプロセスを実行するために、独自のバッファを使用したい場合があります。そのため、Stride は、レンダーテクスチャと深度バッファとして機能するテクスチャーを簡単に作成する方法を提供しています。</p>
+<p>@'Stride.Graphics.GraphicsPresenter' クラスは、常に既定のレンダーターゲットと深度バッファを提供します。これらは、@'Stride.Graphics.GraphicsPresenter.BackBuffer' プロパティおよび @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' プロパティでアクセスできます。プレゼンターは、@'Stride.Graphics.GraphicsDevice' の @'Stride.GraphicsDevice.Presenter' プロパティとして公開されています。しかし、オフスクリーンレンダリングやポストプロセスを実行するために、独自のバッファを使用したい場合があります。そのため、Stride は、レンダーテクスチャと深度バッファとして機能するテクスチャーを簡単に作成する方法を提供しています。</p>
 <!--
 The @'Stride.Graphics.GraphicsPresenter' class always provides a default render target and a depth buffer. They are accessible through the @'Stride.Graphics.GraphicsPresenter.BackBuffer' and @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' properties. The presenter is exposed by the @'Stride.Graphics.GraphicsDevice.Presenter' property of the @'Stride.Graphics.GraphicsDevice'. However, you might want to use your own buffer to perform off-screen rendering or post-processes. As a result, Stride offers a simple way to create textures that can act as render textures and a depth buffers.
 -->
@@ -160,7 +160,7 @@ var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>レンダーターゲットの動作を有効にする <a class="xref" href="../../../api/Stride.Graphics.TextureFlags.html#Stride_Graphics_TextureFlags_RenderTarget">RenderTarget</a> フラグも忘れないでください。</p>
+<p>レンダーターゲットの動作を有効にする @'Stride.Graphics.TextureFlags.RenderTarget' フラグも忘れないでください。</p>
 <p>PixelFormat が正しいことを確認してください（特に深度バッファの場合）。ターゲットプラットフォームで利用可能なフォーマットであるかどうかに注意してください。</p>
 </div>
 <!--
@@ -203,7 +203,7 @@ You can set multiple render textures at the same time. See the overloads of @'St
 -->
 <div class="NOTE">
 <h5>Note</h5>
-<p>画面に表示されるのは <a class="xref" href="../../../api/Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_BackBuffer">BackBuffer</a> だけなので、何かを表示するにはそれをレンダリングする必要があります。</p>
+<p>画面に表示されるのは @'Stride.Graphics.GraphicsPresenter.BackBuffer' だけなので、何かを表示するにはそれをレンダリングする必要があります。</p>
 </div>
 <!--
 >[!Note]
@@ -213,7 +213,7 @@ You can set multiple render textures at the same time. See the overloads of @'St
 <!--
 ### Clear a render target
 -->
-<p>レンダーテクスチャーをクリアするには、<a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_Clear_Stride_Graphics_Texture_Stride_Core_Mathematics_Color4_">Clear(Texture, Color4)</a> メソッドと <a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_Clear_Stride_Graphics_Texture_Stride_Graphics_DepthStencilClearOptions_System_Single_System_Byte_">Clear(Texture, DepthStencilClearOptions, float, byte)</a> メソッドを呼び出します。</p>
+<p>レンダーテクスチャーをクリアするには、@'Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Core.Mathematics.Color4)' メソッドと @'Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' メソッドを呼び出します。</p>
 <!--
 To clear render textures, call the @'Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Core.Mathematics.Color4)' and @'Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
 -->
@@ -226,7 +226,7 @@ CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, DepthStencilClear
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>フレームごとに <a class="xref" href="../../../api/Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_BackBuffer">BackBuffer</a> と <a class="xref" href="../../../api/Stride.Graphics.GraphicsPresenter.html#Stride_Graphics_GraphicsPresenter_DepthStencilBuffer">DepthStencilBuffer</a> をクリアすることを忘れないでください。そうしないと、デバイスによっては予期せぬ動作をする可能性があります。フレームの内容をクリアせず維持したい場合は、中間レンダーターゲットを使用してください。</p>
+<p>フレームごとに @'Stride.Graphics.GraphicsPresenter.BackBuffer' と @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' をクリアすることを忘れないでください。そうしないと、デバイスによっては予期せぬ動作をする可能性があります。フレームの内容をクリアせず維持したい場合は、中間レンダーターゲットを使用してください。</p>
 </div>
 <!--
 >[!Note]
@@ -236,11 +236,11 @@ CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, DepthStencilClear
 <!--
 ## Viewport
 -->
-<p><a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTargetAndViewport_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTargetAndViewport(Texture, Texture)</a> は、現在の <a class="xref" href="../../../api/Stride.Graphics.Viewport.html">Viewport</a> をレンダーターゲットの全体サイズに調整します。</p>
+<p>@'Stride.Graphics.CommandList.SetRenderTargetAndViewport(Stride.Graphics.Texture,Stride.Graphics.Texture)' は、現在の @'Stride.Graphics.Viewport' をレンダーターゲットの全体サイズに調整します。</p>
 <!--
 @'Stride.Graphics.CommandList.SetRenderTargetAndViewport(Stride.Graphics.Texture,Stride.Graphics.Texture)' adjusts the current @'Stride.Graphics.Viewport' to the full size of the render target.
 -->
-<p>テクスチャーのサブセットにのみレンダリングしたい場合は、<a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetRenderTarget_Stride_Graphics_Texture_Stride_Graphics_Texture_">SetRenderTarget(Texture, Texture)</a> と @'Stride.Graphics.CommandList.SetViewport(Stride.Graphics.Viewport)' を使って、レンダーターゲットとビューポートを別々に設定します。</p>
+<p>テクスチャーのサブセットにのみレンダリングしたい場合は、@'Stride.Graphics.CommandList.SetRenderTarget(Stride.Graphics.Texture,Stride.Graphics.Texture)' と @'Stride.Graphics.CommandList.SetViewport(Stride.Graphics.Viewport)' を使って、レンダーターゲットとビューポートを別々に設定します。</p>
 <!--
 If you only want to render to a subset of the texture, set the render target and viewport separately using @'Stride.Graphics.CommandList.SetRenderTarget(Stride.Graphics.Texture,Stride.Graphics.Texture)' and @'Stride.Graphics.CommandList.SetViewport(Stride.Graphics.Viewport)'.
 -->
@@ -312,7 +312,7 @@ CommandList.SetScissorRectangles(rectangles);
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

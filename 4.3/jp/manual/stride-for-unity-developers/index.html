@@ -201,7 +201,7 @@
 </li>
 </ol>
 <h3 id="transform-コンポーネント">Transform コンポーネント</h3>
-<p>Unity® の GameObject と同じように、Stride の各エンティティにはワールドでの位置、回転、拡大縮小を設定する <a class="xref" href="../../api/Stride.Engine.TransformComponent.html">Transform コンポーネント</a>があります。</p>
+<p>Unity® の GameObject と同じように、Stride の各エンティティにはワールドでの位置、回転、拡大縮小を設定する <a href="xref:Stride.Engine.TransformComponent">Transform コンポーネント</a>があります。</p>
 <p><img src="media/stride-vs-unity-entity-transform-component.png" alt="Transform component"></p>
 <p>シーン内のすべてのエンティティは位置を持つ必要があるため、空のエンティティにも Transform コンポーネントがあります。</p>
 <h2 id="アセット">アセット</h2>
@@ -521,19 +521,19 @@ while (Game.IsRunning)
 <h3 id="スクリプトを作成する">スクリプトを作成する</h3>
 <p>スクリプトを作成するには、［Add asset］ボタンをクリックして、［Scripts］を選択します。</p>
 <p><img src="media/stride-vs-unity-create-script.png" alt="Create script in Stride"></p>
-<p>Unity® では、<code>MonoBehaviour</code> スクリプトを作成すると、2 つの基底関数 <code>Start()</code> と <code>Update()</code> が作成されます。Stride の <a class="xref" href="../../api/Stride.Engine.SyncScript.html">SyncScript</a> は同じように動作します。<code>MonoBehaviour</code> と同様に、<a class="xref" href="../../api/Stride.Engine.SyncScript.html">SyncScript</a> には次の 2 つのメソッドがあります。</p>
+<p>Unity® では、<code>MonoBehaviour</code> スクリプトを作成すると、2 つの基底関数 <code>Start()</code> と <code>Update()</code> が作成されます。Stride の <a href="xref:Stride.Engine.SyncScript">SyncScript</a> は同じように動作します。<code>MonoBehaviour</code> と同様に、<a href="xref:Stride.Engine.SyncScript">SyncScript</a> には次の 2 つのメソッドがあります。</p>
 <ul>
-<li><p><a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start">Start()</a> は、スクリプトがロードされると呼び出されます。</p>
+<li><p><a href="xref:Stride.Engine.StartupScript.Start">Start()</a> は、スクリプトがロードされると呼び出されます。</p>
 </li>
-<li><p><a class="xref" href="../../api/Stride.Engine.SyncScript.html#Stride_Engine_SyncScript_Update">Update()</a> は、更新のたびに呼び出されます。</p>
+<li><p><a href="xref:Stride.Engine.SyncScript.Update">Update()</a> は、更新のたびに呼び出されます。</p>
 </li>
 </ul>
-<p><code>MonoBehaviour</code> とは異なる、すべての <a class="xref" href="../../api/Stride.Engine.SyncScript.html">SyncScript</a> で <a class="xref" href="../../api/Stride.Engine.SyncScript.html#Stride_Engine_SyncScript_Update">Update()</a> メソッドを使用する必要があります。そうしないと、コードは正しく動作しません。</p>
+<p><code>MonoBehaviour</code> とは異なる、すべての <a href="xref:Stride.Engine.SyncScript">SyncScript</a> で <a href="xref:Stride.Engine.SyncScript.Update">Update()</a> メソッドを使用する必要があります。そうしないと、コードは正しく動作しません。</p>
 <p>スクリプトをスタートアップ スクリプトまたは非同期スクリプトにしたい場合は、対応するスクリプトの種類を使用します。</p>
 <ul>
-<li><p><a class="xref" href="../../api/Stride.Engine.StartupScript.html">StartupScript</a>: このスクリプトのメソッドは <a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start">Start()</a> の 1 つだけです。起動時にシーンとその内容を初期化します。</p>
+<li><p><a href="xref:Stride.Engine.StartupScript">StartupScript</a>: このスクリプトのメソッドは <a href="xref:Stride.Engine.StartupScript.Start">Start()</a> の 1 つだけです。起動時にシーンとその内容を初期化します。</p>
 </li>
-<li><p><a class="xref" href="../../api/Stride.Engine.AsyncScript.html">AsyncScript</a>: 非同期スクリプトのメソッドは <a class="xref" href="../../api/Stride.Engine.AsyncScript.html#Stride_Engine_AsyncScript_Execute">Execute()</a> の 1 つだけで、そのメソッド内で非同期/待機を使用できます。非同期スクリプトは、同期スクリプトのように 1 つずつロードされることはありません。すべてのスクリプトが並列にロードされます。</p>
+<li><p><a href="xref:Stride.Engine.AsyncScript">AsyncScript</a>: 非同期スクリプトのメソッドは <a href="xref:Stride.Engine.AsyncScript.Execute">Execute()</a> の 1 つだけで、そのメソッド内で非同期/待機を使用できます。非同期スクリプトは、同期スクリプトのように 1 つずつロードされることはありません。すべてのスクリプトが並列にロードされます。</p>
 </li>
 </ul>
 <h3 id="アセンブリを再ロードする">アセンブリを再ロードする</h3>
@@ -671,7 +671,7 @@ public override void Start()
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

@@ -93,10 +93,10 @@
 <p>Stride にはマウス入力を処理する 2 つの方法があります。</p>
 <ul>
 <li><strong>マウスのボタンの状態</strong>を問い合わせます。</li>
-<li>モバイル デバイスを対象とするクロスプラットフォーム ゲームの場合は、<a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> のリストを使用できます。
+<li>モバイル デバイスを対象とするクロスプラットフォーム ゲームの場合は、<a href="xref:Stride.Input.PointerEvent">PointerEvent</a> のリストを使用できます。
 詳細については、「<a href="pointers.html">ポインター</a>」を参照してください。</li>
 </ul>
-<p><strong>マウス ボタンの状態</strong>と<strong>ポインター イベントのリスト</strong>には、<a class="xref" href="../../api/Stride.Input.InputManager.html">入力マネージャー</a>からアクセスできます。</p>
+<p><strong>マウス ボタンの状態</strong>と<strong>ポインター イベントのリスト</strong>には、<a href="xref:Stride.Input.InputManager">入力マネージャー</a>からアクセスできます。</p>
 <table>
 <thead>
 <tr>
@@ -107,12 +107,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a></td>
+<td><a href="xref:Stride.Input.InputManager">InputManager</a></td>
 <td>デスクトップのみ</td>
 <td>デスクトップ ゲームの場合、通常、複数のマウス ボタンでの入力を処理します。つまり、<strong>マウス ボタンの状態</strong>を使用する必要があります。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a></td>
+<td><a href="xref:Stride.Input.PointerEvent">PointerEvent</a></td>
 <td>クロスプラットフォーム</td>
 <td>モバイル ゲームの場合、通常、左マウス ボタンだけでポインターをシミュレートします。つまり、マウス入力をポインターのように処理できます。マウス固有のコントロールを別に作成する必要はありません。詳細については、「<a href="pointers.html">ポインター</a>」を参照してください。</td>
 </tr>
@@ -120,26 +120,26 @@
 </table>
 <p>これらのオプションの詳細については、「<a href="index.html">入力</a>」を参照してください。</p>
 <h2 id="マウスを使用できるかどうかを調べる">マウスを使用できるかどうかを調べる</h2>
-<p>マウスの入力を処理する前に、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasMouse">Input.HasMouse</a> を使用して、マウスが接続されているかどうかを確認します。</p>
+<p>マウスの入力を処理する前に、<a href="xref:Stride.Input.InputManager.HasMouse">Input.HasMouse</a> を使用して、マウスが接続されているかどうかを確認します。</p>
 <h2 id="マウスの位置を取得する">マウスの位置を取得する</h2>
 <p>正規化された座標または絶対座標でマウスの位置を取得できます。</p>
 <h3 id="正規化された座標">正規化された座標</h3>
-<p><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_MousePosition">MousePosition</a> は、ピクセル単位の実際の画面サイズではなく、<strong>正規化された</strong> X、Y 座標でマウス ポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。</p>
+<p>@'Stride.Input.InputManager.MousePosition' は、ピクセル単位の実際の画面サイズではなく、<strong>正規化された</strong> X、Y 座標でマウス ポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。</p>
 <ul>
 <li>(0,0): ポインターは画面の左上隅にあります。</li>
 <li>(1,1): ポインターは画面の右下隅にあります。</li>
 </ul>
 <h3 id="絶対座標">絶対座標</h3>
-<p><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_AbsoluteMousePosition">InputManager.AbsoluteMousePosition</a> は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でマウス ポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。</p>
+<p><a href="xref:Stride.Input.InputManager.AbsoluteMousePosition">InputManager.AbsoluteMousePosition</a> は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でマウス ポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>画面の実際のサイズを取得するには、<a class="xref" href="../../api/Stride.Input.IPointerDevice.html#Stride_Input_IPointerDevice_SurfaceSize">IPointerDevice.SurfaceSize</a> にアクセスします。次に例を示します。</p>
+<p>画面の実際のサイズを取得するには、<a href="xref:Stride.Input.IPointerDevice.SurfaceSize">IPointerDevice.SurfaceSize</a> にアクセスします。次に例を示します。</p>
 <pre><code class="lang-cs">var surfaceSize = Input.Mouse.SurfaceSize;
 </code></pre>
 </div>
 <h2 id="マウス-ボタンの状態変化を問い合わせる">マウス ボタンの状態変化を問い合わせる</h2>
 <p>マウス ボタンを使用してプロジェクトのアクションをトリガーできます。たとえば、ファーストパーソン シューティング ゲームでは、通常、左端のボタンが射撃に使用されます。</p>
-<p><a class="xref" href="../../api/Stride.Input.InputManager.html">入力マネージャー</a>には、マウス ボタンの状態 (<em>押された</em>、<em>押されている</em>、<em>放された</em>) を調べる複数のメソッドがあります。</p>
+<p><a href="xref:Stride.Input.InputManager">入力マネージャー</a>には、マウス ボタンの状態 (<em>押された</em>、<em>押されている</em>、<em>放された</em>) を調べる複数のメソッドがあります。</p>
 <table>
 <thead>
 <tr>
@@ -149,36 +149,36 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasDownMouseButtons">HasDownMouseButtons</a></td>
+<td><a href="xref:Stride.Input.InputManager.HasDownMouseButtons">HasDownMouseButtons</a></td>
 <td>1 つ以上のマウス ボタンが現在押されているかどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasPressedMouseButtons">HasPressedMouseButtons</a></td>
+<td><a href="xref:Stride.Input.InputManager.HasPressedMouseButtons">HasPressedMouseButtons</a></td>
 <td>1 つ以上のマウス ボタンが最後の更新で押されたかどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasReleasedMouseButtons">HasReleasedMouseButtons</a></td>
+<td><a href="xref:Stride.Input.InputManager.HasReleasedMouseButtons">HasReleasedMouseButtons</a></td>
 <td>1 つ以上のマウス ボタンが最後の更新で放されたかどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsMouseButtonDown_Stride_Input_MouseButton_">IsMouseButtonDown (MouseButton)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsMouseButtonDown(Stride.Input.MouseButton)">IsMouseButtonDown (MouseButton)</a></td>
 <td>指定されたマウス ボタンが現在押されているかどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsMouseButtonPressed_Stride_Input_MouseButton_">IsMouseButtonPressed (MouseButton)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsMouseButtonPressed(Stride.Input.MouseButton)">IsMouseButtonPressed (MouseButton)</a></td>
 <td>指定されたマウス ボタンが最後の更新で押されたかどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsMouseButtonReleased_Stride_Input_MouseButton_">IsMouseButtonReleased (MouseButton)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsMouseButtonReleased(Stride.Input.MouseButton)">IsMouseButtonReleased (MouseButton)</a></td>
 <td>指定されたマウス ボタンが最後の更新で放されたかどうかを調べます。</td>
 </tr>
 </tbody>
 </table>
 <h3 id="マウスのデルタ">マウスのデルタ</h3>
-<p>最後の更新以降のマウス位置の変化を正規化された座標で取得するには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_MouseDelta">InputManager.MouseDelta</a> を使用します。これを使用して、マウスの移動の速度と方向を分析できます。</p>
+<p>最後の更新以降のマウス位置の変化を正規化された座標で取得するには、<a href="xref:Stride.Input.InputManager.MouseDelta">InputManager.MouseDelta</a> を使用します。これを使用して、マウスの移動の速度と方向を分析できます。</p>
 <h3 id="マウス-ホイールのデルタ">マウス ホイールのデルタ</h3>
 <p>マウス ホイールを使用してプロジェクトのアクションをトリガーできます。たとえば、ファーストパーソン シューティング ゲームでは、マウス ホイールを動かすことで、武器を切り替えたり、カメラをズームしたりする場合があります。</p>
-<p><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_MouseWheelDelta">InputManager.MouseWheelDelta</a> は、マウス ホイールが前方に回されると正の値を、後方に回されると負の値を返します。値 <code>0</code> は、動きがないことを示します。</p>
+<p><a href="xref:Stride.Input.InputManager.MouseWheelDelta">InputManager.MouseWheelDelta</a> は、マウス ホイールが前方に回されると正の値を、後方に回されると負の値を返します。値 <code>0</code> は、動きがないことを示します。</p>
 <h2 id="マウスの位置をロックする">マウスの位置をロックする</h2>
 <p>プロジェクトによっては、ユーザーが画面の境界を越えてマウス カーソルを移動する必要がある場合があります。たとえば、ファーストパーソン シューティング ゲームでは、通常、カメラを 360 度回転させる必要があります。そのような場合はおそらく、マウス カーソルを非表示にする必要もあります。</p>
 <p>以下のプロパティとメソッドを使用すると、マウスの位置をロックし、カーソルを非表示にすることができます。</p>
@@ -191,22 +191,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_LockMousePosition_System_Boolean_">LockMousePosition(Boolean)</a></td>
-<td>次に <a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_UnlockMousePosition">UnlockMousePosition()</a> メソッドを呼び出すまで、マウスの位置をロックします。</td>
+<td><a href="xref:Stride.Input.InputManager.LockMousePosition(System.Boolean)">LockMousePosition(Boolean)</a></td>
+<td>次に <a href="xref:Stride.Input.InputManager.UnlockMousePosition">UnlockMousePosition()</a> メソッドを呼び出すまで、マウスの位置をロックします。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_UnlockMousePosition">UnlockMousePosition()</a></td>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_LockMousePosition_System_Boolean_">LockMousePosition(Boolean)</a> イベントによってロックされたマウス位置をロック解除します。</td>
+<td><a href="xref:Stride.Input.InputManager.UnlockMousePosition">UnlockMousePosition()</a></td>
+<td><a href="xref:Stride.Input.InputManager.LockMousePosition(System.Boolean)">LockMousePosition(Boolean)</a> イベントによってロックされたマウス位置をロック解除します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsMousePositionLocked">IsMousePositionLocked</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsMousePositionLocked">IsMousePositionLocked</a></td>
 <td>マウスの位置がロックされているかどうかを調べます。</td>
 </tr>
 </tbody>
 </table>
 <div class="TIP">
 <h5>Tip</h5>
-<p>マウスの表示は、<a class="xref" href="../../api/Stride.Games.GameWindow.html#Stride_Games_GameWindow_IsMouseVisible">GameWindow.IsMouseVisible</a> で取得または設定できます。</p>
+<p>マウスの表示は、<a href="xref:Stride.Games.GameWindow.IsMouseVisible">GameWindow.IsMouseVisible</a> で取得または設定できます。</p>
 </div>
 <h2 id="コード例">コード例</h2>
 <pre><code class="lang-cs">public class MouseInputScript : SyncScript
@@ -259,7 +259,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

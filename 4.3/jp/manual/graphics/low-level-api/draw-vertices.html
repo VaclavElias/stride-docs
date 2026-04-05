@@ -126,7 +126,7 @@ Stride provides the following set of built-in primitives:
 - Torus
 - Teapot
 -->
-<p>これらは <a class="xref" href="../../../api/Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a> と一緒に自動作成されたりはしないので、手動でインスタンス化する必要があります。これは、@'Stride.Graphics.GeometricPrimitive.GeometricPrimitive' クラスで行うことができます。</p>
+<p>これらは @'Stride.Graphics.GraphicsDevice' と一緒に自動作成されたりはしないので、手動でインスタンス化する必要があります。これは、@'Stride.Graphics.GeometricPrimitive.GeometricPrimitive' クラスで行うことができます。</p>
 <!--
 They aren't automatically created along with the @'Stride.Graphics.GraphicsDevice', so you have to instantiate them. You can do this through the @'Stride.Graphics.GeometricPrimitives.GeometricPrimitive' class.
 -->
@@ -145,7 +145,7 @@ var myTorus = GeometricPrimitive.Torus.New(GraphicsDevice);
 // draw one on screen
 myCube.Draw(CommandList, EffectInstance);
 </code></pre>
-<p>これらは関連付けられたエフェクトを持っていないので、描画時に手動で <a class="xref" href="../../../api/Stride.Rendering.EffectInstance.html">EffectInstance</a>を提供する必要があります。エフェクトの読み込みの詳細については、<a href="../effects-and-shaders/index.html">エフェクトとシェーダー</a>を参照してください。</p>
+<p>これらは関連付けられたエフェクトを持っていないので、描画時に手動で @'Stride.Rendering.EffectInstance'を提供する必要があります。エフェクトの読み込みの詳細については、<a href="../effects-and-shaders/index.html">エフェクトとシェーダー</a>を参照してください。</p>
 <!--
 They have no effect associated with them, so the user has to provide an @'Stride.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../effects-and-shaders/index.md).
 -->
@@ -153,17 +153,17 @@ They have no effect associated with them, so the user has to provide an @'Stride
 <!--
 ## Custom drawing
 -->
-<p>組込みプリミティブの他に、カスタム頂点バッファを作成することでジオメトリを描画することができます。頂点バッファを作成するには、まず <a class="xref" href="../../../api/Stride.Graphics.VertexDeclaration.html">VertexDeclaration</a> を定義する必要があります。この頂点宣言では、各頂点の要素と、そのレイアウトを記述します。
-詳細については、<a class="xref" href="../../../api/Stride.Graphics.VertexElement.html">VertexElement</a> のリファレンスをご覧ください。</p>
+<p>組込みプリミティブの他に、カスタム頂点バッファを作成することでジオメトリを描画することができます。頂点バッファを作成するには、まず @'Stride.Graphics.VertexDeclaration' を定義する必要があります。この頂点宣言では、各頂点の要素と、そのレイアウトを記述します。
+詳細については、@'Stride.Graphics.VertexElement' のリファレンスをご覧ください。</p>
 <!--
 Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a @'Stride.Graphics.VertexDeclaration' has to be defined. A vertex declaration describes the elements of each vertex and their layout.
 For details, see the @'Stride.Graphics.VertexElement' reference page.
 -->
-<p>次に、頂点の配列から頂点バッファを作成することができます。頂点データ型は、<a class="xref" href="../../../api/Stride.Graphics.VertexDeclaration.html">VertexDeclaration</a> と一致する必要があります。</p>
+<p>次に、頂点の配列から頂点バッファを作成することができます。頂点データ型は、@'Stride.Graphics.VertexDeclaration' と一致する必要があります。</p>
 <!--
 Next, a vertex buffer can be created from an array of vertices. The vertex data type has to match the @'Stride.Graphics.VertexDeclaration'.
 -->
-<p>頂点バッファと頂点宣言を使って、<a class="xref" href="../../../api/Stride.Graphics.VertexBufferBinding.html">VertexBufferBinding</a> を作成することができます。</p>
+<p>頂点バッファと頂点宣言を使って、@'Stride.Graphics.VertexBufferBinding' を作成することができます。</p>
 <!--
 Given vertex buffer and declaration, a @'Stride.Graphics.VertexBufferBinding' can be created. 
 -->
@@ -184,11 +184,11 @@ var vertexBuffer = Buffer.Vertex.New(GraphicsDevice, vertices);
 // Create a vertex buffer binding
 var vertexBufferBinding = new VertexBufferBinding(vertexBuffer, layout, vertexCount);
 </code></pre>
-<p>新しく作成した頂点バッファを描画するには、パイプラインにバインドする必要があります。描画する頂点レイアウトと <a class="xref" href="../../../api/Stride.Graphics.PrimitiveType.html">PrimitiveType</a> は、<a href="pipeline-state.html">パイプライン ステート</a>オブジェクトに含まれていなければなりません。バッファ自体は動的に設定することができます。</p>
+<p>新しく作成した頂点バッファを描画するには、パイプラインにバインドする必要があります。描画する頂点レイアウトと @'Stride.Graphics.PrimitiveType' は、<a href="pipeline-state.html">パイプライン ステート</a>オブジェクトに含まれていなければなりません。バッファ自体は動的に設定することができます。</p>
 <!--
 To draw the newly created vertex buffer, it has to be bound to the pipeline. The vertex layout and the @'Stride.Graphics.PrimitiveType' to draw have to be included in the [pipeline state](pipeline-state.md) object. The buffer itself can be set dynamically.
 -->
-<p>その後、<a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_Draw_System_Int32_System_Int32_">Draw(int, int)</a> を使って、頂点のレンダリングが行えます。</p>
+<p>その後、@'Stride.Graphics.CommandList.Draw(System.Int32,System.Int32)' を使って、頂点のレンダリングが行えます。</p>
 <!--
 Afterwards, the vertices are ready to be rendered using @'Stride.Graphics.CommandList.Draw(System.Int32,System.Int32)'.
 -->
@@ -214,7 +214,7 @@ commandList.SetVertexBuffers(0, vertexBuffer, 0, vertexBufferBinding.Stride);
 commandList.Draw(vertexCount);
 </code></pre>
 <p>また、インデックス付きのジオメトリを描画することも可能です。インデックスバッファを使うには、まず頂点バッファと同じようにインデックスバッファを作成し、パイプラインにバインドします。
-その後、<a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_DrawIndexed_System_Int32_System_Int32_System_Int32_">DrawIndexed(int, int, int)</a> を使って描画することができます。</p>
+その後、@'Stride.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)' を使って描画することができます。</p>
 <!--
 It is also possible to draw indexed geometry. To use an index buffer, first create it similarly to the vertex buffer and bind it to the pipeline.
 It can then be used for drawing using @'Stride.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)'.
@@ -258,7 +258,7 @@ commandList.DrawIndexed(indexBuffer.ElementCount);
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

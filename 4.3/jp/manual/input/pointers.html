@@ -114,8 +114,8 @@
 </div>
 <p>ジェスチャの認識を有効にして、長押しやタップなどのジェスチャを検出できます。詳細については、「<a href="gestures.html">ジェスチャ</a>」を参照してください。</p>
 <h2 id="pointerevent-クラス">PointerEvent クラス</h2>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> は、ポインターのイベントを報告します。イベントには、現在の<strong>ポインターの位置</strong>と時刻の情報が含まれます。<strong>ポインター</strong>が変更されるたびにスローされます。</p>
-<p>最後の更新以降の<strong>ポインター イベント</strong>のリストには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_PointerEvents">InputManager.PointerEvents</a> を使用してアクセスできます。ポインター イベントは時間順に一覧表示されます。リストは更新のたびにクリアされるので、手動でクリアする必要はありません。</p>
+<p><a href="xref:Stride.Input.PointerEvent">PointerEvent</a> は、ポインターのイベントを報告します。イベントには、現在の<strong>ポインターの位置</strong>と時刻の情報が含まれます。<strong>ポインター</strong>が変更されるたびにスローされます。</p>
+<p>最後の更新以降の<strong>ポインター イベント</strong>のリストには、<a href="xref:Stride.Input.InputManager.PointerEvents">InputManager.PointerEvents</a> を使用してアクセスできます。ポインター イベントは時間順に一覧表示されます。リストは更新のたびにクリアされるので、手動でクリアする必要はありません。</p>
 <h3 id="ポインターの情報を取得する">ポインターの情報を取得する</h3>
 <p>以下のプロパティを使用して、イベントをトリガーしたポインターに関する情報を取得できます。</p>
 <table>
@@ -127,7 +127,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_PointerId">PointerEvent.PointerId</a></td>
+<td><a href="xref:Stride.Input.PointerEvent.PointerId">PointerEvent.PointerId</a></td>
 <td>イベントをトリガーしたポインターの ID を示します。</td>
 </tr>
 </tbody>
@@ -148,21 +148,21 @@
 <h3 id="ポインターの位置を取得する">ポインターの位置を取得する</h3>
 <p>正規化された座標または絶対座標でポインターの位置を取得できます。</p>
 <h4 id="正規化された座標">正規化された座標</h4>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_Position">Position</a> は、ピクセル単位の実際の画面サイズではなく、<strong>正規化された</strong> X および Y 座標でポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。</p>
+<p>@'Stride.Input.PointerEvent.Position' は、ピクセル単位の実際の画面サイズではなく、<strong>正規化された</strong> X および Y 座標でポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。</p>
 <ul>
 <li>(0,0): ポインターは画面の左上隅にあります。</li>
 <li>(1,1): ポインターは画面の右下隅にあります。</li>
 </ul>
 <h4 id="絶対座標">絶対座標</h4>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_AbsolutePosition">PointerEvent.AbsolutePosition</a> は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。</p>
+<p><a href="xref:Stride.Input.PointerEvent.AbsolutePosition">PointerEvent.AbsolutePosition</a> は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>画面の実際のサイズを取得するには、<a class="xref" href="../../api/Stride.Input.IPointerDevice.html#Stride_Input_IPointerDevice_SurfaceSize">IPointerDevice.SurfaceSize</a> にアクセスします。次に例を示します。</p>
+<p>画面の実際のサイズを取得するには、<a href="xref:Stride.Input.IPointerDevice.SurfaceSize">IPointerDevice.SurfaceSize</a> にアクセスします。次に例を示します。</p>
 <pre><code class="lang-cs">var surfaceSize = Input.Pointer.SurfaceSize;
 </code></pre>
 </div>
 <h3 id="ポインター-イベントを取得する">ポインター イベントを取得する</h3>
-<p>ポインター イベントを調べるには、<a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_EventType">PointerEvent.EventType</a> を使用します。</p>
+<p>ポインター イベントを調べるには、<a href="xref:Stride.Input.PointerEvent.EventType">PointerEvent.EventType</a> を使用します。</p>
 <p>5 種類のポインター イベントがあります。</p>
 <ul>
 <li><strong>Pressed</strong>: 指が画面にタッチしました。</li>
@@ -175,16 +175,16 @@
 <p>1 つのポインターに対するポインター イベントのシーケンスは、常に <strong>Pressed</strong> イベントで開始します。その後で 1 つ以上の <strong>Moved</strong> イベントが発生する可能性があり、常に <strong>Released</strong> または <strong>Canceled</strong> イベントで終了します。</p>
 </div>
 <h3 id="デルタ値を取得する">デルタ値を取得する</h3>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_DeltaTime">PointerEvent.DeltaTime</a> は、前回の <a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> からの経過時間を取得します。</p>
+<p><a href="xref:Stride.Input.PointerEvent.DeltaTime">PointerEvent.DeltaTime</a> は、前回の @'Stride.Input.PointerEvent' からの経過時間を取得します。</p>
 <p>正規化された座標または絶対座標でデルタ位置を取得できます。</p>
 <h3 id="正規化されたデルタ値">正規化されたデルタ値</h3>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_DeltaPosition">PointerEvent.DeltaPosition</a> は、前回の <a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> からの位置の変化を、<strong>正規化された</strong> X、Y 座標で取得します。</p>
+<p><a href="xref:Stride.Input.PointerEvent.DeltaPosition">PointerEvent.DeltaPosition</a> は、前回の @'Stride.Input.PointerEvent' からの位置の変化を、<strong>正規化された</strong> X、Y 座標で取得します。</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>ポインター イベントのシーケンスの開始時には (つまり、<strong>ポインターの状態</strong>が<strong>ダウン</strong>のとき)、デルタ値は常に null になっています。</p>
 </div>
 <h3 id="絶対デルタ値">絶対デルタ値</h3>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_AbsoluteDeltaPosition">PointerEvent.DeltaPosition</a> は、前回の <a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> からの位置の変化を、<strong>絶対</strong> (X,Y) 座標で取得します。</p>
+<p><a href="xref:Stride.Input.PointerEvent.AbsoluteDeltaPosition">PointerEvent.DeltaPosition</a> は、前回の @'Stride.Input.PointerEvent' からの位置の変化を、<strong>絶対</strong> (X,Y) 座標で取得します。</p>
 <h2 id="コード例">コード例</h2>
 <p>このスクリプトは、ポインターの動きを追跡して、その位置を表示します。</p>
 <pre><code class="lang-cs">using System;
@@ -257,7 +257,7 @@ namespace Stride.Input.Tests
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

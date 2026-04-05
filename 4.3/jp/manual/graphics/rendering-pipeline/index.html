@@ -94,7 +94,7 @@
 <!--
 ## Render features
 -->
-<p>レンダリングロジックは、<a class="xref" href="../../../api/Stride.Rendering.RenderFeature.html">RenderFeature</a> に分離されています。各レンダリング機能は、1 種類の <a class="xref" href="../../../api/Stride.Rendering.RenderObject.html">RenderObject</a>（例：メッシュ、スプライト、パーティクルなど）を処理します。</p>
+<p>レンダリングロジックは、@'Stride.Rendering.RenderFeature' に分離されています。各レンダリング機能は、1 種類の @'Stride.Rendering.RenderObject'（例：メッシュ、スプライト、パーティクルなど）を処理します。</p>
 <!--
 Rendering logic is divided into @'Stride.Rendering.RenderFeature's. Each render feature processes one type of @'Stride.Rendering.RenderObject' (eg meshes, sprites, particles, etc).
 -->
@@ -112,7 +112,7 @@ For more information, see [Render features](render-features.md).
 <!--
 ## Render views
 -->
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderView.html">RenderView</a> を使って、複数の視点からシーンをレンダリングすることができます。
+<p>@'Stride.Rendering.RenderView' を使って、複数の視点からシーンをレンダリングすることができます。
 例えば、画面分割ゲームのプレイヤービューや、<a href="../lights-and-shadows/shadows.html">シャドウマップカスケード</a>のための別々のシャドウビューなどです。</p>
 <!--
 You can render scenes from multiple points of view, represented as @'Stride.Rendering.RenderView's – eg player views in a splitscreen game, or separate shadow views for cascades in a [shadow map cascade](../lights-and-shadows/shadows.md).
@@ -125,7 +125,7 @@ Views are a first-class concept available to all rendering phases, allowing batc
 <!--
 ## Render stages
 -->
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderStage.html">RenderStage</a> は、オブジェクトごとに<a href="../effects-and-shaders/index.html">エフェクト</a>と<a href="../low-level-api/pipeline-state.html">パイプラインステート</a>を選択して、レンダーパスの出力を定義します。</p>
+<p>@'Stride.Rendering.RenderStage' は、オブジェクトごとに<a href="../effects-and-shaders/index.html">エフェクト</a>と<a href="../low-level-api/pipeline-state.html">パイプラインステート</a>を選択して、レンダーパスの出力を定義します。</p>
 <!--
 @'Stride.Rendering.RenderStage's select the [effect](../effects-and-shaders/index.md) and [pipeline state](../low-level-api/pipeline-state.md) per object, and define the output of a render pass.
 -->
@@ -137,7 +137,7 @@ For more information, see [Render stages](render-stages.md).
 <!--
 ## Visibility
 -->
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderObject.html">RenderObject</a> は、<a class="xref" href="../../../api/Stride.Rendering.VisibilityGroup.html">VisibilityGroup</a> に登録されます。<strong>収集</strong>フェーズでは、<a class="xref" href="../../../api/Stride.Rendering.RenderView.html">RenderView</a> と <a class="xref" href="../../../api/Stride.Rendering.RenderStage.html">RenderStage</a> に基づいて、可視グループがオブジェクトをカリングしフィルタリングします。</p>
+<p>@'Stride.Rendering.RenderObject' は、@'Stride.Rendering.VisibilityGroup' に登録されます。<strong>収集</strong>フェーズでは、@'Stride.Rendering.RenderView' と @'Stride.Rendering.RenderStage' に基づいて、可視グループがオブジェクトをカリングしフィルタリングします。</p>
 <!--
 @'Stride.Rendering.RenderObject's are registered with a @'Stride.Rendering.VisibilityGroup'. During the **collect** phase, the visibility group culls and filters them based on the @'Stride.Rendering.RenderView' and @'Stride.Rendering.RenderStage'.
 -->
@@ -174,7 +174,7 @@ For more information, see [Render stages](render-stages.md).
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

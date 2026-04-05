@@ -91,7 +91,7 @@
 <p>Invalid DataMemberMode for the specified <code>[DataMember]</code> member '{0}'. A public/internal/internal protected setter is required for 'DataMemberMode.Assign'.</p>
 </blockquote>
 <h2 id="explanation">Explanation</h2>
-<p>The <a class="xref" href="../api/Stride.Core.DataMemberMode.html#Stride_Core_DataMemberMode_Assign">Assign</a> let's the serializers create new objects and sets them into the target property. The Property needs an accessible/visible setter.</p>
+<p>The @Stride.Core.DataMemberMode.Assign let's the serializers create new objects and sets them into the target property. The Property needs an accessible/visible setter.</p>
 <h2 id="example-invalid-cases">Example: Invalid Cases</h2>
 <p>The following example generates STRDIAG006:</p>
 <pre><code class="lang-csharp">using Stride.Core;
@@ -115,7 +115,7 @@ public class STRDIAG006
 <h2 id="example-special-case-internal">Example: Special Case <code>internal</code></h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>To explicitly set the <code>DataMemberMode.Assign</code> the <a class="xref" href="../api/Stride.Core.DataMemberAttribute.html">DataMemberAttribute</a> has to be applied.
+<p>To explicitly set the <code>DataMemberMode.Assign</code> the @Stride.Core.DataMemberAttribute has to be applied.
 Internal visibility counts then as visible for the serializers and becomes valid.</p>
 </div>
 <pre><code class="lang-csharp">using Stride.Core;
@@ -157,7 +157,7 @@ public class STRDIAG006
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

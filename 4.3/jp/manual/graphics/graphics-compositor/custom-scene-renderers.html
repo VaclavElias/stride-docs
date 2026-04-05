@@ -90,7 +90,7 @@
 <!--
 # Custom scene renderers
 -->
-<p>カスタムシーンレンダラーを作成するには、<a class="xref" href="../../../api/Stride.Rendering.Compositing.ISceneRenderer.html">ISceneRenderer</a> を直接実装するか、<a class="xref" href="../../../api/Stride.Rendering.Compositing.DelegateSceneRenderer.html">DelegateSceneRenderer</a> によるデリゲートを使用します。</p>
+<p>カスタムシーンレンダラーを作成するには、@'Stride.Rendering.Compositing.ISceneRenderer' を直接実装するか、@'Stride.Rendering.Compositing.DelegateSceneRenderer' によるデリゲートを使用します。</p>
 <!--
 To create a custom renderer, directly implement the @'Stride.Rendering.Compositing.ISceneRenderer' or use a delegate through the @'Stride.Rendering.Compositing.DelegateSceneRenderer'.
 -->
@@ -98,7 +98,7 @@ To create a custom renderer, directly implement the @'Stride.Rendering.Compositi
 <!--
 ## Implement an ISceneRenderer
 -->
-<p><a class="xref" href="../../../api/Stride.Rendering.Compositing.SceneRendererBase.html">SceneRendererBase</a> は、<a class="xref" href="../../../api/Stride.Rendering.Compositing.ISceneRenderer.html">ISceneRenderer</a> のデフォルトの実装です。この実装では、<code>DrawCore</code> メソッドが呼び出される前に、レンダラーの出力定義が <code>RenderContext.GraphicsDevice</code> プロパティに自動的にバインドされます。</p>
+<p>@'Stride.Rendering.Compositing.SceneRendererBase' は、@'Stride.Rendering.Compositing.ISceneRenderer' のデフォルトの実装です。この実装では、<code>DrawCore</code> メソッドが呼び出される前に、レンダラーの出力定義が <code>RenderContext.GraphicsDevice</code> プロパティに自動的にバインドされます。</p>
 <!--
 The @'Stride.Rendering.Compositing.SceneRendererBase' provides a default implementation of @'Stride.Rendering.Compositing.ISceneRenderer'. It automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
 -->
@@ -125,7 +125,7 @@ public sealed class MyCustomRenderer : SceneRendererBase
 <!--
 ## Use a delegate
 -->
-<p>レンダラーを開発し、それをメソッドに直接アタッチするには、<a class="xref" href="../../../api/Stride.Rendering.Compositing.DelegateSceneRenderer.html">DelegateSceneRenderer</a> を使用します。</p>
+<p>レンダラーを開発し、それをメソッドに直接アタッチするには、@'Stride.Rendering.Compositing.DelegateSceneRenderer' を使用します。</p>
 <!--
 To develop a renderer and attach it to a method directly, use @'Stride.Rendering.Compositing.DelegateSceneRenderer':
 -->
@@ -175,7 +175,7 @@ To develop a renderer and attach it to a method directly, use @'Stride.Rendering
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

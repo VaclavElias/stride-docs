@@ -92,11 +92,11 @@
 <p><strong>キーボード</strong>は、デスクトップ ゲームで最も一般的な入力デバイスです。Stride にはキーボード入力を処理する 2 つの方法があります。</p>
 <ul>
 <li><strong>キーの状態</strong>を問い合わせる**</li>
-<li><a class="xref" href="../../api/Stride.Input.KeyEvent.html">KeyEvent</a> リストを使用する</li>
+<li><a href="xref:Stride.Input.KeyEvent">KeyEvent</a> リストを使用する</li>
 </ul>
-<p>どちらにも、<a class="xref" href="../../api/Stride.Input.InputManager.html">input</a> 基底クラスからアクセスできます。これらのオプションの詳細については、「<a href="index.html">入力</a>」を参照してください。</p>
+<p>どちらにも、<a href="xref:Stride.Input.InputManager">input</a> 基底クラスからアクセスできます。これらのオプションの詳細については、「<a href="index.html">入力</a>」を参照してください。</p>
 <h2 id="キーボードを使用できるかどうかを調べる">キーボードを使用できるかどうかを調べる</h2>
-<p>キーボード入力を処理する前に、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasKeyboard">Input.HasKeyboard</a> を使用してキーボードが接続されているかどうかを調べます。</p>
+<p>キーボード入力を処理する前に、<a href="xref:Stride.Input.InputManager.HasKeyboard">Input.HasKeyboard</a> を使用してキーボードが接続されているかどうかを調べます。</p>
 <h2 id="キーの状態を取得する">キーの状態を取得する</h2>
 <p><strong>キーの状態</strong>と<strong>状態の変化</strong>を、以下のメソッドで問い合わせることができます。</p>
 <table>
@@ -108,15 +108,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsKeyDown_Stride_Input_Keys_">IsKeyDown(Keys)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsKeyDown(Stride.Input.Keys)">IsKeyDown(Keys)</a></td>
 <td>指定したキーが<strong>ダウン</strong>状態かどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsKeyPressed_Stride_Input_Keys_">IsKeyPressed(Keys)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsKeyPressed(Stride.Input.Keys)">IsKeyPressed(Keys)</a></td>
 <td>指定したキーが最後の更新以降に<strong>押された</strong>かどうかを調べます。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsKeyReleased_Stride_Input_Keys_">IsKeyReleased(Keys)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsKeyReleased(Stride.Input.Keys)">IsKeyReleased(Keys)</a></td>
 <td>指定したキーが最後の更新以降に<strong>放された</strong>かどうかを調べます。</td>
 </tr>
 </tbody>
@@ -127,7 +127,7 @@
 </div>
 <h2 id="キー-イベントを取得する">キー イベントを取得する</h2>
 <p>場合によっては、現在_ダウン_状態になっているすべてのキー、または最後の更新以降に_押された_すべてのキーを知りたいことがあります。キー状態 API は、使用可能な各キーを個別に問い合わせる必要があるため、このような場合には適切ではありません。</p>
-<p>代わりに、<a class="xref" href="../../api/Stride.Input.InputManager.html">Input</a> 基底クラスで使用できる<strong>キー イベント</strong> コレクションを使用します。</p>
+<p>代わりに、<a href="xref:Stride.Input.InputManager">Input</a> 基底クラスで使用できる<strong>キー イベント</strong> コレクションを使用します。</p>
 <table>
 <thead>
 <tr>
@@ -137,24 +137,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_DownKeys">InputManager.DownKeys</a></td>
+<td><a href="xref:Stride.Input.InputManager.DownKeys">InputManager.DownKeys</a></td>
 <td>最後の更新でダウン状態であったキーのリストを取得します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_PressedKeys">InputManager.PressedKeys</a></td>
+<td><a href="xref:Stride.Input.InputManager.PressedKeys">InputManager.PressedKeys</a></td>
 <td>最後の更新で押されたキーのリストを取得します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_ReleasedKeys">InputManager.ReleasedKeys</a></td>
+<td><a href="xref:Stride.Input.InputManager.ReleasedKeys">InputManager.ReleasedKeys</a></td>
 <td>最後の更新で放されたキーのリストを取得します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_KeyEvents">InputManager.KeyEvents</a></td>
+<td><a href="xref:Stride.Input.InputManager.KeyEvents">InputManager.KeyEvents</a></td>
 <td>最後の更新でのキー イベントのリストを取得します (押されたキーまたは放されたキー)。</td>
 </tr>
 </tbody>
 </table>
-<p>すべての <a class="xref" href="../../api/Stride.Input.KeyEvent.html">KeyEvent</a> に、2 つのプロパティ <a class="xref" href="../../api/Stride.Input.KeyEvent.html#Stride_Input_KeyEvent_Key">Key</a> (影響を受けたキー) と <a class="xref" href="../../api/Stride.Input.ButtonEvent.html#Stride_Input_ButtonEvent_IsDown">IsDown</a> (キーの新しい状態) があります。</p>
+<p>すべての @'Stride.Input.KeyEvent' に、2 つのプロパティ @'Stride.Input.KeyEvent.Key' (影響を受けたキー) と @'Stride.Input.ButtonEvent.IsDown' (キーの新しい状態) があります。</p>
 <h2 id="コード例">コード例</h2>
 <pre><code class="lang-cs">public class KeyboardEventsScript : SyncScript
 {
@@ -205,7 +205,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

@@ -102,11 +102,11 @@
 <!--
 The Stride UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout). Much of the WPF documentation also applies to the Stride layout system.
 -->
-<p>Stride UI システムのすべての <a class="xref" href="../../api/Stride.UI.UIElement.html">UIElement</a> には、それを取り巻く矩形があり、レイアウトで使用されます。Stride は、<a class="xref" href="../../api/Stride.UI.UIElement.html">UIElement</a> の要件、利用可能な画面スペース、制約、マージン、余白、および <a class="xref" href="../../api/Stride.UI.Panels.Panel.html">Panel</a> 要素の特別な動作（特定の方法で子を配置する）に従って、レイアウトを計算します。</p>
+<p>Stride UI システムのすべての @'Stride.UI.UIElement' には、それを取り巻く矩形があり、レイアウトで使用されます。Stride は、@'Stride.UI.UIElement' の要件、利用可能な画面スペース、制約、マージン、余白、および @'Stride.UI.Panels.Panel' 要素の特別な動作（特定の方法で子を配置する）に従って、レイアウトを計算します。</p>
 <!--
 Every @'Stride.UI.UIElement' in the Stride UI system has a surrounding rectangle used in layouts. Stride computes layouts according to the @'Stride.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'Stride.UI.Panels.Panel' elements (which arrange children in specific ways). 
 -->
-<p>レイアウトシステムは、このデータを再帰的に処理して、UI システム内のすべての <a class="xref" href="../../api/Stride.UI.UIElement.html">UIElement</a> の位置とサイズを計算します。</p>
+<p>レイアウトシステムは、このデータを再帰的に処理して、UI システム内のすべての @'Stride.UI.UIElement' の位置とサイズを計算します。</p>
 <!--
 Processing this data recursively, the layout system computes a position and size for every @'Stride.UI.UIElement' in the UI system.
 -->
@@ -114,7 +114,7 @@ Processing this data recursively, the layout system computes a position and size
 <!--
 ## Measure and arrange
 -->
-<p>Stride では、レイアウトの処理を 2 つのパスで再帰的に行います。<a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Measure_Stride_Core_Mathematics_Vector3_">Measure</a> と <a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Arrange_Stride_Core_Mathematics_Vector3_System_Boolean_">Arrange</a> です。</p>
+<p>Stride では、レイアウトの処理を 2 つのパスで再帰的に行います。<a href="xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)">Measure</a> と <a href="xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)">Arrange</a> です。</p>
 <!--
 Stride performs the layout process recursively in two passes: [Measure](xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)) and [Arrange](xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)).
 -->
@@ -122,11 +122,11 @@ Stride performs the layout process recursively in two passes: [Measure](xref:Str
 <!--
 ### Measure
 -->
-<p><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Measure_Stride_Core_Mathematics_Vector3_">Measure</a> パスでは、各要素は、<a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Width">Width</a>, <a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Height">Height</a>, <a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Margin">Margin</a>などのプロパティに従って、<a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_DesiredSize">DesiredSize</a> を再帰的に計算します。</p>
+<p><a href="xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)">Measure</a> パスでは、各要素は、@'Stride.UI.UIElement.Width', @'Stride.UI.UIElement.Height', @'Stride.UI.UIElement.Margin'などのプロパティに従って、<a href="xref:Stride.UI.UIElement#Stride_UI_UIElement_DesiredSize">DesiredSize</a> を再帰的に計算します。</p>
 <!--
 In the [Measure](xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:Stride.UI.UIElement#Stride_UI_UIElement_DesiredSize) according to the properties you set, such as @'Stride.UI.UIElement.Width', @'Stride.UI.UIElement.Height', and @'Stride.UI.UIElement.Margin'.
 -->
-<p>一部の <a class="xref" href="../../api/Stride.UI.Panels.Panel.html">Panel</a> 要素は、<a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Measure_Stride_Core_Mathematics_Vector3_">Measure</a> を再帰的に呼び出して、子要素の <a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_DesiredSize">DesiredSize</a> を決定し、それに従って動作します。</p>
+<p>一部の @'Stride.UI.Panels.Panel' 要素は、<a href="xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)">Measure</a> を再帰的に呼び出して、子要素の <a href="xref:Stride.UI.UIElement#Stride_UI_UIElement_DesiredSize">DesiredSize</a> を決定し、それに従って動作します。</p>
 <!--
 Some @'Stride.UI.Panels.Panel' elements call [Measure](xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:Stride.UI.UIElement#Stride_UI_UIElement_DesiredSize) of their children, and act accordingly.
 -->
@@ -134,18 +134,18 @@ Some @'Stride.UI.Panels.Panel' elements call [Measure](xref:Stride.UI.UIElement.
 <!--
 ### Arrange
 -->
-<p><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Arrange_Stride_Core_Mathematics_Vector3_System_Boolean_">Arrange</a> パスは、以下のプロパティを考慮して、要素を配置します。</p>
+<p><a href="xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)">Arrange</a> パスは、以下のプロパティを考慮して、要素を配置します。</p>
 <!--
 The [Arrange](xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
 -->
 <ul>
-<li><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Margin">Margin</a></li>
-<li><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Width">Width</a></li>
-<li><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Height">Height</a></li>
-<li><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_HorizontalAlignment">HorizontalAlignment</a></li>
-<li><a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_VerticalAlignment">VerticalAlignment</a></li>
-<li><a class="xref" href="../../api/Stride.UI.Panels.Panel.html">Panel</a></li>
-<li>specific <a class="xref" href="../../api/Stride.UI.UIElement.html#Stride_UI_UIElement_Arrange_Stride_Core_Mathematics_Vector3_System_Boolean_">Arrange</a> rules</li>
+<li>@'Stride.UI.UIElement.Margin'</li>
+<li>@'Stride.UI.UIElement.Width'</li>
+<li>@'Stride.UI.UIElement.Height'</li>
+<li>@'Stride.UI.UIElement.HorizontalAlignment'</li>
+<li>@'Stride.UI.UIElement.VerticalAlignment'</li>
+<li>@'Stride.UI.Panels.Panel'</li>
+<li>specific <a href="xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)">Arrange</a> rules</li>
 </ul>
 <h2 id="関連項目">関連項目</h2>
 <!--
@@ -186,7 +186,7 @@ The [Arrange](xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,S
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

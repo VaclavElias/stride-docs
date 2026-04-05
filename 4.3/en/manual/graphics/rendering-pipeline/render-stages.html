@@ -94,7 +94,7 @@
 <p>Render stages don't define the rendering order. The rendering order is controlled by the <a href="../graphics-compositor/index.html">graphics compositor</a>.</p>
 </div>
 <h2 id="effect-slots">Effect slots</h2>
-<p><strong>Effect slots</strong> determine which <a href="../effects-and-shaders/index.html">effect/shader</a> a render stage uses. You choose the effect slot with <a class="xref" href="../../../api/Stride.Rendering.RenderStage.html#Stride_Rendering_RenderStage_EffectSlotName">EffectSlotName</a>.</p>
+<p><strong>Effect slots</strong> determine which <a href="../effects-and-shaders/index.html">effect/shader</a> a render stage uses. You choose the effect slot with @'Stride.Rendering.RenderStage.EffectSlotName'.</p>
 <p>If multiple render stages exclusively render different objects, the stages can share the same effect slot. For example, as the opaque stage only renders opaque objects and the transparent stage only renders transparent objects, both stages can use the main effect slot.</p>
 <p>If they render any of the same objects, they can't share effect slots. This is why, for example, we typically render opaque meshes with the main effect slot, then render opaque meshes again with the shadow caster effect slot to create shadows.</p>
 <p>A typical setup of render stages:</p>
@@ -125,21 +125,21 @@
 </tbody>
 </table>
 <h2 id="sort-objects-in-a-render-stage">Sort objects in a render stage</h2>
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderStage.html#Stride_Rendering_RenderStage_SortMode">SortMode</a> defines how Stride sorts objects in that render stage. Stride comes with several <a class="xref" href="../../../api/Stride.Rendering.SortMode.html">SortMode</a> implementations, such as:</p>
+<p>@'Stride.Rendering.RenderStage.SortMode' defines how Stride sorts objects in that render stage. Stride comes with several @'Stride.Rendering.SortMode' implementations, such as:</p>
 <ul>
-<li><a class="xref" href="../../../api/Stride.Rendering.FrontToBackSortMode.html">FrontToBackSortMode</a>, which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque objects and shadows)</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.BackToFrontSortMode.html">BackToFrontSortMode</a>, which renders objects strictly from back to front (useful for transparent objects)</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.StateChangeSortMode.html">StateChangeSortMode</a>, which tries to reduce state changes</li>
+<li>@'Stride.Rendering.FrontToBackSortMode', which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque objects and shadows)</li>
+<li>@'Stride.Rendering.BackToFrontSortMode', which renders objects strictly from back to front (useful for transparent objects)</li>
+<li>@'Stride.Rendering.StateChangeSortMode', which tries to reduce state changes</li>
 </ul>
 <p>Of course, you're free to implement your own, too.</p>
 <h2 id="filter-objects-in-a-render-stage">Filter objects in a render stage</h2>
-<p>To create your own filter for objects in a render stage, inherit from <a class="xref" href="../../../api/Stride.Rendering.RenderStageFilter.html">RenderStageFilter</a>.</p>
+<p>To create your own filter for objects in a render stage, inherit from @'Stride.Rendering.RenderStageFilter'.</p>
 <h3 id="render-stage-selectors">Render stage selectors</h3>
 <p><strong>Render stage selectors</strong> define which objects in your scene are sent to which render stage, and choose which <a href="../effects-and-shaders/effect-language.html">effect</a> to use when rendering a given object.</p>
 <p>For example, this is the typical setup for meshes:</p>
 <ul>
-<li><a class="xref" href="../../../api/Stride.Rendering.MeshTransparentRenderStageSelector.html">MeshTransparentRenderStageSelector</a> chooses either the <code>Main</code> or <code>Transparent</code> render stage, depending on the material properties. The default effect is <code>StrideForwardShadingEffect</code> defined by Stride (you can create your own if you want).</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.Shadows.ShadowMapRenderStageSelector.html">ShadowMapRenderStageSelector</a> selects opaque meshes that cast shadows and adds them to the <code>ShadowMapCaster</code> render stage. The default effect is <code>StrideForwardShadingEffect.ShadowMapCaster</code>, defined by Stride.</li>
+<li>@'Stride.Rendering.MeshTransparentRenderStageSelector' chooses either the <code>Main</code> or <code>Transparent</code> render stage, depending on the material properties. The default effect is <code>StrideForwardShadingEffect</code> defined by Stride (you can create your own if you want).</li>
+<li>@'Stride.Rendering.Shadows.ShadowMapRenderStageSelector' selects opaque meshes that cast shadows and adds them to the <code>ShadowMapCaster</code> render stage. The default effect is <code>StrideForwardShadingEffect.ShadowMapCaster</code>, defined by Stride.</li>
 </ul>
 <p>Either can filter by <a href="../graphics-compositor/render-groups-and-masks.html">render group</a>.</p>
 <p>You can customize everything, so you can add other predefined render stage selectors (eg to add UI to a later full-screen pass), or create your own selector specific to your game.</p>
@@ -171,7 +171,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

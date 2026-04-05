@@ -90,12 +90,12 @@
 <p><span class="badge text-bg-primary">初級</span>
 <span class="badge text-bg-success">プログラマー</span>
 <span class="badge text-bg-success">デザイナー</span></p>
-<p><a class="xref" href="../../api/Stride.Audio.AudioEmitter.html">オーディオ エミッター コンポーネント</a>は、<a href="spatialized-audio.html">空間オーディオ</a>を作成するために使用されるオーディオを生成します。任意のエンティティにオーディオ エミッター コンポーネントを追加できます。</p>
+<p><a href="xref:Stride.Audio.AudioEmitter">オーディオ エミッター コンポーネント</a>は、<a href="spatialized-audio.html">空間オーディオ</a>を作成するために使用されるオーディオを生成します。任意のエンティティにオーディオ エミッター コンポーネントを追加できます。</p>
 <p><a href="audio-listeners.html">オーディオ リスナー</a>がオーディオ エミッターに近づいたり離れたりすると、サウンドのピッチとボリュームが変化します。</p>
 <div class="NOTE">
 <h5>Note</h5>
 </div>
-<p>オーディオ エミッターからのオーディオを聴くには、シーン内に少なくとも 1 つの <a class="xref" href="../../api/Stride.Audio.AudioListener.html">AudioListenerComponent</a> が必要です。</p>
+<p>オーディオ エミッターからのオーディオを聴くには、シーン内に少なくとも 1 つの <a href="xref:Stride.Audio.AudioListener">AudioListenerComponent</a> が必要です。</p>
 <h2 id="1-オーディオ-エミッター-アセットをセットアップする">1. オーディオ エミッター アセットをセットアップする</h2>
 <ol>
 <li><p>［Scene view］で、オーディオ エミッターにするエンティティを選択します。</p>
@@ -146,14 +146,14 @@
 <h2 id="2-オーディオを再生するスクリプトを作成する">2. オーディオを再生するスクリプトを作成する</h2>
 <p>次に、サウンド アセットの再生と構成を行うスクリプトを作成する必要があります。</p>
 <ol>
-<li><p>スクリプトでは、使用する各サウンドに対して <a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html">AudioEmitterSoundController</a> をインスタンス化する必要があります。</p>
+<li><p>スクリプトでは、使用する各サウンドに対して <a href="xref:Stride.Audio.AudioEmitterSoundController">AudioEmitterSoundController</a> をインスタンス化する必要があります。</p>
 <p>たとえば、2 つのサウンド <strong>MySound1</strong> と <strong>MySound2</strong> がある場合は次のようになります。</p>
 <pre><code class="lang-cs"> AudioEmitterComponent audioEmitterComponent = Entity.Get&lt;AudioEmitterComponent&gt;();
  AudioEmitterSoundController mySound1Controller = audioEmitterComponent［&quot;MySound1&quot;］;
  AudioEmitterSoundController mySound2Controller = audioEmitterComponent［&quot;MySound2&quot;］;
 </code></pre>
 </li>
-<li><p><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html">AudioEmitterSoundController</a> の次のプロパティとメソッドを使用して、オーディオを再生および構成します。</p>
+<li><p><a href="xref:Stride.Audio.AudioEmitterSoundController">AudioEmitterSoundController</a> の次のプロパティとメソッドを使用して、オーディオを再生および構成します。</p>
 </li>
 </ol>
 <table>
@@ -165,35 +165,35 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_IsLooping">IsLooping</a></td>
-<td>オーディオをループします。<a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_PlayAndForget">PlayAndForget()</a> が true に設定されている場合は、何も行いません。</td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.IsLooping">IsLooping</a></td>
+<td>オーディオをループします。<a href="xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget">PlayAndForget()</a> が true に設定されている場合は、何も行いません。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_Pitch">Pitch</a></td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.Pitch">Pitch</a></td>
 <td>サウンドのピッチ (周波数) を取得または設定します。空間オーディオの場合は注意して使用する必要があります。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_PlayState">PlayState</a></td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.PlayState">PlayState</a></td>
 <td>オーディオ エミッター サウンド コントローラーの現在の状態を取得します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_Volume">Volume</a></td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.Volume">Volume</a></td>
 <td>オーディオのボリュームです。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_Pause">Pause()</a></td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.Pause">Pause()</a></td>
 <td>オーディオを一時停止します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_Play">Play()</a></td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.Play">Play()</a></td>
 <td>オーディオを再生します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_PlayAndForget">PlayAndForget()</a></td>
-<td>オーディオを 1 回再生してから、メモリをクリアします。発砲音のような短いサウンドに便利です。<a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_IsLooping">IsLooping</a> をオーバーライドします。</td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget">PlayAndForget()</a></td>
+<td>オーディオを 1 回再生してから、メモリをクリアします。発砲音のような短いサウンドに便利です。<a href="xref:Stride.Audio.AudioEmitterSoundController.IsLooping">IsLooping</a> をオーバーライドします。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html#Stride_Audio_AudioEmitterSoundController_Stop">Stop()</a></td>
+<td><a href="xref:Stride.Audio.AudioEmitterSoundController.Stop">Stop()</a></td>
 <td>オーディオを停止します。</td>
 </tr>
 </tbody>
@@ -204,7 +204,7 @@ mySound1Controller.Pitch = 2.0f;
 mySound1Controller.Volume = 0.5f;
 mySound1Controller.Play();
 </code></pre>
-<p>このサウンドは、元のサウンドの 2 倍のピッチと半分のボリュームでループします。詳細については、<a class="xref" href="../../api/Stride.Audio.AudioEmitterSoundController.html">AudioEmitterSoundController Stride API のドキュメント</a>を参照してください。</p>
+<p>このサウンドは、元のサウンドの 2 倍のピッチと半分のボリュームでループします。詳細については、<a href="xref:Stride.Audio.AudioEmitterSoundController">AudioEmitterSoundController Stride API のドキュメント</a>を参照してください。</p>
 <h2 id="3-オーディオ-エミッター-エンティティにスクリプトを追加する">3. オーディオ エミッター エンティティにスクリプトを追加する</h2>
 <p>Game Studio では、スクリプトは［Add component］の下にコンポーネントとして一覧表示されます。オーディオ エミッター エンティティにスクリプトを追加します。</p>
 <ol>
@@ -242,7 +242,7 @@ mySound1Controller.Play();
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

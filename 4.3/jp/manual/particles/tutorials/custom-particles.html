@@ -205,7 +205,7 @@ We'll create a spawner which emits particles per second **and** in bursts every 
       }
   }
 </code></pre>
-<p>このクラスは、<a class="xref" href="../../../api/Stride.Particles.Spawners.ParticleSpawner.html">ParticleSpawner</a> を継承し、<code>BurstCount</code>と<code>burstTimer</code>を追加して、パーティクルがバーストで放出される頻度と数をコントロールしています。</p>
+<p>このクラスは、@'Stride.Particles.Spawners.ParticleSpawner' を継承し、<code>BurstCount</code>と<code>burstTimer</code>を追加して、パーティクルがバーストで放出される頻度と数をコントロールしています。</p>
 <!--
 This class mimics the @'Stride.Particles.Spawners.ParticleSpawner', with the addition of a `BurstCount` and a `burstTimer` to control how often and how many particles are spawned in bursts.
 -->
@@ -263,7 +263,7 @@ We want to place the particles in a cone and shoot them outwards when they spawn
       }
   }
 </code></pre>
-<p>このイニシャライザーでは、シンプルに、円錐の角度と速度の強さを定義しています。円錐のスケーリングや回転は、（すべてのイニシャライザーとアップデーターに共通の）位置とオフセットの継承から得られ、すぐに使用することができます。詳細については、<a class="xref" href="../../../api/Stride.Particles.Initializers.ParticleInitializer.html">ParticleInitializer</a> を参照してください。</p>
+<p>このイニシャライザーでは、シンプルに、円錐の角度と速度の強さを定義しています。円錐のスケーリングや回転は、（すべてのイニシャライザーとアップデーターに共通の）位置とオフセットの継承から得られ、すぐに使用することができます。詳細については、@'Stride.Particles.Initializers.ParticleInitializer' を参照してください。</p>
 <!--
 Our initializer simply defines an angle for the cone and strength for the velocity. Any scaling and rotation of the cone come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. For more information, see the @'Stride.Particles.Initializers.ParticleInitializer'.
 -->
@@ -331,11 +331,11 @@ Because there's no such field yet, start by creating a new particle field. Let's
       public static readonly ParticleFieldDescription&lt;Vector2&gt; RectangleXY = new ParticleFieldDescription&lt;Vector2&gt;(&quot;RectangleXY&quot;, new Vector2(1, 1));
   }
 </code></pre>
-<p>フィールドの型は <a class="xref" href="../../../api/Stride.Core.Mathematics.Vector2.html">Vector2</a> です。幅と高さという 2 つの値だけが必要だからです。パーティクルに自動的に追加されるフィールドはないので、たくさん宣言してもパーティクルの大きさは変わりません。フィールドは、後述のカスタムアップデーターのように、フィールドを必要とするモジュールをプラグインしたときにのみ追加されます。</p>
+<p>フィールドの型は @'Stride.Core.Mathematics.Vector2' です。幅と高さという 2 つの値だけが必要だからです。パーティクルに自動的に追加されるフィールドはないので、たくさん宣言してもパーティクルの大きさは変わりません。フィールドは、後述のカスタムアップデーターのように、フィールドを必要とするモジュールをプラグインしたときにのみ追加されます。</p>
 <!--
 The field has type @'Stride.Core.Mathematics.Vector2', since we only need two values for the width and the height. No fields are added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, such as the custom updater below.
 -->
-<p>APIリファレンスについては、<a class="xref" href="../../../api/Stride.Particles.Modules.ParticleUpdater.html">ParticleUpdater</a> を参照してください。</p>
+<p>APIリファレンスについては、@'Stride.Particles.Modules.ParticleUpdater' を参照してください。</p>
 <!--
 For API reference, see @'Stride.Particles.Modules.ParticleUpdater'.
 -->
@@ -427,7 +427,7 @@ The engine draws quads using 1 quad = 4 vertices = 6 indices, but we can only sp
 <pre><code class="lang-cs">public unsafe override int BuildVertexBuffer(ParticleVertexBuilder vtxBuilder, Vector3 inverseViewX, Vector3 inverseViewY,
   ref Vector3 spaceTranslation, ref Quaternion spaceRotation, float spaceScale, ParticleSorter sorter)
 </code></pre>
-<p>このメソッドは、シェイプビルダーがすべてのパーティクルを反復処理してシェイプを構築する必要があるときに呼び出されます。<a class="xref" href="../../../api/Stride.Particles.VertexLayouts.ParticleVertexBuilder.html">ParticleVertexBuilder</a> は、頂点ストリームのラッパーです。これを使ってパーティクルの頂点データを書き出します。</p>
+<p>このメソッドは、シェイプビルダーがすべてのパーティクルを反復処理してシェイプを構築する必要があるときに呼び出されます。@'Stride.Particles.VertexLayouts.ParticleVertexBuilder' は、頂点ストリームのラッパーです。これを使ってパーティクルの頂点データを書き出します。</p>
 <!--
 This method is called when it needs our shape builder to iterate over all particles and build the shape. The @'Stride.Particles.VertexLayouts.ParticleVertexBuilder' is the wrapper around our vertex stream. We'll use it to write out the vertex data for the particles.
 -->
@@ -541,7 +541,7 @@ You can then reload the scripts in Game Studio. If they don't load, relaunch you
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

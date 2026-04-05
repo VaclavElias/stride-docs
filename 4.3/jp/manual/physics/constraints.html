@@ -92,7 +92,7 @@
 <span class="badge text-bg-success">プログラマー</span></p>
 <p><strong>制約</strong>は、剛体を特定の移動パターンに制限します。たとえば、実際の膝関節は 1 つの軸に沿ってのみ動き、前方には曲がりません。</p>
 <p>制約は、2 つの剛体をリンクすること、または1 つの剛体をワールドの 1 点にリンクすることができます。剛体間の相互作用と依存関係を実現します。</p>
-<p><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">制約の種類</a> は次の 6 つです。</p>
+<p><a href="xref:Stride.Physics.ConstraintTypes">制約の種類</a> は次の 6 つです。</p>
 <ul>
 <li>ヒンジ</li>
 <li>ギア</li>
@@ -107,33 +107,33 @@
 <h5>Note</h5>
 <p>現在、制約を使用できるのはスクリプトからだけです。</p>
 </div>
-<p>制約を作成するには、<a class="xref" href="../../api/Stride.Physics.Simulation.html">Simulation</a> の静的メソッド <a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">CreateConstraint</a> を使用します。</p>
+<p>制約を作成するには、<a href="xref:Stride.Physics.Simulation">Simulation</a> の静的メソッド <a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">CreateConstraint</a> を使用します。</p>
 <pre><code class="lang-cs">CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix frameA, bool useReferenceFrameA);
 </code></pre>
-<p>これは、<a class="xref" href="../../api/Stride.Physics.Constraint.html#Stride_Physics_Constraint_RigidBodyA">RigidBodyA</a> を現在の位置でワールドにリンクします。
-ブール値 <a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は、制限が適用される座標系を指定します (<a class="xref" href="../../api/Stride.Physics.Constraint.html#Stride_Physics_Constraint_RigidBodyA">RigidBodyA</a> またはワールド)。</p>
+<p>これは、<a href="xref:Stride.Physics.Constraint.RigidBodyA">RigidBodyA</a> を現在の位置でワールドにリンクします。
+ブール値 <a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は、制限が適用される座標系を指定します (<a href="xref:Stride.Physics.Constraint.RigidBodyA">RigidBodyA</a> またはワールド)。</p>
 <div class="NOTE">
 <h5>Note</h5>
 <ul>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.Point2Point</a> の場合、フレームは A のピボットを表します。平行移動ベクトルのみが考慮されます。<a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は無視されます。</li>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.Hinge</a> の場合は、フレームは A のピボットと A の軸を表します。これは、ヒンジでは剛体とワールドの間で制限された角度の回転のみが許可されるためです。</li>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.ConeTwist</a> の場合は、<a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は無視されます。</li>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.Gear</a> では、2 つの剛体を作成する必要があります。この関数は例外をスローします。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.Point2Point</a> の場合、フレームは A のピボットを表します。平行移動ベクトルのみが考慮されます。<a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は無視されます。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.Hinge</a> の場合は、フレームは A のピボットと A の軸を表します。これは、ヒンジでは剛体とワールドの間で制限された角度の回転のみが許可されるためです。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.ConeTwist</a> の場合は、<a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は無視されます。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.Gear</a> では、2 つの剛体を作成する必要があります。この関数は例外をスローします。</li>
 </ul>
 </div>
 <pre><code class="lang-cs">CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyComponent rigidBodyB, Matrix frameA, Matrix frameB, bool useReferenceFrameA)
 </code></pre>
-<p>このメソッドは、<a class="xref" href="../../api/Stride.Physics.Constraint.html#Stride_Physics_Constraint_RigidBodyA">RigidBodyA</a> を <a class="xref" href="../../api/Stride.Physics.Constraint.html#Stride_Physics_Constraint_RigidBodyB">RigidBodyB</a> にリンクします。</p>
+<p>このメソッドは、<a href="xref:Stride.Physics.Constraint.RigidBodyA">RigidBodyA</a> を <a href="xref:Stride.Physics.Constraint.RigidBodyB">RigidBodyB</a> にリンクします。</p>
 <div class="NOTE">
 <h5>Note</h5>
 <ul>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.Point2Point</a> の場合、フレームは A または B のピボットを表します。平行移動ベクトルのみが考慮されます。<a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は無視されます。</li>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.Hinge</a> の場合、フレームは A/B のピボットと A/B の軸を表します。これは、この場合のヒンジでは、剛体とワールドの間に制限された角度の回転だけが許可されるためです。</li>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.ConeTwist</a> の場合は、<a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は無視されます。</li>
-<li><a class="xref" href="../../api/Stride.Physics.ConstraintTypes.html">ConstraintTypes.Gear</a> の場合は、<a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は無視されます。フレームは A または B の軸だけを表します。平行移動ベクトル (軸を含む必要があります) だけが使用されます。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.Point2Point</a> の場合、フレームは A または B のピボットを表します。平行移動ベクトルのみが考慮されます。<a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は無視されます。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.Hinge</a> の場合、フレームは A/B のピボットと A/B の軸を表します。これは、この場合のヒンジでは、剛体とワールドの間に制限された角度の回転だけが許可されるためです。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.ConeTwist</a> の場合は、<a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は無視されます。</li>
+<li><a href="xref:Stride.Physics.ConstraintTypes">ConstraintTypes.Gear</a> の場合は、<a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は無視されます。フレームは A または B の軸だけを表します。平行移動ベクトル (軸を含む必要があります) だけが使用されます。</li>
 </ul>
 </div>
-<p>ブール値 <a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_CreateConstraint_Stride_Physics_ConstraintTypes_Stride_Physics_RigidbodyComponent_Stride_Core_Mathematics_Matrix_System_Boolean_">useReferenceFrameA</a> は、制限が適用される座標系 (<a class="xref" href="../../api/Stride.Physics.Constraint.html#Stride_Physics_Constraint_RigidBodyA">RigidBodyA</a> または <a class="xref" href="../../api/Stride.Physics.Constraint.html#Stride_Physics_Constraint_RigidBodyB">RigidBodyB</a>) を決定します。</p>
+<p>ブール値 <a href="xref:Stride.Physics.Simulation.CreateConstraint(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean)">useReferenceFrameA</a> は、制限が適用される座標系 (<a href="xref:Stride.Physics.Constraint.RigidBodyA">RigidBodyA</a> または <a href="xref:Stride.Physics.Constraint.RigidBodyB">RigidBodyB</a>) を決定します。</p>
 <h2 id="制約をシミュレーションに追加する">制約をシミュレーションに追加する</h2>
 <p>制約を作成した後は、以下のメソッドを呼び出してスクリプトからシミュレーションに制約を追加します。</p>
 <pre><code class="lang-cs">this.GetSimulation().AddConstraint(constraint);
@@ -142,7 +142,7 @@
 <pre><code class="lang-cs">var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);
 </code></pre>
-<p>パラメーター <a class="xref" href="../../api/Stride.Physics.Simulation.html#Stride_Physics_Simulation_AddConstraint_Stride_Physics_Constraint_System_Boolean_">disableCollisionsBetweenLinkedBodies</a> は、
+<p>パラメーター <a href="xref:Stride.Physics.Simulation.AddConstraint(Stride.Physics.Constraint,System.Boolean)">disableCollisionsBetweenLinkedBodies</a> は、
 リンクされたボディが相互に衝突するのを停止します。</p>
 <p>同様に、シミュレーションから制約を削除するには、次のメソッドを使用します。</p>
 <pre><code class="lang-cs">this.GetSimulation().RemoveConstraint(constraint);
@@ -172,7 +172,7 @@ this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBod
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

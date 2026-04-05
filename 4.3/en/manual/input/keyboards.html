@@ -92,11 +92,11 @@
 <p>The <strong>keyboard</strong> is the most common input device for desktop games. There are two ways to handle keyboard input in Stride:</p>
 <ul>
 <li>query <strong>key states</strong></li>
-<li>use <a class="xref" href="../../api/Stride.Input.KeyEvent.html">KeyEvent</a> lists</li>
+<li>use <a href="xref:Stride.Input.KeyEvent">KeyEvent</a> lists</li>
 </ul>
-<p>You can access both from the <a class="xref" href="../../api/Stride.Input.InputManager.html">input</a> base class. For more information about these options, see the <a href="index.html">input index</a></p>
+<p>You can access both from the <a href="xref:Stride.Input.InputManager">input</a> base class. For more information about these options, see the <a href="index.html">input index</a></p>
 <h2 id="check-keyboard-availability">Check keyboard availability</h2>
-<p>Before handling keyboard input, check whether a keyboard is connected using <a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasKeyboard">Input.HasKeyboard</a>.</p>
+<p>Before handling keyboard input, check whether a keyboard is connected using <a href="xref:Stride.Input.InputManager.HasKeyboard">Input.HasKeyboard</a>.</p>
 <h2 id="get-key-states">Get key states</h2>
 <p>You can query <strong>key states</strong> and <strong>state changes</strong> with the following methods:</p>
 <table>
@@ -108,15 +108,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsKeyDown_Stride_Input_Keys_">IsKeyDown(Keys)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsKeyDown(Stride.Input.Keys)">IsKeyDown(Keys)</a></td>
 <td>Checks if a specified key is in the <strong>down</strong> state.</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsKeyPressed_Stride_Input_Keys_">IsKeyPressed(Keys)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsKeyPressed(Stride.Input.Keys)">IsKeyPressed(Keys)</a></td>
 <td>Checks if a specified key has been <strong>pressed</strong> since the last update.</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_IsKeyReleased_Stride_Input_Keys_">IsKeyReleased(Keys)</a></td>
+<td><a href="xref:Stride.Input.InputManager.IsKeyReleased(Stride.Input.Keys)">IsKeyReleased(Keys)</a></td>
 <td>Checks if a specified key has been <strong>released</strong> since the last update.</td>
 </tr>
 </tbody>
@@ -127,7 +127,7 @@
 </div>
 <h2 id="get-key-events">Get key events</h2>
 <p>In some cases, you want to know all the keys that are currently <em>Down</em>, or all the keys that have been <em>Pressed</em> since the last update. The key state API isn't good for this situation, as you have to query each available key separately.</p>
-<p>Instead, use the <strong>key events</strong> collections available in the <a class="xref" href="../../api/Stride.Input.InputManager.html">Input</a> base class.</p>
+<p>Instead, use the <strong>key events</strong> collections available in the <a href="xref:Stride.Input.InputManager">Input</a> base class.</p>
 <table>
 <thead>
 <tr>
@@ -137,24 +137,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_DownKeys">InputManager.DownKeys</a></td>
+<td><a href="xref:Stride.Input.InputManager.DownKeys">InputManager.DownKeys</a></td>
 <td>Gets a list of the keys that were down in the last update.</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_PressedKeys">InputManager.PressedKeys</a></td>
+<td><a href="xref:Stride.Input.InputManager.PressedKeys">InputManager.PressedKeys</a></td>
 <td>Gets a list of the keys pressed in the last update.</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_ReleasedKeys">InputManager.ReleasedKeys</a></td>
+<td><a href="xref:Stride.Input.InputManager.ReleasedKeys">InputManager.ReleasedKeys</a></td>
 <td>Gets a list of the keys released in the last update.</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_KeyEvents">InputManager.KeyEvents</a></td>
+<td><a href="xref:Stride.Input.InputManager.KeyEvents">InputManager.KeyEvents</a></td>
 <td>Gets a list of the key events in the last update (keys pressed or released).</td>
 </tr>
 </tbody>
 </table>
-<p>Every <a class="xref" href="../../api/Stride.Input.KeyEvent.html">KeyEvent</a> has two properties: <a class="xref" href="../../api/Stride.Input.KeyEvent.html#Stride_Input_KeyEvent_Key">Key</a> (the affected key) and <a class="xref" href="../../api/Stride.Input.ButtonEvent.html#Stride_Input_ButtonEvent_IsDown">IsDown</a> (the new state of the key).</p>
+<p>Every @'Stride.Input.KeyEvent' has two properties: @'Stride.Input.KeyEvent.Key' (the affected key) and @'Stride.Input.ButtonEvent.IsDown' (the new state of the key).</p>
 <h2 id="example-code">Example code</h2>
 <pre><code class="lang-cs">public class KeyboardEventsScript : SyncScript
 {
@@ -205,7 +205,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

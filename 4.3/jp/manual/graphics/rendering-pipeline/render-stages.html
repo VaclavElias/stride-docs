@@ -111,7 +111,7 @@ Objects can subscribe to multiple render stages. For example, a mesh typically s
 ## Effect slots
 -->
 <p><strong>エフェクトスロット（Effect slots）</strong> は、レンダーステージがどの<a href="../effects-and-shaders/index.html">エフェクトとシェーダー</a>を使うのかの指定に使います。
-エフェクトスロットは、<a class="xref" href="../../../api/Stride.Rendering.RenderStage.html#Stride_Rendering_RenderStage_EffectSlotName">EffectSlotName</a> で選択します。</p>
+エフェクトスロットは、@'Stride.Rendering.RenderStage.EffectSlotName' で選択します。</p>
 <!--
 **Effect slots** determine which [effect/shader](../effects-and-shaders/index.md) a render stage uses. You choose the effect slot with @'Stride.Rendering.RenderStage.EffectSlotName'.
 -->
@@ -165,14 +165,14 @@ A typical setup of render stages:
 <!--
 ## Sort objects in a render stage
 -->
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderStage.html#Stride_Rendering_RenderStage_SortMode">SortMode</a> は、Stride がそのレンダーステージでオブジェクトを並べ替える方法を定義します。Stride には、以下のようないくつかの <a class="xref" href="../../../api/Stride.Rendering.SortMode.html">SortMode</a> の実装があります。</p>
+<p>@'Stride.Rendering.RenderStage.SortMode' は、Stride がそのレンダーステージでオブジェクトを並べ替える方法を定義します。Stride には、以下のようないくつかの @'Stride.Rendering.SortMode' の実装があります。</p>
 <!--
 @'Stride.Rendering.RenderStage.SortMode' defines how Stride sorts objects in that render stage. Stride comes with several @'Stride.Rendering.SortMode' implementations, such as:
 -->
 <ul>
-<li><a class="xref" href="../../../api/Stride.Rendering.FrontToBackSortMode.html">FrontToBackSortMode</a> は、限られた精度でオブジェクトを前から後ろに向かってレンダリングし、オブジェクトが同じ深度範囲を持つ場合にはステートの変更を避けようとします（不透明なオブジェクトや影に便利です）。</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.BackToFrontSortMode.html">BackToFrontSortMode</a> は、オブジェクトを後ろから前に向かって厳密にレンダリングします（透明なオブジェクトに便利です）。</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.StateChangeSortMode.html">StateChangeSortMode</a> は、ステートの変化をできる限り減らせるように並び替えます。</li>
+<li>@'Stride.Rendering.FrontToBackSortMode' は、限られた精度でオブジェクトを前から後ろに向かってレンダリングし、オブジェクトが同じ深度範囲を持つ場合にはステートの変更を避けようとします（不透明なオブジェクトや影に便利です）。</li>
+<li>@'Stride.Rendering.BackToFrontSortMode' は、オブジェクトを後ろから前に向かって厳密にレンダリングします（透明なオブジェクトに便利です）。</li>
+<li>@'Stride.Rendering.StateChangeSortMode' は、ステートの変化をできる限り減らせるように並び替えます。</li>
 </ul>
 <!--
 - @'Stride.Rendering.FrontToBackSortMode', which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque objects and shadows)
@@ -187,7 +187,7 @@ Of course, you're free to implement your own, too.
 <!--
 ## Filter objects in a render stage
 -->
-<p>レンダーステージ内のオブジェクトに対する独自のフィルターを作成するには、<a class="xref" href="../../../api/Stride.Rendering.RenderStageFilter.html">RenderStageFilter</a> を継承します。</p>
+<p>レンダーステージ内のオブジェクトに対する独自のフィルターを作成するには、@'Stride.Rendering.RenderStageFilter' を継承します。</p>
 <!--
 To create your own filter for objects in a render stage, inherit from @'Stride.Rendering.RenderStageFilter'.
 -->
@@ -204,8 +204,8 @@ To create your own filter for objects in a render stage, inherit from @'Stride.R
 For example, this is the typical setup for meshes:
 -->
 <ul>
-<li><a class="xref" href="../../../api/Stride.Rendering.MeshTransparentRenderStageSelector.html">MeshTransparentRenderStageSelector</a> は、マテリアルのプロパティに応じて、<code>Main</code> または <code>Transparent</code> のいずれかのレンダーステージを選択します。既定のエフェクトは、Stride で定義された <code>StrideForwardShadingEffect</code> です（必要であれば、独自に作成することもできます）。</li>
-<li><a class="xref" href="../../../api/Stride.Rendering.Shadows.ShadowMapRenderStageSelector.html">ShadowMapRenderStageSelector</a> は、影を落とす不透明なメッシュを選択して、<code>ShadowMapCaster</code> レンダーステージに追加します。既定のエフェクトは、Stride で定義された<code>StrideForwardShadingEffect.ShadowMapCaster</code> です。</li>
+<li>@'Stride.Rendering.MeshTransparentRenderStageSelector' は、マテリアルのプロパティに応じて、<code>Main</code> または <code>Transparent</code> のいずれかのレンダーステージを選択します。既定のエフェクトは、Stride で定義された <code>StrideForwardShadingEffect</code> です（必要であれば、独自に作成することもできます）。</li>
+<li>@'Stride.Rendering.Shadows.ShadowMapRenderStageSelector' は、影を落とす不透明なメッシュを選択して、<code>ShadowMapCaster</code> レンダーステージに追加します。既定のエフェクトは、Stride で定義された<code>StrideForwardShadingEffect.ShadowMapCaster</code> です。</li>
 </ul>
 <!--
 - @'Stride.Rendering.MeshTransparentRenderStageSelector' chooses either the `Main` or `Transparent` render stage, depending on the material properties. The default effect is `StrideForwardShadingEffect` defined by Stride (you can create your own if you want).
@@ -256,7 +256,7 @@ You can customize everything, so you can add other predefined render stage selec
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

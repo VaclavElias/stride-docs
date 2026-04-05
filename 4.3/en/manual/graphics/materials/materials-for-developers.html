@@ -92,18 +92,18 @@
 <p>This diagram shows the Material interfaces and implementation classes:</p>
 <p><img src="media/materials-for-developers-1.png" alt="media/materials-for-developers-1.png"></p>
 <ul>
-<li>The interface <a class="xref" href="../../../api/Stride.Rendering.Materials.IMaterialDescriptor.html">IMaterialDescriptor</a> is the root interface for a material description.</li>
-<li>The <a class="xref" href="../../../api/Stride.Rendering.Materials.IMaterialShaderGenerator.html">IMaterialShaderGenerator</a> is the main interface used to generate a material shader of the material.</li>
+<li>The interface @'Stride.Rendering.Materials.IMaterialDescriptor' is the root interface for a material description.</li>
+<li>The @'Stride.Rendering.Materials.IMaterialShaderGenerator' is the main interface used to generate a material shader of the material.</li>
 <li>Each attribute and layer implements this interface to modify the final material shader.</li>
-<li>The <a class="xref" href="../../../api/Stride.Rendering.Materials.MaterialDescriptor.html">MaterialDescriptor</a> is the editor-time description of the material before being compiled into a material shader.</li>
-<li>The <a class="xref" href="../../../api/Stride.Rendering.Material.html">Material</a> class is the runtime material shader generated from the <a class="xref" href="../../../api/Stride.Rendering.Materials.MaterialDescriptor.html">MaterialDescriptor</a></li>
+<li>The @'Stride.Rendering.Materials.MaterialDescriptor' is the editor-time description of the material before being compiled into a material shader.</li>
+<li>The @'Stride.Rendering.Material' class is the runtime material shader generated from the @'Stride.Rendering.Materials.MaterialDescriptor'</li>
 </ul>
 <h1 id="modifying-parameters-at-runtime">Modifying parameters at runtime</h1>
-<p>The file <a class="xref" href="../../../api/Stride.Rendering.Materials.MaterialKeys.html">MaterialKeys</a> contains most material keys you might need to use, have a look through it to figure out which one you might need to get to modify the parameter you are interested in.</p>
+<p>The file @'Stride.Rendering.Materials.MaterialKeys' contains most material keys you might need to use, have a look through it to figure out which one you might need to get to modify the parameter you are interested in.</p>
 <p>Let's say you have this fairly simple material:</p>
 <p><img src="media/runtime-param-modif-ex.png" alt="media/runtime-param-modif-ex.png"></p>
 <p>And you want to clone that material, but change its color to red at runtime.
-Searching through the different keys contained in <a class="xref" href="../../../api/Stride.Rendering.Materials.MaterialKeys.html">MaterialKeys</a> you would find <code>MaterialKeys.DiffuseValue</code> and use it as the key to set the new color value you want:</p>
+Searching through the different keys contained in @'Stride.Rendering.Materials.MaterialKeys' you would find <code>MaterialKeys.DiffuseValue</code> and use it as the key to set the new color value you want:</p>
 <pre><code class="lang-csharp">var clone = SerializerExtensions.Clone(MyMaterial);
 clone.Passes[0].Parameters.Set(MaterialKeys.DiffuseValue, new Color4(1, 0, 0));
 </code></pre>
@@ -138,7 +138,7 @@ Here's an example of that through Rider's <em>Threads &amp; Variables</em> windo
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

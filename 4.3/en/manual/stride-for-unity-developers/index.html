@@ -123,11 +123,11 @@
 </tr>
 <tr>
 <td><a href="https://docs.unity3d.com/ScriptReference/GameObject.html"><code>GameObject</code></a></td>
-<td><a class="xref" href="../../api/Stride.Engine.Entity.html"><code>Entity</code></a></td>
+<td><a href="xref:Stride.Engine.Entity"><code>Entity</code></a></td>
 </tr>
 <tr>
 <td><a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a></td>
-<td><a class="xref" href="../../api/Stride.Engine.SyncScript.html"><code>SyncScript</code></a>, <a class="xref" href="../../api/Stride.Engine.AsyncScript.html"><code>AsyncScript</code></a>, <a class="xref" href="../../api/Stride.Engine.StartupScript.html"><code>StartupScript</code></a></td>
+<td><a href="xref:Stride.Engine.SyncScript"><code>SyncScript</code></a>, <a href="xref:Stride.Engine.AsyncScript"><code>AsyncScript</code></a>, <a href="xref:Stride.Engine.StartupScript"><code>StartupScript</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -200,7 +200,7 @@
 </li>
 </ol>
 <h3 id="transform-component">Transform component</h3>
-<p>Like GameObjects in Unity®, each entity in Stride has a <a class="xref" href="../../api/Stride.Engine.TransformComponent.html">Transform component</a> which sets its position, rotation, and scale in the world.</p>
+<p>Like GameObjects in Unity®, each entity in Stride has a <a href="xref:Stride.Engine.TransformComponent">Transform component</a> which sets its position, rotation, and scale in the world.</p>
 <p><img src="media/stride-vs-unity-entity-transform-component.png" alt="Transform component"></p>
 <p>All entities are created with a Transform component by default.</p>
 <p>In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner than that you can use <code>TransformComponent.UpdateLocalMatrix()</code>, <code>Transform.UpdateWorldMatrix()</code>, or <code>Transform.UpdateLocalFromWorld()</code> to do so, depending on how you need to update the matrix.</p>
@@ -233,7 +233,7 @@
 </tbody>
 </table>
 <h4 id="world-positionrotationscale">World Position/Rotation/Scale</h4>
-<p>In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the <a class="xref" href="../../api/Stride.Engine.TransformComponent.html#Stride_Engine_TransformComponent_WorldMatrix">WorldMatrix</a>.</p>
+<p>In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the <a href="xref:Stride.Engine.TransformComponent.WorldMatrix">WorldMatrix</a>.</p>
 <table>
 <thead>
 <tr>
@@ -635,7 +635,7 @@ while (Game.IsRunning)
 <p><img src="media/stride-vs-unity-open-asset-file.png" alt="Open asset file"></p>
 <h3 id="event-functions-start-update-execute-etc">Event functions (Start, Update, Execute, etc)</h3>
 <p>In Unity®, you work with MonoBehaviours using Start(), Update(), and other methods.</p>
-<p>Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see <a href="../scripts/types-of-script.html">Types of script</a>.</p>
+<p>Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see <a href="../scripts/types-of-script.md">Types of script</a>.</p>
 <h3 id="unity-monobehaviour">Unity® MonoBehaviour</h3>
 <pre><code class="lang-cs">public class BasicMethods : MonoBehaviour
 {
@@ -691,16 +691,16 @@ while (Game.IsRunning)
 <h3 id="create-a-script">Create a script</h3>
 <p>To create a script, click the <strong>Add asset</strong> button and select <strong>Scripts</strong>.</p>
 <p><img src="media/stride-vs-unity-create-script.png" alt="Create script in Stride"></p>
-<p>In Unity®, when you create a <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a> script, it has two base functions: <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html"><code>MonoBehaviour.Start()</code></a> and <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html"><code>MonoBehaviour.Update()</code></a>. Stride has a <a class="xref" href="../../api/Stride.Engine.SyncScript.html"><code>SyncScript</code></a> that works similarly. Like <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a>, <a class="xref" href="../../api/Stride.Engine.SyncScript.html"><code>SyncScript</code></a> has two methods:</p>
+<p>In Unity®, when you create a <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a> script, it has two base functions: <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html"><code>MonoBehaviour.Start()</code></a> and <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html"><code>MonoBehaviour.Update()</code></a>. Stride has a <a href="xref:Stride.Engine.SyncScript"><code>SyncScript</code></a> that works similarly. Like <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a>, <a href="xref:Stride.Engine.SyncScript"><code>SyncScript</code></a> has two methods:</p>
 <ul>
-<li><a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start"><code>SyncScript.Start()</code></a> is called when the script is loaded.</li>
-<li><a class="xref" href="../../api/Stride.Engine.SyncScript.html#Stride_Engine_SyncScript_Update"><code>SyncScript.Update()</code></a> is called every update.</li>
+<li><a href="xref:Stride.Engine.StartupScript.Start"><code>SyncScript.Start()</code></a> is called when the script is loaded.</li>
+<li><a href="xref:Stride.Engine.SyncScript.Update"><code>SyncScript.Update()</code></a> is called every update.</li>
 </ul>
-<p>Unlike <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a>, implementing the <a class="xref" href="../../api/Stride.Engine.SyncScript.html#Stride_Engine_SyncScript_Update"><code>SyncScript.Update()</code></a> method is not optional, and as such, must be implemented in every <a class="xref" href="../../api/Stride.Engine.SyncScript.html"><code>SyncScript</code></a>.</p>
+<p>Unlike <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"><code>MonoBehaviour</code></a>, implementing the <a href="xref:Stride.Engine.SyncScript.Update"><code>SyncScript.Update()</code></a> method is not optional, and as such, must be implemented in every <a href="xref:Stride.Engine.SyncScript"><code>SyncScript</code></a>.</p>
 <p>If you want your script to be a startup or asynchronous, use the corresponding script types:</p>
 <ul>
-<li><a class="xref" href="../../api/Stride.Engine.StartupScript.html"><code>StartupScript</code></a>: this script has a single <a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start"><code>StartupScript.Start()</code></a> method. It initializes the scene and its content at startup.</li>
-<li><a class="xref" href="../../api/Stride.Engine.AsyncScript.html"><code>AsyncScript</code></a>: an asynchronous script with a single method <a class="xref" href="../../api/Stride.Engine.AsyncScript.html#Stride_Engine_AsyncScript_Execute"><code>AsyncScript.Execute()</code></a> and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.</li>
+<li><a href="xref:Stride.Engine.StartupScript"><code>StartupScript</code></a>: this script has a single <a href="xref:Stride.Engine.StartupScript.Start"><code>StartupScript.Start()</code></a> method. It initializes the scene and its content at startup.</li>
+<li><a href="xref:Stride.Engine.AsyncScript"><code>AsyncScript</code></a>: an asynchronous script with a single method <a href="xref:Stride.Engine.AsyncScript.Execute"><code>AsyncScript.Execute()</code></a> and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.</li>
 </ul>
 <h3 id="reload-assemblies">Reload assemblies</h3>
 <p>After you create a script, you may have to reload the assemblies manually. To do this, click <strong>Reload assemblies</strong> in the Game Studio toolbar.</p>
@@ -891,7 +891,7 @@ public override void Start()
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

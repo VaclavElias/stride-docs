@@ -96,7 +96,7 @@
 <li>input layout</li>
 <li>output description</li>
 </ul>
-<p>State is compiled into immutable <a class="xref" href="../../../api/Stride.Graphics.PipelineState.html">PipelineState</a> objects, which describe the whole pipeline. They are then bound using a <a class="xref" href="../../../api/Stride.Graphics.CommandList.html">CommandList</a>.</p>
+<p>State is compiled into immutable @'Stride.Graphics.PipelineState' objects, which describe the whole pipeline. They are then bound using a @'Stride.Graphics.CommandList'.</p>
 <p><strong>Code:</strong> Create state objects</p>
 <pre><code class="lang-cs">// Creating pipeline state object
 var pipelineStateDescription = new PipelineStateDescription();
@@ -105,7 +105,7 @@ var pipelineState = PipelineState.New(GraphicsDevice, ref pipelineStateDescripti
 // Applying the state to the pipeline
 CommandList.SetPipelineState(pipelineState);
 </code></pre>
-<p>The <a class="xref" href="../../../api/Stride.Graphics.MutablePipelineState.html">MutablePipelineState</a> class let you set states independently, while caching the underlying pipeline states.</p>
+<p>The @'Stride.Graphics.MutablePipelineState' class let you set states independently, while caching the underlying pipeline states.</p>
 <p><strong>Code:</strong> Mutable pipeline state</p>
 <pre><code class="lang-cs">// Creating the pipeline state object
 var mutablePipelineState = new MutablePipelineState();
@@ -118,30 +118,30 @@ mutablePipelineState.Update();
 CommandList.SetPipelineState(mutablePipelineState.CurrentState);
 </code></pre>
 <h1 id="rasterizer-state">Rasterizer state</h1>
-<p>The rasterizer can be set using the <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_RasterizerState">RasterizerState</a> property. A set of predefined descriptions is held by the <a class="xref" href="../../../api/Stride.Graphics.RasterizerStates.html">RasterizerStates</a> class. They deal with the cull mode, and should be enough for most use cases:</p>
+<p>The rasterizer can be set using the @'Stride.Graphics.PipelineStateDescription.RasterizerState' property. A set of predefined descriptions is held by the @'Stride.Graphics.RasterizerStates' class. They deal with the cull mode, and should be enough for most use cases:</p>
 <ul>
-<li><a class="xref" href="../../../api/Stride.Graphics.RasterizerStates.html#Stride_Graphics_RasterizerStates_CullNone">CullNone</a>: no culling</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.RasterizerStates.html#Stride_Graphics_RasterizerStates_CullFront">CullFront</a>: front-face culling</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.RasterizerStates.html#Stride_Graphics_RasterizerStates_CullBack">CullBack</a>: back-face culling</li>
+<li>@'Stride.Graphics.RasterizerStates.CullNone': no culling</li>
+<li>@'Stride.Graphics.RasterizerStates.CullFront': front-face culling</li>
+<li>@'Stride.Graphics.RasterizerStates.CullBack': back-face culling</li>
 </ul>
 <p><strong>Code:</strong> Set the cull mode</p>
 <pre><code class="lang-cs">pipelineStateDescription.RasterizerState = RasterizerStates.CullNone;
 pipelineStateDescription.RasterizerState = RasterizerStates.CullFront;
 pipelineStateDescription.RasterizerState = RasterizerStates.CullBack;
 </code></pre>
-<p>You can create your own custom state. For the list of options and default values, see the <a class="xref" href="../../../api/Stride.Graphics.RasterizerStateDescription.html">RasterizerStateDescription</a> API documentation.</p>
+<p>You can create your own custom state. For the list of options and default values, see the @'Stride.Graphics.RasterizerStateDescription' API documentation.</p>
 <p><strong>Code:</strong> Custom rasterizer states</p>
 <pre><code class="lang-cs">var rasterizerStateDescription = new RasterizerStateDescription(CullMode.Front);
 rasterizerStateDescription.ScissorTestEnable = true; // enables the scissor test
 pipelineStateDescription.RasterizerState = rasterizerStateDescription;
 </code></pre>
 <h1 id="depth-and-stencil-states">Depth and stencil states</h1>
-<p>The <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_DepthStencilState">DepthStencilState</a> property contains the depth and stencil states. A set of commonly used states is defined by the <a class="xref" href="../../../api/Stride.Graphics.DepthStencilStates.html">DepthStencilStates</a> class:</p>
+<p>The @'Stride.Graphics.PipelineStateDescription.DepthStencilState' property contains the depth and stencil states. A set of commonly used states is defined by the @'Stride.Graphics.DepthStencilStates' class:</p>
 <ul>
-<li><a class="xref" href="../../../api/Stride.Graphics.DepthStencilStates.html#Stride_Graphics_DepthStencilStates_Default">Default</a>: depth read and write with a less-than comparison</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.DepthStencilStates.html#Stride_Graphics_DepthStencilStates_DefaultInverse">DefaultInverse</a>: read and write with a greater-or-equals comparison</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.DepthStencilStates.html#Stride_Graphics_DepthStencilStates_DepthRead">DepthRead</a>: read only with a less-than comparison</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.DepthStencilStates.html#Stride_Graphics_DepthStencilStates_None">None</a>: neither read nor write</li>
+<li>@'Stride.Graphics.DepthStencilStates.Default': depth read and write with a less-than comparison</li>
+<li>@'Stride.Graphics.DepthStencilStates.DefaultInverse': read and write with a greater-or-equals comparison</li>
+<li>@'Stride.Graphics.DepthStencilStates.DepthRead': read only with a less-than comparison</li>
+<li>@'Stride.Graphics.DepthStencilStates.None': neither read nor write</li>
 </ul>
 <p><strong>Code:</strong> Setting the depth state</p>
 <pre><code class="lang-cs">pipelineStateDescription.DepthStencilState = DepthStencilStates.Default;
@@ -149,23 +149,23 @@ pipelineStateDescription.DepthStencilState = DepthStencilStates.DefaultInverse;
 pipelineStateDescription.DepthStencilState = DepthStencilStates.DepthRead;
 pipelineStateDescription.DepthStencilState = DepthStencilStates.None;
 </code></pre>
-<p>You can also set custom depth and stencil states. For the  list of options and default values, see the <a class="xref" href="../../../api/Stride.Graphics.DepthStencilStateDescription.html">DepthStencilStateDescription</a> API documentation.</p>
+<p>You can also set custom depth and stencil states. For the  list of options and default values, see the @'Stride.Graphics.DepthStencilStateDescription' API documentation.</p>
 <p><strong>Code:</strong> Custom depth and stencil state</p>
 <pre><code class="lang-cs">// depth test is enabled but it doesn't write
 var depthStencilStateDescription = new DepthStencilStateDescription(true, false);
 pipelineStateDescription.DepthStencilState = depthStencilStateDescription;
 </code></pre>
-<p>The stencil reference isn't part of the <a class="xref" href="../../../api/Stride.Graphics.PipelineState.html">PipelineState</a>. It's set using <a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetStencilReference_System_Int32_">SetStencilReference(int)</a>.</p>
+<p>The stencil reference isn't part of the @'Stride.Graphics.PipelineState'. It's set using @'Stride.Graphics.CommandList.SetStencilReference(System.Int32)'.</p>
 <p><strong>Code:</strong> Set the stencil reference</p>
 <pre><code class="lang-cs">CommandList.SetStencilReference(2);
 </code></pre>
 <h1 id="blend-state">Blend state</h1>
-<p>The <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_BlendState">BlendState</a> and <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_SampleMask">SampleMask</a> properties control blending. The <a class="xref" href="../../../api/Stride.Graphics.BlendStates.html">BlendStates</a> class defines a set of commonly used blend states:</p>
+<p>The @'Stride.Graphics.PipelineStateDescription.BlendState' and @'Stride.Graphics.PipelineStateDescription.SampleMask' properties control blending. The @'Stride.Graphics.BlendStates' class defines a set of commonly used blend states:</p>
 <ul>
-<li><a class="xref" href="../../../api/Stride.Graphics.BlendStates.html#Stride_Graphics_BlendStates_Additive">Additive</a>: sums the colors</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.BlendStates.html#Stride_Graphics_BlendStates_AlphaBlend">AlphaBlend</a>: sums the colors using the alpha of the source on the destination color</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.BlendStates.html#Stride_Graphics_BlendStates_NonPremultiplied">NonPremultiplied</a>: sums using the alpha of the source on both colors</li>
-<li><a class="xref" href="../../../api/Stride.Graphics.BlendStates.html#Stride_Graphics_BlendStates_Opaque">Opaque</a>: replaces the color</li>
+<li>@'Stride.Graphics.BlendStates.Additive': sums the colors</li>
+<li>@'Stride.Graphics.BlendStates.AlphaBlend': sums the colors using the alpha of the source on the destination color</li>
+<li>@'Stride.Graphics.BlendStates.NonPremultiplied': sums using the alpha of the source on both colors</li>
+<li>@'Stride.Graphics.BlendStates.Opaque': replaces the color</li>
 </ul>
 <p><strong>Code:</strong> Set the blend state</p>
 <pre><code class="lang-cs">// Set common blend states
@@ -177,7 +177,7 @@ pipelineStateDescription.BlendState = BlendStates.Opaque;
 // Set the sample mask
 pipelineStateDescription.SampleMask = 0xFFFFFFFF;
 </code></pre>
-<p>You can set custom depth and blend states. For a list of options and default values, see the <a class="xref" href="../../../api/Stride.Graphics.BlendStateDescription.html">BlendStateDescription</a> API documentation.</p>
+<p>You can set custom depth and blend states. For a list of options and default values, see the @'Stride.Graphics.BlendStateDescription' API documentation.</p>
 <p><strong>Code:</strong> Custom blend state</p>
 <pre><code class="lang-cs">// create the object describing the blend state per target
 var blendStateRenderTargetDescription = new BlendStateRenderTargetDescription();
@@ -191,37 +191,37 @@ blendStateDescription.AlphaToCoverageEnable = true; // enable alpha to coverage
 blendStateDescription.RenderTargets[0] = blendStateRenderTargetDescription;
 pipelineStateDescription.BlendState = blendStateDescription;
 </code></pre>
-<p>The blend factor isn't part of the <a class="xref" href="../../../api/Stride.Graphics.PipelineState.html">PipelineState</a>. It's set using <a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_SetBlendFactor_Stride_Core_Mathematics_Color4_">SetBlendFactor(Color4)</a>.</p>
+<p>The blend factor isn't part of the @'Stride.Graphics.PipelineState'. It's set using @'Stride.Graphics.CommandList.SetBlendFactor(Stride.Core.Mathematics.Color4)'.</p>
 <p><strong>Code:</strong> Set the blend factor</p>
 <pre><code class="lang-cs">CommandList.SetBlendFactor(Color4.White);
 </code></pre>
 <h2 id="effects">Effects</h2>
 <p>The pipeline state also includes the shaders you want to use for drawing.
-To bind an <a class="xref" href="../../../api/Stride.Graphics.Effect.html">Effect</a> to the pipeline, set the <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_EffectBytecode">EffectBytecode</a>
-and <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_RootSignature">RootSignature</a> properties of the <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html">PipelineStateDescription</a> to the matching values of the effect.</p>
-<p>An <a class="xref" href="../../../api/Stride.Shaders.EffectBytecode.html">EffectBytecode</a> contains the actual shader programs. For more information, see <a href="../effects-and-shaders/index.html">Effects and Shaders</a>.</p>
-<p>The <a class="xref" href="../../../api/Stride.Graphics.RootSignature.html">RootSignature</a> describes the number and kind of resources expected by the effect. The next chapter covers how to <a href="resources.html">bind resources</a> to the pipeline.</p>
+To bind an @'Stride.Graphics.Effect' to the pipeline, set the @'Stride.Graphics.PipelineStateDescription.EffectBytecode'
+and @'Stride.Graphics.PipelineStateDescription.RootSignature' properties of the @'Stride.Graphics.PipelineStateDescription' to the matching values of the effect.</p>
+<p>An @'Stride.Shaders.EffectBytecode' contains the actual shader programs. For more information, see <a href="../effects-and-shaders/index.html">Effects and Shaders</a>.</p>
+<p>The @'Stride.Graphics.RootSignature' describes the number and kind of resources expected by the effect. The next chapter covers how to <a href="resources.html">bind resources</a> to the pipeline.</p>
 <p><strong>Code:</strong> Bind an effect</p>
 <pre><code class="lang-cs">var effectInstance = new EffectInstance(EffectSystem.LoadEffect(&quot;MyEffect&quot;).WaitForResult());
 pipelineStateDescription.EffectBytecode = effectInstance.Effect.Bytecode;
 pipelineStateDescription.RootSignature = effectInstance.RootSignature;
 </code></pre>
 <h2 id="input-layout">Input layout</h2>
-<p>The pipeline state describes the layout in which vertices are sent to the device through the <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_InputElements">InputElements</a> and <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_PrimitiveType">PrimitiveType</a> properties.</p>
-<p>The <a href="draw-vertices.html">Draw vertices</a> page describes how to create custom vertex buffers and their <a class="xref" href="../../../api/Stride.Graphics.VertexDeclaration.html">VertexDeclaration</a> in more detail.</p>
+<p>The pipeline state describes the layout in which vertices are sent to the device through the @'Stride.Graphics.PipelineStateDescription.InputElements' and @'Stride.Graphics.PipelineStateDescription.PrimitiveType' properties.</p>
+<p>The <a href="draw-vertices.html">Draw vertices</a> page describes how to create custom vertex buffers and their @'Stride.Graphics.VertexDeclaration' in more detail.</p>
 <p><strong>Code:</strong> Set an input layout</p>
 <pre><code class="lang-cs">VertexDeclaration vertexDeclaration = new VertexDeclaration();
 pipelineStateDescription.InputElements = vertexDeclaration.CreateInputElements();
 pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 </code></pre>
 <h2 id="output-description">Output description</h2>
-<p>The <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html#Stride_Graphics_PipelineStateDescription_Output">Output</a> property of the <a class="xref" href="../../../api/Stride.Graphics.PipelineStateDescription.html">PipelineStateDescription</a> defines the number and <a class="xref" href="../../../api/Stride.Graphics.PixelFormat.html">PixelFormat</a> of all bound render textures.</p>
+<p>The @'Stride.Graphics.PipelineStateDescription.Output' property of the @'Stride.Graphics.PipelineStateDescription' defines the number and @'Stride.Graphics.PixelFormat' of all bound render textures.</p>
 <p>For information on how to bind render textures to the pipeline, see <a href="textures-and-render-textures.html">Textures and render textures</a>.</p>
 <p><strong>Code:</strong> Create an output description</p>
 <pre><code class="lang-cs">var renderOutputDescription = new RenderOutputDescription(GraphicsDevice.Presenter.BackBuffer.Format, GraphicsDevice.Presenter.DepthStencilBuffer.Format);
 pipelineStateDescription.Output = renderOutputDescription;
 </code></pre>
-<p>You can use the <a class="xref" href="../../../api/Stride.Graphics.RenderOutputDescription.html#Stride_Graphics_RenderOutputDescription_CaptureState_Stride_Graphics_CommandList_">CaptureState(CommandList)</a> to retrieve the output description last set on a <a class="xref" href="../../../api/Stride.Graphics.CommandList.html">CommandList</a>. This is especially useful in combination with <a class="xref" href="../../../api/Stride.Graphics.MutablePipelineState.html">MutablePipelineState</a>, when the render target might not be known up front.</p>
+<p>You can use the @'Stride.Graphics.RenderOutputDescription.CaptureState(Stride.Graphics.CommandList)' to retrieve the output description last set on a @'Stride.Graphics.CommandList'. This is especially useful in combination with @'Stride.Graphics.MutablePipelineState', when the render target might not be known up front.</p>
 <p><strong>Code:</strong> Capture output description</p>
 <pre><code class="lang-cs">mutablePipelineState.State.Output.CaptureState(CommandList);
 mutablePipelineState.Update();
@@ -247,7 +247,7 @@ mutablePipelineState.Update();
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

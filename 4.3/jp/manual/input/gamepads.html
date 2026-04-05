@@ -107,13 +107,13 @@
 <h3 id="ゲームパッドが接続されていることを確認する">ゲームパッドが接続されていることを確認する</h3>
 <p>ゲームパッドの入力を処理する前に:</p>
 <ul>
-<li><p>いずれかのゲームパッドが接続されているかどうかを確認するには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasGamePad">InputManager.HasGamePad</a> を使用します。</p>
+<li><p>いずれかのゲームパッドが接続されているかどうかを確認するには、<a href="xref:Stride.Input.InputManager.HasGamePad">InputManager.HasGamePad</a> を使用します。</p>
 </li>
-<li><p>接続されているゲームパッドの数を確認するには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_GamePadCount">InputManager.GamePadCount</a> を使用します。</p>
+<li><p>接続されているゲームパッドの数を確認するには、<a href="xref:Stride.Input.InputManager.GamePadCount">InputManager.GamePadCount</a> を使用します。</p>
 </li>
-<li><p>現在のデバイスが切断されたかどうかを確認するには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_DeviceRemoved">InputManager.DeviceRemoved</a> イベントを使用します。</p>
+<li><p>現在のデバイスが切断されたかどうかを確認するには、<a href="xref:Stride.Input.InputManager.DeviceRemoved">InputManager.DeviceRemoved</a> イベントを使用します。</p>
 </li>
-<li><p>デバイスが接続されたかどうかを確認するには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_DeviceAdded">InputManager.DeviceAdded</a> イベントを使用します。</p>
+<li><p>デバイスが接続されたかどうかを確認するには、<a href="xref:Stride.Input.InputManager.DeviceAdded">InputManager.DeviceAdded</a> イベントを使用します。</p>
 </li>
 </ul>
 <h3 id="デジタル-ボタン">デジタル ボタン</h3>
@@ -127,35 +127,35 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadDeviceExtensions.html#Stride_Input_GamePadDeviceExtensions_IsButtonDown_Stride_Input_IGamePadDevice_Stride_Input_GamePadButton_">IsButtonDown(IGamePadDevice, GamePadButton)</a></td>
+<td><a href="xref:Stride.Input.GamePadDeviceExtensions.IsButtonDown(Stride.Input.IGamePadDevice,Stride.Input.GamePadButton)">IsButtonDown(IGamePadDevice, GamePadButton)</a></td>
 <td>ボタンが「<em>押されている</em>」状態かどうかを確認します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadDeviceExtensions.html#Stride_Input_GamePadDeviceExtensions_IsButtonPressed_Stride_Input_IGamePadDevice_Stride_Input_GamePadButton_">IsButtonPressed(IGamePadDevice, GamePadButton)</a></td>
+<td><a href="xref:Stride.Input.GamePadDeviceExtensions.IsButtonPressed(Stride.Input.IGamePadDevice,Stride.Input.GamePadButton)">IsButtonPressed(IGamePadDevice, GamePadButton)</a></td>
 <td>前回の更新以降にユーザーがボタンを「<em>押した</em>」かどうかを確認します。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadDeviceExtensions.html#Stride_Input_GamePadDeviceExtensions_IsButtonReleased_Stride_Input_IGamePadDevice_Stride_Input_GamePadButton_">IsButtonReleased(IGamePadDevice, GamePadButton)</a></td>
+<td><a href="xref:Stride.Input.GamePadDeviceExtensions.IsButtonReleased(Stride.Input.IGamePadDevice,Stride.Input.GamePadButton)">IsButtonReleased(IGamePadDevice, GamePadButton)</a></td>
 <td>前回の更新以降にユーザーがボタンを「<em>放した</em>」かどうかを確認します。</td>
 </tr>
 </tbody>
 </table>
 <p><strong>ボタン (GamePadButton)</strong> は確認するゲームパッド ボタンです。</p>
-<p>デジタル ボタンの状態は、<a class="xref" href="../../api/Stride.Input.GamePadState.html#Stride_Input_GamePadState_Buttons">GamePadState.Buttons</a> を使用して取得することもできます。</p>
+<p>デジタル ボタンの状態は、<a href="xref:Stride.Input.GamePadState.Buttons">GamePadState.Buttons</a> を使用して取得することもできます。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p><a class="xref" href="../../api/Stride.Input.GamePadState.html#Stride_Input_GamePadState_Buttons">GamePadState.Buttons</a> フィールドは、2 進法を使用するビットマスクです。ビットマスクの値に応じて、どのボタンが<em>アップ</em>か<em>ダウン</em>かを特定できます。</p>
+<p><a href="xref:Stride.Input.GamePadState.Buttons">GamePadState.Buttons</a> フィールドは、2 進法を使用するビットマスクです。ビットマスクの値に応じて、どのボタンが<em>アップ</em>か<em>ダウン</em>かを特定できます。</p>
 </div>
-<p>ゲームパッドの状態を取得するには、<a class="xref" href="../../api/Stride.Input.IGamePadDevice.html#Stride_Input_IGamePadDevice_State">IGamePadDevice.State</a> を使用します。</p>
+<p>ゲームパッドの状態を取得するには、<a href="xref:Stride.Input.IGamePadDevice.State">IGamePadDevice.State</a> を使用します。</p>
 <h3 id="アナログ-ボタン">アナログ ボタン</h3>
 <p>アナログ ボタンの値を問い合わせるには、最初に
-<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_GetGamePadByIndex_System_Int32_">GetGamePadByIndex(index)</a> を使用してゲームパッドの現在の状態を取得します。<em>index (整数)</em> は、確認するゲームパッドのインデックスです。</p>
+<a href="xref:Stride.Input.InputManager.GetGamePadByIndex(System.Int32)">GetGamePadByIndex(index)</a> を使用してゲームパッドの現在の状態を取得します。<em>index (整数)</em> は、確認するゲームパッドのインデックスです。</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p><a class="xref" href="../../api/Stride.Input.IGamePadDevice.html#Stride_Input_IGamePadDevice_State">IGamePadDevice.State</a> によって返される値は、<strong>現在の</strong>更新でのゲームパッドの状態です。この値を次の更新に再使用することはできません。更新のたびに、再度問い合わせる必要があります。</p>
+<p><a href="xref:Stride.Input.IGamePadDevice.State">IGamePadDevice.State</a> によって返される値は、<strong>現在の</strong>更新でのゲームパッドの状態です。この値を次の更新に再使用することはできません。更新のたびに、再度問い合わせる必要があります。</p>
 </div>
 <p>トリガーとサムスティックの位置を取得するには、
-<a class="xref" href="../../api/Stride.Input.GamePadState.html">GamePadState</a> のフィールドを使用します。</p>
+<a href="xref:Stride.Input.GamePadState">GamePadState</a> のフィールドを使用します。</p>
 <table>
 <thead>
 <tr>
@@ -165,19 +165,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadState.html#Stride_Input_GamePadState_LeftThumb">GamePadState.LeftThumb</a></td>
+<td><a href="xref:Stride.Input.GamePadState.LeftThumb">GamePadState.LeftThumb</a></td>
 <td>左サムスティックの X 軸/Y 軸の値です。どちらの軸も範囲は［-1.0f, 1.0f］です。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadState.html#Stride_Input_GamePadState_RightThumb">GamePadState.RightThumb</a></td>
+<td><a href="xref:Stride.Input.GamePadState.RightThumb">GamePadState.RightThumb</a></td>
 <td>右サムスティックの X 軸/Y 軸の値です。どちらの軸も範囲は［-1.0f, 1.0f］です。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadState.html#Stride_Input_GamePadState_LeftTrigger">GamePadState.LeftTrigger</a></td>
+<td><a href="xref:Stride.Input.GamePadState.LeftTrigger">GamePadState.LeftTrigger</a></td>
 <td>左トリガー アナログ コントロールの値です。1 つの軸の範囲は［0, 1.0f］です。</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.GamePadState.html#Stride_Input_GamePadState_RightTrigger">GamePadState.RightTrigger</a></td>
+<td><a href="xref:Stride.Input.GamePadState.RightTrigger">GamePadState.RightTrigger</a></td>
 <td>右トリガー アナログ コントロールの値です。1 つの軸の範囲は［0, 1.0f］です。</td>
 </tr>
 </tbody>
@@ -188,7 +188,7 @@
 <p>トリガーは X 軸の方向に動きます。その位置は次のように表されます。</p>
 <p><img src="media/index-gamepad-trigger-position.png" alt="Query trigger position"></p>
 <h3 id="振動">振動</h3>
-<p>ゲームパッドの振動レベルを設定するには、<a class="xref" href="../../api/Stride.Input.IGamePadDevice.html#Stride_Input_IGamePadDevice_SetVibration_System_Single_System_Single_System_Single_System_Single_">IGamePadDevice.SetVibration</a> を使用します。</p>
+<p>ゲームパッドの振動レベルを設定するには、<a href="xref:Stride.Input.IGamePadDevice.SetVibration(System.Single,System.Single,System.Single,System.Single)">IGamePadDevice.SetVibration</a> を使用します。</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>現在、Stride は Xbox ゲームパッドの振動のみをサポートします。</p>
@@ -257,7 +257,7 @@ public class TestScript : SyncScript
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

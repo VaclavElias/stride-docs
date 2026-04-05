@@ -132,11 +132,11 @@
 </tr>
 <tr>
 <td>Node</td>
-<td><a class="xref" href="../../api/Stride.Engine.Entity.html"><code>Entity</code></a></td>
+<td><a href="xref:Stride.Engine.Entity"><code>Entity</code></a></td>
 </tr>
 <tr>
 <td>Script attached to Node</td>
-<td>Script component (<a class="xref" href="../../api/Stride.Engine.SyncScript.html"><code>SyncScript</code></a>, <a class="xref" href="../../api/Stride.Engine.AsyncScript.html"><code>AsyncScript</code></a>, <a class="xref" href="../../api/Stride.Engine.StartupScript.html"><code>StartupScript</code></a>)</td>
+<td>Script component (<a href="xref:Stride.Engine.SyncScript"><code>SyncScript</code></a>, <a href="xref:Stride.Engine.AsyncScript"><code>AsyncScript</code></a>, <a href="xref:Stride.Engine.StartupScript"><code>StartupScript</code></a>)</td>
 </tr>
 <tr>
 <td><code>[Export]</code></td>
@@ -212,7 +212,7 @@
 </li>
 </ol>
 <h3 id="transform-component">Transform component</h3>
-<p>Like <code>Node3D</code> / <code>Node2D</code> in Godot, each entity in Stride has a <a class="xref" href="../../api/Stride.Engine.TransformComponent.html">Transform component</a> that sets its position, rotation, and scale in the world.</p>
+<p>Like <code>Node3D</code> / <code>Node2D</code> in Godot, each entity in Stride has a <a href="xref:Stride.Engine.TransformComponent">Transform component</a> that sets its position, rotation, and scale in the world.</p>
 <p><img src="../stride-for-unity-developers/media/stride-vs-unity-entity-transform-component.png" alt="Transform component"></p>
 <p>All entities are created with a Transform component by default.</p>
 <p>In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner, you can use <code>TransformComponent.UpdateLocalMatrix()</code>, <code>Transform.UpdateWorldMatrix()</code>, or <code>Transform.UpdateLocalFromWorld()</code>, depending on how you need to update the matrix.</p>
@@ -247,10 +247,10 @@
 <div class="TIP">
 <h5>Tip</h5>
 <p>In Godot, <code>Node3D.rotation</code> is Euler angles in <strong>radians</strong>, and Godot also exposes convenience properties like <code>rotation_degrees</code>.</p>
-<p>In order to get and set rotation using degrees use the utility methods <a href="xref:Stride.Core.Mathematics.MathUtil.DegreesToRadians"><code>MathUtil.DegreesToRadians</code></a> and <a href="xref:Stride.Core.Mathematics.MathUtil.RadiansToDegrees"><code>MathUtil.RadiansToDegrees</code></a> with <code>Transform.RotationEulerXYZ</code>.</p>
+<p>In order to get and set rotation using degrees use the utility methods <a href="xref:Stride.Core.Mathematics.MathUtil.DegreesToRadians*"><code>MathUtil.DegreesToRadians</code></a> and <a href="xref:Stride.Core.Mathematics.MathUtil.RadiansToDegrees*"><code>MathUtil.RadiansToDegrees</code></a> with <code>Transform.RotationEulerXYZ</code>.</p>
 </div>
 <h4 id="world-positionrotationscale">World Position/Rotation/Scale</h4>
-<p>In Godot, world-space transform values are typically accessed via <code>global_*</code> properties or <code>global_transform</code>. In comparison to Godot, many of the Transform component's properties related to its location in the world are accessed via Stride's <a class="xref" href="../../api/Stride.Engine.TransformComponent.html#Stride_Engine_TransformComponent_WorldMatrix">WorldMatrix</a>.</p>
+<p>In Godot, world-space transform values are typically accessed via <code>global_*</code> properties or <code>global_transform</code>. In comparison to Godot, many of the Transform component's properties related to its location in the world are accessed via Stride's <a href="xref:Stride.Engine.TransformComponent.WorldMatrix">WorldMatrix</a>.</p>
 <table>
 <thead>
 <tr>
@@ -667,15 +667,15 @@ func _exit_tree() -&gt; void:
 <h4 id="stride-2">Stride</h4>
 <p>To create a script, click the <strong>Add asset</strong> button and select <strong>Scripts</strong>.</p>
 <p><img src="../stride-for-unity-developers/media/stride-vs-unity-create-script.png" alt="Create script in Stride"></p>
-<p>Stride has a <a class="xref" href="../../api/Stride.Engine.SyncScript.html">SyncScript</a> class that comes with methods such as:</p>
+<p>Stride has a <a href="xref:Stride.Engine.SyncScript">SyncScript</a> class that comes with methods such as:</p>
 <ul>
-<li><a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start"><code>SyncScript.Start()</code></a> is called when the script is loaded.</li>
-<li><a class="xref" href="../../api/Stride.Engine.SyncScript.html#Stride_Engine_SyncScript_Update"><code>SyncScript.Update()</code></a> is called every update.</li>
+<li><a href="xref:Stride.Engine.StartupScript.Start"><code>SyncScript.Start()</code></a> is called when the script is loaded.</li>
+<li><a href="xref:Stride.Engine.SyncScript.Update"><code>SyncScript.Update()</code></a> is called every update.</li>
 </ul>
 <p>If you want your script to be a startup or asynchronous, use the corresponding script types:</p>
 <ul>
-<li><a class="xref" href="../../api/Stride.Engine.StartupScript.html"><code>StartupScript</code></a>: this script has a single <a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start"><code>StartupScript.Start()</code></a> method. It initializes the scene and its content at startup.</li>
-<li><a class="xref" href="../../api/Stride.Engine.AsyncScript.html"><code>AsyncScript</code></a>: an asynchronous script with a single method <a class="xref" href="../../api/Stride.Engine.AsyncScript.html#Stride_Engine_AsyncScript_Execute"><code>AsyncScript.Execute()</code></a> and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.</li>
+<li><a href="xref:Stride.Engine.StartupScript"><code>StartupScript</code></a>: this script has a single <a href="xref:Stride.Engine.StartupScript.Start"><code>StartupScript.Start()</code></a> method. It initializes the scene and its content at startup.</li>
+<li><a href="xref:Stride.Engine.AsyncScript"><code>AsyncScript</code></a>: an asynchronous script with a single method <a href="xref:Stride.Engine.AsyncScript.Execute"><code>AsyncScript.Execute()</code></a> and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.</li>
 </ul>
 <h4 id="godot-2">Godot</h4>
 <p>In Godot, you can either create a script from the editor or attach an existing script to a node via the Inspector.</p>
@@ -835,7 +835,7 @@ public class MyClass
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

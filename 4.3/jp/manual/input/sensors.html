@@ -90,14 +90,14 @@
 <p><span class="badge text-bg-primary">中級</span>
 <span class="badge text-bg-success">プログラマー</span></p>
 <p>プロジェクトの入力デバイスとして、ジャイロスコープや加速度計などのさまざまな<strong>センサー</strong>を使用できます。センサーはモバイル ゲームでよく使用されます。</p>
-<p>センサーにアクセスして以下のことを行うには、<a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a> を使用します。</p>
+<p>センサーにアクセスして以下のことを行うには、@'Stride.Input.InputManager' を使用します。</p>
 <ul>
 <li>センサーが Stride でサポートされているかどうかを調べる</li>
 <li>センサーを無効にする</li>
 <li>センサーのデータを取得する</li>
 </ul>
-<p>Stride は、<em>Orientation</em>、<em>Accelerometer</em>、<em>UserAcceleration</em>、<em>Gravity</em>、<em>Compass</em>、<em>Gyroscope</em> の 6 種類のセンサーからデータを取得できます。これらのセンサーは <a class="xref" href="../../api/Stride.Input.ISensorDevice.html">ISensorDevice</a> を継承します。</p>
-<p>センサーの種類ごとに、既定のインスタンスが作成されます。各インスタンスには、<a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a> からアクセスできます。</p>
+<p>Stride は、<em>Orientation</em>、<em>Accelerometer</em>、<em>UserAcceleration</em>、<em>Gravity</em>、<em>Compass</em>、<em>Gyroscope</em> の 6 種類のセンサーからデータを取得できます。これらのセンサーは @'Stride.Input.ISensorDevice' を継承します。</p>
+<p>センサーの種類ごとに、既定のインスタンスが作成されます。各インスタンスには、@'Stride.Input.InputManager' からアクセスできます。</p>
 <p>センサーは状態に基づきます。各センサー インスタンスは、フレームごとに自動的に更新され、直前の更新でのセンサーの値を格納しています。</p>
 <p>たとえば、加速度計にアクセスするには、以下を使用します。</p>
 <pre><code class="lang-cs">var accelerometer = Input.Accelerometer;
@@ -112,11 +112,11 @@
 </div>
 <h2 id="センサーを有効にする">センサーを有効にする</h2>
 <p>センサー データの取得と更新には多大な CPU 時間を要するので、既定では、使用可能なすべてのセンサーが無効になっています。</p>
-<p>センサーを有効にするには、<a class="xref" href="../../api/Stride.Input.ISensorDevice.html#Stride_Input_ISensorDevice_IsEnabled">IsEnabled</a> を <code>true</code> に設定します。センサーが必要ない場合は、このプロパティを <code>false</code> に設定して無効にします。</p>
+<p>センサーを有効にするには、@'Stride.Input.ISensorDevice.IsEnabled' を <code>true</code> に設定します。センサーが必要ない場合は、このプロパティを <code>false</code> に設定して無効にします。</p>
 <h2 id="方向センサーを使用する">方向センサーを使用する</h2>
 <p><strong>方向センサー</strong>は、重力と地球の北極を基にして、<strong>デバイスの向き</strong>を示します。デバイスの Y 軸が磁北と一致し、Z 軸が重力と一致している場合、方向は null になります。方向データを使用して、ゲームのさまざまなアクションを制御できます。</p>
 <p><img src="media/sensor-overview-orientation-sensor.png" alt="Orientation sensor"></p>
-<p>デバイスの現在の方向を取得するには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_Orientation">Input.Orientation</a> を使用します。</p>
+<p>デバイスの現在の方向を取得するには、<a href="xref:Stride.Input.InputManager.Orientation">Input.Orientation</a> を使用します。</p>
 <table>
 <thead>
 <tr>
@@ -127,27 +127,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Roll">Roll</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Roll">Roll</a></td>
 <td>X 軸を中心とする回転です。</td>
 <td><code>public float Roll { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Pitch">Pitch</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Pitch">Pitch</a></td>
 <td>Y 軸を中心とする回転です。</td>
 <td><code>public float Pitch { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Yaw">Yaw</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Yaw">Yaw</a></td>
 <td>Z 軸を中心とする回転です。</td>
 <td><code>public float Yaw { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_RotationMatrix">Rotation Matrix</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.RotationMatrix">Rotation Matrix</a></td>
 <td>デバイスの回転です。</td>
 <td><code>public Matrix RotationMatrix { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Quaternion">Quaternion</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Quaternion">Quaternion</a></td>
 <td>デバイスの方位と回転です。</td>
 <td><code>public Quaternion Quaternion { get; }</code></td>
 </tr>
@@ -178,29 +178,29 @@
 <h5>Note</h5>
 <p>ユーザーが力を加えていない場合、<strong>デバイスの加速度</strong>は<strong>重力</strong>と等しくなります。</p>
 </div>
-<p>未加工の加速度を取得するには、<a class="xref" href="../../api/Stride.Input.IAccelerometerSensor.html#Stride_Input_IAccelerometerSensor_Acceleration">Accelerometer.Acceleration</a> を使用します。次に例を示します。</p>
+<p>未加工の加速度を取得するには、<a href="xref:Stride.Input.IAccelerometerSensor.Acceleration">Accelerometer.Acceleration</a> を使用します。次に例を示します。</p>
 <pre><code>var acceleration = Input.Accelerometer.Acceleration;
 </code></pre>
 <h3 id="ユーザー加速度センサーを使用する">ユーザー加速度センサーを使用する</h3>
 <p><strong>ユーザー加速度センサー</strong>は加速度計と似ていますが、ユーザーによって加えられた加速度<strong>だけ</strong> (重力加速度を除いたもの) を測定します。</p>
-<p>ユーザー加速度を取得するには、<a class="xref" href="../../api/Stride.Input.IUserAccelerationSensor.html#Stride_Input_IUserAccelerationSensor_Acceleration">UserAcceleration.Acceleration</a> を使用します。次に例を示します。</p>
+<p>ユーザー加速度を取得するには、<a href="xref:Stride.Input.IUserAccelerationSensor.Acceleration">UserAcceleration.Acceleration</a> を使用します。次に例を示します。</p>
 <pre><code class="lang-cs">var userAcceleration = Input.UserAcceleration.Acceleration;
 </code></pre>
 <h3 id="重力センサーを使用する">重力センサーを使用する</h3>
 <p>重力センサーは、デバイスに加えられている重力 (メートル毎秒毎秒) の向きと大きさを示す 3D ベクトルを提供します。</p>
-<p>重力ベクトルを取得するには、<a class="xref" href="../../api/Stride.Input.IGravitySensor.html">GravitySensor</a> を使用します。次に例を示します。</p>
+<p>重力ベクトルを取得するには、<a href="xref:Stride.Input.IGravitySensor">GravitySensor</a> を使用します。次に例を示します。</p>
 <pre><code class="lang-cs"> var gravityVector = Input.Gravity.Vector;
 </code></pre>
 <h3 id="コンパス-センサーを使用する">コンパス センサーを使用する</h3>
 <p><strong>コンパス</strong>は、デバイスの先端の方向と<strong>北極</strong>の方向がなす角度を示します。これは、たとえば、回転やデジタル マップの位置合わせに役立ちます。</p>
 <p><img src="media/sensor-overview-compasss.png" alt="Compass"></p>
-<p>この角度を取得するには、<a class="xref" href="../../api/Stride.Input.ICompassSensor.html#Stride_Input_ICompassSensor_Heading">CompassSensor.Heading</a> を使用します。次に例を示します。</p>
+<p>この角度を取得するには、<a href="xref:Stride.Input.ICompassSensor.Heading">CompassSensor.Heading</a> を使用します。次に例を示します。</p>
 <pre><code class="lang-cs">var heading = Input.Compass.Heading;
 </code></pre>
 <h3 id="ジャイロスコープを使用する">ジャイロスコープを使用する</h3>
 <p>ジャイロスコープは、デバイスの<strong>回転速度</strong> (<strong>ラジアン/秒</strong>) を測定します。</p>
 <p><img src="media/sensor-overview-gyroscope-sensor.png" alt="Gyroscope"></p>
-<p>回転速度を取得するには、<a class="xref" href="../../api/Stride.Input.IGyroscopeSensor.html#Stride_Input_IGyroscopeSensor_RotationRate">GyroscopeSensor.RotationRate</a> を使用します。次に例を示します。</p>
+<p>回転速度を取得するには、<a href="xref:Stride.Input.IGyroscopeSensor.RotationRate">GyroscopeSensor.RotationRate</a> を使用します。次に例を示します。</p>
 <pre><code class="lang-cs">  var rotationRate = Input.Gyroscope.RotationRate;
   var rotationSpeedX =  rotationRate.X;
   var rotationSpeedY =  rotationRate.Y;
@@ -258,7 +258,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

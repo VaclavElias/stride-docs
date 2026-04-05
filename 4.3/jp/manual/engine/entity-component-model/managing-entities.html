@@ -127,9 +127,9 @@ Here is some examples of entity processors:
 -->
 <ul>
 <li><p>@'Stride.Engine.TransformationProcessor': 階層と、@'Stride.Engine.TransformationComponent' に格納されているローカル変換から、変換行列を計算します。</p>
-<p>その結果、単純なエンティティリストの代わりに、<a class="xref" href="../../../api/Stride.Engine.EntityManager.html">EntityManager</a> を階層化シーングラフとして使用することができます。</p>
+<p>その結果、単純なエンティティリストの代わりに、@'Stride.Engine.EntityManager' を階層化シーングラフとして使用することができます。</p>
 </li>
-<li><p>@'Stride.Engine.MeshProcessor': <a class="xref" href="../../../api/Stride.Engine.ModelComponent.html#Stride_Engine_ModelComponent_Model">Model</a> をレンダリングに追加します。</p>
+<li><p>@'Stride.Engine.MeshProcessor': @'Stride.Engine.ModelComponent.Model' をレンダリングに追加します。</p>
 </li>
 <li><p>@'Stride.Engine.LightProcessor': ライトを集めて更新し、レンダリングシステムに転送します。実装の詳細（遅延レンダリングやフォワードレンダリングなど）は隠蔽されます。</p>
 </li>
@@ -145,7 +145,7 @@ Here is some examples of entity processors:
 <!--
 ## Entity System
 -->
-<p>エンティティは、<a class="xref" href="../../../api/Stride.Engine.EntityManager.html">EntityManager</a> にまとめられています。これには、エンティティプロセッサーのリストも含まれます。エンティティが追加されたり、エンティティコンポーネントが変更されたりする際には、エンティティプロセッサーを含めるべきかを問い合わせます。</p>
+<p>エンティティは、@'Stride.Engine.EntityManager' にまとめられています。これには、エンティティプロセッサーのリストも含まれます。エンティティが追加されたり、エンティティコンポーネントが変更されたりする際には、エンティティプロセッサーを含めるべきかを問い合わせます。</p>
 <!--
 Entity are grouped together in an @'Stride.Engine.EntityManager'. It will also contains the list of entity processors. When an entity is added or an entity components changes, it will ask entity processors if they should be included.
 -->
@@ -172,7 +172,7 @@ foreach (var entity in engine.EntityManager.Entities)
 }
 ```
 -->
-<p><a class="xref" href="../../../api/Stride.Engine.EntityManager.html">EntityManager</a> は、<code>Entities (ref:{Stride.Engine.Entity})</code> を列挙するために使うことができます。エンティティの子のエンティティもこのリストに含まれることに注意してください。</p>
+<p>@'Stride.Engine.EntityManager' は、<code>Entities (ref:{Stride.Engine.Entity})</code> を列挙するために使うことができます。エンティティの子のエンティティもこのリストに含まれることに注意してください。</p>
 <!--
 @'Stride.Engine.EntityManager' can be used to enumerate its `Entities (ref:{Stride.Engine.Entity})`. Note that children of a given entities will also be in this list.
 -->
@@ -201,7 +201,7 @@ To manipulate entities as a scenegraph, refer to @'Stride.Engine.TransformationC
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

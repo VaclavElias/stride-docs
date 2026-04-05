@@ -101,7 +101,7 @@
 <li>Torus</li>
 <li>Teapot</li>
 </ul>
-<p>They aren't automatically created along with the <a class="xref" href="../../../api/Stride.Graphics.GraphicsDevice.html">GraphicsDevice</a>, so you have to instantiate them. You can do this through the <a class="xref" href="../../../api/Stride.Graphics.GeometricPrimitives.GeometricPrimitive.html">GeometricPrimitive</a> class.</p>
+<p>They aren't automatically created along with the @'Stride.Graphics.GraphicsDevice', so you have to instantiate them. You can do this through the @'Stride.Graphics.GeometricPrimitives.GeometricPrimitive' class.</p>
 <p><strong>Code:</strong> Creating and using a primitive</p>
 <pre><code class="lang-cs">// creation
 var myCube = GeometricPrimitive.Cube.New(GraphicsDevice);
@@ -112,12 +112,12 @@ var myTorus = GeometricPrimitive.Torus.New(GraphicsDevice);
 // draw one on screen
 myCube.Draw(CommandList, EffectInstance);
 </code></pre>
-<p>They have no effect associated with them, so the user has to provide an <a class="xref" href="../../../api/Stride.Rendering.EffectInstance.html">EffectInstance</a> when drawing. For information on loading effects, please see <a href="../effects-and-shaders/index.html">Effects and shaders</a>.</p>
+<p>They have no effect associated with them, so the user has to provide an @'Stride.Rendering.EffectInstance' when drawing. For information on loading effects, please see <a href="../effects-and-shaders/index.html">Effects and shaders</a>.</p>
 <h2 id="custom-drawing">Custom drawing</h2>
-<p>Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a <a class="xref" href="../../../api/Stride.Graphics.VertexDeclaration.html">VertexDeclaration</a> has to be defined. A vertex declaration describes the elements of each vertex and their layout.
-For details, see the <a class="xref" href="../../../api/Stride.Graphics.VertexElement.html">VertexElement</a> reference page.</p>
-<p>Next, a vertex buffer can be created from an array of vertices. The vertex data type has to match the <a class="xref" href="../../../api/Stride.Graphics.VertexDeclaration.html">VertexDeclaration</a>.</p>
-<p>Given vertex buffer and declaration, a <a class="xref" href="../../../api/Stride.Graphics.VertexBufferBinding.html">VertexBufferBinding</a> can be created.</p>
+<p>Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a @'Stride.Graphics.VertexDeclaration' has to be defined. A vertex declaration describes the elements of each vertex and their layout.
+For details, see the @'Stride.Graphics.VertexElement' reference page.</p>
+<p>Next, a vertex buffer can be created from an array of vertices. The vertex data type has to match the @'Stride.Graphics.VertexDeclaration'.</p>
+<p>Given vertex buffer and declaration, a @'Stride.Graphics.VertexBufferBinding' can be created.</p>
 <p><strong>Code:</strong> Creating a vertex buffer</p>
 <pre><code class="lang-cs">// Create a vertex layout with position and texture coordinate
 var layout = new VertexDeclaration(VertexElement.Position&lt;Vector3&gt;(), VertexElement.TextureCoordinate&lt;Vector2&gt;()); 
@@ -129,8 +129,8 @@ var vertexBuffer = Buffer.Vertex.New(GraphicsDevice, vertices);
 // Create a vertex buffer binding
 var vertexBufferBinding = new VertexBufferBinding(vertexBuffer, layout, vertexCount);
 </code></pre>
-<p>To draw the newly created vertex buffer, it has to be bound to the pipeline. The vertex layout and the <a class="xref" href="../../../api/Stride.Graphics.PrimitiveType.html">PrimitiveType</a> to draw have to be included in the <a href="pipeline-state.html">pipeline state</a> object. The buffer itself can be set dynamically.</p>
-<p>Afterwards, the vertices are ready to be rendered using <a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_Draw_System_Int32_System_Int32_">Draw(int, int)</a>.</p>
+<p>To draw the newly created vertex buffer, it has to be bound to the pipeline. The vertex layout and the @'Stride.Graphics.PrimitiveType' to draw have to be included in the <a href="pipeline-state.html">pipeline state</a> object. The buffer itself can be set dynamically.</p>
+<p>Afterwards, the vertices are ready to be rendered using @'Stride.Graphics.CommandList.Draw(System.Int32,System.Int32)'.</p>
 <p><strong>Code:</strong> Binding and drawing vertex buffers</p>
 <pre><code class="lang-cs">// Set the pipeline state
 pipelineStateDescription.InputElements = vertexBufferBinding.Layout.CreateInputElements();
@@ -146,7 +146,7 @@ commandList.SetVertexBuffers(0, vertexBuffer, 0, vertexBufferBinding.Stride);
 commandList.Draw(vertexCount);
 </code></pre>
 <p>It is also possible to draw indexed geometry. To use an index buffer, first create it similarly to the vertex buffer and bind it to the pipeline.
-It can then be used for drawing using <a class="xref" href="../../../api/Stride.Graphics.CommandList.html#Stride_Graphics_CommandList_DrawIndexed_System_Int32_System_Int32_System_Int32_">DrawIndexed(int, int, int)</a>.</p>
+It can then be used for drawing using @'Stride.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)'.</p>
 <p><strong>Code:</strong> Drawing indexed vertices</p>
 <pre><code class="lang-cs">// Create the index buffer
 var indices = new short[indexCount];
@@ -180,7 +180,7 @@ commandList.DrawIndexed(indexBuffer.ElementCount);
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

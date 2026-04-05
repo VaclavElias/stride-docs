@@ -98,16 +98,16 @@
 <p>The instructions provided here can be used as a general guide for updating to any new version of Stride.</p>
 </div>
 <h2 id="updating-stride">Updating Stride</h2>
-<ol>
-<li><strong>Update Visual Studio 2026:</strong> Ensure that you have the latest version of Visual Studio 2026. This is crucial for compatibility with the latest Stride version. After updating Visual Studio, restart your computer to apply the changes fully.</li>
-<li><strong>Stride Launcher Instructions:</strong> Open the Stride Launcher. Follow the instructions provided to update or install the Visual Studio plugin for Stride. This step is essential for integrating the latest version of Stride with your development environment.</li>
-<li><strong>Restart Again:</strong> After completing the installation or update of the Visual Studio plugin, restart your computer once more. This helps to ensure that all components are correctly loaded and ready for use.</li>
-</ol>
-<h2 id="updating-your-project">Updating Your Project</h2>
+<p>In the <strong>Stride Launcher</strong>, look over to <strong>Stride versions</strong> and press the update button next to the version you are using.</p>
+<p><img src="media/stride-launcher-update.webp" alt="Picture of the update button in the Stride Launcher."></p>
+<p>Major and minor releases will appear as a separate version in the list and will require manual installation.</p>
+<h2 id="updating-your-ide">Updating your IDE</h2>
+<p>Make sure you are using the latest version of your IDE of choice to ensure compatibility with the latest version of Stride. Some IDEs might also require you to restart your computer to apply the changes fully.</p>
+<h2 id="updating-your-project">Updating your project</h2>
 <ol>
 <li><strong>Version Control:</strong> Before proceeding with the update, confirm that your project is under version control with all current changes committed. This provides a safety net, allowing you to revert to the previous state if needed. If you're not using version control, ensure you have a backup of your project.</li>
 <li><strong>Opening the Project:</strong> When you open a project created with an older version of Stride, a dialogue will appear, prompting you to update the project. Make sure to check the option to apply the update to all packages in the solution. Additionally, you can verify later whether all packages have been updated by checking your project files, specifically the <code>.csproj</code> files.
-<img src="media/update-stride-packages.webp" alt="New Project dialog"> <em>Dialog prompting for project update in Stride.</em></li>
+<img src="media/update-stride-packages.webp" alt="New Project dialog"></li>
 <li><strong>Saving the Project:</strong> After Stride updates the project, it's crucial to save it immediately. This step prevents the project from being in an undefined state and solidifies the changes made during the update.
 <img src="media/update-stride-save-project.webp" alt="New Project dialog"></li>
 <li><strong>Rebuild and Reload:</strong> Finally, rebuild the project and reload assemblies. This ensures that all components are up-to-date and properly synchronized with the new version of Stride.</li>
@@ -134,7 +134,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

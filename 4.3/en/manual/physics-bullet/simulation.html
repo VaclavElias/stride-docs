@@ -94,24 +94,24 @@
 <p>Bullet Physics is being phased out. We no longer plan to support or expand its features as our focus shifts to <a href="../physics/index.html">Bepu Physics</a>. We recommend transitioning to Bepu Physics for access to the latest updates and ongoing improvements.</p>
 </div>
 
-<p>Stride's physics are controlled by the <a class="xref" href="../../api/Stride.Physics.Simulation.html">Simulation</a> class.
-You can change how Stride initializes the <a class="xref" href="../../api/Stride.Physics.Simulation.html">simulation</a> by modifying flags in <a class="xref" href="../../api/Stride.Physics.PhysicsSettings.html">PhysicsSettings</a>, accessed in the <strong>GameSettings</strong> asset properties.</p>
+<p>Stride's physics are controlled by the <a href="xref:Stride.Physics.Simulation">Simulation</a> class.
+You can change how Stride initializes the <a href="xref:Stride.Physics.Simulation">simulation</a> by modifying flags in <a href="xref:Stride.Physics.PhysicsSettings">PhysicsSettings</a>, accessed in the <strong>GameSettings</strong> asset properties.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Your scene must have at least one <a href="colliders.html">Collider</a> in order for Stride to initialize the <a class="xref" href="../../api/Stride.Physics.Simulation.html">Simulation</a> instance.</p>
+<p>Your scene must have at least one <a href="colliders.html">Collider</a> in order for Stride to initialize the <a href="xref:Stride.Physics.Simulation">Simulation</a> instance.</p>
 </div>
 <p><img src="media/simulation-physics-settings.png" alt="Physics Settings"></p>
 <ul>
-<li><p><code>CollisionsOnly</code> initializes the <a class="xref" href="../../api/Stride.Physics.Simulation.html">Simulation</a> with collision detection turned on, but no other physics. Objects won't react to physical forces.</p>
+<li><p><code>CollisionsOnly</code> initializes the <a href="xref:Stride.Physics.Simulation">Simulation</a> with collision detection turned on, but no other physics. Objects won't react to physical forces.</p>
 </li>
-<li><p><code>ContinuousCollisionDetection</code> initializes the <a class="xref" href="../../api/Stride.Physics.Simulation.html">Simulation</a> with continuous collision detection (CCD). CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.</p>
+<li><p><code>ContinuousCollisionDetection</code> initializes the <a href="xref:Stride.Physics.Simulation">Simulation</a> with continuous collision detection (CCD). CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.</p>
 </li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The <code>SoftBodySupport</code>, <code>MultiThreaded</code>, and <code>UseHardwareWhenPossible</code> flags are currently disabled.</p>
 </div>
-<p>At runtime, you can change some <a class="xref" href="../../api/Stride.Physics.Simulation.html">Simulation</a> parameters:</p>
+<p>At runtime, you can change some <a href="xref:Stride.Physics.Simulation">Simulation</a> parameters:</p>
 <ul>
 <li><code>Gravity</code> — the global gravity, in <a href="../game-studio/world-units.html">world units</a> per second squared</li>
 <li><code>FixedTimeStep</code> — the length of a simulation timestep, in seconds</li>
@@ -143,7 +143,7 @@ You can change how Stride initializes the <a class="xref" href="../../api/Stride
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

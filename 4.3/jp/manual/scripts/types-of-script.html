@@ -92,7 +92,7 @@
 <p>Stride のスクリプトの主要な種類は、<strong>スタートアップ スクリプト</strong>、<strong>同期スクリプト</strong>、<strong>非同期スクリプト</strong> の 3 種類です。</p>
 <p>スクリプトを作成するときは、ニーズに最適な動作を持つスクリプトの種類から継承します。</p>
 <h2 id="スタートアップ-スクリプト">スタートアップ スクリプト</h2>
-<p>スタートアップ スクリプトは、実行時に追加または削除されたときにのみ実行します。主として、ゲーム要素の初期化 (キャラクターの生成など) およびシーンがアンロードされるときのゲーム要素の破棄に使用されます。初期化用の <a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start">Start</a> メソッドと、<a class="xref" href="../../api/Stride.Engine.ScriptComponent.html#Stride_Engine_ScriptComponent_Cancel">Cancel</a> メソッドを持っています。どちらのメソッドも必要に応じてオーバーライドできます。</p>
+<p>スタートアップ スクリプトは、実行時に追加または削除されたときにのみ実行します。主として、ゲーム要素の初期化 (キャラクターの生成など) およびシーンがアンロードされるときのゲーム要素の破棄に使用されます。初期化用の <a href="xref:Stride.Engine.StartupScript.Start">Start</a> メソッドと、<a href="xref:Stride.Engine.ScriptComponent.Cancel">Cancel</a> メソッドを持っています。どちらのメソッドも必要に応じてオーバーライドできます。</p>
 <p>例:</p>
 <pre><code class="lang-cs">public class StartUpScriptExample : StartupScript
 {
@@ -105,9 +105,9 @@
 <h2 id="同期スクリプト">同期スクリプト</h2>
 <p>同期スクリプトは、初期化された後、フレームごとに更新され、最終的にキャンセルされます (スクリプトが削除されるとき)。</p>
 <ul>
-<li>初期化コードがある場合は、<a class="xref" href="../../api/Stride.Engine.StartupScript.html#Stride_Engine_StartupScript_Start">Start</a> メソッドに記述します。</li>
-<li>更新を実行するコードは、<a class="xref" href="../../api/Stride.Engine.SyncScript.html#Stride_Engine_SyncScript_Update">Update</a> メソッドに記述します。</li>
-<li>キャンセルを実行するコードは、<a class="xref" href="../../api/Stride.Engine.ScriptComponent.html#Stride_Engine_ScriptComponent_Cancel">Cancel</a> メソッドに記述します。</li>
+<li>初期化コードがある場合は、<a href="xref:Stride.Engine.StartupScript.Start">Start</a> メソッドに記述します。</li>
+<li>更新を実行するコードは、<a href="xref:Stride.Engine.SyncScript.Update">Update</a> メソッドに記述します。</li>
+<li>キャンセルを実行するコードは、<a href="xref:Stride.Engine.ScriptComponent.Cancel">Cancel</a> メソッドに記述します。</li>
 </ul>
 <p>次のスクリプトは、無条件に、すべてのフレームで更新を実行します。</p>
 <pre><code class="lang-cs">public class SampleSyncScript : SyncScript
@@ -123,7 +123,7 @@
 <ul>
 <li><p>非同期コードは、<a href="xref:%22Stride.Engine.AsyncScript.Execute%22">Execute</a> 関数に記述します。</p>
 </li>
-<li><p>キャンセルを実行するコードは、<a class="xref" href="../../api/Stride.Engine.ScriptComponent.html#Stride_Engine_ScriptComponent_Cancel">Cancel</a> メソッドに記述します。</p>
+<li><p>キャンセルを実行するコードは、<a href="xref:Stride.Engine.ScriptComponent.Cancel">Cancel</a> メソッドに記述します。</p>
 </li>
 </ul>
 <p>次のスクリプトは、イベントとトリガーに応じたアクションを実行します。</p>
@@ -175,7 +175,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

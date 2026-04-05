@@ -114,8 +114,8 @@
 </div>
 <p>You can enable gesture recognition to detect gestures such as long presses and taps. For more information, see <a href="gestures.html">Gestures</a>.</p>
 <h2 id="the-pointerevent-class">The PointerEvent class</h2>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> reports pointer events. It contains the current <strong>pointer status</strong> and time information. It is thrown every time the <strong>pointer</strong> is modified.</p>
-<p>You can access the list of <strong>pointer events</strong> since the last update using <a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_PointerEvents">InputManager.PointerEvents</a>. Stride lists pointer events in chronological order. The list is cleared at every update, so you don't need to clear it manually.</p>
+<p><a href="xref:Stride.Input.PointerEvent">PointerEvent</a> reports pointer events. It contains the current <strong>pointer status</strong> and time information. It is thrown every time the <strong>pointer</strong> is modified.</p>
+<p>You can access the list of <strong>pointer events</strong> since the last update using <a href="xref:Stride.Input.InputManager.PointerEvents">InputManager.PointerEvents</a>. Stride lists pointer events in chronological order. The list is cleared at every update, so you don't need to clear it manually.</p>
 <h3 id="get-pointer-information">Get pointer information</h3>
 <p>You can use the following properties to get information about the pointer that triggered the event:</p>
 <table>
@@ -127,7 +127,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_PointerId">PointerEvent.PointerId</a></td>
+<td><a href="xref:Stride.Input.PointerEvent.PointerId">PointerEvent.PointerId</a></td>
 <td>Indicates the ID of the pointer which triggered the event.</td>
 </tr>
 </tbody>
@@ -148,21 +148,21 @@ There's no relation between the pointer ID values and corresponding fingers.</p>
 <h3 id="get-the-pointer-position">Get the pointer position</h3>
 <p>You can get the pointer position in normalized or absolute coordinates.</p>
 <h4 id="normalized-coordinates">Normalized coordinates</h4>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_Position">Position</a> returns the pointer position in <strong>normalized</strong> X and Y coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution and you don't have to write separate code for different resolutions.</p>
+<p>@'Stride.Input.PointerEvent.Position' returns the pointer position in <strong>normalized</strong> X and Y coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution and you don't have to write separate code for different resolutions.</p>
 <ul>
 <li>(0,0): the pointer is in the top-left corner of the screen</li>
 <li>(1,1): the pointer is in the bottom-right corner of the screen</li>
 </ul>
 <h4 id="absolute-coordinates">Absolute coordinates</h4>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_AbsolutePosition">PointerEvent.AbsolutePosition</a> returns the pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).</p>
+<p><a href="xref:Stride.Input.PointerEvent.AbsolutePosition">PointerEvent.AbsolutePosition</a> returns the pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>To get the actual size of the screen, access <a class="xref" href="../../api/Stride.Input.IPointerDevice.html#Stride_Input_IPointerDevice_SurfaceSize">IPointerDevice.SurfaceSize</a>. For example:</p>
+<p>To get the actual size of the screen, access <a href="xref:Stride.Input.IPointerDevice.SurfaceSize">IPointerDevice.SurfaceSize</a>. For example:</p>
 <pre><code class="lang-cs">var surfaceSize = Input.Pointer.SurfaceSize;
 </code></pre>
 </div>
 <h3 id="get-pointer-events">Get pointer events</h3>
-<p>Use the <a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_EventType">PointerEvent.EventType</a> to check the pointer events.</p>
+<p>Use the <a href="xref:Stride.Input.PointerEvent.EventType">PointerEvent.EventType</a> to check the pointer events.</p>
 <p>There are five types of pointer event:</p>
 <ul>
 <li><strong>Pressed</strong>: The finger touched the screen.</li>
@@ -175,16 +175,16 @@ There's no relation between the pointer ID values and corresponding fingers.</p>
 <p>A sequence of pointer events for one pointer always starts with a <strong>Pressed</strong> event. This might be followed by one or more <strong>Moved</strong> events, and always ends with a <strong>Released</strong> or <strong>Canceled</strong> event.</p>
 </div>
 <h3 id="get-delta-values">Get delta values</h3>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_DeltaTime">PointerEvent.DeltaTime</a> gets the time elapsed from the previous <a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a>.</p>
+<p><a href="xref:Stride.Input.PointerEvent.DeltaTime">PointerEvent.DeltaTime</a> gets the time elapsed from the previous @'Stride.Input.PointerEvent'.</p>
 <p>You can get the delta position in normalized or absolute coordinates.</p>
 <h3 id="normalized-delta-values">Normalized delta values</h3>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_DeltaPosition">PointerEvent.DeltaPosition</a> gets the change in position since the previous <a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> in <strong>normalized</strong> X,Y coordinates.</p>
+<p><a href="xref:Stride.Input.PointerEvent.DeltaPosition">PointerEvent.DeltaPosition</a> gets the change in position since the previous @'Stride.Input.PointerEvent' in <strong>normalized</strong> X,Y coordinates.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Delta values are always nulls at the beginning of the sequence of pointer events (ie when the <strong>pointer state</strong> is <strong>down</strong>).</p>
 </div>
 <h3 id="absolute-delta-values">Absolute delta values</h3>
-<p><a class="xref" href="../../api/Stride.Input.PointerEvent.html#Stride_Input_PointerEvent_AbsoluteDeltaPosition">PointerEvent.DeltaPosition</a> gets the change in position since the previous <a class="xref" href="../../api/Stride.Input.PointerEvent.html">PointerEvent</a> in <strong>absolute</strong> (X,Y) coordinates.</p>
+<p><a href="xref:Stride.Input.PointerEvent.AbsoluteDeltaPosition">PointerEvent.DeltaPosition</a> gets the change in position since the previous @'Stride.Input.PointerEvent' in <strong>absolute</strong> (X,Y) coordinates.</p>
 <h2 id="example-code">Example code</h2>
 <p>This script tracks the pointer movement and prints its positions:</p>
 <pre><code class="lang-cs">using System;
@@ -257,7 +257,7 @@ namespace Stride.Input.Tests
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

@@ -101,7 +101,7 @@
 <p>Entities represent different objects in a scene, like the player, enemies, walls, etc. These entities contain components that dictate how they behave.</p>
 <h2 id="components">Components</h2>
 <p>Components dictate how entities which they are attached to behave. For example: a player movement component that makes an entity move, when keyboard buttons are pressed.</p>
-<p>In code, a component is a class that inherits <code>StartupScript</code>, <code>SyncScript</code> or <code>AsyncScript</code>.</p>
+<p>In code, a component is a class that inherits <a href="xref:Stride.Engine.StartupScript"><code>StartupScript</code></a>, <a href="xref:Stride.Engine.SyncScript"><code>SyncScript</code></a> or <a href="xref:Stride.Engine.AsyncScript"><code>AsyncScript</code></a>.</p>
 <pre><code class="lang-csharp">using Stride.Engine;
 
 namespace MyGame;
@@ -117,18 +117,18 @@ public class MyComponent : StartupScript
 <h2 id="script-types">Script types</h2>
 <p>In Stride, a component can be created from one of 3 types of script:</p>
 <ul>
-<li><strong>Startup Script</strong> - a script that runs only once when it's added.</li>
-<li><strong>Sync Script</strong> - a script that runs when it's added and then every frame.</li>
-<li><strong>Async Script</strong> - an <strong>asynchronous</strong> script that runs only once when it's added, but can await the next frame continuously.</li>
+<li><a href="../scripts/types-of-script/startup-script.html"><strong>Startup Script</strong></a> - a script that runs only once when it's added.</li>
+<li><a href="../scripts/types-of-script/sync-script.html"><strong>Sync Script</strong></a> - a script that runs when it's added and then every frame.</li>
+<li><a href="../scripts/types-of-script/async-script.html"><strong>Async Script</strong></a> - an <strong>asynchronous</strong> script that runs only once when it's added, but can await the next frame continuously.</li>
 </ul>
-<p>For more information, read <a href="../scripts/types-of-script">types of script</a>.</p>
+<p>For more information, read <a href="../scripts/types-of-script.html">types of script</a>.</p>
 <h2 id="assets-and-resources">Assets and resources</h2>
 <p>An <strong>asset</strong> is a representation of an element in the project (like a texture), that contains a list of it's properties in the engine (e.g. <code>.sdmat</code> <code>.sdprefab</code>).</p>
 <p>A <strong>resource</strong> is a file on the disk containing data, like an image (e.g. <code>.png</code> <code>.mp3</code>), that's used in the project.</p>
 <p>Assets do not contain resource data. Instead, they reference a resource. For example: a texture asset (<code>.sdtex</code>) has a reference to an image (<code>.png</code>) that is located in the resource folder.</p>
 <h2 id="project-structure">Project structure</h2>
 <p>A Stride project is a standard <a href="https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022">C# solution</a>. Assets and resources can be separated into multiple C# projects, for example: <strong>MyGame</strong> contains game assets and <strong>MyGame.Windows</strong> contains assets specific to the windows version of the game (like the window icon).</p>
-<p>For more information, read <a href="../files-and-folders/project-structure">project structure</a>.</p>
+<p>For more information, read <a href="../files-and-folders/project-structure.html">project structure</a>.</p>
 
 </article>
 
@@ -150,7 +150,7 @@ public class MyComponent : StartupScript
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

@@ -92,10 +92,10 @@
 <p>申し訳ありません。このページの日本語訳はございません。英語で表示いたします。</p>
 </div>
 <p>This document expects the reader to be familiar with ECS, please take a look at <a href="usage.html">usage</a> first.</p>
-<p>Handling components through <a class="xref" href="../../../api/Stride.Engine.EntityProcessor.html"><code>EntityProcessor</code></a> may be too rigid in some cases, when the components
+<p>Handling components through <a href="xref:Stride.Engine.EntityProcessor"><code>EntityProcessor</code></a> may be too rigid in some cases, when the components
 you're trying to process cannot share the same base implementation for example.</p>
-<p><a class="xref" href="../../../api/Stride.Engine.FlexibleProcessing.IComponent-2.html"><code>Stride.Engine.FlexibleProcessing.IComponent&lt;TProcessor, TThis&gt;</code></a>
-provides similar features to <a class="xref" href="../../../api/Stride.Engine.EntityProcessor.html"><code>EntityProcessor</code></a> while being more flexible on the component type,
+<p><a href="xref:Stride.Engine.FlexibleProcessing.IComponent%602"><code>Stride.Engine.FlexibleProcessing.IComponent&lt;TProcessor, TThis&gt;</code></a>
+provides similar features to <a href="xref:Stride.Engine.EntityProcessor"><code>EntityProcessor</code></a> while being more flexible on the component type,
 this document covers some of the usage of this particular interface.</p>
 <p>The <code>IComponent</code> interface requires to type parameters,</p>
 <ul>
@@ -119,8 +119,8 @@ your implemented type are compatible.</p>
     }
 }
 </code></pre>
-<p>The main difference compared to <a class="xref" href="../../../api/Stride.Engine.EntityProcessor.html"><code>EntityProcessor</code></a>
-is that <a class="xref" href="../../../api/Stride.Engine.FlexibleProcessing.IComponent-2.html"><code>IComponent</code></a> is not limited to concrete types, your processor may operate on interfaces as well;</p>
+<p>The main difference compared to <a href="xref:Stride.Engine.EntityProcessor"><code>EntityProcessor</code></a>
+is that <a href="xref:Stride.Engine.FlexibleProcessing.IComponent%602"><code>IComponent</code></a> is not limited to concrete types, your processor may operate on interfaces as well;</p>
 <pre><code class="lang-cs">// Here, declaring the interface, which will be the type received by the processor
 public interface IInteractable : IComponent&lt;IInteractable.InteractableProcessor, IInteractable&gt;
 {
@@ -144,7 +144,7 @@ public class Character : SyncScript, IInteractable
 }
 </code></pre>
 <h2 id="updating-processors">Updating Processors</h2>
-<p><a class="xref" href="../../../api/Stride.Engine.FlexibleProcessing.IComponent-2.html"><code>Processors</code></a> do not receive any updates by default, you have to implement the <a class="xref" href="../../../api/Stride.Engine.FlexibleProcessing.IUpdateProcessor.html"><code>IUpdateProcessor</code></a> or <a class="xref" href="../../../api/Stride.Engine.FlexibleProcessing.IDrawProcessor.html"><code>IDrawProcessor</code></a>
+<p><a href="xref:Stride.Engine.FlexibleProcessing.IComponent%602"><code>Processors</code></a> do not receive any updates by default, you have to implement the <a href="xref:Stride.Engine.FlexibleProcessing.IUpdateProcessor"><code>IUpdateProcessor</code></a> or <a href="xref:Stride.Engine.FlexibleProcessing.IDrawProcessor"><code>IDrawProcessor</code></a>
 interface to receive them:</p>
 <pre><code class="lang-cs">public interface ISpecialTick : IComponent&lt;ISpecialTick.Processor, ISpecialTick&gt;
 {
@@ -195,7 +195,7 @@ If the system you're writing is performance critical you should look into strate
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

@@ -89,7 +89,7 @@
 
 <p><span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span></p>
-<p>The <a class="xref" href="../../api/Stride.Engine.AnimationComponent.html">AnimationComponent</a> has the property <a class="xref" href="../../api/Stride.Engine.AnimationComponent.html#Stride_Engine_AnimationComponent_BlendTreeBuilder">AnimationComponent.BlendTreeBuilder</a>. If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which implements from <code>IBlendTreeBuilder</code> and assign it to the BlendTreeBuilder under your animation component.</p>
+<p>The <a href="xref:Stride.Engine.AnimationComponent">AnimationComponent</a> has the property <a href="xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder">AnimationComponent.BlendTreeBuilder</a>. If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which implements from <code>IBlendTreeBuilder</code> and assign it to the BlendTreeBuilder under your animation component.</p>
 <p>When the animation component is updated, it calls <code>void BuildBlendTree(FastList&lt;AnimationOperation&gt; animationList)</code> on your script instead of updating the animations itself. This allows you to choose any combination of animation clips, speeds and blends, but is also more difficult, as all the heavy lifting is now on the script side.</p>
 <p>The templates <em>First-person shooter</em>, <em>Third-person platformer</em> and <em>Top-down RPG</em>, included with Stride, are examples of how to use custom blend trees.</p>
 <h2 id="code-sample">Code sample</h2>
@@ -211,7 +211,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

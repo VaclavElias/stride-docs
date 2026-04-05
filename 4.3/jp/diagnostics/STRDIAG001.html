@@ -91,7 +91,7 @@
 <p>The <code>[DataContract]</code> is not valid for the type '{0}'. Expected is a public/internal Accessor.</p>
 </blockquote>
 <h2 id="explanation">Explanation</h2>
-<p>The <a class="xref" href="../api/Stride.Core.DataContractAttribute.html">DataContractAttribute</a> can only be applied to <code>public</code>/<code>internal</code> type. Any lower access will cause STRDIAG001 on the target type.</p>
+<p>The @Stride.Core.DataContractAttribute can only be applied to <code>public</code>/<code>internal</code> type. Any lower access will cause STRDIAG001 on the target type.</p>
 <h2 id="example-private-inner-class">Example: private inner class</h2>
 <p>The following example generates STRDIAG001:</p>
 <pre><code class="lang-csharp">using Stride.Core;
@@ -111,7 +111,7 @@ file class STRDIAG001
 }
 </code></pre>
 <h2 id="solution">Solution</h2>
-<p>To resolve the warning, increase the accessibility of the type to <code>public</code>/<code>internal</code> or remove the <a class="xref" href="../api/Stride.Core.DataContractAttribute.html">DataContractAttribute</a>.</p>
+<p>To resolve the warning, increase the accessibility of the type to <code>public</code>/<code>internal</code> or remove the @Stride.Core.DataContractAttribute.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="../manual/scripts/serialization.html">Serialisation</a></li>
@@ -137,7 +137,7 @@ file class STRDIAG001
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

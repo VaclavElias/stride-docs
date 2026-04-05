@@ -90,7 +90,7 @@
 <p><span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span></p>
 <p>You can use various <strong>sensors</strong>, such as gyroscopes and accelerometers, as input devices in your project. Sensors are often used in mobile games.</p>
-<p>Use <a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a> to access sensors and:</p>
+<p>Use @'Stride.Input.InputManager' to access sensors and:</p>
 <ul>
 <li>check if a sensor is supported by Stride</li>
 <li>disable a sensor</li>
@@ -105,8 +105,8 @@
 <li>Compass</li>
 <li>Gyroscope</li>
 </ul>
-<p>They inherit from <a class="xref" href="../../api/Stride.Input.ISensorDevice.html">ISensorDevice</a>.</p>
-<p>Stride creates a default instance for each sensor type. You can access each instance from the <a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a>.</p>
+<p>They inherit from @'Stride.Input.ISensorDevice'.</p>
+<p>Stride creates a default instance for each sensor type. You can access each instance from the @'Stride.Input.InputManager'.</p>
 <p>Sensors are state-based. Each sensor instance is automatically updated every frame, and contains the value of the sensor just before the update.</p>
 <p>For example, to access the accelerometer, use:</p>
 <pre><code class="lang-cs">var accelerometer = Input.Accelerometer;
@@ -121,11 +121,11 @@
 </div>
 <h2 id="enable-a-sensor">Enable a sensor</h2>
 <p>By default, Stride disables all available sensors, as retrieving and updating sensor data takes significant CPU time.</p>
-<p>To enable a sensor, set <a class="xref" href="../../api/Stride.Input.ISensorDevice.html#Stride_Input_ISensorDevice_IsEnabled">IsEnabled</a> to <code>true</code>. When you don't need the sensor, disable it by setting the property to <code>false</code>.</p>
+<p>To enable a sensor, set @'Stride.Input.ISensorDevice.IsEnabled' to <code>true</code>. When you don't need the sensor, disable it by setting the property to <code>false</code>.</p>
 <h2 id="use-the-orientation-sensor">Use the orientation sensor</h2>
 <p>The <strong>orientation sensor</strong> indicates the <strong>orientation of the device</strong> with respect to gravity and the Earth's north pole. The orientation is null when the device's Y-axis is aligned with the magnetic north pole and the Z-axis with the gravity. You can use orientation data to control various actions in a game.</p>
 <p><img src="media/sensor-overview-orientation-sensor.png" alt="Orientation sensor"></p>
-<p>Use <a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_Orientation">Input.Orientation</a> to get the current orientation of the device.</p>
+<p>Use <a href="xref:Stride.Input.InputManager.Orientation">Input.Orientation</a> to get the current orientation of the device.</p>
 <table>
 <thead>
 <tr>
@@ -136,27 +136,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Roll">Roll</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Roll">Roll</a></td>
 <td>The rotation around the X-axis</td>
 <td><code>public float Roll { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Pitch">Pitch</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Pitch">Pitch</a></td>
 <td>The rotation around the Y-axis</td>
 <td><code>public float Pitch { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Yaw">Yaw</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Yaw">Yaw</a></td>
 <td>The rotation around the Z-axis</td>
 <td><code>public float Yaw { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_RotationMatrix">Rotation Matrix</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.RotationMatrix">Rotation Matrix</a></td>
 <td>The device rotation</td>
 <td><code>public Matrix RotationMatrix { get; }</code></td>
 </tr>
 <tr>
-<td><a class="xref" href="../../api/Stride.Input.IOrientationSensor.html#Stride_Input_IOrientationSensor_Quaternion">Quaternion</a></td>
+<td><a href="xref:Stride.Input.IOrientationSensor.Quaternion">Quaternion</a></td>
 <td>The device orientation and rotation</td>
 <td><code>public Quaternion Quaternion { get; }</code></td>
 </tr>
@@ -187,29 +187,29 @@
 <h5>Note</h5>
 <p>When the user isn't applying force, the <strong>device acceleration</strong> is equal to its <strong>gravity</strong>.</p>
 </div>
-<p>To get the raw acceleration, use <a class="xref" href="../../api/Stride.Input.IAccelerometerSensor.html#Stride_Input_IAccelerometerSensor_Acceleration">Accelerometer.Acceleration</a>. For example:</p>
+<p>To get the raw acceleration, use <a href="xref:Stride.Input.IAccelerometerSensor.Acceleration">Accelerometer.Acceleration</a>. For example:</p>
 <pre><code>var acceleration = Input.Accelerometer.Acceleration;
 </code></pre>
 <h3 id="use-the-user-acceleration-sensor">Use the user acceleration sensor</h3>
 <p>The <strong>user acceleration sensor</strong> is similar to the accelerometer, but measures the acceleration applied <strong>only</strong> by a user (without gravitational acceleration).</p>
-<p>To get the user acceleration, use <a class="xref" href="../../api/Stride.Input.IUserAccelerationSensor.html#Stride_Input_IUserAccelerationSensor_Acceleration">UserAcceleration.Acceleration</a>. For example:</p>
+<p>To get the user acceleration, use <a href="xref:Stride.Input.IUserAccelerationSensor.Acceleration">UserAcceleration.Acceleration</a>. For example:</p>
 <pre><code class="lang-cs">var userAcceleration = Input.UserAcceleration.Acceleration;
 </code></pre>
 <h3 id="use-the-gravity-sensor">Use the gravity sensor</h3>
 <p>The gravity sensor gives a 3D vector indicating the direction and magnitude of gravity (meters per second squared) acting on the device.</p>
-<p>To get the gravity vector, use <a class="xref" href="../../api/Stride.Input.IGravitySensor.html">GravitySensor</a>. For example:</p>
+<p>To get the gravity vector, use <a href="xref:Stride.Input.IGravitySensor">GravitySensor</a>. For example:</p>
 <pre><code class="lang-cs"> var gravityVector = Input.Gravity.Vector;
 </code></pre>
 <h3 id="use-the-compass-sensor">Use the compass sensor</h3>
 <p>The <strong>compass</strong> indicates measures the angle between the top of the device and the <strong>North Pole</strong>. This is useful, for example, to rotate and align digital maps.</p>
 <p><img src="media/sensor-overview-compasss.png" alt="Compass"></p>
-<p>To get this angle, use <a class="xref" href="../../api/Stride.Input.ICompassSensor.html#Stride_Input_ICompassSensor_Heading">CompassSensor.Heading</a>. For example:</p>
+<p>To get this angle, use <a href="xref:Stride.Input.ICompassSensor.Heading">CompassSensor.Heading</a>. For example:</p>
 <pre><code class="lang-cs">var heading = Input.Compass.Heading;
 </code></pre>
 <h3 id="use-the-gyroscope">Use the gyroscope</h3>
 <p>The gyroscope measures the <strong>rotation speed</strong> of the device (<strong>radians per second</strong>).</p>
 <p><img src="media/sensor-overview-gyroscope-sensor.png" alt="Gyroscope"></p>
-<p>To get the rotation speed, use <a class="xref" href="../../api/Stride.Input.IGyroscopeSensor.html#Stride_Input_IGyroscopeSensor_RotationRate">GyroscopeSensor.RotationRate</a>. For example:</p>
+<p>To get the rotation speed, use <a href="xref:Stride.Input.IGyroscopeSensor.RotationRate">GyroscopeSensor.RotationRate</a>. For example:</p>
 <pre><code class="lang-cs">  var rotationRate = Input.Gyroscope.RotationRate; 
   var rotationSpeedX =  rotationRate.X;
   var rotationSpeedY =  rotationRate.Y;
@@ -267,7 +267,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

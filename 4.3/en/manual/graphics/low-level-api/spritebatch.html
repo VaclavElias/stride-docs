@@ -95,7 +95,7 @@
 <p>Remember that you need to put all custom code in a <a href="../graphics-compositor/custom-scene-renderers.html">custom scene renderer</a> to include it in the composition.</p>
 </div>
 <h2 id="create-a-sprite-batch">Create a sprite batch</h2>
-<p>Stride offers a easy way to deal with batches of sprites through the <a class="xref" href="../../../api/Stride.Graphics.SpriteBatch.html">SpriteBatch</a> class. You can use this class to regroup, update, and display sprites efficiently.</p>
+<p>Stride offers a easy way to deal with batches of sprites through the @'Stride.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.</p>
 <p><strong>Code:</strong> Creating a sprite batch</p>
 <pre><code class="lang-cs">var spriteBatch = new SpriteBatch(GraphicsDevice);
 </code></pre>
@@ -105,7 +105,7 @@
 </code></pre>
 <p>You can also set states like the ones discussed on the <a href="pipeline-state.html">Pipeline state</a> page.</p>
 <h2 id="draw-a-sprite-batch">Draw a sprite batch</h2>
-<p>The <a class="xref" href="../../../api/Stride.Graphics.SpriteBatch.html">SpriteBatch</a> class has multiple draw methods to set various parameters. For a list of features, see the <a class="xref" href="../../../api/Stride.Graphics.SpriteBatch.html">SpriteBatch</a> API documentation.</p>
+<p>The @'Stride.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a list of features, see the @'Stride.Graphics.SpriteBatch' API documentation.</p>
 <p><strong>Code:</strong> Drawing a sprite batch</p>
 <pre><code class="lang-cs">// begin the sprite batch operations
 spriteBatch.Begin(Game.GraphicsContext, SpriteSortMode.Immediate);
@@ -116,15 +116,15 @@ spriteBatch.Draw(myTexture, new Vector2(10, 20));
 // end the sprite batch operations
 spriteBatch.End();
 </code></pre>
-<p>There are five modes to draw a sprite batch. They are enumerated in the <a class="xref" href="../../../api/Stride.Graphics.SpriteSortMode.html">SpriteSortMode</a> enum:</p>
+<p>There are five modes to draw a sprite batch. They are enumerated in the @'Stride.Graphics.SpriteSortMode' enum:</p>
 <ul>
 <li>Deferred (default mode): the sprites are drawn at the same time at the end to reduce the drawcall overhead</li>
-<li>Immediate: the sprites are drawn after each <a class="xref" href="../../../api/Stride.Graphics.SpriteBatch.html#Stride_Graphics_SpriteBatch_Draw_">Draw</a> call</li>
+<li>Immediate: the sprites are drawn after each @'Stride.Graphics.SpriteBatch.Draw*' call</li>
 <li>Texture: Deferred mode but sprites are sorted based on their texture to reduce effect parameters update</li>
 <li>BackToFront: Deferred mode with a sort based on the z-order of the sprites</li>
 <li>FrontToBack: Deferred mode with a sort based on the z-order of the sprites</li>
 </ul>
-<p>To set the mode, specify it in the <a class="xref" href="../../../api/Stride.Graphics.SpriteBatch.html#Stride_Graphics_SpriteBatch_Begin_">Begin</a> method.</p>
+<p>To set the mode, specify it in the @'Stride.Graphics.SpriteBatch.Begin*' method.</p>
 <p><strong>Code:</strong> Deferred drawing of the sprite batch</p>
 <pre><code class="lang-cs">// begin the sprite batch operations
 spriteBatch.Begin(Game.GraphicsContext); // same as spriteBatch.Begin(GraphicsContext, SpriteSortMode.Deferred);
@@ -144,7 +144,7 @@ spriteBatch.End();
 <li>center offset</li>
 <li>color tint</li>
 </ul>
-<p>For a full list, see the <a class="xref" href="../../../api/Stride.Graphics.SpriteBatch.html">SpriteBatch</a> API documentation, especially the <strong>Draw</strong> methods.</p>
+<p>For a full list, see the @'Stride.Graphics.SpriteBatch' API documentation, especially the <strong>Draw</strong> methods.</p>
 <p><strong>Code:</strong> More complex sprite batch drawing</p>
 <pre><code class="lang-cs">// begin the sprite batch operations
 spriteBatch.Begin(GraphicsContext);
@@ -189,7 +189,7 @@ spriteBatch.End();
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

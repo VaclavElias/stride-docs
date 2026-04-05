@@ -161,7 +161,7 @@
       }
   }
 </code></pre>
-<p>This class mimics the <a class="xref" href="../../../api/Stride.Particles.Spawners.ParticleSpawner.html">ParticleSpawner</a>, with the addition of a <code>BurstCount</code> and a <code>burstTimer</code> to control how often and how many particles are spawned in bursts.</p>
+<p>This class mimics the @'Stride.Particles.Spawners.ParticleSpawner', with the addition of a <code>BurstCount</code> and a <code>burstTimer</code> to control how often and how many particles are spawned in bursts.</p>
 <p>The <code>SpawnNew</code> method is called every frame to allow the spawner to calculate how many new particles should be emitted in the emitter based on the elapsed time.</p>
 <p>As an exercise, try implementing the following changes:</p>
 <ul>
@@ -197,7 +197,7 @@
       }
   }
 </code></pre>
-<p>Our initializer simply defines an angle for the cone and strength for the velocity. Any scaling and rotation of the cone come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. For more information, see the <a class="xref" href="../../../api/Stride.Particles.Initializers.ParticleInitializer.html">ParticleInitializer</a>.</p>
+<p>Our initializer simply defines an angle for the cone and strength for the velocity. Any scaling and rotation of the cone come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. For more information, see the @'Stride.Particles.Initializers.ParticleInitializer'.</p>
 <p>The constructor for the initializer is important, as it sets the list of required fields we'll use. The initializer sets the particle's position and velocity, so we add those, and needs to generate some randomness, so we also add the random seed which we are going to use. All particles have <code>Life</code> and <code>RandomSeed</code> fields when they spawn.</p>
 <pre><code class="lang-cs">// This method is called for all new particles once the initializer is added to an emitter. Rather than updating all of them, we are given a starting and end indices and must only use particles in the defined range.
 public unsafe override void Initialize(ParticlePool pool, int startIdx, int endIdx, int maxCapacity)
@@ -248,8 +248,8 @@ public unsafe override void Initialize(ParticlePool pool, int startIdx, int endI
       public static readonly ParticleFieldDescription&lt;Vector2&gt; RectangleXY = new ParticleFieldDescription&lt;Vector2&gt;(&quot;RectangleXY&quot;, new Vector2(1, 1));
   }
 </code></pre>
-<p>The field has type <a class="xref" href="../../../api/Stride.Core.Mathematics.Vector2.html">Vector2</a>, since we only need two values for the width and the height. No fields are added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, such as the custom updater below.</p>
-<p>For API reference, see <a class="xref" href="../../../api/Stride.Particles.Modules.ParticleUpdater.html">ParticleUpdater</a>.</p>
+<p>The field has type @'Stride.Core.Mathematics.Vector2', since we only need two values for the width and the height. No fields are added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, such as the custom updater below.</p>
+<p>For API reference, see @'Stride.Particles.Modules.ParticleUpdater'.</p>
 <pre><code class="lang-cs">  [DataContract(&quot;CustomParticleUpdater&quot;)] // Used for serialization so that our custom object can be saved. A good practice is to have the data contract have the same name as the class name.
   [Display(&quot;CustomUpdater&quot;)]				// Unless a display name is specified, the name of the data contract will be used. Sometimes we want to hide it and display something simpler instead.
   public class CustomParticleUpdater : ParticleUpdater
@@ -316,7 +316,7 @@ public unsafe override void Initialize(ParticlePool pool, int startIdx, int endI
 <pre><code class="lang-cs">public unsafe override int BuildVertexBuffer(ParticleVertexBuilder vtxBuilder, Vector3 inverseViewX, Vector3 inverseViewY,
   ref Vector3 spaceTranslation, ref Quaternion spaceRotation, float spaceScale, ParticleSorter sorter)
 </code></pre>
-<p>This method is called when it needs our shape builder to iterate over all particles and build the shape. The <a class="xref" href="../../../api/Stride.Particles.VertexLayouts.ParticleVertexBuilder.html">ParticleVertexBuilder</a> is the wrapper around our vertex stream. We'll use it to write out the vertex data for the particles.</p>
+<p>This method is called when it needs our shape builder to iterate over all particles and build the shape. The @'Stride.Particles.VertexLayouts.ParticleVertexBuilder' is the wrapper around our vertex stream. We'll use it to write out the vertex data for the particles.</p>
 <p><code>inverseViewX</code> and <code>inverseViewY</code> are unit vectors in camera space passed down to the shape builder if we need to generate camera-facing shapes.</p>
 <pre><code class="lang-cs">  foreach (var particle in sorter)
   {
@@ -398,7 +398,7 @@ public unsafe override void Initialize(ParticlePool pool, int startIdx, int endI
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

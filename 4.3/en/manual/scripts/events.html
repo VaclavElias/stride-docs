@@ -100,7 +100,7 @@
 <p>Events are handled entirely in scripts. You can't configure them in Game Studio.</p>
 </div>
 <h2 id="create-and-broadcast-an-event">Create and broadcast an event</h2>
-<p>Broadcasters in the Stride API are of type <a class="xref" href="../../api/Stride.Engine.Events.EventKey.html">EventKey</a> or <a class="xref" href="../../api/Stride.Engine.Events.EventKey-1.html">EventKey&lt;T&gt;</a>. They use the method <a class="xref" href="../../api/Stride.Engine.Events.EventKey.html#Stride_Engine_Events_EventKey_Broadcast">Broadcast</a> or <a class="xref" href="../../api/Stride.Engine.Events.EventKey-1.html#Stride_Engine_Events_EventKey_1_Broadcast__0_">Broadcast(T)</a> to broadcast events to receivers.</p>
+<p>Broadcasters in the Stride API are of type <a href="xref:Stride.Engine.Events.EventKey">EventKey</a> or <a href="xref:Stride.Engine.Events.EventKey%601">EventKey&lt;T&gt;</a>. They use the method <a href="xref:Stride.Engine.Events.EventKey#Stride_Engine_Events_EventKey_Broadcast">Broadcast</a> or <a href="xref:Stride.Engine.Events.EventKey%601#Stride_Engine_Events_EventKey_1_Broadcast__0_">Broadcast(T)</a> to broadcast events to receivers.</p>
 <p>For example, this code creates two &quot;Game Over&quot; events. One with a non-generic and the other with a generic version of EventKey:</p>
 <pre><code class="lang-cs">public static class GlobalEvents
 {
@@ -115,7 +115,7 @@
 }
 </code></pre>
 <h2 id="create-a-receiver">Create a receiver</h2>
-<p>Receivers in the Stride API are of type <a class="xref" href="../../api/Stride.Engine.Events.EventReceiver.html">EventReceiver</a> or <a class="xref" href="../../api/Stride.Engine.Events.EventReceiver-1.html">EventReceiver&lt;T&gt;</a>.</p>
+<p>Receivers in the Stride API are of type <a href="xref:Stride.Engine.Events.EventReceiver">EventReceiver</a> or <a href="xref:Stride.Engine.Events.EventReceiver%601">EventReceiver&lt;T&gt;</a>.</p>
 <p>To receive the &quot;Game Over&quot; events described above, use:</p>
 <pre><code class="lang-cs">var gameOverListener = new EventReceiver(GlobalEvents.GameOverEventKey);
 var gameIsOver = gameOverListener.TryReceive();
@@ -134,7 +134,7 @@ string asyncData = await gameOverListenerWithData.ReceiveAsync();
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="best-practice.html">Best Practice</a></li>
-<li><a href="types-of-script.html">Types of script</a></li>
+<li><a href="types-of-script.md">Types of script</a></li>
 <li><a href="create-a-script.html">Create a script</a></li>
 <li><a href="use-a-script.html">Use a script</a></li>
 <li><a href="public-properties-and-fields.html">Public properties and fields</a></li>
@@ -163,7 +163,7 @@ string asyncData = await gameOverListenerWithData.ReceiveAsync();
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

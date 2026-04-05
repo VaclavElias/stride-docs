@@ -101,11 +101,11 @@
 </li>
 </ul>
 <h2 id="入力を処理する">入力を処理する</h2>
-<p>入力は <a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a> クラスで処理します。このクラスには、スクリプトからプロパティとメソッドを使用してアクセスできます。</p>
-<p>特定の入力デバイスが使用できるかどうかを調べるには、対応する <a class="xref" href="../../api/Stride.Input.InputManager.html">InputManager</a> プロパティを使用します。たとえば、マウスが接続されているかどうかを調べるには、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_HasMouse">Input.HasMouse</a> を使用します。</p>
+<p>入力は <a href="xref:Stride.Input.InputManager">InputManager</a> クラスで処理します。このクラスには、スクリプトからプロパティとメソッドを使用してアクセスできます。</p>
+<p>特定の入力デバイスが使用できるかどうかを調べるには、対応する @'Stride.Input.InputManager' プロパティを使用します。たとえば、マウスが接続されているかどうかを調べるには、<a href="xref:Stride.Input.InputManager.HasMouse">Input.HasMouse</a> を使用します。</p>
 <p>デバイスの使用可能性を調べた後、Stride で入力を処理するには 4 つの方法があります。</p>
 <h3 id="状態を問い合わせる">状態を問い合わせる</h3>
-<p>デジタル キーやボタンの状態 (<em>アップ_または_ダウン</em>) およびアナログ ボタンやセンサーの数値を問い合わせることができます。たとえば、<a class="xref" href="../../api/Stride.Input.InputManager.html#Stride_Input_InputManager_DownKeys">DownKeys</a> は、最後の更新で_ダウン_状態であったキーのリストを取得します。</p>
+<p>デジタル キーやボタンの状態 (<em>アップ_または_ダウン</em>) およびアナログ ボタンやセンサーの数値を問い合わせることができます。たとえば、@'Stride.Input.InputManager.DownKeys' は、最後の更新で_ダウン_状態であったキーのリストを取得します。</p>
 <p><img src="media/index-state-one-action-between-updates.png" alt="Query key and button states"></p>
 <p><img src="media/index-state-analog-stick-position.png" alt="Analog stick positions"></p>
 <p>更新の間にユーザーが複数のアクションを実行する場合があります。更新の間に状態の変化がなかった場合 (最終結果が同じ)、Stride はアクションを登録しません。</p>
@@ -162,7 +162,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>

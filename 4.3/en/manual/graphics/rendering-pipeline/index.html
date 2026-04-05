@@ -88,17 +88,17 @@
 <h1 id="rendering-pipeline">Rendering pipeline</h1>
 
 <h2 id="render-features">Render features</h2>
-<p>Rendering logic is divided into <a class="xref" href="../../../api/Stride.Rendering.RenderFeature.html">RenderFeature</a>s. Each render feature processes one type of <a class="xref" href="../../../api/Stride.Rendering.RenderObject.html">RenderObject</a> (eg meshes, sprites, particles, etc).</p>
+<p>Rendering logic is divided into @'Stride.Rendering.RenderFeature's. Each render feature processes one type of @'Stride.Rendering.RenderObject' (eg meshes, sprites, particles, etc).</p>
 <p>Stride executes features in phases: <strong>collect</strong>, <strong>extract</strong>, <strong>prepare</strong> and <strong>draw</strong>. This means each step of the pipeline can be isolated, parallelized and optimized separately.</p>
 <p>For more information, see <a href="render-features.html">Render features</a>.</p>
 <h2 id="render-views">Render views</h2>
-<p>You can render scenes from multiple points of view, represented as <a class="xref" href="../../../api/Stride.Rendering.RenderView.html">RenderView</a>s – eg player views in a splitscreen game, or separate shadow views for cascades in a <a href="../lights-and-shadows/shadows.html">shadow map cascade</a>.</p>
+<p>You can render scenes from multiple points of view, represented as @'Stride.Rendering.RenderView's – eg player views in a splitscreen game, or separate shadow views for cascades in a <a href="../lights-and-shadows/shadows.html">shadow map cascade</a>.</p>
 <p>Views are a first-class concept available to all rendering phases, allowing batching across multiple views.</p>
 <h2 id="render-stages">Render stages</h2>
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderStage.html">RenderStage</a>s select the <a href="../effects-and-shaders/index.html">effect</a> and <a href="../low-level-api/pipeline-state.html">pipeline state</a> per object, and define the output of a render pass.</p>
+<p>@'Stride.Rendering.RenderStage's select the <a href="../effects-and-shaders/index.html">effect</a> and <a href="../low-level-api/pipeline-state.html">pipeline state</a> per object, and define the output of a render pass.</p>
 <p>For more information, see <a href="render-stages.html">Render stages</a>.</p>
 <h2 id="visibility">Visibility</h2>
-<p><a class="xref" href="../../../api/Stride.Rendering.RenderObject.html">RenderObject</a>s are registered with a <a class="xref" href="../../../api/Stride.Rendering.VisibilityGroup.html">VisibilityGroup</a>. During the <strong>collect</strong> phase, the visibility group culls and filters them based on the <a class="xref" href="../../../api/Stride.Rendering.RenderView.html">RenderView</a> and <a class="xref" href="../../../api/Stride.Rendering.RenderStage.html">RenderStage</a>.</p>
+<p>@'Stride.Rendering.RenderObject's are registered with a @'Stride.Rendering.VisibilityGroup'. During the <strong>collect</strong> phase, the visibility group culls and filters them based on the @'Stride.Rendering.RenderView' and @'Stride.Rendering.RenderStage'.</p>
 <h2 id="in-this-section">In this section</h2>
 <ul>
 <li><a href="render-features.html">Render features</a></li>
@@ -125,7 +125,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.8</p><p>&copy; .NET Foundation and Contributors</p></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small"><p>Supported by the <a href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p><p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p><p>Stride Docs Website v.2.0.0.16</p><p>&copy; .NET Foundation and Contributors</p></div>
         </div>
       </div>
     </footer>
