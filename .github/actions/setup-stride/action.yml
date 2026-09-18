@@ -138,7 +138,7 @@ runs:
     # This installs the latest version of DocFX and may introduce breaking changes
     # run: dotnet tool update -g docfx
     # This installs a specific, tested version of DocFX.
-    run: dotnet tool update -g docfx --version 2.78.5
+    run: dotnet tool update -g docfx --version 2.80.1
     shell: pwsh
 
   # - name: Prebuild Stride
